@@ -6,10 +6,19 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Nov 2019 19:20:29 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 20:20:16 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>First</title>
+      <link>https://CorPython.github.io/post/first/</link>
+      <pubDate>Wed, 06 Nov 2019 20:20:16 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/first/</guid>
+      <description> 1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息  .git文件中的信息有以下  config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端钩子脚本。 info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件 objects 目录存储所有数据内容 refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等  2.在文件夹中新建一个文件README.md vim README.md cat README.md  3.连接GitHub 本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY mkdir .ssh//创建一个文件夹.ssh cd .ssh/ ssh-keygen -t rsa -C &amp;quot;1337425156zhang@gmail.com&amp;quot;//生成ssh密钥  4.将生成的ssh信息复制到gtihub cd .ssh cat id_rsa.pub  5.测试是否连接到github ssh -T git@github.com -i /e/git_notes/.ssh/id_rsa  </description>
+    </item>
     
     <item>
       <title>Test</title>
