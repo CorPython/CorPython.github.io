@@ -12,18 +12,18 @@
     <title>Test :: My New Hugo Site</title>
 
     
-    <link href="/CorPython.github.io/css/nucleus.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/fontawesome-all.min.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/hybrid.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/featherlight.min.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/perfect-scrollbar.min.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/auto-complete.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/atom-one-dark-reasonable.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/theme.css?1573050640" rel="stylesheet">
-    <link href="/CorPython.github.io/css/hugo-theme.css?1573050640" rel="stylesheet">
+    <link href="/CorPython.github.io/css/nucleus.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/fontawesome-all.min.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/hybrid.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/featherlight.min.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/perfect-scrollbar.min.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/auto-complete.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/atom-one-dark-reasonable.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/theme.css?1573103058" rel="stylesheet">
+    <link href="/CorPython.github.io/css/hugo-theme.css?1573103058" rel="stylesheet">
     
 
-    <script src="/CorPython.github.io/js/jquery-3.3.1.min.js?1573050640"></script>
+    <script src="/CorPython.github.io/js/jquery-3.3.1.min.js?1573103058"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/CorPython.github.io/js/lunr.min.js?1573050640"></script>
-<script type="text/javascript" src="/CorPython.github.io/js/auto-complete.js?1573050640"></script>
+<script type="text/javascript" src="/CorPython.github.io/js/lunr.min.js?1573103058"></script>
+<script type="text/javascript" src="/CorPython.github.io/js/auto-complete.js?1573103058"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/github.com\/CorPython.github.io";
     
 </script>
-<script type="text/javascript" src="/CorPython.github.io/js/search.js?1573050640"></script>
+<script type="text/javascript" src="/CorPython.github.io/js/search.js?1573103058"></script>
 
     
   </div>
@@ -198,7 +198,37 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1-创建一个新仓库-repo">1.创建一个新仓库<code>repo</code></a>
+<ul>
+<li><a href="#span-style-color-red-git文件中的信息有以下-span"><span style='color:red'> .git文件中的信息有以下</span></a>
+<ul>
+<li><a href="#config-文件包含了项目特有的配置选项">config 文件包含了项目特有的配置选项</a></li>
+<li><a href="#description仓库的描述">description仓库的描述</a></li>
+<li><a href="#head-文件指向当前分支">HEAD 文件指向当前分支</a></li>
+<li><a href="#hooks-目录保存了客户端或服务端钩子脚本">hooks 目录保存了客户端或服务端钩子脚本。</a></li>
+<li><a href="#info-目录保存了一份不希望在-gitignore-文件中管理的忽略模式-ignored-patterns-的全局可执行文件">info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件</a></li>
+<li><a href="#objects-目录存储所有数据内容">objects 目录存储所有数据内容</a></li>
+<li><a href="#refs-目录存储指向数据-分支-的提交对象的指针-里面即有stash栈指针以及tag等">refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2-在文件夹中新建一个文件-readme-md">2.在文件夹中新建一个文件<code>README.md</code></a></li>
+<li><a href="#3-连接github">3.连接GitHub</a>
+<ul>
+<li>
+<ul>
+<li><a href="#本地仓库与远程仓库的传输是通过ssh加密的-首先创建ssk-key">本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#4-将生成的ssh信息复制到gtihub">4.将生成的ssh信息复制到gtihub</a></li>
+<li><a href="#5-测试是否连接到github">5.测试是否连接到github</a></li>
+<li><a href="#6-配置config">6.配置config</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -222,6 +252,69 @@
 
 
 
+
+
+<h2 id="1-创建一个新仓库-repo">1.创建一个新仓库<code>repo</code></h2>
+
+<pre><code>mkdir repo//创建一个新文件夹
+cd repo//进入这个文件夹
+git init//初始化这个仓库
+ll .git/.git文件中的相关信息
+</code></pre>
+
+<p><img src="C:Users张福平AppDataRoamingTyporatypora-user-images1572961811012.png" alt="1572961811012" /></p>
+
+<h3 id="span-style-color-red-git文件中的信息有以下-span"><span style='color:red'> .git文件中的信息有以下</span></h3>
+
+<ol>
+<li><h4 id="config-文件包含了项目特有的配置选项">config 文件包含了项目特有的配置选项</h4></li>
+
+<li><h4 id="description仓库的描述">description仓库的描述</h4></li>
+
+<li><h4 id="head-文件指向当前分支">HEAD 文件指向当前分支</h4></li>
+
+<li><h4 id="hooks-目录保存了客户端或服务端钩子脚本">hooks 目录保存了客户端或服务端钩子脚本。</h4></li>
+
+<li><h4 id="info-目录保存了一份不希望在-gitignore-文件中管理的忽略模式-ignored-patterns-的全局可执行文件">info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件</h4></li>
+
+<li><h4 id="objects-目录存储所有数据内容">objects 目录存储所有数据内容</h4></li>
+
+<li><h4 id="refs-目录存储指向数据-分支-的提交对象的指针-里面即有stash栈指针以及tag等">refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等</h4></li>
+</ol>
+
+<h2 id="2-在文件夹中新建一个文件-readme-md">2.在文件夹中新建一个文件<code>README.md</code></h2>
+
+<pre><code>vim README.md
+cat README.md
+</code></pre>
+
+<h2 id="3-连接github">3.连接GitHub</h2>
+
+<h4 id="本地仓库与远程仓库的传输是通过ssh加密的-首先创建ssk-key">本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY</h4>
+
+<pre><code>mkdir .ssh//创建一个文件夹.ssh
+cd .ssh/
+ssh-keygen -t rsa -C &quot;1337425156zhang@gmail.com&quot;//生成ssh密钥
+</code></pre>
+
+<p><img src="C:Users张福平AppDataRoamingTyporatypora-user-images1572963664684.png" alt="1572963664684" /></p>
+
+<h2 id="4-将生成的ssh信息复制到gtihub">4.将生成的ssh信息复制到gtihub</h2>
+
+<pre><code>cd .ssh
+cat id_rsa.pub
+</code></pre>
+
+<p><img src="C:Users张福平AppDataRoamingTyporatypora-user-images1572964010027.png" alt="1572964010027" /></p>
+
+<h2 id="5-测试是否连接到github">5.测试是否连接到github</h2>
+
+<p><img src="C:Users张福平AppDataRoamingTyporatypora-user-images1572964202515.png" alt="1572964202515" /></p>
+
+<pre><code>ssh -T git@github.com -i /e/git_notes/.ssh/id_rsa
+</code></pre>
+
+<h2 id="6-配置config">6.配置config</h2>
 
 
 <footer class=" footline" >
@@ -309,19 +402,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CorPython.github.io/js/clipboard.min.js?1573050640"></script>
-    <script src="/CorPython.github.io/js/perfect-scrollbar.min.js?1573050640"></script>
-    <script src="/CorPython.github.io/js/perfect-scrollbar.jquery.min.js?1573050640"></script>
-    <script src="/CorPython.github.io/js/jquery.sticky.js?1573050640"></script>
-    <script src="/CorPython.github.io/js/featherlight.min.js?1573050640"></script>
-    <script src="/CorPython.github.io/js/highlight.pack.js?1573050640"></script>
+    <script src="/CorPython.github.io/js/clipboard.min.js?1573103058"></script>
+    <script src="/CorPython.github.io/js/perfect-scrollbar.min.js?1573103058"></script>
+    <script src="/CorPython.github.io/js/perfect-scrollbar.jquery.min.js?1573103058"></script>
+    <script src="/CorPython.github.io/js/jquery.sticky.js?1573103058"></script>
+    <script src="/CorPython.github.io/js/featherlight.min.js?1573103058"></script>
+    <script src="/CorPython.github.io/js/highlight.pack.js?1573103058"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CorPython.github.io/js/modernizr.custom-3.6.0.js?1573050640"></script>
-    <script src="/CorPython.github.io/js/learn.js?1573050640"></script>
-    <script src="/CorPython.github.io/js/hugo-learn.js?1573050640"></script>
+    <script src="/CorPython.github.io/js/modernizr.custom-3.6.0.js?1573103058"></script>
+    <script src="/CorPython.github.io/js/learn.js?1573103058"></script>
+    <script src="/CorPython.github.io/js/hugo-learn.js?1573103058"></script>
 
-    <link href="/CorPython.github.io/mermaid/mermaid.css?1573050640" rel="stylesheet" />
-    <script src="/CorPython.github.io/mermaid/mermaid.js?1573050640"></script>
+    <link href="/CorPython.github.io/mermaid/mermaid.css?1573103058" rel="stylesheet" />
+    <script src="/CorPython.github.io/mermaid/mermaid.js?1573103058"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
