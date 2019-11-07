@@ -6,10 +6,23 @@
     <description>Recent content in Posts on code Newbie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Nov 2019 19:23:28 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 19:54:17 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo提交博客及推送到的github流程</title>
+      <link>https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Thu, 07 Nov 2019 19:54:17 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/</guid>
+      <description>在博客根目录下运行下面命令,并在post目录下生成markdown博客文件
+hugo new post/xxxx.md  在博客根目录下运行下面命令
+hugo //将本地文件重新编译 hugo server//在本地生成  注意,可以在本地查看博客变化,等自己觉得合适了就可以使用下面命令提交到github
+在hugo本地的public目录下使用如下命令
+git add -A //将修改的文件提交到缓冲区 git commit -m &#39;提交说明&#39; git push -u origin master //推送到远端仓库主分支上  </description>
+    </item>
     
     <item>
       <title>GitHub相关</title>
