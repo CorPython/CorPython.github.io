@@ -4,22 +4,22 @@
   
   <url>
     <loc>https://CorPython.github.io/</loc>
-    <lastmod>2019-11-06T20:20:16+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://CorPython.github.io/post/first/</loc>
-    <lastmod>2019-11-06T20:20:16+08:00</lastmod>
+    <lastmod>2019-11-06T19:20:29+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://CorPython.github.io/post/</loc>
-    <lastmod>2019-11-06T20:20:16+08:00</lastmod>
+    <lastmod>2019-11-06T19:20:29+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://CorPython.github.io/post/test/</loc>
     <lastmod>2019-11-06T19:20:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://CorPython.github.io/post/first/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
