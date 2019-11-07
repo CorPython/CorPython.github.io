@@ -6,27 +6,97 @@
     <description>Recent content on code Newbie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Nov 2019 19:20:29 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 19:23:28 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test</title>
-      <link>https://CorPython.github.io/post/test/</link>
-      <pubDate>Wed, 06 Nov 2019 19:20:29 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/post/test/</guid>
-      <description>1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息  .git文件中的信息有以下  config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端钩子脚本。 info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件 objects 目录存储所有数据内容 refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等  2.在文件夹中新建一个文件README.md vim README.md cat README.md  3.连接GitHub 本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY mkdir .ssh//创建一个文件夹.ssh cd .ssh/ ssh-keygen -t rsa -C &amp;quot;1337425156zhang@gmail.com&amp;quot;//生成ssh密钥  4.将生成的ssh信息复制到gtihub cd .ssh cat id_rsa.pub  5.测试是否连接到github ssh -T git@github.com -i /e/git_notes/.ssh/id_rsa  6.配置config 查看官网主题https://www.gohugo.org/theme/ 的配置文档</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>GitHub相关</title>
       <link>https://CorPython.github.io/post/first/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/first/</guid>
       <description> 1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息  .git文件中的信息有以下  config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端钩子脚本。 info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件 objects 目录存储所有数据内容 refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等  2.在文件夹中新建一个文件README.md vim README.md cat README.md  3.连接GitHub 本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY mkdir .ssh//创建一个文件夹.ssh cd .ssh/ ssh-keygen -t rsa -C &amp;quot;1337425156zhang@gmail.com&amp;quot;//生成ssh密钥  4.将生成的ssh信息复制到gtihub cd .ssh cat id_rsa.pub  5.测试是否连接到github ssh -T git@github.com -i /e/git_notes/.ssh/id_rsa  6.配置config </description>
+    </item>
+    
+    <item>
+      <title>linux编译c/c&#43;&#43;命令</title>
+      <link>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</guid>
+      <description> linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test  linux下gcc编译c语言 gcc -o test test.c ./test  </description>
+    </item>
+    
+    <item>
+      <title>vim基本操作及pacman常见指令</title>
+      <link>https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/</guid>
+      <description>vim指令 基础命令 h上 j下 k 上 l右
+b:回退
+p:粘贴
+y:复制
+u:撤消
+d:剪切
+i:进入insert模式
+a:在当前光标后进入insert模式
+o:在当前光标的下一行进入insert模式
+c:剪切并进入insert模式
+v：直接进入可视化visual模式
+V：选择光标所在行并进入visual模式
+ctrl + v：可以进入visual模式，选择一个长方形块进行操作
+w:保存
+q:退出
+/：使用 /+你要搜索的字符快速定位
+常用指令 1.按住{跳转到下一个段落
+2.按住}跳转到上一个段落
+3.按住%跳转到[]或者{}两边
+4.要使vim中文不乱码，在配置文件vimrc中添加
+set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳转到再按数字键再按方向键往哪个方向剪切几个字符
+比如d5-&amp;gt; 表示向右删除5个字符
+6.按两下d或者c剪切一行
+7.按p粘贴内容
+8.组合键cw删除字符并进入insert模式
+9.撤销操作：按esc退出进入command模式，按u撤销前一个操作
+10.剪切操作：在command模式下按v进入visual模式，按上下选中多行，按c或者d剪切
+11.粘贴操作：按command模式下按p粘贴剪切的内容
+12.vim中的左下上右代表的键还有H J K L
+13.另存为：wq + 文件名.后缀名
+ 按两下y复制一行,再按p粘贴
+ vim是在terminal中运行的，按【Ctrl+Alt+T】打开终端之后
+ 在command模式下，vim中可以用【Page Up】和【Page Down】来进行翻页，vim中还支持【Ctrl+ F】来进行向下翻页，用【Ctrl+B】进行向上翻页。
+ 在command模式下，vim中还支持【数字+GG】快速定位，进行跳转到某一行的操作。
+ 在command模式下，vim支持【数字+J】表示向下多少行，【数字+K】表示向上多少行的操作。如果想要取消上述操作按【Esc】键即可取消。
+ 全局替换
+: % s/要替换的字符串/替换后的内容/g （g代表全局替换）  按u撤消上一步操作</description>
+    </item>
+    
+    <item>
+      <title>Vscode快捷键</title>
+      <link>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>vscode  vs code 的常用快捷键
+  1、注释：
+　a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/
+　b) 取消单行注释：ctrl+k,ctrl+u
+　c) 多行注释：[alt+shift+A]
+　d) 多行注释：/**
+  2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移
+3、显示/隐藏左侧目录栏 ctrl + b
+4、复制当前行：shift + alt +up/down
+5、删除当前行：shift + ctrl + k
+6、控制台终端显示与隐藏：ctrl + ~
+7、查找文件/安装vs code 插件地址：ctrl + p
+  8、代码格式化：shift + alt +f
+9、新建一个窗口 : ctrl + shift + n
+10、行增加缩进: ctrl + [
+11、行减少缩进: ctrl + ]
+12、裁剪尾随空格(去掉一行的末尾那些没用的空格) : ctrl + shift + x</description>
     </item>
     
   </channel>

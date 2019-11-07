@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>vim基本操作及pacman常见指令 // code Newbie</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="code Newbie" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://CorPython.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vim基本操作及pacman常见指令"/>
+<meta name="twitter:description" content="vim指令 基础命令 h上 j下 k 上 l右
+b:回退
+p:粘贴
+y:复制
+u:撤消
+d:剪切
+i:进入insert模式
+a:在当前光标后进入insert模式
+o:在当前光标的下一行进入insert模式
+c:剪切并进入insert模式
+v：直接进入可视化visual模式
+V：选择光标所在行并进入visual模式
+ctrl &#43; v：可以进入visual模式，选择一个长方形块进行操作
+w:保存
+q:退出
+/：使用 /&#43;你要搜索的字符快速定位
+常用指令 1.按住{跳转到下一个段落
+2.按住}跳转到上一个段落
+3.按住%跳转到[]或者{}两边
+4.要使vim中文不乱码，在配置文件vimrc中添加
+set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳转到再按数字键再按方向键往哪个方向剪切几个字符
+比如d5-&gt; 表示向右删除5个字符
+6.按两下d或者c剪切一行
+7.按p粘贴内容
+8.组合键cw删除字符并进入insert模式
+9.撤销操作：按esc退出进入command模式，按u撤销前一个操作
+10.剪切操作：在command模式下按v进入visual模式，按上下选中多行，按c或者d剪切
+11.粘贴操作：按command模式下按p粘贴剪切的内容
+12.vim中的左下上右代表的键还有H J K L
+13.另存为：wq &#43; 文件名.后缀名
+ 按两下y复制一行,再按p粘贴
+ vim是在terminal中运行的，按【Ctrl&#43;Alt&#43;T】打开终端之后
+ 在command模式下，vim中可以用【Page Up】和【Page Down】来进行翻页，vim中还支持【Ctrl&#43; F】来进行向下翻页，用【Ctrl&#43;B】进行向上翻页。
+ 在command模式下，vim中还支持【数字&#43;GG】快速定位，进行跳转到某一行的操作。
+ 在command模式下，vim支持【数字&#43;J】表示向下多少行，【数字&#43;K】表示向上多少行的操作。如果想要取消上述操作按【Esc】键即可取消。
+ 全局替换
+: % s/要替换的字符串/替换后的内容/g （g代表全局替换）  按u撤消上一步操作"/>
+
+    <meta property="og:title" content="vim基本操作及pacman常见指令" />
+<meta property="og:description" content="vim指令 基础命令 h上 j下 k 上 l右
+b:回退
+p:粘贴
+y:复制
+u:撤消
+d:剪切
+i:进入insert模式
+a:在当前光标后进入insert模式
+o:在当前光标的下一行进入insert模式
+c:剪切并进入insert模式
+v：直接进入可视化visual模式
+V：选择光标所在行并进入visual模式
+ctrl &#43; v：可以进入visual模式，选择一个长方形块进行操作
+w:保存
+q:退出
+/：使用 /&#43;你要搜索的字符快速定位
+常用指令 1.按住{跳转到下一个段落
+2.按住}跳转到上一个段落
+3.按住%跳转到[]或者{}两边
+4.要使vim中文不乱码，在配置文件vimrc中添加
+set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳转到再按数字键再按方向键往哪个方向剪切几个字符
+比如d5-&gt; 表示向右删除5个字符
+6.按两下d或者c剪切一行
+7.按p粘贴内容
+8.组合键cw删除字符并进入insert模式
+9.撤销操作：按esc退出进入command模式，按u撤销前一个操作
+10.剪切操作：在command模式下按v进入visual模式，按上下选中多行，按c或者d剪切
+11.粘贴操作：按command模式下按p粘贴剪切的内容
+12.vim中的左下上右代表的键还有H J K L
+13.另存为：wq &#43; 文件名.后缀名
+ 按两下y复制一行,再按p粘贴
+ vim是在terminal中运行的，按【Ctrl&#43;Alt&#43;T】打开终端之后
+ 在command模式下，vim中可以用【Page Up】和【Page Down】来进行翻页，vim中还支持【Ctrl&#43; F】来进行向下翻页，用【Ctrl&#43;B】进行向上翻页。
+ 在command模式下，vim中还支持【数字&#43;GG】快速定位，进行跳转到某一行的操作。
+ 在command模式下，vim支持【数字&#43;J】表示向下多少行，【数字&#43;K】表示向上多少行的操作。如果想要取消上述操作按【Esc】键即可取消。
+ 全局替换
+: % s/要替换的字符串/替换后的内容/g （g代表全局替换）  按u撤消上一步操作" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2019-11-07T19:23:28+08:00" />
+<meta property="article:modified_time" content="2019-11-07T19:23:28+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://CorPython.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="code Newbie" /></a>
+      <h1>code Newbie</h1>
+      <p>欢迎来到我的博客,code more.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/CorPython" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">vim基本操作及pacman常见指令</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Nov 7, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h2 id="vim指令">vim指令</h2>
+
+<h3 id="基础命令">基础命令</h3>
+
+<p><img src="https://i.loli.net/2019/11/07/y9QR8uYWJM2cdjT.png" alt="" /></p>
+
+<p><img src="https://i.loli.net/2019/11/07/UHRGawe4CpSQukr.png" alt="" /></p>
+
+<p><code>h</code>上    <code>j</code>下     <code>k</code> 上     <code>l</code>右</p>
+
+<p><code>b</code>:回退</p>
+
+<p><code>p</code>:粘贴</p>
+
+<p><code>y</code>:复制</p>
+
+<p><code>u</code>:撤消</p>
+
+<p><code>d</code>:剪切</p>
+
+<p><code>i</code>:进入<code>insert</code>模式</p>
+
+<p><code>a</code>:在当前光标后进入<code>insert</code>模式</p>
+
+<p><code>o</code>:在当前光标的下一行进入<code>insert</code>模式</p>
+
+<p><code>c</code>:剪切并进入<code>insert</code>模式</p>
+
+<p><code>v</code>：直接进入可视化visual模式</p>
+
+<p><code>V</code>：选择光标所在行并进入visual模式</p>
+
+<p><code>ctrl + v</code>：可以进入visual模式，选择一个长方形块进行操作</p>
+
+<p><code>w</code>:保存</p>
+
+<p><code>q</code>:退出</p>
+
+<p><code>/</code>：使用 <code>/</code>+<code>你要搜索的字符</code>快速定位</p>
+
+<h3 id="常用指令">常用指令</h3>
+
+<p>1.按住<span style="color:red"><code>{</code></span>跳转到下一个段落</p>
+
+<p>2.按住<span style="color:red"><code>}</code></span>跳转到上一个段落</p>
+
+<p>3.按住<span style="color:red"><code>%</code></span>跳转到<code>[]</code>或者<code>{}</code>两边</p>
+
+<p>4.要使vim中文不乱码，在配置文件vimrc中添加</p>
+
+<pre><code>set fileencodings=utf-8,ucs-bom,cp936,big5  
+set fileencoding=utf-8
+</code></pre>
+
+<p>5.先按<span style="color:red"><code>d</code></span>跳转到再按数字键再按方向键往哪个方向剪切几个字符</p>
+
+<p>比如d5-&gt; 表示向右删除5个字符</p>
+
+<p>6.按两下<span style="color:red"><code>d</code></span>或者<span style='color:red'><code>c</code></span>剪切一行</p>
+
+<p>7.按<span style="color:red"><code>p</code></span>粘贴内容</p>
+
+<p>8.组合键<span style="color:red"><code>cw</code></span>删除字符并进入<code>insert</code>模式</p>
+
+<p>9.撤销操作：按<code>esc</code>退出进入<code>command</code>模式，按<span style='color:red'><code>u</code></span>撤销前一个操作</p>
+
+<p>10.剪切操作：在<code>command</code>模式下按<span style="color:red"><code>v</code></span>进入<code>visual</code>模式，按上下选中多行，按<span style='color:red'><code>c</code></span>或者<span style='color:red'><code>d</code></span>剪切</p>
+
+<p>11.粘贴操作：按<code>command</code>模式下按<span style='color:red'><code>p</code></span>粘贴剪切的内容</p>
+
+<p>12.vim中的左下上右代表的键还有<code>H J K L</code></p>
+
+<p>13.另存为：<span style='color:red'><code>wq</code></span>   + <code>文件名.后缀名</code></p>
+
+<ol>
+<li><p>按两下<span style="color:red"><code>y</code></span>复制一行,再按<code>p</code>粘贴</p></li>
+
+<li><p>vim是在<strong>terminal</strong>中运行的，按<strong>【Ctrl+Alt+T】</strong>打开终端之后</p></li>
+
+<li><p>在command模式下，vim中可以用【Page Up】和【Page Down】来进行翻页，vim中还支持【Ctrl+ F】来进行向下翻页，用【Ctrl+B】进行向上翻页。</p></li>
+
+<li><p>在command模式下，vim中还支持【数字+GG】快速定位，进行跳转到某一行的操作。</p></li>
+
+<li><p>在command模式下，vim支持【数字+J】表示向下多少行，【数字+K】表示向上多少行的操作。如果想要取消上述操作按【Esc】键即可取消。</p></li>
+
+<li><p>全局替换</p>
+
+<pre><code>: % s/要替换的字符串/替换后的内容/g （g代表全局替换）
+</code></pre></li>
+
+<li><p>按<span style='color:red'><code>u</code></span>撤消上一步操作</p></li>
+
+<li><p>按<span style='color:red'><code>ctrl + r</code></span>取消上一步被撤销的操作</p></li>
+
+<li><p>分屏命令</p>
+
+<p><code>vs</code>:左右分屏                 <code>sp</code>:上下分屏</p></li>
+
+<li><p>normal 和 insert 模式相互切换</p>
+
+<p>按下<code>ctrl + [</code> 或者<code>ctrl + c</code>退出<code>insert</code>模式</p>
+
+<p>在normal模式下输入<span style='color:red'><code>gi</code></span>进入最后一次编辑的地方</p></li>
+
+<li><p>在<code>insert</code>模式下进行删除的快捷键<span style='color:red'>这些命令同样可以在终端下使用</span></p>
+
+<p><code>ctrl + h</code>:删除上一个字符</p>
+
+<p><code>ctrl + w</code>：删除上一个单词</p>
+
+<p><code>ctrl + u</code>：删除这一行</p></li>
+
+<li><p><code>gg</code>将光标移动到文件开头</p>
+
+<p><code>G</code>将光标移动到文件结尾</p></li>
+</ol>
+
+<h2 id="vim多文件操作">vim多文件操作</h2>
+
+<p>分屏命令：<code>vs</code> 和 <code>sp</code></p>
+
+<p>打开多个缓冲区   <code>:e + 文件名</code></p>
+
+<p>使用   <code>:ls</code>  显示所有的缓冲区</p>
+
+<p>使用<code>:b + n</code>回到第n个缓冲区(如果文件没被修改过,请在b后面加上<code>!</code>)</p>
+
+<p>使用<code>bprevious</code>回到上一个缓冲区</p>
+
+<p>使用<code>ctrl + w</code>切换不同的窗口</p>
+
+<p>左右交换窗口可以使用<code>ctrl + w</code> + <code>L</code></p>
+
+<p>可以使用<code>vs+文件名分屏</code></p>
+
+<h2 id="vim-安装插件">vim 安装插件</h2>
+
+<p>vim在linux下的配置文件的地址有以下两者方法</p>
+
+<pre><code>vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc)
+或者
+vim ~/.vimrc
+</code></pre>
+
+<p>linux下安装插件管理器<code>vim_plug</code></p>
+
+<pre><code>curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+</code></pre>
+
+<p>将以下信息写入<code>.vimrc</code>中</p>
+
+<pre><code>&quot; Specify a directory for plugins
+&quot; - For Neovim: stdpath('data') . '/plugged'
+&quot; - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+&quot; Make sure you use single quotes
+
+&quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+
+&quot; Any valid git URL is allowed
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+&quot; Multiple Plug commands can be written in a single line using | separators
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+&quot; On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+&quot; Using a non-master branch
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
+&quot; Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+Plug 'fatih/vim-go', { 'tag': '*' }
+
+&quot; Plugin options
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+&quot; Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+&quot; Unmanaged plugin (manually installed and updated)
+Plug '~/my-prototype-plugin'
+
+&quot; Initialize plugin system
+call plug#end()
+</code></pre>
+
+<p>使用命令更新配置文件</p>
+
+<pre><code>:source ~/.vimrc 
+</code></pre>
+
+<p>加入自己想用的插件</p>
+
+<pre><code>call plug#begin('~/.vim/plugged')
+&quot; 将该插件加入到插件列表
+Plug 'mhinz/vim-startify'
+call plug#end()
+</code></pre>
+
+<p>开始安装插件</p>
+
+<pre><code>:PlugInstall 
+</code></pre>
+
+<h2 id="pacman指令">Pacman指令</h2>
+
+<p>1.安装软件</p>
+
+<pre><code>sudo pacman -S 软件名 
+</code></pre>
+
+<p>2.更新软件源并更新你的软件</p>
+
+<pre><code>sudo pacman -Syu
+</code></pre>
+
+<p>3.查询软件</p>
+
+<pre><code>sudo pacman -Ss 软件名
+</code></pre>
+
+<p>4.请理已安装的软件的缓存(安装包)</p>
+
+<pre><code>sudo pacman -Sc
+</code></pre>
+
+<p>5.删除某个软件</p>
+
+<ul>
+<li><p>只删除安装包</p>
+
+<pre><code>sudo pacman -R 软件名
+</code></pre></li>
+
+<li><p>删除安装包及其依赖</p>
+
+<pre><code>sudo pacman -Rs 软件名
+</code></pre></li>
+
+<li><p>在上面的基础上删除该软件的全局配置(推荐)</p>
+
+<pre><code>sudo pacman -Rns 软件名
+</code></pre></li>
+</ul>
+
+<p>6.查询本地已经安装的软件</p>
+
+<pre><code>sudo pacman -Q
+</code></pre>
+
+<p>7.查询软件的数量</p>
+
+<pre><code>sudo pacman -Qe | wc -l
+</code></pre>
+
+<p>8.省略查询到的版本号</p>
+
+<pre><code>sudo pacman -Qeq 
+</code></pre>
+
+<p>9.查询本地安装了的某个软件的信息</p>
+
+<pre><code>sudo pacman -Qs 软件名
+</code></pre>
+
+<p>10.查询不再需要的依赖</p>
+
+<pre><code>sudo pacman -Qdtq
+</code></pre>
+
+<p>11.删除不需要的依赖</p>
+
+<pre><code>sudo pacman -R $(pacman -Qdtq)
+</code></pre>
+
+<h2 id="终端下可用的快捷键">终端下可用的快捷键</h2>
+
+<p><code>ctrl + a</code>: 移动到开头</p>
+
+<p><code>ctrl + e</code>: 移动到结尾​</p>
+
+<p><code>ctrl + h</code>:删除上一个字符</p>
+
+<p><code>ctrl + w</code>：删除上一个单词</p>
+
+<p><code>ctrl + u</code>：删除这一行</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
