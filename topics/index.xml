@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topics on </title>
+    <link>https://CorPython.github.io/topics/</link>
+    <description>Recent content in Topics on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>15270405776@163.com (code NewBie)</managingEditor>
+    <webMaster>15270405776@163.com (code NewBie)</webMaster>
+    
+	<atom:link href="https://CorPython.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
