@@ -6,17 +6,27 @@
     <description>Recent content in Posts on code Newbie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Nov 2019 20:32:46 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Nov 2019 20:46:48 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Windows大量软件安装后乱码解决</title>
+      <link>https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Fri, 08 Nov 2019 20:46:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
+      <description> 写在前面 你是不是经常遇到windows软件安装后输入窗口输入中文全是乱码或者中文根本不能输入,本人也曾经遇到过这种问题,曾经使用的Dev C++5.11就出现过这种情况,虽然环境改成了中文却全是乱码,搜遍全网,也没有找到结果,就在不久前,我终于知道了问题的解决办法,请根据下列步骤进行修复,
+以win10系统为例 1.在设置中选择时间和语言 2.选择区域 3.选择其他设置 4.选择区域 5.注意这里是不是中文简体 ![i6.最重要的一步,一定要取消utf-8的勾选(极其重要) 我就是这里勾选了Beta版导致很多软件中文乱码,甚至不能使用,切记!!! </description>
+    </item>
+    
+    <item>
       <title>vscode配置文档</title>
-      <link>https://CorPython.github.io/post/new/</link>
+      <link>https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Thu, 07 Nov 2019 20:32:46 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/new/</guid>
+      <guid>https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/</guid>
       <description>vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件
 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可
 注意:在所有的mingw64的位置改为自己电脑上的配置 launch.json { &amp;quot;version&amp;quot;: &amp;quot;0.2.0&amp;quot;, &amp;quot;configurations&amp;quot;: [ { // 配置 VS Code 调试行为： &amp;quot;name&amp;quot;: &amp;quot;c/c++&amp;quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。 &amp;quot;preLaunchTask&amp;quot;: &amp;quot;Compile&amp;quot;, // 调试会话开始前要运行的任务。 &amp;quot;type&amp;quot;: &amp;quot;cppdbg&amp;quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。 &amp;quot;request&amp;quot;: &amp;quot;launch&amp;quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ). &amp;quot;program&amp;quot;: &amp;quot;${fileDirname}/${fileBasenameNoExtension}.exe&amp;quot;, // 调试器将启动或附加的可执行文件的完整路径。 &amp;quot;externalConsole&amp;quot;: false, // 设置是否显示外部控制台。 // 配置目标应用程序： &amp;quot;args&amp;quot;: [], // 设置调试时传递给程序的命令行参数。 &amp;quot;cwd&amp;quot;: &amp;quot;${workspaceFolder}&amp;quot;, // 设置调试器启动的应用程序的工作目录。 &amp;quot;environment&amp;quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &amp;quot;name&amp;quot;: &amp;quot;squid&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;clam&amp;quot; } ]。 // 自定义 GDB 或者 LLDB： &amp;quot;windows&amp;quot;: { &amp;quot;MIMode&amp;quot;: &amp;quot;gdb&amp;quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。 &amp;quot;miDebuggerPath&amp;quot;: &amp;quot;D:/mingw64/mingw64/bin/gdb.</description>
@@ -37,10 +47,10 @@ git add -A //将修改的文件提交到缓冲区 git commit -m &#39;提交说�
     
     <item>
       <title>GitHub相关</title>
-      <link>https://CorPython.github.io/post/first/</link>
+      <link>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/first/</guid>
+      <guid>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</guid>
       <description> 1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息  .git文件中的信息有以下  config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端钩子脚本。 info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件 objects 目录存储所有数据内容 refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等  2.在文件夹中新建一个文件README.md vim README.md cat README.md  3.连接GitHub 本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY mkdir .ssh//创建一个文件夹.ssh cd .ssh/ ssh-keygen -t rsa -C &amp;quot;1337425156zhang@gmail.com&amp;quot;//生成ssh密钥  4.将生成的ssh信息复制到gtihub cd .ssh cat id_rsa.pub  5.测试是否连接到github ssh -T git@github.com -i /e/git_notes/.ssh/id_rsa  6.配置config </description>
     </item>
     
