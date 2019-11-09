@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>code show</title>
+    <title>code show的博客</title>
     <link>https://CorPython.github.io/</link>
-    <description>Recent content on code show</description>
+    <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Nov 2019 09:54:11 +0800</lastBuildDate>
@@ -38,7 +38,7 @@
       <guid>https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/</guid>
       <description>vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件
 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可
-注意:在所有的mingw64的位置改为自己电脑上的配置 launch.json { &amp;quot;version&amp;quot;: &amp;quot;0.2.0&amp;quot;, &amp;quot;configurations&amp;quot;: [ { // 配置 VS Code 调试行为： &amp;quot;name&amp;quot;: &amp;quot;c/c++&amp;quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。 &amp;quot;preLaunchTask&amp;quot;: &amp;quot;Compile&amp;quot;, // 调试会话开始前要运行的任务。 &amp;quot;type&amp;quot;: &amp;quot;cppdbg&amp;quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。 &amp;quot;request&amp;quot;: &amp;quot;launch&amp;quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ). &amp;quot;program&amp;quot;: &amp;quot;${fileDirname}/${fileBasenameNoExtension}.exe&amp;quot;, // 调试器将启动或附加的可执行文件的完整路径。 &amp;quot;externalConsole&amp;quot;: false, // 设置是否显示外部控制台。 // 配置目标应用程序： &amp;quot;args&amp;quot;: [], // 设置调试时传递给程序的命令行参数。 &amp;quot;cwd&amp;quot;: &amp;quot;${workspaceFolder}&amp;quot;, // 设置调试器启动的应用程序的工作目录。 &amp;quot;environment&amp;quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &amp;quot;name&amp;quot;: &amp;quot;squid&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;clam&amp;quot; } ]。 // 自定义 GDB 或者 LLDB： &amp;quot;windows&amp;quot;: { &amp;quot;MIMode&amp;quot;: &amp;quot;gdb&amp;quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。 &amp;quot;miDebuggerPath&amp;quot;: &amp;quot;D:/mingw64/mingw64/bin/gdb.</description>
+注意:在所有的mingw64的位置改为自己电脑上的配置 launch.json { &amp;quot;version&amp;quot;: &amp;quot;0.2.0&amp;quot;, &amp;quot;configurations&amp;quot;: [ { // 配置 VS Code 调试行为： &amp;quot;name&amp;quot;: &amp;quot;c/c++&amp;quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。 &amp;quot;preLaunchTask&amp;quot;: &amp;quot;Compile&amp;quot;, // 调试会话开始前要运行的任务。 &amp;quot;type&amp;quot;: &amp;quot;cppdbg&amp;quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。 &amp;quot;request&amp;quot;: &amp;quot;launch&amp;quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ). &amp;quot;program&amp;quot;: &amp;quot;${fileDirname}/${fileBasenameNoExtension}.exe&amp;quot;, // 调试器将启动或附加的可执行文件的完整路径。 &amp;quot;externalConsole&amp;quot;: false, // 设置是否显示外部控制台。 // 配置目标应用程序： &amp;quot;args&amp;quot;: [], // 设置调试时传递给程序的命令行参数。 &amp;quot;cwd&amp;quot;: &amp;quot;${workspaceFolder}&amp;quot;, // 设置调试器启动的应用程序的工作目录。 &amp;quot;environment&amp;quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &amp;quot;name&amp;quot;: &amp;quot;squid&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;clam&amp;quot; } ]。 // 自定义 GDB 或者 LLDB： &amp;quot;windows&amp;quot;: { &amp;quot;MIMode&amp;quot;: &amp;quot;gdb&amp;quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。 &amp;quot;miDebuggerPath&amp;quot;: &amp;quot;D:/mingw64/mingw64/bin/gdb.exe&amp;quot; // 调试器的路径，修改为你的安装路径 }, &amp;quot;miDebuggerArgs&amp;quot;: &amp;quot;&amp;quot;, // 传递给调试器的附加参数 &amp;quot;stopAtEntry&amp;quot;: false, // 设置调试器是否停止在目标的入口（附加时忽略）。默认值为 false。 &amp;quot;setupCommands&amp;quot;: [ { // 执行下面的命令数组以设置 GDB 或 LLDB &amp;quot;description&amp;quot;: &amp;quot;Enable pretty-printing for gdb&amp;quot;, &amp;quot;text&amp;quot;: &amp;quot;-enable-pretty-printing&amp;quot;, // 鼠标悬停查看变量的值，需要启用 pretty-printing 。 &amp;quot;ignoreFailures&amp;quot;: true // 忽略失败的命令，默认为 false 。 } ] } ] }  tasks.</description>
     </item>
     
     <item>
@@ -114,7 +114,16 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
  在command模式下，vim中还支持【数字+GG】快速定位，进行跳转到某一行的操作。
  在command模式下，vim支持【数字+J】表示向下多少行，【数字+K】表示向上多少行的操作。如果想要取消上述操作按【Esc】键即可取消。
  全局替换
-: % s/要替换的字符串/替换后的内容/g （g代表全局替换）  按u撤消上一步操作</description>
+: % s/要替换的字符串/替换后的内容/g （g代表全局替换）  按u撤消上一步操作
+ 按ctrl + r取消上一步被撤销的操作
+ 分屏命令
+vs:左右分屏 sp:上下分屏
+ normal 和 insert 模式相互切换
+按下ctrl + [ 或者ctrl + c退出insert模式
+在normal模式下输入gi进入最后一次编辑的地方
+ 在insert模式下进行删除的快捷键这些命令同样可以在终端下使用
+ctrl + h:删除上一个字符
+ctrl + w：删除上一个单词</description>
     </item>
     
     <item>
@@ -139,7 +148,38 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
 9、新建一个窗口 : ctrl + shift + n
 10、行增加缩进: ctrl + [
 11、行减少缩进: ctrl + ]
-12、裁剪尾随空格(去掉一行的末尾那些没用的空格) : ctrl + shift + x</description>
+12、裁剪尾随空格(去掉一行的末尾那些没用的空格) : ctrl + shift + x
+13、字体放大/缩小: ctrl + ( + 或 - )
+14、拆分编辑器 : ctrl + 1/2/3
+15、切换窗口 : ctrl + shift + left/right
+  16、关闭编辑器窗口 : ctrl + w</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>https://CorPython.github.io/about/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/about/</guid>
+      <description> 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 </description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://CorPython.github.io/archives/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>最近动态</title>
+      <link>https://CorPython.github.io/news/%E6%9C%80%E6%96%B0/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/news/%E6%9C%80%E6%96%B0/</guid>
+      <description> 暂时没有写内容,敬请期待 </description>
     </item>
     
   </channel>
