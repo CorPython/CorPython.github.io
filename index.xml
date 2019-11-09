@@ -137,10 +137,10 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
     
     <item>
       <title>关于</title>
-      <link>https://CorPython.github.io/about/about/</link>
+      <link>https://CorPython.github.io/about/</link>
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/about/about/</guid>
+      <guid>https://CorPython.github.io/about/</guid>
       <description> 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 </description>
     </item>
     
@@ -155,10 +155,10 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
     
     <item>
       <title>最近动态</title>
-      <link>https://CorPython.github.io/new/%E6%9C%80%E8%BF%91%E5%8A%A8%E6%80%81/</link>
+      <link>https://CorPython.github.io/new/</link>
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/new/%E6%9C%80%E8%BF%91%E5%8A%A8%E6%80%81/</guid>
+      <guid>https://CorPython.github.io/new/</guid>
       <description> 暂时没有写内容,敬请期待 暂时没有写内容,敬请期待 暂时没有写内容,敬请期待 </description>
     </item>
     
