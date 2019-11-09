@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on code show的博客</title>
-    <link>https://CorPython.github.io/about/</link>
-    <description>Recent content in Abouts on code show的博客</description>
+    <title>Aboutmes on code show的博客</title>
+    <link>https://CorPython.github.io/aboutme/</link>
+    <description>Recent content in Aboutmes on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Nov 2019 19:23:28 +0800</lastBuildDate>
     
-	<atom:link href="https://CorPython.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://CorPython.github.io/aboutme/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>关于</title>
-      <link>https://CorPython.github.io/about/about/</link>
+      <link>https://CorPython.github.io/aboutme/about/</link>
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/about/about/</guid>
+      <guid>https://CorPython.github.io/aboutme/about/</guid>
       <description> 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 </description>
     </item>
     

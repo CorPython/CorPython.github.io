@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on code show的博客</title>
+    <link>https://CorPython.github.io/new/</link>
+    <description>Recent content in News on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Nov 2019 19:23:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/new/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>最近动态</title>
+      <link>https://CorPython.github.io/new/%E6%9C%80%E8%BF%91%E5%8A%A8%E6%80%81/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/new/%E6%9C%80%E8%BF%91%E5%8A%A8%E6%80%81/</guid>
+      <description> 暂时没有写内容,敬请期待 暂时没有写内容,敬请期待 暂时没有写内容,敬请期待 </description>
+    </item>
+    
+  </channel>
+</rss>

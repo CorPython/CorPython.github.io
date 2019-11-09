@@ -47,7 +47,7 @@
                 <nav id="nav-menu" class="clearfix">
                     <a class="current" href="https://CorPython.github.io/">首页</a>
                     
-                    <a  href="https://CorPython.github.io/news/" title="最新动态">最新动态</a>
+                    <a  href="https://CorPython.github.io/new/" title="最新动态">最新动态</a>
                     
                     <a  href="https://CorPython.github.io/archives/" title="归档">归档</a>
                     
@@ -71,7 +71,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="连接Mongodb数据库" >连接Mongodb数据库</a>
+                                    <a href="https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5Mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="连接Mongodb数据库" >连接Mongodb数据库</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -81,7 +81,7 @@
                             <div class="post-content">
                                  1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径  2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功 ……
                             </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/">阅读全文</a></p>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5Mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/">阅读全文</a></p>
                         </article>
                     
                     
@@ -118,7 +118,7 @@
                             <div class="post-content">
                                 vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件
 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可
-注意:在所有的mingw64的位置改为自己电脑上的配置 launch.json { &quot;version&quot;: &quot;0.2.0&quot;, &quot;configurations&quot;: [ { // 配置 VS Code 调试行为： &quot;name&quot;: &quot;c/c++&quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。 &quot;preLaunchTask&quot;: &quot;Compile&quot;, // 调试会话开始前要运行的任务。 &quot;type&quot;: &quot;cppdbg&quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。 &quot;request&quot;: &quot;launch&quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ). &quot;program&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}.exe&quot;, // 调试器将启动或附加的可执行文件的完整路径。 &quot;externalConsole&quot;: false, // 设置是否显示外部控制台。 // 配置目标应用程序： &quot;args&quot;: [], // 设置调试时传递给程序的命令行参数。 &quot;cwd&quot;: &quot;${workspaceFolder}&quot;, // 设置调试器启动的应用程序的工作目录。 &quot;environment&quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &quot;name&quot;: &quot;squid&quot;, &quot;value&quot;: &quot;clam&quot; } ]。 // 自定义 GDB 或者 LLDB： &quot;windows&quot;: { &quot;MIMode&quot;: &quot;gdb&quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。 &quot;miDebuggerPath&quot;: &quot;D:/mingw64/mingw64/bin/gdb.exe&quot; // 调试器的路径，修改为你的安装路径 }, &quot;miDebuggerArgs&quot;: &quot;&quot;, // 传递给调试器的附加参数 &quot;stopAtEntry&quot;: false, // 设置调试器是否停止在目标的入口（附加时忽略）。默认值为 false。 &quot;setupCommands&quot;: [ { // 执行下面的命令数组以设置 GDB 或 LLDB &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;, &quot;text&quot;: &quot;-enable-pretty-printing&quot;, // 鼠标悬停查看变量的值，需要启用 pretty-printing 。 &quot;ignoreFailures&quot;: true // 忽略失败的命令，默认为 false 。 } ] } ] }  tasks.……
+注意:在所有的mingw64的位置改为自己电脑上的配置 launch.json { &quot;version&quot;: &quot;0.2.0&quot;, &quot;configurations&quot;: [ { // 配置 VS Code 调试行为： &quot;name&quot;: &quot;c/c++&quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。 &quot;preLaunchTask&quot;: &quot;Compile&quot;, // 调试会话开始前要运行的任务。 &quot;type&quot;: &quot;cppdbg&quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。 &quot;request&quot;: &quot;launch&quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ). &quot;program&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}.exe&quot;, // 调试器将启动或附加的可执行文件的完整路径。 &quot;externalConsole&quot;: false, // 设置是否显示外部控制台。 // 配置目标应用程序： &quot;args&quot;: [], // 设置调试时传递给程序的命令行参数。 &quot;cwd&quot;: &quot;${workspaceFolder}&quot;, // 设置调试器启动的应用程序的工作目录。 &quot;environment&quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &quot;name&quot;: &quot;squid&quot;, &quot;value&quot;: &quot;clam&quot; } ]。 // 自定义 GDB 或者 LLDB： &quot;windows&quot;: { &quot;MIMode&quot;: &quot;gdb&quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。 &quot;miDebuggerPath&quot;: &quot;D:/mingw64/mingw64/bin/gdb.……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/">阅读全文</a></p>
                         </article>
@@ -158,7 +158,7 @@ git add -A //将修改的文件提交到缓冲区 git commit -m '提交说明' g
                             </date>
                             
                             <div class="post-content">
-                                 1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息  .git文件中的信息有以下  config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端钩子脚本。 info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件 objects 目录存储所有数据内容 refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等  2.在文件夹中新建一个文件README.md vim README.md cat README.md  3.连接GitHub 本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY mkdir .ssh//创建一个文件夹.ssh cd .ssh/ ssh-keygen -t rsa -C &quot;1337425156zhang@gmail.com&quot;//生成ssh密钥  4.将生成的ssh信息复制到gtihub cd .ssh cat id_rsa.pub  5.测试是否连接到github ssh -T git@github.com -i /e/git_notes/.ssh/id_rsa  6.配置config ……
+                                1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息  .git文件中的信息有以下  config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端钩子脚本。 info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件 objects 目录存储所有数据内容 refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等  2.在文件夹中新建一个文件README.md vim README.md cat README.md  3.连接GitHub 本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY mkdir .ssh//创建一个文件夹.ssh cd .ssh/ ssh-keygen -t rsa -C &quot;1337425156zhang@gmail.com&quot;//生成ssh密钥  4.将生成的ssh信息复制到gtihub cd .ssh cat id_rsa.pub  5.测试是否连接到github ssh -T git@github.……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/">阅读全文</a></p>
                         </article>
@@ -226,20 +226,7 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
 13.另存为：wq + 文件名.后缀名
  按两下y复制一行,再按p粘贴
  vim是在terminal中运行的，按【Ctrl+Alt+T】打开终端之后
- 在command模式下，vim中可以用【Page Up】和【Page Down】来进行翻页，vim中还支持【Ctrl+ F】来进行向下翻页，用【Ctrl+B】进行向上翻页。
- 在command模式下，vim中还支持【数字+GG】快速定位，进行跳转到某一行的操作。
- 在command模式下，vim支持【数字+J】表示向下多少行，【数字+K】表示向上多少行的操作。如果想要取消上述操作按【Esc】键即可取消。
- 全局替换
-: % s/要替换的字符串/替换后的内容/g （g代表全局替换）  按u撤消上一步操作
- 按ctrl + r取消上一步被撤销的操作
- 分屏命令
-vs:左右分屏 sp:上下分屏
- normal 和 insert 模式相互切换
-按下ctrl + [ 或者ctrl + c退出insert模式
-在normal模式下输入gi进入最后一次编辑的地方
- 在insert模式下进行删除的快捷键这些命令同样可以在终端下使用
-ctrl + h:删除上一个字符
-ctrl + w：删除上一个单词……
+ 在command模式下，vim中可以用【Page Up】和【Page Down】来进行翻页，vim中还支持【Ctrl+ F】来进行向下翻页，用【Ctrl+B】进行向上翻页。……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/">阅读全文</a></p>
                         </article>
@@ -270,14 +257,7 @@ ctrl + w：删除上一个单词……
 6、控制台终端显示与隐藏：ctrl + ~
 7、查找文件/安装vs code 插件地址：ctrl + p
   8、代码格式化：shift + alt +f
-9、新建一个窗口 : ctrl + shift + n
-10、行增加缩进: ctrl + [
-11、行减少缩进: ctrl + ]
-12、裁剪尾随空格(去掉一行的末尾那些没用的空格) : ctrl + shift + x
-13、字体放大/缩小: ctrl + ( + 或 - )
-14、拆分编辑器 : ctrl + 1/2/3
-15、切换窗口 : ctrl + shift + left/right
-  16、关闭编辑器窗口 : ctrl + w……
+9、新建一个窗口 : ctrl + shift + n……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/">阅读全文</a></p>
                         </article>
@@ -287,7 +267,7 @@ ctrl + w：删除上一个单词……
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/about/" title="关于" >关于</a>
+                                    <a href="https://CorPython.github.io/about/about/" title="关于" >关于</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -297,7 +277,7 @@ ctrl + w：删除上一个单词……
                             <div class="post-content">
                                  这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 ……
                             </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/about/">阅读全文</a></p>
+                            <p class="readmore"><a href="https://CorPython.github.io/about/about/">阅读全文</a></p>
                         </article>
                     
                     
@@ -363,7 +343,7 @@ ctrl + w：删除上一个单词……
 <ul class="widget-list">
     
     <li>
-        <a href="https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="连接Mongodb数据库">连接Mongodb数据库</a>
+        <a href="https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5Mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="连接Mongodb数据库">连接Mongodb数据库</a>
     </li>
     
     <li>
