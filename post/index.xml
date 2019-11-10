@@ -6,19 +6,10 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Nov 2019 09:54:11 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Nov 2019 20:46:48 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>连接Mongodb数据库</title>
-      <link>https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5Mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-      <pubDate>Sat, 09 Nov 2019 09:54:11 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5Mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
-      <description> 1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径  2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功 </description>
-    </item>
     
     <item>
       <title>Windows大量软件安装后乱码解决</title>
@@ -28,6 +19,15 @@
       <guid>https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
       <description> 写在前面 你是不是经常遇到windows软件安装后输入窗口输入中文全是乱码或者中文根本不能输入,本人也曾经遇到过这种问题,曾经使用的Dev C++5.11就出现过这种情况,虽然环境改成了中文却全是乱码,搜遍全网,也没有找到结果,就在不久前,我终于知道了问题的解决办法,请根据下列步骤进行修复,
 以win10系统为例 1.在设置中选择时间和语言 2.选择区域 3.选择其他设置 4.选择区域 5.注意这里是不是中文简体 ![i6.最重要的一步,一定要取消utf-8的勾选(极其重要) 我就是这里勾选了Beta版导致很多软件中文乱码,甚至不能使用,切记!!! </description>
+    </item>
+    
+    <item>
+      <title>连接Mongodb数据库</title>
+      <link>https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5Mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Fri, 08 Nov 2019 09:54:11 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E8%BF%9E%E6%8E%A5Mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description> 1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径  2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功 </description>
     </item>
     
     <item>
