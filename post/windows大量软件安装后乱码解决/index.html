@@ -168,21 +168,30 @@
 
 
 
-<div id="disqus_thread"></div>
+
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
-
-
-
-
-
-(function() { 
-var d = document, s = d.createElement('script');
-s.src = 'https://corpython.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+  const gitalk = new Gitalk({
+    clientID: '0646c0805e71e693ccea',
+    clientSecret: 'ee9386a3dd89764f8304d219f9d82a8db545a731',
+    repo: 'CorPython.github.io',
+    owner: 'CorPython',
+    admin: ['CorPython'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function () {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
                 </div>
             </div>
             <div id="secondary">
