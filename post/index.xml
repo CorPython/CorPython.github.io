@@ -6,10 +6,19 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2019 18:59:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2019 20:40:54 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vscode终端中文乱码应对方案</title>
+      <link>https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Mon, 11 Nov 2019 20:40:54 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</guid>
+      <description> 解决vscode终端中文乱码 1.查看cmd窗口编码，GBK的编码为936，cmd的默认编码为GBK,而很多编译器的默认编码为UTF-8，所以中文会出现乱码，比如vscode下默认编码为UTF-8 使用chcp查看cmd的编码，如果不是UTF-8，可以使用chcp 65001这个命令 2.注意此时你的终端已经默认是utf-8编码了，所以你的文件也必须是utf-8编码的。如果之前是GBK或者是其他编码，一定要重新编码为utf-8(一定要注意这一点) 3.在vscode的配置文件settings.json中添加下列语句 &amp;quot;terminal.integrated.shellArgs.windows&amp;quot;: [&amp;quot;/K chcp 65001 &amp;gt;nul&amp;quot;],  4.最终效果 中文完美显示!!!! 最后: 建议在使用windows系统使用git-bash这个终端,不仅使用git简单快速,还内置了vim,并且支持许多linux下同样的命令,可以减少使用cmd这个让人上火的软件.软件地址在这里 </description>
+    </item>
     
     <item>
       <title>Hugo博客使用gittalk评论系统</title>
