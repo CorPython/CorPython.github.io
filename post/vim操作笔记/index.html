@@ -440,7 +440,7 @@ call plug#end()
     repo: 'CorPython.github.io',
     owner: 'CorPython',
     admin: ['CorPython'],
-    id: location.pathname, 
+    id: md5(location.pathname), 
     distractionFreeMode: false 
   });
   (function () {
