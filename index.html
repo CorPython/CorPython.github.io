@@ -71,6 +71,60 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="Hugo博客使用gittalk评论系统" >Hugo博客使用gittalk评论系统</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月11日
+                            </date>
+                            
+                            <div class="post-content">
+                                1.进入github官方网站,登陆自己的github-&gt;settings-&gt;Devloper settings-&gt;Github Apps会出现下图  Application name:给应用起个名字,根据自己的想法 Homepage:写你的博客地址 Application description:为你的应用写一段描述 Application callback URL:回调地址,可以写你的博客地址  2.点击Register application创建,生成自己的client key和client Secret 3.找到配置评论的文件,比如我的文件是comments.html,该文件的位置在\themes\maupassant\layouts\partials\comment.html {{ if .Site.Params.enableGitalk }} &lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt; &lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt; &lt;script&gt; const gitalk = new Gitalk({ clientID: '{{ .Site.Params.Gitalk.clientID }}', clientSecret: '{{ .Site.Params.Gitalk.clientSecret }}', repo: '{{ .Site.Params.Gitalk.repo }}', owner: '{{ .……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="修复gitpush到github出错问题" >修复gitpush到github出错问题</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月11日
+                            </date>
+                            
+                            <div class="post-content">
+                                 当执行了git push -u origin master时,有时候会出现下图中的错误,主要时本地的代码和远程代码仓库的代码出现了冲突,需要同步远程的master 分支 要解决上述的冲突很简单,只需要下面两条指令即可完成 git pull origin master git push -u origin master  ……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/" title="Gittalk报错Error: Validation Failed" >Gittalk报错Error: Validation Failed</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月11日
+                            </date>
+                            
+                            <div class="post-content">
+                                 gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.找到配置评论的文件,比如我的文件是comments.html,该文件的位置在\themes\maupassant\layouts\partials\comment.html 2.将id:localtion.pathname改为id:decodeURI(location.pathname) 3.再重新启动博客,已经可以了 ……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
                                     <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Windows连接mongodb数据库" >Windows连接mongodb数据库</a>
                                 </h1>
                             </header>
@@ -229,72 +283,6 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
                         </article>
                     
                     
-		    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="Vscode快捷键" >Vscode快捷键</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-content">
-                                vscode  vs code 的常用快捷键
-  1、注释：
-　a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/
-　b) 取消单行注释：ctrl+k,ctrl+u
-　c) 多行注释：[alt+shift+A]
-　d) 多行注释：/**
-  2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移
-3、显示/隐藏左侧目录栏 ctrl + b
-4、复制当前行：shift + alt +up/down
-5、删除当前行：shift + ctrl + k
-6、控制台终端显示与隐藏：ctrl + ~
-7、查找文件/安装vs code 插件地址：ctrl + p
-  8、代码格式化：shift + alt +f……
-                            </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/">阅读全文</a></p>
-                        </article>
-                    
-                    
-		    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/about/" title="关于" >关于</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-content">
-                                 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 ……
-                            </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/about/">阅读全文</a></p>
-                        </article>
-                    
-                    
-		    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/archives/" title="归档" >归档</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-content">
-                                ……
-                            </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/archives/">阅读全文</a></p>
-                        </article>
-                    
-                    
                     
 
 
@@ -338,6 +326,18 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
 <ul class="widget-list">
     
     <li>
+        <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="Hugo博客使用gittalk评论系统">Hugo博客使用gittalk评论系统</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="修复gitpush到github出错问题">修复gitpush到github出错问题</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/" title="Gittalk报错Error: Validation Failed">Gittalk报错Error: Validation Failed</a>
+    </li>
+    
+    <li>
         <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Windows连接mongodb数据库">Windows连接mongodb数据库</a>
     </li>
     
@@ -363,10 +363,6 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
     
     <li>
         <a href="https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="vim基本操作及pacman常见指令">vim基本操作及pacman常见指令</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="Vscode快捷键">Vscode快捷键</a>
     </li>
     
 </ul>
