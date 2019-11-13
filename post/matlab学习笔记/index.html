@@ -1,0 +1,2369 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.59.1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Matlab学习笔记 | code show的博客</title>
+    <meta property="og:title" content="Matlab学习笔记 - code show的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content="2019-11-13T16:05:31&#43;08:00">
+        
+        
+    <meta property="article:modified_time" content="2019-11-13T16:05:31&#43;08:00">
+        
+    <meta name="Keywords" content="java,c,博客,c&#43;&#43;,python,linux">
+    <meta name="description" content="Matlab学习笔记">
+        
+    <meta name="author" content="code show">
+    <meta property="og:url" content="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    
+        <link rel="stylesheet" href="/css/prism.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+<body>
+<header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://CorPython.github.io/">
+                        code show的博客
+                    </a>
+                
+                <p class="description">专注于Java、C/C&#43;&#43;、python</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://CorPython.github.io/">首页</a>
+                    
+                    <a  href="https://CorPython.github.io/new/" title="最新动态">最新动态</a>
+                    
+                    <a  href="https://CorPython.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://CorPython.github.io/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="body">
+        
+        
+    <div class="container">
+        <div class="col-group">
+
+            <div class="col-8" id="main">
+                <div class="res-cons">
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">Matlab学习笔记</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2019年11月13日
+                        </date>
+                        
+                        
+                        <div class="post-meta">
+                            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span> 阅读</span></span>
+                        </div>
+                        
+                        
+                        <div class="post-content">
+                            
+
+<h2 id="绘图">绘图</h2>
+
+<h3 id="添加标签-标题-生成网格线-美化图形">添加标签，标题，生成网格线，美化图形</h3>
+
+<pre><code class="language-matlab">x = [0:0.01:10];
+y = sin(x);
+plot(x, y), xlabel('x'), ylabel('Sin(x)'), title('Sin(x) Graph'),
+grid on,axis equal#添加网格线和美化图形
+</code></pre>
+
+<p><img src="https://i.loli.net/2019/11/13/G3CvmVySnpuaeqO.png" alt="" /></p>
+
+<h3 id="绘制多个函数">绘制多个函数</h3>
+
+<pre><code class="language-matlab">x = [0 : 0.01: 10];
+y = sin(x);
+g = cos(x);
+plot(x, y, x, g, '.-'), legend('Sin(x)', 'Cos(x)')
+</code></pre>
+
+<p><img src="https://i.loli.net/2019/11/13/QERpcVzeA5Mh9Ct.png" alt="" /></p>
+
+<h3 id="绘制多个图象">绘制多个图象</h3>
+
+<pre><code class="language-matlab">plot(x,y,x,g)
+#等价于
+plot(x,y)
+hold all#保留上次绘图并添加新的绘图
+plot(x,g)
+</code></pre>
+
+<h3 id="设置坐标轴的刻度范围">设置坐标轴的刻度范围</h3>
+
+<pre><code class="language-matlab">axis([xmin xmax ymin ymax])
+axis([xmin xmax ymin ymax zmin zmax cmin cmax]);
+% 设置x，y，z轴的范围及当前颜色刻度范围
+axis 'auto x'% 自动设置x轴的范围
+axis(axis) % 固定当前坐标轴的范围
+</code></pre>
+
+<h3 id="用subplot画多个子图">用subplot画多个子图</h3>
+
+<p>subplot(m,n,p)</p>
+
+<p>m , n分别代表位置矩阵的行和列，p代表m行的第p列</p>
+
+<pre><code class="language-matlab">x = 0:0.01:5;
+y = exp(-1.5*x).*sin(10*x);
+subplot(1,3,1)
+plot(x,y), xlabel('x'),ylabel('exp(–1.5x)*sin(10x)'),axis([0 5 -1 1])
+y = exp(-2*x).*sin(10*x);
+subplot(1,3,2)
+plot(x,y),xlabel('x'),ylabel('exp(–2x)*sin(10x)'),axis([0 5 -1 1])
+y = exp(-2.5*x).*sin(10*x);
+subplot(1,3,3)
+plot(x,y),xlabel('x'),ylabel('exp(–2x)*sin(10x)'),axis([0 5 -1 1])
+</code></pre>
+
+<p><img src="https://i.loli.net/2019/11/13/KQwtCvPaOmoslcT.png" alt="" /></p>
+
+<h3 id="绘图基本格式">绘图基本格式</h3>
+
+<pre><code class="language-matlab">%% 绘图
+set(gca,'linewidth',2) 
+% 与最短路程关系图
+subplot(3,1,1);% 子图
+plot(R,Y1, '-r*', 'LineWidth', 2);
+set(gca,'linewidth',2); % 设置坐标轴线宽
+xlabel('蚂蚁数与城市数之比');% x轴标签
+ylabel('最短路程');% y轴标签
+title('蚂蚁数与最短路程关系图','fontsize',12);% 标题及字体大小
+legend('最短路程'); % 设置图例
+</code></pre>
+
+<h3 id="绘图知识补充">绘图知识补充</h3>
+
+<pre><code class="language-matlab">set(gca,'XTickLabel','')%去掉x轴上的标签
+hold on %保持当前图形
+hold off % 解除hold on命令
+grid on% 添加网格线
+legend('first','second',1)%前两个参数分别是两个图例的名称，第三个参数是图例的位置
+
+</code></pre>
+
+<h2 id="图形">图形</h2>
+
+<h3 id="绘制条形图">绘制条形图</h3>
+
+<pre><code>x = 1:10;
+y = [75, 58, 90, 87, 50, 85, 92, 75, 60, 95];
+bar(x,y), xlabel('Student'),ylabel('Score'),
+title('First Sem')
+print -deps graph.eps#纯美化工作,可写可不写
+</code></pre>
+
+<p><img src="https://i.loli.net/2019/11/13/rHfpsR6yu3d7ing.png" alt="" /></p>
+
+<h3 id="绘制等高线图">绘制等高线图</h3>
+
+<p>contour 线的两个变量的函数的曲线，沿着该函数具有一个恒定值。加入等于标高点，一个给定的水平，如平均海平面以上用于创建等高线图等高线。</p>
+
+<p>meshgrid 命令是用于产生一个矩阵的元素，赋予 x 和 y 的范围内进行了在每一种情况下的增量同规格一起。</p>
+
+<pre><code class="language-matlab">[x,y] = meshgrid(-5:0.1:5,-3:0.1:3); % 设置变量定义域
+g = x.^2 + y.^2;                     % 设置函数
+[C, h] = contour(x,y,g);             % 调用contour()函数
+set(h,'ShowText','on','TextStep',get(h,'LevelStep')*2)
+print -deps graph.eps
+
+</code></pre>
+
+<p><img src="https://i.loli.net/2019/11/13/VN9LCIAdQ2u7go5.png" alt="" /></p>
+
+<h3 id="三维图">三维图</h3>
+
+<p>三维绘图基本显示两个变量中的一个函数定义的表面，g = f (x,y)。像以前一样，定义 g，我们首先创建一组点（X，Y）函数，使用 meshgrid 命令在域；接下来，我们该函数本身分配；最后使用 surf 命令来创建曲面图。</p>
+
+<pre><code class="language-matlab">[x,y] = meshgrid(-2:.2:2);
+g = x .* exp(-x.^2 - y.^2);
+surf(x, y, g)
+print -deps graph.eps
+
+</code></pre>
+
+<p><img src="https://i.loli.net/2019/11/13/DPhW2rQg5FB4SZA.png" alt="" /></p>
+
+<h2 id="matlab基础">MATLAB基础</h2>
+
+<p>MATLAB常用的运算符和特殊字符如下表所示：</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">目的</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>+</strong></td>
+<td align="center">加；加法运算符</td>
+</tr>
+
+<tr>
+<td align="center"><strong>-</strong></td>
+<td align="center">减；减法运算符</td>
+</tr>
+
+<tr>
+<td align="center">*****</td>
+<td align="center">标量和矩阵乘法运算符</td>
+</tr>
+
+<tr>
+<td align="center"><strong>.*</strong></td>
+<td align="center">数组乘法运算符</td>
+</tr>
+
+<tr>
+<td align="center"><strong>^</strong></td>
+<td align="center">标量和矩阵求幂运算符</td>
+</tr>
+
+<tr>
+<td align="center"><strong>.^</strong></td>
+<td align="center">数组求幂运算符</td>
+</tr>
+
+<tr>
+<td align="center">*<em>*</em></td>
+<td align="center">矩阵左除</td>
+</tr>
+
+<tr>
+<td align="center"><strong>/</strong></td>
+<td align="center">矩阵右除</td>
+</tr>
+
+<tr>
+<td align="center">*<em>.*</em></td>
+<td align="center">阵列左除</td>
+</tr>
+
+<tr>
+<td align="center"><strong>./</strong></td>
+<td align="center">阵列右除</td>
+</tr>
+
+<tr>
+<td align="center"><strong>:</strong></td>
+<td align="center">向量生成；子阵提取</td>
+</tr>
+
+<tr>
+<td align="center"><strong>( )</strong></td>
+<td align="center">下标运算；参数定义</td>
+</tr>
+
+<tr>
+<td align="center"><strong>[ ]</strong></td>
+<td align="center">矩阵生成</td>
+</tr>
+
+<tr>
+<td align="center"><strong>.</strong></td>
+<td align="center">点乘运算，常与其他运算符联合使用</td>
+</tr>
+
+<tr>
+<td align="center"><strong>…</strong></td>
+<td align="center">续行标志；行连续运算符</td>
+</tr>
+
+<tr>
+<td align="center"><strong>,</strong></td>
+<td align="center">分行符（该行结果不显示）</td>
+</tr>
+
+<tr>
+<td align="center"><strong>;</strong></td>
+<td align="center">语句结束；分行符（该行结果显示）</td>
+</tr>
+
+<tr>
+<td align="center"><strong>%</strong></td>
+<td align="center">注释标志</td>
+</tr>
+
+<tr>
+<td align="center"><strong>_</strong></td>
+<td align="center">引用符号和转置运算符</td>
+</tr>
+
+<tr>
+<td align="center"><strong>._</strong></td>
+<td align="center">非共轭转置运算符</td>
+</tr>
+
+<tr>
+<td align="center"><strong>=</strong></td>
+<td align="center">赋值运算符</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab特殊变量和常量">MATLAB特殊变量和常量</h2>
+
+<p>MATLAB支持以下特殊变量和常量：</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>ans</strong></td>
+<td align="center">默认的变量名，以应答最近依次操作运算结果</td>
+</tr>
+
+<tr>
+<td align="center"><strong>eps</strong></td>
+<td align="center">浮点数的相对误差</td>
+</tr>
+
+<tr>
+<td align="center"><strong>i,j</strong></td>
+<td align="center">虚数单位，定义为 i2 = j2 = -1</td>
+</tr>
+
+<tr>
+<td align="center"><strong>Inf</strong></td>
+<td align="center">代表无穷大</td>
+</tr>
+
+<tr>
+<td align="center"><strong>NaN</strong></td>
+<td align="center">代表不定值（不是数字）</td>
+</tr>
+
+<tr>
+<td align="center"><strong>pi</strong></td>
+<td align="center">圆周率</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="变量">变量</h2>
+
+<p>变量命名：字母开头，后面可以接字母，数字，下划线，区分大小写</p>
+
+<p>在MATLAB中可以使用 <code>who</code>命令显示所有已经使用的变量名</p>
+
+<p>用<code>whos</code>命令可以显示更多变量信息</p>
+
+<p>用<code>clear</code>清空当前内存中的变量</p>
+
+<h2 id="长任务">长任务</h2>
+
+<p>长任务可以通过使用省略号（&hellip;）延伸到另一条线路。例如，</p>
+
+<pre><code class="language-matlab">initial_velocity = 0;
+acceleration = 9.8;
+time = 20;
+final_velocity = initial_velocity ...
+    + acceleration * time
+
+</code></pre>
+
+<h2 id="matlab的format函数">MATLAB的format函数</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Format函数</th>
+<th align="center">最多可显示</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">format short</td>
+<td align="center">小数点后4位十进制数（默认）</td>
+</tr>
+
+<tr>
+<td align="center">format short e</td>
+<td align="center">5位浮点表示</td>
+</tr>
+
+<tr>
+<td align="center">format long</td>
+<td align="center">15位定点表示</td>
+</tr>
+
+<tr>
+<td align="center">format long e</td>
+<td align="center">15位浮点表示</td>
+</tr>
+
+<tr>
+<td align="center">format bank</td>
+<td align="center">小数点后2个十进制数字</td>
+</tr>
+
+<tr>
+<td align="center">format +</td>
+<td align="center">正，负或零</td>
+</tr>
+
+<tr>
+<td align="center">format rat</td>
+<td align="center">有理数近似</td>
+</tr>
+
+<tr>
+<td align="center">format compact</td>
+<td align="center">变量之间没有空行</td>
+</tr>
+
+<tr>
+<td align="center">format loose</td>
+<td align="center">变量之间有空行</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab管理会话的命令">MATLAB管理会话的命令</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">目的/作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">clc</td>
+<td align="center">清除命令窗口。</td>
+</tr>
+
+<tr>
+<td align="center">clear</td>
+<td align="center">从内存中删除变量。</td>
+</tr>
+
+<tr>
+<td align="center">exist</td>
+<td align="center">检查存在的文件或变量。</td>
+</tr>
+
+<tr>
+<td align="center">global</td>
+<td align="center">声明变量为全局。</td>
+</tr>
+
+<tr>
+<td align="center">help</td>
+<td align="center">搜索帮助主题。</td>
+</tr>
+
+<tr>
+<td align="center">lookfor</td>
+<td align="center">搜索帮助关键字条目。</td>
+</tr>
+
+<tr>
+<td align="center">quit</td>
+<td align="center">停止MATLAB。</td>
+</tr>
+
+<tr>
+<td align="center">who</td>
+<td align="center">列出当前变量。</td>
+</tr>
+
+<tr>
+<td align="center">whos</td>
+<td align="center">列出当前变量（长显示）。</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab系统命令">MATLAB系统命令</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">目的/作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">cd</td>
+<td align="center">改变当前目录。</td>
+</tr>
+
+<tr>
+<td align="center">date</td>
+<td align="center">显示当前日期。</td>
+</tr>
+
+<tr>
+<td align="center">delete</td>
+<td align="center">删除一个文件。</td>
+</tr>
+
+<tr>
+<td align="center">diary</td>
+<td align="center">日记文件记录开/关切换。</td>
+</tr>
+
+<tr>
+<td align="center">dir</td>
+<td align="center">列出当前目录中的所有文件。</td>
+</tr>
+
+<tr>
+<td align="center">load</td>
+<td align="center">负载工作区从一个文件中的变量。</td>
+</tr>
+
+<tr>
+<td align="center">path</td>
+<td align="center">显示搜索路径。</td>
+</tr>
+
+<tr>
+<td align="center">pwd</td>
+<td align="center">显示当前目录。</td>
+</tr>
+
+<tr>
+<td align="center">save</td>
+<td align="center">保存在一个文件中的工作区变量。</td>
+</tr>
+
+<tr>
+<td align="center">type</td>
+<td align="center">显示一个文件的内容。</td>
+</tr>
+
+<tr>
+<td align="center">what</td>
+<td align="center">列出所有MATLAB文件在当前目录中。</td>
+</tr>
+
+<tr>
+<td align="center">wklread</td>
+<td align="center">读取.wk1电子表格文件。</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab向量-矩阵和阵列命令">MATLAB向量，矩阵和阵列命令</h2>
+
+<p>下表列出了MATLAB用于工作数组、矩阵和向量的各种命令：</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用/目的</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">cat</td>
+<td align="center">连接数组</td>
+</tr>
+
+<tr>
+<td align="center">find</td>
+<td align="center">查找非零元素的索引</td>
+</tr>
+
+<tr>
+<td align="center">length</td>
+<td align="center">计算元素数量</td>
+</tr>
+
+<tr>
+<td align="center">linspace</td>
+<td align="center">创建间隔向量</td>
+</tr>
+
+<tr>
+<td align="center">logspace</td>
+<td align="center">创建对数间隔向量</td>
+</tr>
+
+<tr>
+<td align="center">max</td>
+<td align="center">返回最大元素</td>
+</tr>
+
+<tr>
+<td align="center">min</td>
+<td align="center">返回最小元素</td>
+</tr>
+
+<tr>
+<td align="center">prod</td>
+<td align="center">计算数组元素的连乘积</td>
+</tr>
+
+<tr>
+<td align="center">reshape</td>
+<td align="center">重新调整矩阵的行数、列数、维数</td>
+</tr>
+
+<tr>
+<td align="center">size</td>
+<td align="center">计算数组大小</td>
+</tr>
+
+<tr>
+<td align="center">sort</td>
+<td align="center">排序每个列</td>
+</tr>
+
+<tr>
+<td align="center">sum</td>
+<td align="center">每列相加</td>
+</tr>
+
+<tr>
+<td align="center">eye</td>
+<td align="center">创建一个单位矩阵</td>
+</tr>
+
+<tr>
+<td align="center">ones</td>
+<td align="center">生成全1矩阵</td>
+</tr>
+
+<tr>
+<td align="center">zeros</td>
+<td align="center">生成零矩阵</td>
+</tr>
+
+<tr>
+<td align="center">cross</td>
+<td align="center">计算矩阵交叉乘积</td>
+</tr>
+
+<tr>
+<td align="center">dot</td>
+<td align="center">计算矩阵点积</td>
+</tr>
+
+<tr>
+<td align="center">det</td>
+<td align="center">计算数组的行列式</td>
+</tr>
+
+<tr>
+<td align="center">inv</td>
+<td align="center">计算矩阵的逆</td>
+</tr>
+
+<tr>
+<td align="center">pinv</td>
+<td align="center">计算矩阵的伪逆</td>
+</tr>
+
+<tr>
+<td align="center">rank</td>
+<td align="center">计算矩阵的秩</td>
+</tr>
+
+<tr>
+<td align="center">rref</td>
+<td align="center">将矩阵化成行最简形</td>
+</tr>
+
+<tr>
+<td align="center">cell</td>
+<td align="center">创建单元数组</td>
+</tr>
+
+<tr>
+<td align="center">celldisp</td>
+<td align="center">显示单元数组</td>
+</tr>
+
+<tr>
+<td align="center">cellplot</td>
+<td align="center">显示单元数组的图形表示</td>
+</tr>
+
+<tr>
+<td align="center">num2cell</td>
+<td align="center">将数值阵列转化为异质阵列</td>
+</tr>
+
+<tr>
+<td align="center">deal</td>
+<td align="center">匹配输入和输出列表</td>
+</tr>
+
+<tr>
+<td align="center">iscell</td>
+<td align="center">判断是否为元胞类型</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab绘图命令">MATLAB绘图命令</h2>
+
+<p>MATLAB提供了大量的命令绘制图表。下表列出了一些常用的命令绘制：</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用/目的</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">axis</td>
+<td align="center">人功选择坐标轴尺寸</td>
+</tr>
+
+<tr>
+<td align="center">fplot</td>
+<td align="center">智能绘图功能</td>
+</tr>
+
+<tr>
+<td align="center">grid</td>
+<td align="center">显示网格线</td>
+</tr>
+
+<tr>
+<td align="center">plot</td>
+<td align="center">生成XY图</td>
+</tr>
+
+<tr>
+<td align="center">print</td>
+<td align="center">打印或绘图到文件</td>
+</tr>
+
+<tr>
+<td align="center">title</td>
+<td align="center">把文字置于顶部</td>
+</tr>
+
+<tr>
+<td align="center">xlabel</td>
+<td align="center">将文本标签添加到x轴</td>
+</tr>
+
+<tr>
+<td align="center">ylabel</td>
+<td align="center">将文本标签添加到y轴</td>
+</tr>
+
+<tr>
+<td align="center">axes</td>
+<td align="center">创建轴对象</td>
+</tr>
+
+<tr>
+<td align="center">close</td>
+<td align="center">关闭当前的绘图</td>
+</tr>
+
+<tr>
+<td align="center">close all</td>
+<td align="center">关闭所有绘图</td>
+</tr>
+
+<tr>
+<td align="center">figure</td>
+<td align="center">打开一个新的图形窗口</td>
+</tr>
+
+<tr>
+<td align="center">gtext</td>
+<td align="center">通过鼠标在指定位置放注文</td>
+</tr>
+
+<tr>
+<td align="center">hold</td>
+<td align="center">保持当前图形</td>
+</tr>
+
+<tr>
+<td align="center">legend</td>
+<td align="center">鼠标放置图例</td>
+</tr>
+
+<tr>
+<td align="center">refresh</td>
+<td align="center">重新绘制当前图形窗口</td>
+</tr>
+
+<tr>
+<td align="center">set</td>
+<td align="center">指定对象的属性，如轴</td>
+</tr>
+
+<tr>
+<td align="center">subplot</td>
+<td align="center">在子窗口中创建图</td>
+</tr>
+
+<tr>
+<td align="center">text</td>
+<td align="center">在图上做标记</td>
+</tr>
+
+<tr>
+<td align="center">bar</td>
+<td align="center">创建条形图</td>
+</tr>
+
+<tr>
+<td align="center">loglog</td>
+<td align="center">创建双对数图</td>
+</tr>
+
+<tr>
+<td align="center">polar</td>
+<td align="center">创建极坐标图像</td>
+</tr>
+
+<tr>
+<td align="center">semilogx</td>
+<td align="center">创建半对数图（对数横坐标）</td>
+</tr>
+
+<tr>
+<td align="center">semilogy</td>
+<td align="center">创建半对数图（对数纵坐标）</td>
+</tr>
+
+<tr>
+<td align="center">stairs</td>
+<td align="center">创建阶梯图</td>
+</tr>
+
+<tr>
+<td align="center">stem</td>
+<td align="center">创建针状图</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="if语句">if语句</h2>
+
+<pre><code class="language-matlab">a = 10;
+if(a&lt;=10)
+    fprintf('value is %d\n',a);
+end
+
+</code></pre>
+
+<pre><code class="language-matlab">a = 100;
+if  a &lt; 20
+    fprintf('a is less than 20\n' );
+else
+    fprintf('a is not less than 20\n' );
+end
+
+</code></pre>
+
+<pre><code class="language-matlab">a = 100;
+if  a &lt; 20
+    fprintf('a is less than 20\n' );
+else
+    fprintf('a is not less than 20\n' );
+end
+
+</code></pre>
+
+<pre><code class="language-matlab">a = 45;
+if  a &lt; 20
+    fprintf('a is less than 20\n' );
+elseif a&lt;50
+    fprintf('a is not less than 50\n' );
+elseif a&lt;80
+    fprintf('a is not less than 80\n' );
+end
+
+</code></pre>
+
+<h2 id="循环语句">循环语句</h2>
+
+<pre><code class="language-matlab">a = 10;
+while a &lt; 20 
+  fprintf('value of a: %d\n', a);
+  a = a + 1;
+end
+
+</code></pre>
+
+<pre><code class="language-matlab">for a = 10:20 
+  fprintf('value of a: %d\n', a);
+end
+%
+for a = [12,12,15,15,15]
+  disp(a)
+end
+
+</code></pre>
+
+<h2 id="break-continue-switch语句">break，continue，switch语句</h2>
+
+<pre><code class="language-MATLAB">grade = 'D';
+switch(grade)
+    case 'A'
+        fprintf('Excellent!\n' );
+    case 'B'
+        fprintf('Well done\n' );
+    case 'C'
+        fprintf('Well done\n' );
+    case 'D'
+        fprintf('You passed\n' );
+    case 'F'
+        fprintf('Better try again\n' );
+    otherwise
+        fprintf('Invalid grade\n' );
+end
+
+</code></pre>
+
+<h2 id="行-列向量">行，列向量</h2>
+
+<p>行向量：用空格或者逗号分隔</p>
+
+<p>列向量：用分号分隔</p>
+
+<pre><code class="language-matlab">%行向量
+a = [1,2,3,4,5]
+%列向量
+b = [1;2;3;4;5]
+%访问向量元素
+a(4)  %4
+b(3)  %3
+a(:)  %1 2 3 4 5
+b(2:4)
+% 2
+% 3
+% 4
+
+
+</code></pre>
+
+<h2 id="向量运算">向量运算</h2>
+
+<h3 id="1-加减操作">1.加减操作</h3>
+
+<p>在 MATLAB 中当进行两个向量的加法与减法的时候，这两个向量的元素必须有相同的类型和数量。</p>
+
+<pre><code class="language-matlab">a = [1,2,3];
+b = [4,5,6];
+disp(a + b)
+
+</code></pre>
+
+<h3 id="2-乘法操作">2.乘法操作</h3>
+
+<p>1.标量乘法</p>
+
+<pre><code class="language-matlab">a = [1,2,3];
+c = 3 * a;
+disp(c)
+
+</code></pre>
+
+<p>2.点积</p>
+
+<p>MATLAB 中两个向量的点积 a = (a1, a2, …, an) and b = (b1, b2, …, bn) 由以下给定:</p>
+
+<p>a.b = ∑(ai.bi)</p>
+
+<pre><code class="language-matlab">a = [1,2,3]
+b = [4,5,6]
+disp(dot(a,b))
+
+</code></pre>
+
+<p>3.向量转置</p>
+
+<pre><code>r = [1 2 3 4]
+disp(r')
+
+</code></pre>
+
+<p>4.向量的合并</p>
+
+<p>MATLAB 允许在原有的向量中附加向量，共同创造新的向量</p>
+
+<pre><code>r1 = [ 1 2 3 4 ];
+r2 = [5 6 7 8 ];
+r = [r1,r2]
+rMat = [r1;r2]
+ 
+c1 = [ 1; 2; 3; 4 ];
+c2 = [5; 6; 7; 8 ];
+c = [c1; c2]
+cMat = [c1,c2]
+
+</code></pre>
+
+<p>5.求向量的模</p>
+
+<pre><code>v = [1 2 3 4 5];
+sv = v.* v;% 平方   
+dp = sum(sv);% 求和   
+mag = sqrt(dp);% 开方
+disp(mag);
+
+</code></pre>
+
+<h2 id="矩阵相关">矩阵相关</h2>
+
+<h3 id="创建矩阵">创建矩阵</h3>
+
+<p>在MATLAB中创建矩阵有以下规则：</p>
+
+<ul>
+<li>矩阵元素必须在 “<strong>[ ]</strong>” 内；</li>
+<li>矩阵的同行元素之间用空格（或 “<strong>,</strong>”）隔开；</li>
+<li>矩阵的行与行之间用 “<strong>;</strong>”（或回车符）隔开；</li>
+<li>矩阵的元素可以是数值、变量、表达式或函数；</li>
+<li>矩阵的尺寸不必预先定义。</li>
+</ul>
+
+<h3 id="matlab使用矩阵中的元素">MATLAB使用矩阵中的元素</h3>
+
+<pre><code class="language-matlab">a = [1 2 3 4;4 5 6 5;4 5 7 5;2 2 7 4]
+a(2,:)%第二行
+a(:,3)%第三列
+a(:,2:3)%第二列和第三列
+a(1:2,2:3)%第一行和第二行的二,三列
+
+</code></pre>
+
+<h3 id="删除矩阵中的元素">删除矩阵中的元素</h3>
+
+<p>可以删除整行或整列的矩阵，只要分配一组空方括号 <strong>[ ]</strong> 给该行或列。</p>
+
+<p>基本上，<strong>[ ]</strong> 表示一个空数组。</p>
+
+<pre><code class="language-matlab">a = [1 2 3 4;4 5 6 5;4 5 7 5;2 2 7 4]
+a(2,:) = [] % 删除第二行
+
+</code></pre>
+
+<h3 id="矩阵运算">矩阵运算</h3>
+
+<p>加减太简单，略。。。。</p>
+
+<p>1.矩阵除法</p>
+
+<p>MATLAB 中有两种矩阵除法符号：即左除“＼” 和右除 “／” 。</p>
+
+<pre><code>a = [ 1 2 3 ; 4 5 6; 7 8 9];
+b = [ 7 5 6 ; 2 4 8; 5 7 1];
+c = a / b  
+d = a \ b % 等价于b/a
+
+</code></pre>
+
+<p>2.矩阵标量操作</p>
+
+<p>MATLAB矩阵的标量操作就是加，减，乘或者除以一个数字矩阵。</p>
+
+<p>添加到具有原始矩阵的每个元素的行和列，相减，乘或除以数相同数量的标量运算会产生一个新的矩阵。</p>
+
+<p>3.矩阵转置</p>
+
+<p>和向量转置一样，用单引号实现</p>
+
+<pre><code>a = [1,2,3;4,5,6;7,8,9];
+disp(a')
+
+</code></pre>
+
+<p>4.合并矩阵</p>
+
+<p>和合并向量相同</p>
+
+<pre><code>a = [ 10 12 23 ; 14 8 6; 27 8 9]
+b = [ 12 31 45 ; 8 0 -9; 45 2 11]
+c = [a, b]
+d = [a; b]
+
+</code></pre>
+
+<p>结果：</p>
+
+<pre><code>a =
+    10    12    23
+    14     8     6
+    27     8     9
+b =
+    12    31    45
+     8     0    -9
+    45     2    11
+c =
+    10    12    23    12    31    45
+    14     8     6     8     0    -9
+    27     8     9    45     2    11
+d =
+    10    12    23
+    14     8     6
+    27     8     9
+    12    31    45
+     8     0    -9
+    45     2    11
+
+</code></pre>
+
+<p>5.矩阵乘法</p>
+
+<p>MATLAB中如果有两个矩阵 A 和 B ，其中 A 是 m x n 矩阵，B 是 n x p 矩阵，那么他们相乘能够产生一个 m x n 的矩阵 C</p>
+
+<p>条件： A矩阵的列 = B矩阵的行</p>
+
+<pre><code>a = [ 1 2 3; 2 3 4; 1 2 5];
+b = [ 2 1 3 ; 5 0 -2; 2 3 -1];
+disp(a * b)
+
+</code></pre>
+
+<p>6.求行列式的值</p>
+
+<p>MATLAB要计算对应矩阵行列式的值的指令为：d=det(A)，该指令返回矩阵 A 的行列式，并把所得值赋给 d。若 A 仅包含整数项，则该结果 d 也是一个整数。</p>
+
+<pre><code>a = [ 1 2 3; 2 3 4; 1 2 5];
+det(a)
+
+</code></pre>
+
+<p>7.逆矩阵</p>
+
+<p>MATLAB中矩阵A的逆矩阵被记为 A−1 ，下面的关系成立：</p>
+
+<pre><code>AA−1 = A−1A = 1
+
+</code></pre>
+
+<p>MATLAB中不是每个矩阵都有逆矩阵的，比如一个矩阵的行列式是零的话，则矩阵的逆就不存在，这样的矩阵是奇异的。</p>
+
+<p>MATLAB中，逆矩阵的计算使用 inv 函数：逆矩阵A是inv(A).</p>
+
+<pre><code>a = [1 2 3;4 5 6;7 8 9]
+b = inv(a)
+
+</code></pre>
+
+<h2 id="数组">数组</h2>
+
+<p>数组中的元素可以是字符等
+矩阵中的只能是数
+这是二者最直观的区别。
+因为矩阵是一个数学概念（线性代数里的），数组是个计算机上的概念</p>
+
+<h3 id="特殊数组">特殊数组</h3>
+
+<p>全零数组：<code>zeros(5)</code>为五维的全零数组</p>
+
+<p>全1数组：<code>ones(4,3)</code>为四行三列的全一数组</p>
+
+<p>单位矩阵：<code>eye(4,3)</code>为四行三列的单位矩阵</p>
+
+<p>使用 rand() 函数建立一个数组（0,1）上均匀分布的随机数：rand(3,5)</p>
+
+<p>幻方矩阵：<code>magic(n)</code>,逐行，逐列或对角线都想等，参数必须大于等于3，</p>
+
+<h3 id="元胞数组">元胞数组</h3>
+
+<p>cell数组一般被叫做元胞数组，它的每个单元可以储存不同的数据类型，可以是数值，字符或矩阵或元胞数组等</p>
+
+<p>1.创建一个元胞数组</p>
+
+<p>可以直接通过{}类似于矩阵的直接赋值：a={&lsquo;winter&rsquo;,123,&lsquo;coming&rsquo;,&lsquo;哈哈&rsquo;};</p>
+
+<p>也可以通过cell函数预分配内存，再赋值：a=cell(1,4);a={&lsquo;winter&rsquo;,123,&lsquo;coming&rsquo;,&lsquo;哈哈&rsquo;};</p>
+
+<p>2.该数组的访问</p>
+
+<p><strong>通过()访问cell数组时访问到的是cell单元</strong></p>
+
+<p><strong>通过{}访问cell数组时访问到的是cell单元储存的内容，</strong></p>
+
+<pre><code class="language-matlab">c = {'Red', 'Blue', 'Green', 'Yellow', 'White'; 1 2 3 4 5};
+c(1:2,1:2)
+
+</code></pre>
+
+<p>结果：</p>
+
+<pre><code class="language-matlab">ans = 
+    'Red'    'Blue'
+    [  1]    [   2]
+
+</code></pre>
+
+<h2 id="多维数组">多维数组</h2>
+
+<h2 id="matlab多维数组">MATLAB多维数组</h2>
+
+<p>在MATLAB中，一个阵列如果具有两个以上的维度则被称为多维数组。</p>
+
+<p>在MATLAB中的多维数组是正常的两维矩阵的延伸。</p>
+
+<p>MATLAB中需要先创建一个二维数组然后对该二维数组进行扩展，这样才能生成一个多维数组。</p>
+
+<p>例如，我们先建立一个二维数组a。</p>
+
+<pre><code class="language-matlab">a = [7 9 5; 6 1 9; 4 3 2]
+
+</code></pre>
+
+<p>MATLAB执行上述语句，返回以下结果：</p>
+
+<pre><code class="language-matlab">a =
+     7     9     5
+     6     1     9
+     4     3     2
+
+</code></pre>
+
+<p>数组 a 是一个 3x3 阵列，通过提供的值，我们可以添加一个第三维，例如：</p>
+
+<pre><code class="language-matlab">a(:, :, 2)= [ 1 2 3; 4 5 6; 7 8 9]
+
+</code></pre>
+
+<p>MATLAB执行上述语句，返回以下结果：</p>
+
+<pre><code class="language-matlab">a(:,:,1) =
+     7     9     5
+     6     1     9
+     4     3     2
+
+a(:,:,2) =
+     1     2     3
+     4     5     6
+     7     8     9
+
+</code></pre>
+
+<h2 id="matlab数组函数">MATLAB数组函数</h2>
+
+<p>MATLAB提供以下功能进行排序，旋转，置乱，重塑或移动数组的内容。</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">目的</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">length</td>
+<td align="center">矢量长度或最大阵列尺寸</td>
+</tr>
+
+<tr>
+<td align="center">ndims</td>
+<td align="center">数组维数</td>
+</tr>
+
+<tr>
+<td align="center">numel</td>
+<td align="center">数组元素的数目</td>
+</tr>
+
+<tr>
+<td align="center">size</td>
+<td align="center">数组维度</td>
+</tr>
+
+<tr>
+<td align="center">iscolumn</td>
+<td align="center">确定输入是否是列向量</td>
+</tr>
+
+<tr>
+<td align="center">isempty</td>
+<td align="center">确定数组是否为空</td>
+</tr>
+
+<tr>
+<td align="center">ismatrix</td>
+<td align="center">确定输入是否为矩阵</td>
+</tr>
+
+<tr>
+<td align="center">isrow</td>
+<td align="center">确定输入是否为行向量</td>
+</tr>
+
+<tr>
+<td align="center">isscalar</td>
+<td align="center">确定输入是否为标量</td>
+</tr>
+
+<tr>
+<td align="center">isvector</td>
+<td align="center">确定输入是否为矢量</td>
+</tr>
+
+<tr>
+<td align="center">blkdiag</td>
+<td align="center">从输入参数构造块对角矩阵</td>
+</tr>
+
+<tr>
+<td align="center">circshift</td>
+<td align="center">循环移位</td>
+</tr>
+
+<tr>
+<td align="center">ctranspose</td>
+<td align="center">复数共轭转置</td>
+</tr>
+
+<tr>
+<td align="center">diag</td>
+<td align="center">矩阵的对角矩阵和对角线</td>
+</tr>
+
+<tr>
+<td align="center">flipdim</td>
+<td align="center">沿指定维度翻转数组</td>
+</tr>
+
+<tr>
+<td align="center">fliplr</td>
+<td align="center">从左到右翻转矩阵</td>
+</tr>
+
+<tr>
+<td align="center">flipud</td>
+<td align="center">将矩阵向下翻转</td>
+</tr>
+
+<tr>
+<td align="center">ipermute</td>
+<td align="center">n-维阵列的反置换维数</td>
+</tr>
+
+<tr>
+<td align="center">permute</td>
+<td align="center">重新排列 N 维数组的维数</td>
+</tr>
+
+<tr>
+<td align="center">repmat</td>
+<td align="center">复制和平铺数组</td>
+</tr>
+
+<tr>
+<td align="center">reshape</td>
+<td align="center">重塑数组</td>
+</tr>
+
+<tr>
+<td align="center">rot90</td>
+<td align="center">旋转矩阵90度</td>
+</tr>
+
+<tr>
+<td align="center">shiftdim</td>
+<td align="center">移位维度</td>
+</tr>
+
+<tr>
+<td align="center">issorted</td>
+<td align="center">确定集合元素是否按排序顺序排列</td>
+</tr>
+
+<tr>
+<td align="center">sort</td>
+<td align="center">按升序或降序对数组元素进行排序</td>
+</tr>
+
+<tr>
+<td align="center">sortrows</td>
+<td align="center">按升序对行排序</td>
+</tr>
+
+<tr>
+<td align="center">squeeze</td>
+<td align="center">删除单维度</td>
+</tr>
+
+<tr>
+<td align="center">transpose</td>
+<td align="center">转置</td>
+</tr>
+
+<tr>
+<td align="center">vectorize</td>
+<td align="center">矢量化表达式</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab冒号符号">MATLAB冒号符号</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">格式</th>
+<th align="center">目的</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>A(:,j)</strong></td>
+<td align="center">是A的第j列</td>
+</tr>
+
+<tr>
+<td align="center"><strong>A(i,:)</strong></td>
+<td align="center">是A的第j行</td>
+</tr>
+
+<tr>
+<td align="center"><strong>A(:,:)</strong></td>
+<td align="center">是等效的二维数组；对于矩阵，这与A相同</td>
+</tr>
+
+<tr>
+<td align="center"><strong>A(j:k)</strong></td>
+<td align="center">是A（j），A（j + 1），&hellip;，A（k）</td>
+</tr>
+
+<tr>
+<td align="center"><strong>A(:,j:k)</strong></td>
+<td align="center">是 A(:,j)， A(:,j+1)，&hellip;，A(:,k)</td>
+</tr>
+
+<tr>
+<td align="center"><strong>A(:,:,k)</strong></td>
+<td align="center">是三维数组A的第k页</td>
+</tr>
+
+<tr>
+<td align="center"><strong>A(i,j,k,:)</strong></td>
+<td align="center">是四维数组A中的矢量；矢量包括A（i，j，k，1），A（i，j，k，2），A（i，j，k，3）等</td>
+</tr>
+
+<tr>
+<td align="center"><strong>A(:)</strong></td>
+<td align="center">是 A 的所有要素，被视为单列；在赋值语句的左侧，A（:) 填充A，保留以前的形状；在这种情况下，右侧必须包含与A相同数量的元素</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab数字">MATLAB数字</h2>
+
+<p>MATLAB提供各种数字数据类型转换为以下功能：</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">目的</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">double</td>
+<td align="center">转换为双精度数字</td>
+</tr>
+
+<tr>
+<td align="center">single</td>
+<td align="center">转换为单精度数</td>
+</tr>
+
+<tr>
+<td align="center">int8</td>
+<td align="center">转换为8位有符号整数</td>
+</tr>
+
+<tr>
+<td align="center">int16</td>
+<td align="center">转换为16位有符号整数</td>
+</tr>
+
+<tr>
+<td align="center">int32</td>
+<td align="center">转换为32位有符号整数</td>
+</tr>
+
+<tr>
+<td align="center">int64</td>
+<td align="center">转换为64位有符号整数</td>
+</tr>
+
+<tr>
+<td align="center">uint8</td>
+<td align="center">转换为8位无符号整数</td>
+</tr>
+
+<tr>
+<td align="center">uint16</td>
+<td align="center">转换为16位无符号整数</td>
+</tr>
+
+<tr>
+<td align="center">uint32</td>
+<td align="center">转换为32位无符号整数</td>
+</tr>
+
+<tr>
+<td align="center">uint64</td>
+<td align="center">转换为64位无符号整数</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matlab函数">MATLAB函数</h2>
+
+<blockquote>
+<p>在MATLAB中，函数定义在单独的文件。文件函数的文件名应该是相同的。</p>
+</blockquote>
+
+<p>函数是一组语句一起执行任务。</p>
+
+<p>函数在自己的工作空间进行操作，被称为本地工作区，独立的工作区；在 MATLAB 命令提示符访问，这就是所谓的基础工作区的变量。</p>
+
+<p>函数可以接受多个输入参数和可能返回多个输出参数。</p>
+
+<p>函数语句的语法是：</p>
+
+<pre><code>function [out1,out2, ..., outN] = myfun(in1,in2,in3, ..., inN)
+end
+
+</code></pre>
+
+<h2 id="matlab匿名函数">MATLAB匿名函数</h2>
+
+<p>一个匿名的函数就像是在传统的编程语言，在一个单一的 MATLAB 语句定义一个内联函数。</p>
+
+<p>它由一个单一的 MATLAB 表达式和任意数量的输入和输出参数。</p>
+
+<p>在MATLAB命令行或在一个函数或脚本可以定义一个匿名函数。</p>
+
+<p>这种方式，可以创建简单的函数，而不必为他们创建一个文件。</p>
+
+<p>建立一个匿名函数表达式的语法如下：</p>
+
+<pre><code>f = @(参数列表)expression
+
+</code></pre>
+
+<p>例如：</p>
+
+<pre><code class="language-matlab">power = @(x, n) x.^n;
+result1 = power(7, 3)
+result2 = power(49, 0.5)
+result3 = power(10, -10)
+result4 = power (4.5, 1.5)
+
+</code></pre>
+
+<h2 id="matlab嵌套函数">MATLAB嵌套函数</h2>
+
+<p>在这个机体内另一个函数，可以定义函数。这些被称为嵌套函数。</p>
+
+<p>嵌套函数包含任何其他函数的任何或所有的组件。</p>
+
+<p>嵌套函数被另一个函数的范围内定义他们共享访问包含函数的工作区。</p>
+
+<p>嵌套函数的语法如下：</p>
+
+<pre><code>function x = A(p1, p2)
+...
+B(p2)
+   function y = B(p3)
+   ...
+   end
+...
+end
+
+</code></pre>
+
+<h2 id="matlab全局变量">MATLAB全局变量</h2>
+
+<p>全局变量可以共享由一个以上的函数。对于这一点，需要将变量声明为全局在所有的函数可使用。</p>
+
+<p>全局声明必须出现在变量中实际上是使用功能。这是一个很好的做法是使用大写字母为全局变量的名称，以区别于其他变量。</p>
+
+<pre><code class="language-matlab">global x %申明全局变量
+x = 15;
+disp(x);
+global x  %使用全局变量时也要用global定义
+x = x + 20;
+disp(x)
+
+</code></pre>
+
+<h2 id="matlab读写excel文件">MATLAB读写excel文件</h2>
+
+<p>读取</p>
+
+<pre><code class="language-matlab">    [num,text,raw] = xlsread('filename','sheet');                    
+    [num,text,raw] = xlsread('filename','sheet','xlRange');            
+
+    num   %返回为数值矩阵
+    
+    text   %元胞数组，返回文本数据
+    
+    raw    %元胞数组，返回工作表的数值数据和文本数据
+
+    filename   %读取指定文件
+
+    sheet   %读取该文件的指定工作表
+
+    xlRange   %读取指定工作表的范围，使用Excel范围的语法
+
+</code></pre>
+
+<p>写入</p>
+
+<pre><code class="language-matlab">		status = xlswrite('filename',A,'sheet','xlRange')   %这里的file是已存在的
+
+            status        %用0和1返回操作的状态
+
+            A             %要写入的数据
+
+</code></pre>
+
+<h2 id="matlab与excel的交互">MATLAB与excel的交互</h2>
+
+<p>运行下列代码</p>
+
+<pre><code>num = xlsread('demo.xlsx',-1);
+
+</code></pre>
+
+<p>在excel中选择好数据的范围，再按确定</p>
+
+<p><img src="https://i.loli.net/2019/11/13/pHSK5xdX4qrAEfb.png" alt="" /></p>
+
+<h2 id="matlab中的时间数据">MATLAB中的时间数据</h2>
+
+<p>在MATLAB中处理日期和时间经常需要String和Number间的转换，其中的一些技巧总结如下：</p>
+
+<p>MATLAB中每一个日期和时间都有相对应的date number。比如如果你在MATLAB命令窗口中输入”today”，就会显示今天的date number。Excel中也有date number，不过和MATLAB用的是不同的一套体系，因此无法互相转换，只能把Excel中的日期以string的形式导入MATLAB之后再进行处理。</p>
+
+<p>MATLAB中double格式的date number和string格式的date string可以通过<code>datestr</code>”和<code>datenum</code>这两个命令互相转换，例子见下图：</p>
+
+<p><img src="http://s6.sinaimg.cn/mw690/005YdexJgy6QdQHDZPLb5" alt="img" /></p>
+
+<p>一般来讲如果只输入日期而不输入时间，对应的date number为整数，默认时间为00:00:00（如datenum(datestr(today)))。如果输入了具体时间（几小时几分几秒），对应的date number就是小数了。上图中的命令”format long g”只是为了不用科学计数法来显示这个小数，并不是使用datenum所必须的。</p>
+
+<p>MATLAB中有32种支持的date string格式，因此可以通过datestr(date number, i)的方式来将结果输出为第i种格式（如上图中的”datestr(today,0)”）</p>
+
+<pre><code>date=datenum({'2015-2-201','2015-2-211','2015-2-221','2015-2-231'}); 
+Papashi=[10^6,10^7,10^8 ,10^9];
+figure(1);
+plot(date,Papashi); 
+% 根据日期时间来绘图，指定好datestring的样式
+figure(2);
+plot(date,Papashi),datetick('x','dd-mm-yyyy');
+
+</code></pre>
+
+<p><img src="https://i.loli.net/2019/11/13/nbXdQjwcfRpLt16.png" alt="" /></p>
+
+<h3 id="使用strcat来连接字符串">使用strcat来连接字符串</h3>
+
+<pre><code class="language-matlab">disp(strcat(num2str(15),'num','is',num2str(18)));
+% 15numis18
+
+</code></pre>
+
+<h2 id="matlab读取文本">MATLAB读取文本</h2>
+
+<ol>
+<li>load/importdata/csvread</li>
+</ol>
+
+<p>对于简单文本文件的读取（文件内容只包括数值，并且以逗号或空格为分隔符），这三个函数的常见用法基本一致。
+load、importdata、csvread 常见用法：</p>
+
+<pre><code class="language-matlab">M = csvread(filename)
+M = load(filename)
+M = importdata(filename)
+
+</code></pre>
+
+<p>2.dlmread</p>
+
+<p>dlmread 的用法比 csvread 稍微复杂一点，它能够指定分隔符(csvread 只能读取逗号分隔符和空格分隔符)。
+dlmread 常见用法：</p>
+
+<pre><code>M = dlmread(filename)
+M = dlmread(filename, delimiter)12
+
+</code></pre>
+
+<p>其中 filename 为所读取的文件，delimiter 为分隔符。</p>
+
+<p>3.简单文本数据的读取</p>
+
+<p>ok.txt文件</p>
+
+<pre><code>数字1 数字2 数字3 数字4 数字5 日期1
+713 439 33.4 16339 1 2019-05-10
+709 473 33.6 15042 2 2019--08-12
+666 462 33.3 14951 3 2016-05-18
+703 472 33.3 15024 4 2016-05-18
+696 487 33.4 14994 5 2016-05-18
+656 496 33.3 14968 6 2016-05-18
+705 476 33.1 14955 7 2016-05-18
+696 482 34.1 14899 8 2016-05-18
+703 471 330.2 14894 9 2016-05-18
+675 441 33.1 15109 10 2016-05-18
+
+</code></pre>
+
+<pre><code class="language-matlab">[A,B,C,D,E,F] = textread('ok.txt','%d%d%f%d%d%s','headerlines',1)
+
+</code></pre>
+
+<p><code>headerlines,1</code>为跳过第一行，<code>%d %f %s</code>为读取格式</p>
+
+<h2 id="matlab代码节">MATLAB代码节</h2>
+
+<p>使用两个%%来对.m文件的代码进行分节，可以将光标移到某一节上，单独运行某个节的代码</p>
+
+<p><img src="https://i.loli.net/2019/11/13/rGKuaS4IWxVEn6v.png" alt="" /></p>
+
+<p><img src="https://i.loli.net/2019/11/13/vnL12wesMQ3Pf4x.png" alt="" /></p>
+
+<h2 id="matlab常用函数">MATLAB常用函数</h2>
+
+<h3 id="1-sum函数">1.sum函数</h3>
+
+<p><strong>sum函数基本的用法为：</strong></p>
+
+<p>a=sum(A)  %按列求和</p>
+
+<p>b=sum(A,2) %按行求和</p>
+
+<p>c=sum(A(:)) %矩阵求和</p>
+
+<p>假定A为一个矩阵：</p>
+
+<p>sum(A)以矩阵A的每一列为对象，对一列内的数字求和。</p>
+
+<p>sum(A,2)以矩阵A的每一行为对象，对一行内的数字求和。</p>
+
+<h3 id="2-rand函数">2.rand函数</h3>
+
+<p><code>X = rand</code> 返回一个在区间 (0,1) 内均匀分布的随机数。</p>
+
+<p><code>X = rand(n)</code> 返回一个 <code>n</code>×<code>n</code> 的随机数矩阵。</p>
+
+<p><code>X = rand(sz1,...,szN)</code> 返回由随机数组成的 <code>sz1</code>×&hellip;×<code>szN</code> 数组，其中 <code>sz1,...,szN</code> 指示每个维度的大小。例如：<code>rand(3,4)</code> 返回一个 3×4 的矩阵。</p>
+
+<p><code>X = rand(sz)</code> 返回由随机数组成的数组，其中大小向量 <code>sz</code> 指定 <code>size(X)</code>。例如：<code>rand([3 4])</code> 返回一个 3×4 的矩阵。</p>
+
+<h3 id="3-find函数">3.find函数</h3>
+
+<p><code>k = find(X)</code> 返回一个包含数组 <code>X</code> 中每个非零元素的<a href="https://ww2.mathworks.cn/help/matlab/ref/find.html#buf0c2r-8">线性索引</a>的向量。</p>
+
+<ul>
+<li>如果 <code>X</code> 为向量，则 <code>find</code> 返回方向与 <code>X</code> 相同的向量。</li>
+<li>如果 <code>X</code> 为多维数组，则 <code>find</code> 返回由结果的线性索引组成的列向量。</li>
+<li>如果 <code>X</code> 包含非零元素或为空，则 <code>find</code> 返回一个空数组。</li>
+<li>总而言之，<code>find()</code>就是返回符合条件的索引值，如果要知道符合条件的元素数量，可以使用`length()函数</li>
+</ul>
+
+<h3 id="4-unifrnd函数">4.unifrnd函数</h3>
+
+<p>R = <code>unifrnd</code>(x0,x1,m,n)</p>
+
+<p>产生下限为x0，上限为x1的连续m*n随机数数组(矩阵)</p>
+
+<pre><code class="language-matlab">x1=unifrnd(20,30,N,1);
+x2=unifrnd(10,20,N,1);
+x3=unifrnd(-10,16,N,1);
+
+</code></pre>
+
+<h3 id="5-mean函数-均值">5.mean函数(均值)</h3>
+
+<p><code>M = mean(A)</code> 返回 <code>A</code> 沿大小不等于 1 的第一个数组维度的元素的均值</p>
+
+<ul>
+<li>如果 <code>A</code> 是向量，则 <code>mean(A)</code> 返回元素均值。</li>
+<li>如果 <code>A</code> 为矩阵，那么 <code>mean(A)</code> 返回包含每列均值的行向量。</li>
+<li>如果 <code>A</code> 是多维数组，则 <code>mean(A)</code> 沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。此维度会变为 <code>1</code>，而所有其他维度的大小保持不变。</li>
+</ul>
+
+<p><code>M = mean(A,'all')</code> 计算 <code>A</code> 的所有元素的均值。</p>
+
+<p><code>M = mean(A,dim)</code> 返回维度 <code>dim</code> 上的均值。例如，如果 <code>A</code> 为矩阵，则 <code>mean(A,2)</code> 是包含每一行均值的列向量。</p>
+
+<h3 id="6-std函数标准差">6.std函数标准差)</h3>
+
+<h3 id="7-var函数-方差">7.var函数(方差)</h3>
+
+<h3 id="8-repmat函数-重复数组副本">8.repmat函数(重复数组副本)</h3>
+
+<p><strong>基本用法:repmat(A,m,n)</strong></p>
+
+<ul>
+<li>1.如果A是标量，则生成一个元素全是A的m *n矩阵</li>
+
+<li><p>2.如果A是矩阵，则生成元素为矩阵A的合并矩阵</p>
+
+<pre><code class="language-matlab">A = 10;
+repmat(A,3,5)
+B = [10 50 40];
+repmat(B,5,1)
+
+</code></pre></li>
+</ul>
+
+<p>输出结果</p>
+
+<pre><code>ans =
+
+    10    10    10    10    10
+    10    10    10    10    10
+    10    10    10    10    10
+
+
+ans =
+
+    10    50    40
+    10    50    40
+    10    50    40
+    10    50    40
+    10    50    40
+
+</code></pre>
+
+<h3 id="9-unique函数">9.unique函数</h3>
+
+<p>删除重复值</p>
+
+<pre><code class="language-matlab">A = [8 7 3 9 2 4 11 3 8 4 4];
+[b,i,j] = unique(A);
+disp(b),disp(i'),disp(j')
+%b是删除重复值后的有序序列
+%i是b中的元素在原向量中的索引序列
+%j是原来的元素在b中的索引序列
+%结果
+2     3     4     7     8     9    11
+
+5     3     6     2     1     4     7
+
+5     4     2     6     1     3     7     2     5     3     3
+
+</code></pre>
+
+<h2 id="size-length-ndims-的用法">size(),length(),ndims()的用法</h2>
+
+<ul>
+<li><strong>size(a)表示矩阵每个维度的长度</strong></li>
+</ul>
+
+<p><strong>另外size(a,n)表示矩阵a在第n个维度下的长度</strong></p>
+
+<pre><code class="language-matlab">  A = rand(4,3);
+  [m,n] = size(A)
+  % 输出结果
+  m = 4
+  n = 3
+  %%
+  B = ones(1,5)
+  size(B,1),size(B,2)% 结果为1 和 8
+  
+</code></pre>
+
+<ul>
+<li>length(a)表示矩阵a的最大的长度(即最长的一维)，即max(size(a))；</li>
+</ul>
+
+<p>当a是向量时，即表示向量的元素个数</p>
+
+<ul>
+<li>ndims(a)表示矩阵a的维数，即length(size(a))；</li>
+</ul>
+
+<p>MATLAB认为向量也是二维矩阵，只不过其中一个维度的长为1因此ndims([1 2 3])也等于2；</p>
+
+<h2 id="int2str-num2str-str2num">int2str,num2str,str2num</h2>
+
+<ul>
+<li>函数名：i<code>nt2str</code></li>
+</ul>
+
+<p>​ 功能：将整数值转换为字符串</p>
+
+<p>​ 输入格式：str = int2str(N)</p>
+
+<ul>
+<li>函数名：<code>num2str</code></li>
+</ul>
+
+<p>​ 功能：将数值型变量转换为字符串类型</p>
+
+<p>​ 输入格式：</p>
+
+<p>​ str = num2str(A)</p>
+
+<p>​ str = num2str(A,precision)</p>
+
+<p>​ str = num2str(A,formatSpec)</p>
+
+<ul>
+<li>函数名：<code>str2num</code></li>
+</ul>
+
+<p>​ 功能：将字符串类型转换为数值类型</p>
+
+<h2 id="处理nan数据">处理NaN数据</h2>
+
+<p>对于非数值NaN型数据，应从向量x中剔除</p>
+
+<pre><code class="language-matlab">x(isnan(x)) = [] %(建议使用)
+% 或者
+x = x(find(~isnan(x)))
+
+</code></pre>
+
+<p>删除NaN所在行或者所在列</p>
+
+<pre><code class="language-matlab">x(:,any(isnan(x))) = [] % 删除列
+x(any(isnan(x)'),:) = [] % 删除行
+
+</code></pre>
+
+<h2 id="sym符号变量-常量">sym符号变量，常量</h2>
+
+<pre><code class="language-matlab">x = sym(1/2);
+y = sym(2/3);
+c = x + y; 
+disp(c)
+
+</code></pre>
+
+<h2 id="结构体">结构体</h2>
+
+<pre><code class="language-matlab">% 创建一个结构体
+stu.name = 'zh';
+stu.age = 15;
+stu.sex ='F';
+stu.num = 175224;
+stu.addr = 'nchu';
+% 结构体数组转为cell
+a = struct2cell(stu);
+% 预分配一个5行1列的矩阵
+% 矩阵的每一个元素是一个cell
+S = cell(5,1);
+for i=1:5
+    S{i,1} = a;
+end
+% 访问第一个结构体的第一个元素
+disp(S{1,1}{1})
+
+</code></pre>
+
+<h2 id="解微分方程及微分方程组">解微分方程及微分方程组</h2>
+
+<p>1.解下列微分方程
+$$
+\begin{equation}
+\begin{array}{l}{y^{\prime \prime \prime}-3 y^{\prime \prime}+3 y^{\prime}-y=-1} \ {y^{\prime \prime}(0)=y^{\prime}(0)=1,\quad y(0)=2}\end{array}
+\end{equation}
+$$</p>
+
+<pre><code class="language-matlab">%%
+%解一阶微分方程
+syms y(t)
+Dy = diff(y,t);
+D2y = diff(y,t,2);
+cond = [D2y(0)==1,Dy(0)==1,y(0)==2];
+eqn = diff(y,t,3) - 3 * diff(y,t,2) + 3*diff(y,t,1) -y==-1;
+ysol = dsolve(eqn)
+ysol2 = dsolve(eqn,cond)
+
+</code></pre>
+
+<pre><code class="language-matlab">%简化版本
+%%
+%解一阶微分方程
+clc;
+syms y(t)
+D3y = diff(y,t,3);
+cond = [D2y(0)==1,Dy(0)==1,y(0)==2];
+eqn = D3y- 3 * D2y + 3*Dy -y==-1;
+ysol = dsolve(eqn)
+ysol2 = dsolve(eqn,cond)
+
+</code></pre>
+
+<p>2.解下列微分方程组
+$$
+\begin{equation}
+\left{\begin{array}{ll}{x^{\prime}-2 y^{\prime \prime}-2 y=0,} &amp; {x(0)=x^{\prime}(0)=0} \ {x^{\prime \prime}-2 y^{\prime}=2 \sin (t),} &amp; {y(0)=y^{\prime}(0)=1}\end{array}\right.
+\end{equation}
+$$</p>
+
+<pre><code class="language-matlab">%%
+%解一阶微分方程组
+clc;
+syms x(t) y(t)
+Dx = diff(x,t);
+Dy = diff(y,t);
+eqn1  = diff(x,t) - 2*diff(y,t,2) - 2*y ==0;
+eqn2 = diff(x,t,2) - 2*diff(y,t)==2*sin(t);
+cond1 = [x(0)==0,Dx(0)==0];
+cond2 = [y(0)==1,Dy(0)==1];
+eqn = [eqn1,eqn2];
+cond = [cond1,cond2];
+[xsol,ysol] = dsolve(eqn,cond)
+
+</code></pre>
+
+<h2 id="doc">doc</h2>
+
+<p>在命令行中输入<code>doc</code>，按<code>Enter</code>键执行，或者直接单击MATLAB右上角的<img src="C:Users张福平AppDataRoamingTyporatypora-user-images1567497598034.png" alt="1567497598034" />符号打开帮助浏览器</p>
+
+<p><img src="https://i.loli.net/2019/11/13/lw7pmtx2DOybuQR.png" alt="" /></p>
+
+<p><code>syntax</code>:语法</p>
+
+<p><code>Description</code>:函数说明</p>
+
+<p><code>More about</code>：更多和该函数相关的信息</p>
+
+<p><code>See also</code>:提供了与该函数相关的其他函数的链接</p>
+
+<h2 id="save和load">Save和load</h2>
+
+<p>Save将当前工作区的变量保存在一个.mat文件中，load则可以将该文件中的变量重新加载出来</p>
+
+<pre><code class="language-matlab">save('matlab.mat')
+load('matlab.mat')
+
+</code></pre>
+
+<h2 id="matlab数据拟合">MATLAB数据拟合</h2>
+
+<p>使用命令<code>cftool</code>打开数据拟合工具箱</p>
+
+<p>上面的模式分别介绍如下；</p>
+
+<pre><code>Custom Equations：用户自定义的函数类型 
+Exponential：指数逼近，有2种类型， a*exp(b*x) 、 a*exp(b*x) + c*exp(d*x)
+Fourier：傅立叶逼近，有7种类型，基础型是 a0 + a1*cos(x*w) + b1*sin(x*w) 
+Gaussian：高斯逼近，有8种类型，基础型是 a1*exp(-((x-b1)/c1)^2) 
+Interpolant：插值逼近，有4种类型，linear、nearest neighbor、cubic spline、shape-preserving 
+Polynomial：多形式逼近，有9种类型，linear ~、quadratic ~、cubic ~、4-9th degree ~ 
+Power：幂逼近，有2种类型，a*x^b 、a*x^b + c 
+Rational：有理数逼近，分子、分母共有的类型是linear ~、quadratic ~、cubic ~、4-5th degree ~；此外，分子还包括constant型 
+Smoothing Spline：平滑逼近
+Sum of Sin Functions：正弦曲线逼近，有8种类型，基础型是 a1*sin(b1*x + c1) 
+Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b) 
+
+</code></pre>
+
+<p>选择适合于曲线拟合应用的数据：
+<strong>对于曲线, X、Y 和weights必须是具有相同数量元素的矩阵。
+对于曲面, X、Y 和 Z 必须是:元素个数相同的矩阵;表格形式的数据.</strong>
+可以保存和重新加载会话, 以便方便地访问多个匹配项。会话文件包含会话中的所有配合和变量, 并记住你所使用过的的布局。
+保存会话
+要保存会话, 首先选择文件 &gt; 保存会话以打开文件浏览器。接下来, 为会话文件选择一个名称和位置 (文件扩展名为. sfit)。
+在保存会话一次后, 可以使用文件 &gt;&gt; 保存 MySessionName 来覆盖该会话以供后续保存。
+要以其他名称保存当前会话, 请选择 “文件 &gt; 保存会话”。
+重新加载会话
+使用文件 &gt; 加载会话打开文件浏览器, 您可以在其中选择要加载的已保存曲线管接头会话文件。
+删除会话
+使用文件 &gt; 清除会话从当前曲线管接头应用程序会话中移除所有匹配项。</p>
+
+                        </div>
+
+                        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+                        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">解决vscode终端中文乱码</a></li>
+        
+        <li><a href="/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">hugo博客如何使用gittalk</a></li>
+        
+        <li><a href="/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/">git push -u origin master出错解决方案</a></li>
+        
+        <li><a href="/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/">Gittalk报错Error: Validation Failed</a></li>
+        
+        <li><a href="/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/">windows连接mongodb数据库</a></li>
+        
+    </ul>
+</div>
+
+
+                        <div class="post-meta meta-tags">
+                            
+                            没有标签
+                            
+                        </div>
+                    </article>
+                    
+
+
+
+
+
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '0646c0805e71e693ccea',
+    clientSecret: 'ee9386a3dd89764f8304d219f9d82a8db545a731',
+    repo: 'CorPython.github.io',
+    owner: 'CorPython',
+    admin: ['CorPython'],
+    id: decodeURI(location.pathname), 
+    distractionFreeMode: false 
+  });
+  (function () {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+                </div>
+            </div>
+            <div id="secondary">
+    <section class="widget">
+        <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+  
+  <input type="text" name="q" maxlength="20" placeholder="Search">
+  <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/" title="Vim如何安装插件">Vim如何安装插件</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/" title="Pacman包管理命令">Pacman包管理命令</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/" title="Hugo限制摘要字数显示">Hugo限制摘要字数显示</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Matlab学习笔记">Matlab学习笔记</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" title="解决vscode终端中文乱码">解决vscode终端中文乱码</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="hugo博客如何使用gittalk">hugo博客如何使用gittalk</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="git push -u origin master出错解决方案">git push -u origin master出错解决方案</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/" title="Gittalk报错Error: Validation Failed">Gittalk报错Error: Validation Failed</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="windows连接mongodb数据库">windows连接mongodb数据库</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/" title="Windows大量软件安装后乱码解决">Windows大量软件安装后乱码解决</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://CorPython.github.io/categories/vim/">vim (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://CorPython.github.io/tags/vim/">vim</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://github.com/CorPython/CorPython.github.io" title="博客">博客github仓库</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://github.com/CorPython" title="github">github首页</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://www.google.com/" title="谷歌">谷歌首页</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://www.baidu.com/" title="百度">百度首页</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://www.cnblogs.com/" title="博客园">博客园首页</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://CorPython.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        &copy; 2019 <a href="https://CorPython.github.io/">code show的博客 By code show</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        
+        (function () {
+            $("pre code").parent().addClass("line-numbers")
+        }());
+
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script type="text/javascript" src="/js/prism.js" async="true"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'GA ID', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+</body>
+</html>

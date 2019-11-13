@@ -71,7 +71,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="vim基本操作及pacman常见指令" >vim基本操作及pacman常见指令</a>
+                                    <a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/" title="vscode配置文档" >vscode配置文档</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -79,36 +79,79 @@
                             </date>
                             
                             <div class="post-content">
-                                vim指令 基础命令 h上 j下 k 上 l右
-b:回退
-p:粘贴
-y:复制
-u:撤消
-d:剪切
-i:进入insert模式
-a:在当前光标后进入insert模式
-o:在当前光标的下一行进入insert模式
-c:剪切并进入insert模式
-v：直接进入可视化visual模式
-V：选择光标所在行并进入visual模式
-ctrl + v：可以进入visual模式，选择一个长方形块进行操作
-w:保存
-q:退出
-/：使用 /+你要搜索的字符快速定位
-常用指令 1.按住{跳转到下一个段落
-2.按住}跳转到上一个段落
-3.按住%跳转到[]或者{}两边
-4.要使vim中文不乱码，在配置文件vimrc中添加
-set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳转到再按数字键再按方向键往哪个方向剪切几个字符
-比如d5-&gt; 表示向右删除5个字符
-6.按两下d或者c剪切一行
-7.按p粘贴内容
-8.组合键cw删除字符并进入insert模式
-9.撤销操作：按esc退出进入command模式，按u撤销前一个操作
-10.剪切操作：在command模式下按v进入visual模式，按上下选中多行，按c或者d剪切
-11.粘贴操作：按command模式下按p粘贴剪切的内容
-12.vim中的左下上右代表的键还有H J K L
-13.另存为：wq + 文件名.……
+                                vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可 注意:在所有的mingw64的位置……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/" title="hugo发布博客流程" >hugo发布博客流程</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月7日
+                            </date>
+                            
+                            <div class="post-content">
+                                在博客根目录下运行下面命令,并在post目录下生成markdown博客文件 hugo new post/xxxx.md 在博客根目录下运行下面命令 hugo //将本地文件重新编译 hugo server//在本地生成 注意,可以在本地查看博客变化,等自己觉得合适了就可以使用下面命令提交到github 在hugo本地的public目录下使用如……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/" title="gitHub基本操作" >gitHub基本操作</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月7日
+                            </date>
+                            
+                            <div class="post-content">
+                                1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息 .git文件中的信息有以下 config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/" title="linux编译c/c&#43;&#43;命令" >linux编译c/c&#43;&#43;命令</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月7日
+                            </date>
+                            
+                            <div class="post-content">
+                                linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test linux下gcc编译c语言 gcc -o test test.c ./test……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="vim基础操作" >vim基础操作</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月7日
+                            </date>
+                            
+                            <div class="post-content">
+                                vim指令 基础命令 h上 j下 k 上 l右 b:回退 p:粘贴 y:复制 u:撤消 d:剪切 i:进入insert模式 a:在当前光标后进入insert模式 o:在当前光标的下一行进入insert模式 c:剪切并进入insert模式 v：直接进入可视化visual模式 V：选择光标所在行并进入visual模式……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/">阅读全文</a></p>
                         </article>
@@ -126,19 +169,7 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
                             </date>
                             
                             <div class="post-content">
-                                vscode  vs code 的常用快捷键
-  1、注释：
-　a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/
-　b) 取消单行注释：ctrl+k,ctrl+u
-　c) 多行注释：[alt+shift+A]
-　d) 多行注释：/**
-  2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移
-3、显示/隐藏左侧目录栏 ctrl + b
-4、复制当前行：shift + alt +up/down
-5、删除当前行：shift + ctrl + k
-6、控制台终端显示与隐藏：ctrl + ~
-7、查找文件/安装vs code 插件地址：ctrl + p
-  8、代码格式化：shift + alt +f……
+                                vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：ctrl+k,ctrl+u c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移 3、显示/隐藏左侧目录栏 ctrl + b……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/">阅读全文</a></p>
                         </article>
@@ -241,15 +272,31 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
 <ul class="widget-list">
     
     <li>
-        <a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" title="Vscode终端中文乱码应对方案">Vscode终端中文乱码应对方案</a>
+        <a href="https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/" title="Vim如何安装插件">Vim如何安装插件</a>
     </li>
     
     <li>
-        <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="Hugo博客使用gittalk评论系统">Hugo博客使用gittalk评论系统</a>
+        <a href="https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/" title="Pacman包管理命令">Pacman包管理命令</a>
     </li>
     
     <li>
-        <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="修复gitpush到github出错问题">修复gitpush到github出错问题</a>
+        <a href="https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/" title="Hugo限制摘要字数显示">Hugo限制摘要字数显示</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Matlab学习笔记">Matlab学习笔记</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" title="解决vscode终端中文乱码">解决vscode终端中文乱码</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="hugo博客如何使用gittalk">hugo博客如何使用gittalk</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="git push -u origin master出错解决方案">git push -u origin master出错解决方案</a>
     </li>
     
     <li>
@@ -257,27 +304,11 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
     </li>
     
     <li>
-        <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Windows连接mongodb数据库">Windows连接mongodb数据库</a>
+        <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="windows连接mongodb数据库">windows连接mongodb数据库</a>
     </li>
     
     <li>
         <a href="https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/" title="Windows大量软件安装后乱码解决">Windows大量软件安装后乱码解决</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/" title="vscode配置文档">vscode配置文档</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/" title="Hugo提交博客及推送到github的流程">Hugo提交博客及推送到github的流程</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/" title="GitHub相关">GitHub相关</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/" title="linux编译c/c&#43;&#43;命令">linux编译c/c&#43;&#43;命令</a>
     </li>
     
 </ul>
@@ -289,12 +320,16 @@ set fileencodings=utf-8,ucs-bom,cp936,big5 set fileencoding=utf-8  5.先按d跳�
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
+    <li><a href="https://CorPython.github.io/categories/vim/">vim (1)</a></li>
+    
 </ul>
     </section>
 
     <section class="widget">
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
+    
+    <a href="https://CorPython.github.io/tags/vim/">vim</a>
     
 </div>
     </section>

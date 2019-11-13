@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>vscode配置文档 | code show的博客</title>
-    <meta property="og:title" content="vscode配置文档 - code show的博客">
+    <title>Pacman包管理命令 | code show的博客</title>
+    <meta property="og:title" content="Pacman包管理命令 - code show的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content="2019-11-07T20:32:46&#43;08:00">
+    <meta property="article:published_time" content="2019-11-13T16:51:48&#43;08:00">
         
         
-    <meta property="article:modified_time" content="2019-11-07T20:32:46&#43;08:00">
+    <meta property="article:modified_time" content="2019-11-13T16:51:48&#43;08:00">
         
     <meta name="Keywords" content="java,c,博客,c&#43;&#43;,python,linux">
-    <meta name="description" content="vscode配置文档">
+    <meta name="description" content="Pacman包管理命令">
         
     <meta name="author" content="code show">
-    <meta property="og:url" content="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/">
+    <meta property="og:url" content="https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -76,10 +76,10 @@
                 <div class="res-cons">
                     <article class="post">
                         <header>
-                            <h1 class="post-title">vscode配置文档</h1>
+                            <h1 class="post-title">Pacman包管理命令</h1>
                         </header>
                         <date class="post-meta meta-date">
-                            2019年11月7日
+                            2019年11月13日
                         </date>
                         
                         
@@ -91,119 +91,75 @@
                         <div class="post-content">
                             
 
-<p><strong><code>vscode</code>作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件</strong></p>
+<h2 id="pacman指令">Pacman指令</h2>
 
-<p><strong>使用者只要直接在<code>.vscode</code> 文件夹下建立<code>launch.json</code>和<code>tasks.json</code>配置文件即可</strong></p>
+<p>1.安装软件</p>
 
-<h3 id="span-style-color-red-注意-span-在所有的mingw64的位置改为自己电脑上的配置"><span style='color:red'><code>注意:</code></span>在所有的mingw64的位置改为自己电脑上的配置</h3>
-
-<h4 id="launch-json"><code>launch.json</code></h4>
-
-<pre><code class="language-json">{
-    &quot;version&quot;: &quot;0.2.0&quot;,
-    &quot;configurations&quot;: [
-        {
-            // 配置 VS Code 调试行为：
-            &quot;name&quot;: &quot;c/c++&quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。
-            &quot;preLaunchTask&quot;: &quot;Compile&quot;, // 调试会话开始前要运行的任务。
-            &quot;type&quot;: &quot;cppdbg&quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。
-            &quot;request&quot;: &quot;launch&quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ).
-            &quot;program&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}.exe&quot;, // 调试器将启动或附加的可执行文件的完整路径。
-            &quot;externalConsole&quot;: false, // 设置是否显示外部控制台。
-            // 配置目标应用程序：
-            &quot;args&quot;: [], // 设置调试时传递给程序的命令行参数。
-            &quot;cwd&quot;: &quot;${workspaceFolder}&quot;, // 设置调试器启动的应用程序的工作目录。
-            &quot;environment&quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &quot;name&quot;: &quot;squid&quot;, &quot;value&quot;: &quot;clam&quot; } ]。
-            // 自定义 GDB 或者 LLDB：
-            &quot;windows&quot;: {
-                &quot;MIMode&quot;: &quot;gdb&quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。
-                &quot;miDebuggerPath&quot;: &quot;D:/mingw64/mingw64/bin/gdb.exe&quot; // 调试器的路径，修改为你的安装路径
-            },
-            &quot;miDebuggerArgs&quot;: &quot;&quot;, // 传递给调试器的附加参数
-            &quot;stopAtEntry&quot;: false, // 设置调试器是否停止在目标的入口（附加时忽略）。默认值为 false。
-            &quot;setupCommands&quot;: [
-                { // 执行下面的命令数组以设置 GDB 或 LLDB
-                    &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
-                    &quot;text&quot;: &quot;-enable-pretty-printing&quot;, // 鼠标悬停查看变量的值，需要启用 pretty-printing 。
-                    &quot;ignoreFailures&quot;: true // 忽略失败的命令，默认为 false 。
-                }
-            ]
-        }
-    ]
-}
+<pre><code>sudo pacman -S 软件名 
 </code></pre>
 
-<h4 id="tasks-json"><code>tasks.json</code></h4>
+<p>2.更新软件源并更新你的软件</p>
 
-<pre><code class="language-json{">{
-    // 有关 tasks.json 格式的参考文档：https://go.microsoft.com/fwlink/?LinkId=733558 。
-    &quot;version&quot;: &quot;2.0.0&quot;,
-    &quot;tasks&quot;: [{
-        &quot;label&quot;: &quot;Compile&quot;,
-        &quot;type&quot;: &quot;shell&quot;, // { shell | process }
-        // 适用于 Windows 的配置：
-        &quot;windows&quot;: {
-            &quot;command&quot;: &quot;g++&quot;,
-            &quot;args&quot;: [
-                &quot;-g&quot;,
-                &quot;\&quot;${file}\&quot;&quot;,
-                &quot;-o&quot;,
-                &quot;\&quot;${fileDirname}\\${fileBasenameNoExtension}.exe\&quot;&quot;
-                // 设置编译后的可执行文件的字符集为 GB2312：
-                // &quot;-fexec-charset&quot;, &quot;GB2312&quot;
-                // 直接设置命令行字符集为 utf-8：
-                // chcp 65001
-            ]
-        },
-        // 定义此任务属于的执行组：
-        &quot;group&quot;: {
-            &quot;kind&quot;: &quot;build&quot;, // { build | test }
-            &quot;isDefault&quot;: true // { true | false }
-        },
-        // 定义如何在用户界面中处理任务输出：
-        &quot;presentation&quot;: {
-            // 控制是否显示运行此任务的面板。默认值为 &quot;always&quot;：
-            // - always:    总是在此任务执行时显示终端。
-            // - never:     不要在此任务执行时显示终端。
-            // - silent:    仅在任务没有关联问题匹配程序且在执行时发生错误时显示终端
-            &quot;reveal&quot;: &quot;silent&quot;,
-            // 控制面板是否获取焦点。默认值为 &quot;false&quot;：
-            &quot;focus&quot;: false,
-            // 控制是否将执行的命令显示到面板中。默认值为“true”：
-            &quot;echo&quot;: false,
-            // 控制是否在任务间共享面板。同一个任务使用相同面板还是每次运行时新创建一个面板：
-            // - shared:     终端被共享，其他任务运行的输出被添加到同一个终端。
-            // - dedicated:  执行同一个任务，则使用同一个终端，执行不同任务，则使用不同终端。
-            // - new:        任务的每次执行都使用一个新的终端。
-            &quot;panel&quot;: &quot;dedicated&quot;
-        },
-        // 使用问题匹配器处理任务输出：
-        &quot;problemMatcher&quot;: {
-            // 代码内问题的所有者为 cpp 语言服务。
-            &quot;owner&quot;: &quot;cpp&quot;,
-            // 定义应如何解释问题面板中报告的文件名
-            &quot;fileLocation&quot;: [
-                &quot;relative&quot;,
-                &quot;${workspaceFolder}&quot;
-            ],
-            // 在输出中匹配问题的实际模式。
-            &quot;pattern&quot;: {
-                // The regular expression.
-                &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,
-                // 第一个匹配组匹配文件的相对文件名：
-                &quot;file&quot;: 1,
-                // 第二个匹配组匹配问题出现的行：
-                &quot;line&quot;: 2,
-                // 第三个匹配组匹配问题出现的列：
-                &quot;column&quot;: 3,
-                // 第四个匹配组匹配问题的严重性，如果忽略，所有问题都被捕获为错误：
-                &quot;severity&quot;: 4,
-                // 第五个匹配组匹配消息：
-                &quot;message&quot;: 5
-            }
-        }
-    }]
-}
+<pre><code>sudo pacman -Syu
+</code></pre>
+
+<p>3.查询软件</p>
+
+<pre><code>sudo pacman -Ss 软件名
+</code></pre>
+
+<p>4.请理已安装的软件的缓存(安装包)</p>
+
+<pre><code>sudo pacman -Sc
+</code></pre>
+
+<p>5.删除某个软件</p>
+
+<ul>
+<li><p>只删除安装包</p>
+
+<pre><code>sudo pacman -R 软件名
+</code></pre></li>
+
+<li><p>删除安装包及其依赖</p>
+
+<pre><code>sudo pacman -Rs 软件名
+</code></pre></li>
+
+<li><p>在上面的基础上删除该软件的全局配置(推荐)</p>
+
+<pre><code>sudo pacman -Rns 软件名
+</code></pre></li>
+</ul>
+
+<p>6.查询本地已经安装的软件</p>
+
+<pre><code>sudo pacman -Q
+</code></pre>
+
+<p>7.查询软件的数量</p>
+
+<pre><code>sudo pacman -Qe | wc -l
+</code></pre>
+
+<p>8.省略查询到的版本号</p>
+
+<pre><code>sudo pacman -Qeq 
+</code></pre>
+
+<p>9.查询本地安装了的某个软件的信息</p>
+
+<pre><code>sudo pacman -Qs 软件名
+</code></pre>
+
+<p>10.查询不再需要的依赖</p>
+
+<pre><code>sudo pacman -Qdtq
+</code></pre>
+
+<p>11.删除不需要的依赖</p>
+
+<pre><code>sudo pacman -R $(pacman -Qdtq)
 </code></pre>
 
                         </div>
@@ -212,7 +168,7 @@
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
-        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/">https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/">https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</a></li>
         <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
     </ul>
 </div>
@@ -226,15 +182,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/">Vscode快捷键</a></li>
+        <li><a href="/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/">Hugo限制摘要字数显示</a></li>
         
-        <li><a href="/post/github%E7%9B%B8%E5%85%B3/">gitHub基本操作</a></li>
+        <li><a href="/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Matlab学习笔记</a></li>
         
-        <li><a href="/post/linux%E5%91%BD%E4%BB%A4/">linux编译c/c&#43;&#43;命令</a></li>
+        <li><a href="/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">解决vscode终端中文乱码</a></li>
         
-        <li><a href="/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/">vim基础操作</a></li>
+        <li><a href="/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">hugo博客如何使用gittalk</a></li>
         
-        <li><a href="/about/">关于</a></li>
+        <li><a href="/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/">git push -u origin master出错解决方案</a></li>
         
     </ul>
 </div>

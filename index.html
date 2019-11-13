@@ -71,7 +71,86 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" title="Vscode终端中文乱码应对方案" >Vscode终端中文乱码应对方案</a>
+                                    <a href="https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/" title="Vim如何安装插件" >Vim如何安装插件</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月13日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/vim">vim</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                vim 安装插件 vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc linux下安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 将以下信息写入.vimrc中 &quot; Specify a directory for plugins &quot; - For Neovim: stdpath('data') . '/plugged' &quot; - Avoid using standard Vim directory names like 'plugin' call plug#begin('~/.vim/plugged') &quot; Make sure you use single quotes &quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align Plug 'junegunn/vim-easy-align' &quot;……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/" title="Pacman包管理命令" >Pacman包管理命令</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月13日
+                            </date>
+                            
+                            <div class="post-content">
+                                Pacman指令 1.安装软件 sudo pacman -S 软件名 2.更新软件源并更新你的软件 sudo pacman -Syu 3.查询软件 sudo pacman -Ss 软件名 4.请理已安装的软件的缓存(安装包) sudo pacman -Sc 5.删除某个软件 只删除安装包 sudo pacman -R 软件名 删除安装包及其依赖 sudo pacman -Rs 软件名 在上面的基础上删除该软件的全局配置(推荐) sudo pacman -Rns 软件名 6.查询本地已经……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/" title="Hugo限制摘要字数显示" >Hugo限制摘要字数显示</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月13日
+                            </date>
+                            
+                            <div class="post-content">
+                                在首页显示博客时,我们通常不希望将所有的内容显示出来,只希望显示部分内容.我们通常会在config.toml中设定摘要的字数 summaryLength = 180 但是,只在配置文件中这样设置是没有效果的!!!!我们需要在每一篇博客的开头加上这样一句 isCJKLanguage: true 为了避免每次写博客时手动添加,我们可以将这一句写入模板中,打……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Matlab学习笔记" >Matlab学习笔记</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月13日
+                            </date>
+                            
+                            <div class="post-content">
+                                绘图 添加标签，标题，生成网格线，美化图形 x = [0:0.01:10]; y = sin(x); plot(x, y), xlabel('x'), ylabel('Sin(x)'), title('Sin(x) Graph'), grid on,axis equal#添加网格线和美化图形 绘制多个函数 x = [0 : 0.01: 10]; y = sin(x); g = cos(x); plot(x, y, x, g, '.-'), legend('Sin(x)', 'Cos(x)') 绘制多个图象 plot(x,y,x,g) #等价于 plot(x,y) hold all#保留上次绘图并添加新的绘图 plot(x,g) 设置坐标轴的刻度范围 axis([xmin xmax ymin ymax]) axis([xmin xmax ymin ymax zmin zmax cmin cmax]); % 设置x，y，z轴的范围……
+                            </div>
+                            <p class="readmore"><a href="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">阅读全文</a></p>
+                        </article>
+                    
+                    
+		    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" title="解决vscode终端中文乱码" >解决vscode终端中文乱码</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -79,7 +158,7 @@
                             </date>
                             
                             <div class="post-content">
-                                 解决vscode终端中文乱码 1.查看cmd窗口编码，GBK的编码为936，cmd的默认编码为GBK,而很多编译器的默认编码为UTF-8，所以中文会出现乱码，比如vscode下默认编码为UTF-8 使用chcp查看cmd的编码，如果不是UTF-8，可以使用chcp 65001这个命令 2.注意此时你的终端已经默认是utf-8编码了，所以你的文件也必须是utf-8编码的。如果之前是GBK或者是其他编码，一定要重新编码为utf-8(一定要注意这一点) 3.在vscode的配置文件settings.json中添加下列语句 &quot;terminal.integrated.shellArgs.windows&quot;: [&quot;/K chcp 65001 &gt;nul&quot;],  4.最终效果 中文完美显示!!!! 最后: 建议在使用windows系统使用git-bash这个终端,不仅使用git简单快速,还内置了vim,并且支持许多linux下同样的命令,可以减少使用cmd这个让人上火的软件.软件地址在这里 ……
+                                解决vscode终端中文乱码 1.查看cmd窗口编码，GBK的编码为936，cmd的默认编码为GBK,而很多编译器的默认编码为UTF-8，所以中文会出现乱码，比如vscode下默认编码为UTF-8 使用chcp查看cmd的编码，如果不是UTF-8，可以使用chcp 65001这个命令 2……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">阅读全文</a></p>
                         </article>
@@ -89,7 +168,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="Hugo博客使用gittalk评论系统" >Hugo博客使用gittalk评论系统</a>
+                                    <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="hugo博客如何使用gittalk" >hugo博客如何使用gittalk</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -97,7 +176,7 @@
                             </date>
                             
                             <div class="post-content">
-                                1.进入github官方网站,登陆自己的github-&gt;settings-&gt;Devloper settings-&gt;Github Apps会出现下图  Application name:给应用起个名字,根据自己的想法 Homepage:写你的博客地址 Application description:为你的应用写一段描述 Application callback URL:回调地址,可以写你的博客地址  2.点击Register application创建,生成自己的client key和client Secret 3.找到配置评论的文件,比如我的文件是comments.html,该文件的位置在\themes\maupassant\layouts\partials\comment.html {{ if .Site.Params.enableGitalk }} &lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt; &lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt; &lt;script&gt; const gitalk = new Gitalk({ clientID: '{{ .Site.Params.Gitalk.clientID }}', clientSecret: '{{ .Site.Params.Gitalk.clientSecret }}', repo: '{{ .Site.Params.Gitalk.repo }}', owner: '{{ .……
+                                1.进入github官方网站,登陆自己的github-&gt;settings-&gt;Devloper settings-&gt;Github Apps会出现下图 Application name:给应用起个名字,根据自己的想法 Homepage:写你的博客地址 Application description:为你的应用写一段描述 Application callback URL:回调地址,可以写你的博客……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">阅读全文</a></p>
                         </article>
@@ -107,7 +186,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="修复gitpush到github出错问题" >修复gitpush到github出错问题</a>
+                                    <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="git push -u origin master出错解决方案" >git push -u origin master出错解决方案</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -115,7 +194,7 @@
                             </date>
                             
                             <div class="post-content">
-                                 当执行了git push -u origin master时,有时候会出现下图中的错误,主要时本地的代码和远程代码仓库的代码出现了冲突,需要同步远程的master 分支 要解决上述的冲突很简单,只需要下面两条指令即可完成 git pull origin master git push -u origin master  ……
+                                当执行了git push -u origin master时,有时候会出现下图中的错误,主要时本地的代码和远程代码仓库的代码出现了冲突,需要同步远程的master 分支 要解决上述的冲突很简单,只需要下面两条指令即可完成 git pull origin master git push -u origin master……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/">阅读全文</a></p>
                         </article>
@@ -133,7 +212,7 @@
                             </date>
                             
                             <div class="post-content">
-                                 gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.找到配置评论的文件,比如我的文件是comments.html,该文件的位置在\themes\maupassant\layouts\partials\comment.html 2.将id:localtion.pathname改为id:decodeURI(location.pathname) 3.再重新启动博客,已经可以了 ……
+                                gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/">阅读全文</a></p>
                         </article>
@@ -143,7 +222,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Windows连接mongodb数据库" >Windows连接mongodb数据库</a>
+                                    <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="windows连接mongodb数据库" >windows连接mongodb数据库</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -151,7 +230,7 @@
                             </date>
                             
                             <div class="post-content">
-                                 1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径  2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功 ……
+                                1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径 2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/">阅读全文</a></p>
                         </article>
@@ -169,88 +248,9 @@
                             </date>
                             
                             <div class="post-content">
-                                 写在前面 你是不是经常遇到windows软件安装后输入窗口输入中文全是乱码或者中文根本不能输入,本人也曾经遇到过这种问题,曾经使用的Dev C++5.11就出现过这种情况,虽然环境改成了中文却全是乱码,搜遍全网,也没有找到结果,就在不久前,我终于知道了问题的解决办法,请根据下列步骤进行修复,
-以win10系统为例 1.在设置中选择时间和语言 2.选择区域 3.选择其他设置 4.选择区域 5.注意这里是不是中文简体 ![i6.最重要的一步,一定要取消utf-8的勾选(极其重要) 我就是这里勾选了Beta版导致很多软件中文乱码,甚至不能使用,切记!!! ……
+                                写在前面 你是不是经常遇到windows软件安装后输入窗口输入中文全是乱码或者中文根本不能输入,本人也曾经遇到过这种问题,曾经使用的Dev C++5.11就出现过这种情况,虽然环境改成了中文却全是乱码,搜遍全网,也没有找到结果,就在不久前,我终于知道了问题的解决办法,请根据下列步骤进……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/">阅读全文</a></p>
-                        </article>
-                    
-                    
-		    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/" title="vscode配置文档" >vscode配置文档</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-content">
-                                vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件
-使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可
-注意:在所有的mingw64的位置改为自己电脑上的配置 launch.json { &quot;version&quot;: &quot;0.2.0&quot;, &quot;configurations&quot;: [ { // 配置 VS Code 调试行为： &quot;name&quot;: &quot;c/c++&quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。 &quot;preLaunchTask&quot;: &quot;Compile&quot;, // 调试会话开始前要运行的任务。 &quot;type&quot;: &quot;cppdbg&quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。 &quot;request&quot;: &quot;launch&quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ). &quot;program&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}.exe&quot;, // 调试器将启动或附加的可执行文件的完整路径。 &quot;externalConsole&quot;: false, // 设置是否显示外部控制台。 // 配置目标应用程序： &quot;args&quot;: [], // 设置调试时传递给程序的命令行参数。 &quot;cwd&quot;: &quot;${workspaceFolder}&quot;, // 设置调试器启动的应用程序的工作目录。 &quot;environment&quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &quot;name&quot;: &quot;squid&quot;, &quot;value&quot;: &quot;clam&quot; } ]。 // 自定义 GDB 或者 LLDB： &quot;windows&quot;: { &quot;MIMode&quot;: &quot;gdb&quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。 &quot;miDebuggerPath&quot;: &quot;D:/mingw64/mingw64/bin/gdb.……
-                            </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/">阅读全文</a></p>
-                        </article>
-                    
-                    
-		    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/" title="Hugo提交博客及推送到github的流程" >Hugo提交博客及推送到github的流程</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-content">
-                                在博客根目录下运行下面命令,并在post目录下生成markdown博客文件
-hugo new post/xxxx.md  在博客根目录下运行下面命令
-hugo //将本地文件重新编译 hugo server//在本地生成  注意,可以在本地查看博客变化,等自己觉得合适了就可以使用下面命令提交到github
-在hugo本地的public目录下使用如下命令
-git add -A //将修改的文件提交到缓冲区 git commit -m '提交说明' git push -u origin master //推送到远端仓库主分支上  ……
-                            </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/">阅读全文</a></p>
-                        </article>
-                    
-                    
-		    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/" title="GitHub相关" >GitHub相关</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-content">
-                                1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息  .git文件中的信息有以下  config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端钩子脚本。 info 目录保存了一份不希望在 .gitignore 文件中管理的忽略模式 (ignored patterns) 的全局可执行文件 objects 目录存储所有数据内容 refs 目录存储指向数据 (分支) 的提交对象的指针,里面即有stash栈指针以及tag等  2.在文件夹中新建一个文件README.md vim README.md cat README.md  3.连接GitHub 本地仓库与远程仓库的传输是通过SSH加密的，首先创建SSK KEY mkdir .ssh//创建一个文件夹.ssh cd .ssh/ ssh-keygen -t rsa -C &quot;1337425156zhang@gmail.……
-                            </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/">阅读全文</a></p>
-                        </article>
-                    
-                    
-		    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/" title="linux编译c/c&#43;&#43;命令" >linux编译c/c&#43;&#43;命令</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-content">
-                                 linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test  linux下gcc编译c语言 gcc -o test test.c ./test  ……
-                            </div>
-                            <p class="readmore"><a href="https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/">阅读全文</a></p>
                         </article>
                     
                     
@@ -297,15 +297,31 @@ git add -A //将修改的文件提交到缓冲区 git commit -m '提交说明' g
 <ul class="widget-list">
     
     <li>
-        <a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" title="Vscode终端中文乱码应对方案">Vscode终端中文乱码应对方案</a>
+        <a href="https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/" title="Vim如何安装插件">Vim如何安装插件</a>
     </li>
     
     <li>
-        <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="Hugo博客使用gittalk评论系统">Hugo博客使用gittalk评论系统</a>
+        <a href="https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/" title="Pacman包管理命令">Pacman包管理命令</a>
     </li>
     
     <li>
-        <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="修复gitpush到github出错问题">修复gitpush到github出错问题</a>
+        <a href="https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/" title="Hugo限制摘要字数显示">Hugo限制摘要字数显示</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Matlab学习笔记">Matlab学习笔记</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" title="解决vscode终端中文乱码">解决vscode终端中文乱码</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="hugo博客如何使用gittalk">hugo博客如何使用gittalk</a>
+    </li>
+    
+    <li>
+        <a href="https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/" title="git push -u origin master出错解决方案">git push -u origin master出错解决方案</a>
     </li>
     
     <li>
@@ -313,27 +329,11 @@ git add -A //将修改的文件提交到缓冲区 git commit -m '提交说明' g
     </li>
     
     <li>
-        <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Windows连接mongodb数据库">Windows连接mongodb数据库</a>
+        <a href="https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/" title="windows连接mongodb数据库">windows连接mongodb数据库</a>
     </li>
     
     <li>
         <a href="https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/" title="Windows大量软件安装后乱码解决">Windows大量软件安装后乱码解决</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/" title="vscode配置文档">vscode配置文档</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/" title="Hugo提交博客及推送到github的流程">Hugo提交博客及推送到github的流程</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/" title="GitHub相关">GitHub相关</a>
-    </li>
-    
-    <li>
-        <a href="https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/" title="linux编译c/c&#43;&#43;命令">linux编译c/c&#43;&#43;命令</a>
     </li>
     
 </ul>
@@ -345,12 +345,16 @@ git add -A //将修改的文件提交到缓冲区 git commit -m '提交说明' g
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
+    <li><a href="https://CorPython.github.io/categories/vim/">vim (1)</a></li>
+    
 </ul>
     </section>
 
     <section class="widget">
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
+    
+    <a href="https://CorPython.github.io/tags/vim/">vim</a>
     
 </div>
     </section>
