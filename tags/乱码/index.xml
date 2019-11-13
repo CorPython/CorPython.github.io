@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>乱码 on code show的博客</title>
+    <link>https://CorPython.github.io/tags/%E4%B9%B1%E7%A0%81/</link>
+    <description>Recent content in 乱码 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Nov 2019 20:40:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/%E4%B9%B1%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决vscode终端中文乱码</title>
+      <link>https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Mon, 11 Nov 2019 20:40:54 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</guid>
+      <description>解决vscode终端中文乱码 1.查看cmd窗口编码，GBK的编码为936，cmd的默认编码为GBK,而很多编译器的默认编码为UTF-8，所以中文会出现乱码，比如vscode下默认编码为UTF-8 使用chcp查看cmd的编码，如果不是UTF-8，可以使用chcp 65001这个命令 2</description>
+    </item>
+    
+    <item>
+      <title>Windows大量软件安装后乱码解决</title>
+      <link>https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Fri, 08 Nov 2019 20:46:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
+      <description>写在前面 你是不是经常遇到windows软件安装后输入窗口输入中文全是乱码或者中文根本不能输入,本人也曾经遇到过这种问题,曾经使用的Dev C++5.11就出现过这种情况,虽然环境改成了中文却全是乱码,搜遍全网,也没有找到结果,就在不久前,我终于知道了问题的解决办法,请根据下列步骤进</description>
+    </item>
+    
+  </channel>
+</rss>

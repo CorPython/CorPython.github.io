@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on code show的博客</title>
+    <link>https://CorPython.github.io/tags/windows/</link>
+    <description>Recent content in windows on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Nov 2019 20:30:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>windows连接mongodb数据库</title>
+      <link>https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Sun, 10 Nov 2019 20:30:14 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径 2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功</description>
+    </item>
+    
+    <item>
+      <title>Windows大量软件安装后乱码解决</title>
+      <link>https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Fri, 08 Nov 2019 20:46:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
+      <description>写在前面 你是不是经常遇到windows软件安装后输入窗口输入中文全是乱码或者中文根本不能输入,本人也曾经遇到过这种问题,曾经使用的Dev C++5.11就出现过这种情况,虽然环境改成了中文却全是乱码,搜遍全网,也没有找到结果,就在不久前,我终于知道了问题的解决办法,请根据下列步骤进</description>
+    </item>
+    
+  </channel>
+</rss>

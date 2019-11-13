@@ -20,5 +20,23 @@
       <description>vim 安装插件 vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc linux下安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 将以下信息写入.vimrc中 &amp;quot; Specify a directory for plugins &amp;quot; - For Neovim: stdpath(&#39;data&#39;) . &#39;/plugged&#39; &amp;quot; - Avoid using standard Vim directory names like &#39;plugin&#39; call plug#begin(&#39;~/.vim/plugged&#39;) &amp;quot; Make sure you use single quotes &amp;quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align Plug &#39;junegunn/vim-easy-align&#39; &amp;quot;</description>
     </item>
     
+    <item>
+      <title>github基本操作</title>
+      <link>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</guid>
+      <description>1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息 .git文件中的信息有以下 config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端</description>
+    </item>
+    
+    <item>
+      <title>vim基础操作</title>
+      <link>https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vim%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/</guid>
+      <description>vim指令 基础命令 h上 j下 k 上 l右 b:回退 p:粘贴 y:复制 u:撤消 d:剪切 i:进入insert模式 a:在当前光标后进入insert模式 o:在当前光标的下一行进入insert模式 c:剪切并进入insert模式 v：直接进入可视化visual模式 V：选择光标所在行并进入visual模式</description>
+    </item>
+    
   </channel>
 </rss>

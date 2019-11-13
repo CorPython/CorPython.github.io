@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>入门教程 on code show的博客</title>
+    <link>https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 入门教程 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Nov 2019 16:54:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim如何安装插件</title>
+      <link>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</guid>
+      <description>vim 安装插件 vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc linux下安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 将以下信息写入.vimrc中 &amp;quot; Specify a directory for plugins &amp;quot; - For Neovim: stdpath(&#39;data&#39;) . &#39;/plugged&#39; &amp;quot; - Avoid using standard Vim directory names like &#39;plugin&#39; call plug#begin(&#39;~/.vim/plugged&#39;) &amp;quot; Make sure you use single quotes &amp;quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align Plug &#39;junegunn/vim-easy-align&#39; &amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Pacman包管理命令</title>
+      <link>https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 13 Nov 2019 16:51:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</guid>
+      <description>Pacman指令 1.安装软件 sudo pacman -S 软件名 2.更新软件源并更新你的软件 sudo pacman -Syu 3.查询软件 sudo pacman -Ss 软件名 4.请理已安装的软件的缓存(安装包) sudo pacman -Sc 5.删除某个软件 只删除安装包 sudo pacman -R 软件名 删除安装包及其依赖 sudo pacman -Rs 软件名 在上面的基础上删除该软件的全局配置(推荐) sudo pacman -Rns 软件名 6.查询本地已经</description>
+    </item>
+    
+    <item>
+      <title>windows连接mongodb数据库</title>
+      <link>https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Sun, 10 Nov 2019 20:30:14 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径 2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功</description>
+    </item>
+    
+    <item>
+      <title>github基本操作</title>
+      <link>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</guid>
+      <description>1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息 .git文件中的信息有以下 config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端</description>
+    </item>
+    
+    <item>
+      <title>linux编译c/c&#43;&#43;命令</title>
+      <link>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</guid>
+      <description>linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test linux下gcc编译c语言 gcc -o test test.c ./test</description>
+    </item>
+    
+    <item>
+      <title>Vscode快捷键</title>
+      <link>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：ctrl+k,ctrl+u c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移 3、显示/隐藏左侧目录栏 ctrl + b</description>
+    </item>
+    
+  </channel>
+</rss>

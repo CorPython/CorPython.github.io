@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on code show的博客</title>
+    <link>https://CorPython.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Nov 2019 18:14:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gittalk报错Error: Validation Failed</title>
+      <link>https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Mon, 11 Nov 2019 18:14:21 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/</guid>
+      <description>gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.</description>
+    </item>
+    
+  </channel>
+</rss>

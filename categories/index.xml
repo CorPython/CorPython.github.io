@@ -12,11 +12,47 @@
     
     
     <item>
-      <title>vim</title>
-      <link>https://CorPython.github.io/categories/vim/</link>
+      <title>入门教程</title>
+      <link>https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
       <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/categories/vim/</guid>
+      <guid>https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 13 Nov 2019 16:09:51 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习笔记</title>
+      <link>https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 13 Nov 2019 16:05:31 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>解决办法</title>
+      <link>https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Mon, 11 Nov 2019 20:40:54 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件配置</title>
+      <link>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 07 Nov 2019 20:32:46 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
       <description></description>
     </item>
     

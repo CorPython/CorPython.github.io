@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on code show的博客</title>
+    <link>https://CorPython.github.io/tags/github/</link>
+    <description>Recent content in github on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Nov 2019 19:23:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>github基本操作</title>
+      <link>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</guid>
+      <description>1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息 .git文件中的信息有以下 config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端</description>
+    </item>
+    
+  </channel>
+</rss>

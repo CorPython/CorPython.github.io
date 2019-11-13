@@ -81,7 +81,7 @@
                             <div class="post-meta">
                                 <span>|</span>
                                 
-                                <span class="meta-category"><a href="https://CorPython.github.io/categories/vim">vim</a></span>
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B">入门教程</a></span>
                                 
                             </div>
                             
@@ -103,6 +103,13 @@
                                 2019年11月13日
                             </date>
                             
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B">入门教程</a></span>
+                                
+                            </div>
+                            
                             <div class="post-content">
                                 Pacman指令 1.安装软件 sudo pacman -S 软件名 2.更新软件源并更新你的软件 sudo pacman -Syu 3.查询软件 sudo pacman -Ss 软件名 4.请理已安装的软件的缓存(安装包) sudo pacman -Sc 5.删除某个软件 只删除安装包 sudo pacman -R 软件名 删除安装包及其依赖 sudo pacman -Rs 软件名 在上面的基础上删除该软件的全局配置(推荐) sudo pacman -Rns 软件名 6.查询本地已经……
                             </div>
@@ -120,6 +127,13 @@
                             <date class="post-meta meta-date">
                                 2019年11月13日
                             </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2">博客</a></span>
+                                
+                            </div>
                             
                             <div class="post-content">
                                 在首页显示博客时,我们通常不希望将所有的内容显示出来,只希望显示部分内容.我们通常会在config.toml中设定摘要的字数 summaryLength = 180 但是,只在配置文件中这样设置是没有效果的!!!!我们需要在每一篇博客的开头加上这样一句 isCJKLanguage: true 为了避免每次写博客时手动添加,我们可以将这一句写入模板中,打……
@@ -139,6 +153,13 @@
                                 2019年11月13日
                             </date>
                             
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">学习笔记</a></span>
+                                
+                            </div>
+                            
                             <div class="post-content">
                                 绘图 添加标签，标题，生成网格线，美化图形 x = [0:0.01:10]; y = sin(x); plot(x, y), xlabel('x'), ylabel('Sin(x)'), title('Sin(x) Graph'), grid on,axis equal#添加网格线和美化图形 绘制多个函数 x = [0 : 0.01: 10]; y = sin(x); g = cos(x); plot(x, y, x, g, '.-'), legend('Sin(x)', 'Cos(x)') 绘制多个图象 plot(x,y,x,g) #等价于 plot(x,y) hold all#保留上次绘图并添加新的绘图 plot(x,g) 设置坐标轴的刻度范围 axis([xmin xmax ymin ymax]) axis([xmin xmax ymin ymax zmin zmax cmin cmax]); % 设置x，y，z轴的范围……
                             </div>
@@ -156,6 +177,13 @@
                             <date class="post-meta meta-date">
                                 2019年11月11日
                             </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a></span>
+                                
+                            </div>
                             
                             <div class="post-content">
                                 解决vscode终端中文乱码 1.查看cmd窗口编码，GBK的编码为936，cmd的默认编码为GBK,而很多编译器的默认编码为UTF-8，所以中文会出现乱码，比如vscode下默认编码为UTF-8 使用chcp查看cmd的编码，如果不是UTF-8，可以使用chcp 65001这个命令 2……
@@ -175,6 +203,13 @@
                                 2019年11月11日
                             </date>
                             
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2">博客</a></span>
+                                
+                            </div>
+                            
                             <div class="post-content">
                                 1.进入github官方网站,登陆自己的github-&gt;settings-&gt;Devloper settings-&gt;Github Apps会出现下图 Application name:给应用起个名字,根据自己的想法 Homepage:写你的博客地址 Application description:为你的应用写一段描述 Application callback URL:回调地址,可以写你的博客……
                             </div>
@@ -192,6 +227,13 @@
                             <date class="post-meta meta-date">
                                 2019年11月11日
                             </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a></span>
+                                
+                            </div>
                             
                             <div class="post-content">
                                 当执行了git push -u origin master时,有时候会出现下图中的错误,主要时本地的代码和远程代码仓库的代码出现了冲突,需要同步远程的master 分支 要解决上述的冲突很简单,只需要下面两条指令即可完成 git pull origin master git push -u origin master……
@@ -211,6 +253,13 @@
                                 2019年11月11日
                             </date>
                             
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a></span>
+                                
+                            </div>
+                            
                             <div class="post-content">
                                 gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.……
                             </div>
@@ -229,6 +278,13 @@
                                 2019年11月10日
                             </date>
                             
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B">入门教程</a></span>
+                                
+                            </div>
+                            
                             <div class="post-content">
                                 1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径 2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功……
                             </div>
@@ -246,6 +302,13 @@
                             <date class="post-meta meta-date">
                                 2019年11月8日
                             </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a></span>
+                                
+                            </div>
                             
                             <div class="post-content">
                                 写在前面 你是不是经常遇到windows软件安装后输入窗口输入中文全是乱码或者中文根本不能输入,本人也曾经遇到过这种问题,曾经使用的Dev C++5.11就出现过这种情况,虽然环境改成了中文却全是乱码,搜遍全网,也没有找到结果,就在不久前,我终于知道了问题的解决办法,请根据下列步骤进……
@@ -345,7 +408,15 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://CorPython.github.io/categories/vim/">vim (1)</a></li>
+    <li><a href="https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/">入门教程 (6)</a></li>
+    
+    <li><a href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/">博客 (3)</a></li>
+    
+    <li><a href="https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记 (2)</a></li>
+    
+    <li><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">解决办法 (4)</a></li>
+    
+    <li><a href="https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/">软件配置 (1)</a></li>
     
 </ul>
     </section>
@@ -354,7 +425,35 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
+    <a href="">Gittalk</a>
+    
+    <a href="https://CorPython.github.io/tags/git/">git</a>
+    
+    <a href="https://CorPython.github.io/tags/github/">github</a>
+    
+    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
+    
+    <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
+    
+    <a href="https://CorPython.github.io/tags/linux/">linux</a>
+    
+    <a href="https://CorPython.github.io/tags/matlab/">matlab</a>
+    
+    <a href="https://CorPython.github.io/tags/mongodb/">mongodb</a>
+    
+    <a href="https://CorPython.github.io/tags/pacman/">pacman</a>
+    
     <a href="https://CorPython.github.io/tags/vim/">vim</a>
+    
+    <a href="https://CorPython.github.io/tags/vscode/">vscode</a>
+    
+    <a href="https://CorPython.github.io/tags/windows/">windows</a>
+    
+    <a href="https://CorPython.github.io/tags/%E4%B9%B1%E7%A0%81/">乱码</a>
+    
+    <a href="https://CorPython.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+    
+    <a href="https://CorPython.github.io/tags/%E6%8F%92%E4%BB%B6/">插件</a>
     
 </div>
     </section>

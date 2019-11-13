@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>matlab on code show的博客</title>
+    <link>https://CorPython.github.io/tags/matlab/</link>
+    <description>Recent content in matlab on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Nov 2019 16:05:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Matlab学习笔记</title>
+      <link>https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 13 Nov 2019 16:05:31 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>绘图 添加标签，标题，生成网格线，美化图形 x = [0:0.01:10]; y = sin(x); plot(x, y), xlabel(&#39;x&#39;), ylabel(&#39;Sin(x)&#39;), title(&#39;Sin(x) Graph&#39;), grid on,axis equal#添加网格线和美化图形 绘制多个函数 x = [0 : 0.01: 10]; y = sin(x); g = cos(x); plot(x, y, x, g, &#39;.-&#39;), legend(&#39;Sin(x)&#39;, &#39;Cos(x)&#39;) 绘制多个图象 plot(x,y,x,g) #等价于 plot(x,y) hold all#保留上次绘图并添加新的绘图 plot(x,g) 设置坐标轴的刻度范围 axis([xmin xmax ymin ymax]) axis([xmin xmax ymin ymax zmin zmax cmin cmax]); % 设置x，y，z轴的范围</description>
+    </item>
+    
+  </channel>
+</rss>
