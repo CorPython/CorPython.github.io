@@ -6,17 +6,35 @@
     <description>Recent content in Tags on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Nov 2019 16:54:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2019 13:31:15 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>hugo</title>
+      <link>https://CorPython.github.io/tags/hugo/</link>
+      <pubDate>Fri, 15 Nov 2019 13:31:15 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>vim</title>
       <link>https://CorPython.github.io/tags/vim/</link>
-      <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
+      <pubDate>Thu, 14 Nov 2019 20:39:01 +0800</pubDate>
       
       <guid>https://CorPython.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://CorPython.github.io/tags/github/</link>
+      <pubDate>Wed, 13 Nov 2019 18:30:44 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/tags/github/</guid>
       <description></description>
     </item>
     
@@ -35,15 +53,6 @@
       <pubDate>Wed, 13 Nov 2019 16:51:48 +0800</pubDate>
       
       <guid>https://CorPython.github.io/tags/pacman/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://CorPython.github.io/tags/hugo/</link>
-      <pubDate>Wed, 13 Nov 2019 16:09:51 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -76,10 +85,10 @@
     
     <item>
       <title>gittalk</title>
-      <link>https://CorPython.github.io/tags/gittalk/</link>
+      <link></link>
       <pubDate>Mon, 11 Nov 2019 18:59:30 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/tags/gittalk/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
@@ -94,10 +103,10 @@
     
     <item>
       <title>Gittalk</title>
-      <link></link>
+      <link>https://CorPython.github.io/tags/Gittalk/</link>
       <pubDate>Mon, 11 Nov 2019 18:14:21 +0800</pubDate>
       
-      <guid></guid>
+      <guid>https://CorPython.github.io/tags/Gittalk/</guid>
       <description></description>
     </item>
     
@@ -125,15 +134,6 @@
       <pubDate>Sun, 10 Nov 2019 20:30:14 +0800</pubDate>
       
       <guid>https://CorPython.github.io/tags/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://CorPython.github.io/tags/github/</link>
-      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/tags/github/</guid>
       <description></description>
     </item>
     

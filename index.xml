@@ -6,10 +6,55 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Nov 2019 16:54:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2019 13:31:15 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo添加博客字数统计功能</title>
+      <link>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Fri, 15 Nov 2019 13:31:15 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <description>1.在自己的博客的文章中找到你想将字数多少显示的具体位置,假如我想将它放在阅读数的后面,先定位到阅读数的源代码位置,找到对应的class位置. 2.在自己主题的single.html的配置中搜索第一步中的class的位置,并在{{ end }}后面添加一下代码,比如我的主题对应的singl</description>
+    </item>
+    
+    <item>
+      <title>hugo如何将文章置顶</title>
+      <link>https://CorPython.github.io/post/hugo%E5%A6%82%E4%BD%95%E5%B0%86%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</link>
+      <pubDate>Fri, 15 Nov 2019 13:04:44 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E5%A6%82%E4%BD%95%E5%B0%86%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</guid>
+      <description>在创建的博客或者写过的博客的Front matter中添加下列字段 weight:1</description>
+    </item>
+    
+    <item>
+      <title>git clone出错</title>
+      <link>https://CorPython.github.io/post/gitcloneerror/</link>
+      <pubDate>Thu, 14 Nov 2019 20:39:01 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/gitcloneerror/</guid>
+      <description>问题如下图: 输入命令,修改https方式下载改为使用ssh下载方式 git config --global url.git：//github.com/.insteadOf https://github.com/</description>
+    </item>
+    
+    <item>
+      <title>Vim代码自动补全</title>
+      <link>https://CorPython.github.io/post/vim%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8/</link>
+      <pubDate>Thu, 14 Nov 2019 12:36:58 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vim%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8/</guid>
+      <description>vim自带的代码补全快捷键 ctrl + N</description>
+    </item>
+    
+    <item>
+      <title>Github同步fork的项目</title>
+      <link>https://CorPython.github.io/post/github%E5%90%8C%E6%AD%A5fork%E7%9A%84%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Wed, 13 Nov 2019 18:30:44 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/github%E5%90%8C%E6%AD%A5fork%E7%9A%84%E9%A1%B9%E7%9B%AE/</guid>
+      <description>给出两种方法 1.使用git指令进行更新 git remote -v git remote add upstream git@github.com:xxx/xxx.git git fetch upstream git merge upstream/master 2.在Github Desktop上更新</description>
+    </item>
     
     <item>
       <title>Vim如何安装插件</title>
@@ -30,7 +75,7 @@
     </item>
     
     <item>
-      <title>Hugo限制摘要字数显示</title>
+      <title>hugo限制摘要字数显示</title>
       <link>https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/</link>
       <pubDate>Wed, 13 Nov 2019 16:09:51 +0800</pubDate>
       
@@ -134,7 +179,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</guid>
-      <description>linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test linux下gcc编译c语言 gcc -o test test.c ./test</description>
+      <description>linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test linux下gcc编译c语言 gcc -o test test.c ./test linux基本命令 cd 或者cd ~ 返回用户工作目录 ls cd - 返回上一个访问的目录 mkdir 文件夹名 创建文件夹 cd ..// 返回上一级目录 cd ../.. 返回上两级目录,以此类推 pwd 打印当前路径 export //</description>
     </item>
     
     <item>
@@ -161,7 +206,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/about/</guid>
-      <description> 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 这个人很懒,还不想写介绍 </description>
+      <description>关于本人 本人卑微大三狗,于2019/11/07搭建了这个博客,用来记录学习技术的过程,鉴于自己技术浅薄,所以博客中的内容可能无法解决你的问题或者误导了你,我先主动的表示抱歉.也欢迎随时和我沟通,也可以在下方的评论区评论,有时间的话我一定及时回复. 联系方式 下面是我的qq和微信联系方</description>
     </item>
     
     <item>
@@ -179,7 +224,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/new/</guid>
-      <description> 暂时没有写内容,敬请期待 暂时没有写内容,敬请期待 暂时没有写内容,敬请期待 </description>
+      <description>最近正打算复习数据结构及学习基础的算法,刷一些leecode算法题</description>
     </item>
     
   </channel>

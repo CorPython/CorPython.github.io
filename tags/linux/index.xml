@@ -17,7 +17,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</guid>
-      <description>linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test linux下gcc编译c语言 gcc -o test test.c ./test</description>
+      <description>linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test linux下gcc编译c语言 gcc -o test test.c ./test linux基本命令 cd 或者cd ~ 返回用户工作目录 ls cd - 返回上一个访问的目录 mkdir 文件夹名 创建文件夹 cd ..// 返回上一级目录 cd ../.. 返回上两级目录,以此类推 pwd 打印当前路径 export //</description>
     </item>
     
   </channel>

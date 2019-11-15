@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>gittalk on code show的博客</title>
-    <link>https://CorPython.github.io/tags/gittalk/</link>
-    <description>Recent content in gittalk on code show的博客</description>
+    <title>Gittalk on code show的博客</title>
+    <link>https://CorPython.github.io/tags/Gittalk/</link>
+    <description>Recent content in Gittalk on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2019 18:59:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2019 18:14:21 +0800</lastBuildDate>
     
-	<atom:link href="https://CorPython.github.io/tags/gittalk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://CorPython.github.io/tags/Gittalk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hugo博客如何使用gittalk</title>
-      <link>https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 11 Nov 2019 18:59:30 +0800</pubDate>
+      <title>Gittalk报错Error: Validation Failed</title>
+      <link>https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Mon, 11 Nov 2019 18:14:21 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
-      <description>1.进入github官方网站,登陆自己的github-&amp;gt;settings-&amp;gt;Devloper settings-&amp;gt;Github Apps会出现下图 Application name:给应用起个名字,根据自己的想法 Homepage:写你的博客地址 Application description:为你的应用写一段描述 Application callback URL:回调地址,可以写你的博客</description>
+      <guid>https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/</guid>
+      <description>gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.</description>
     </item>
     
   </channel>
