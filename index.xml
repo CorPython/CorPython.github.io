@@ -6,10 +6,19 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2019 13:31:15 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2019 22:19:14 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WireShark找不到接口或者网卡</title>
+      <link>https://CorPython.github.io/post/WireShark%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8E%A5%E5%8F%A3%E6%88%96%E8%80%85%E7%BD%91%E5%8D%A1/</link>
+      <pubDate>Tue, 19 Nov 2019 22:19:14 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/WireShark%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8E%A5%E5%8F%A3%E6%88%96%E8%80%85%E7%BD%91%E5%8D%A1/</guid>
+      <description>wireshark是一款win10上的抓包软件.详情请点击官网 安装过程就不再赘述,请自己百度 百度的解释为: Wireshark（前称Ethereal）是一个网络封包分析软件。网络封包分析软件的功能是撷取网络封包，并尽可能显示出最为详细的网络封包资料。Wireshark使用WinPC</description>
+    </item>
     
     <item>
       <title>hugo添加博客字数统计功能</title>
