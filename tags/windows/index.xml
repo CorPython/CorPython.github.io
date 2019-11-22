@@ -6,10 +6,19 @@
     <description>Recent content in windows on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Nov 2019 20:30:14 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 20:21:37 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows安装latex</title>
+      <link>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</link>
+      <pubDate>Fri, 22 Nov 2019 20:21:37 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</guid>
+      <description>后期会补上</description>
+    </item>
     
     <item>
       <title>windows连接mongodb数据库</title>

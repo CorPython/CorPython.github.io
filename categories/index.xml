@@ -6,10 +6,28 @@
     <description>Recent content in Categories on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Nov 2019 22:19:14 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 20:25:21 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>软件配置</title>
+      <link>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 22 Nov 2019 20:25:21 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件安装</title>
+      <link>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Fri, 22 Nov 2019 20:21:37 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>解决办法</title>
@@ -35,15 +53,6 @@
       <pubDate>Thu, 14 Nov 2019 20:39:01 +0800</pubDate>
       
       <guid>https://CorPython.github.io/categories/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>软件配置</title>
-      <link>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Thu, 14 Nov 2019 12:36:58 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
       <description></description>
     </item>
     

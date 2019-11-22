@@ -6,10 +6,19 @@
     <description>Recent content in 软件配置 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2019 12:36:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 20:25:21 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vscode如何写latex</title>
+      <link>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</link>
+      <pubDate>Fri, 22 Nov 2019 20:25:21 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</guid>
+      <description>后续会补上</description>
+    </item>
     
     <item>
       <title>Vim代码自动补全</title>

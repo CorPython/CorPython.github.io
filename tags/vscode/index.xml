@@ -6,10 +6,19 @@
     <description>Recent content in vscode on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2019 20:40:54 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 20:25:21 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vscode如何写latex</title>
+      <link>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</link>
+      <pubDate>Fri, 22 Nov 2019 20:25:21 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</guid>
+      <description>后续会补上</description>
+    </item>
     
     <item>
       <title>解决vscode终端中文乱码</title>
