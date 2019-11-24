@@ -1,93 +1,126 @@
-var lunrIndex, pagesIndex;
+$(document).ready(function () {
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "sitemap.xml";
+    var path = "/" + search_path;
+    // monitor main search box;
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            async: true,
+            success: function( xmlResponse ) {
+                // get the contents from search data
+                console.log("xxxx");
+                isfetched = true;
+                $('.popup').detach().appendTo('.header-inner');
+                var datas = $( "entry", xmlResponse ).map(function() {
+                    return {
+                        title: $( "title", this ).text(),
+                        content: $("content",this).text(),
+                        url: $( "url" , this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function(){
+                    var matchcounts = 0;
+                    var str='<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length > 1) {
+                    // perform local searching
+                    datas.forEach(function(data) {
+                        var isMatch = true;
+                        var content_index = [];
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                        var data_url = data.url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if(data_title != '' && data_content != '') {
+                            keywords.forEach(function(keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if( index_title < 0 && index_content < 0 ){
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i == 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            matchcounts += 1;
+                            str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g,"");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if(start < 0){
+                                    start = 0;
+                                }
+                                if(start == 0){
+                                    end = 50;
+                                }
+                                if(end > content.length){
+                                    end = content.length;
+                                }
+                                var match_content = content.substring(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function(keyword){
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                                });
 
-function endsWith(str, suffix) {
-    return str.indexOf(suffix, str.length - suffix.length) !== -1;
-}
-
-// Initialize lunrjs using our generated index file
-function initLunr() {
-    if (!endsWith(baseurl,"/")){
-        baseurl = baseurl+'/'
-    };
-
-    // First retrieve the index file
-    $.getJSON(baseurl +"index.json")
-        .done(function(index) {
-            pagesIndex = index;
-            // Set up lunrjs by declaring the fields we use
-            // Also provide their boost level for the ranking
-            lunrIndex = lunr(function() {
-                this.ref("uri");
-                this.field('title', {
-		    boost: 15
+                                str += "<p class=\"search-result\">" + match_content +"...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    })};
+                    str += "</ul>";
+                    if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                    if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                    $resultContent.innerHTML = str;
                 });
-                this.field('tags', {
-		    boost: 10
-                });
-                this.field("content", {
-		    boost: 5
-                });
-				
-                this.pipeline.remove(lunr.stemmer);
-                this.searchPipeline.remove(lunr.stemmer);
-				
-                // Feed lunr with each file and let lunr actually index them
-                pagesIndex.forEach(function(page) {
-		    this.add(page);
-                }, this);
-            })
-        })
-        .fail(function(jqxhr, textStatus, error) {
-            var err = textStatus + ", " + error;
-            console.error("Error getting Hugo index file:", err);
+                proceedsearch();
+            }
         });
-}
+    }
 
-/**
- * Trigger a search in lunr and transform the result
- *
- * @param  {String} query
- * @return {Array}  results
- */
-function search(queryTerm) {
-    // Find the item in our index corresponding to the lunr one to have more info
-    return lunrIndex.search(queryTerm+"^100"+" "+queryTerm+"*^10"+" "+"*"+queryTerm+"^10"+" "+queryTerm+"~2^1").map(function(result) {
-            return pagesIndex.filter(function(page) {
-                return page.uri === result.ref;
-            })[0];
-        });
-}
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+     console.log("isfetched", isfetched);
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
 
-// Let's get started
-initLunr();
-$( document ).ready(function() {
-    var searchList = new autoComplete({
-        /* selector for the search box element */
-        selector: $("#search-by").get(0),
-        /* source is the callback to perform the search */
-        source: function(term, response) {
-            response(search(term));
-        },
-        /* renderItem displays individual search results */
-        renderItem: function(item, term) {
-            var numContextWords = 2;
-            var text = item.content.match(
-                "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
-            item.context = text;
-            return '<div class="autocomplete-suggestion" ' +
-                'data-term="' + term + '" ' +
-                'data-title="' + item.title + '" ' +
-                'data-uri="'+ item.uri + '" ' +
-                'data-context="' + item.context + '">' +
-                '» ' + item.title +
-                '<div class="context">' +
-                (item.context || '') +'</div>' +
-                '</div>';
-        },
-        /* onSelect callback fires when a search suggestion is chosen */
-        onSelect: function(e, term, item) {
-            location.href = item.getAttribute('data-uri');
-        }
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+
+    $('.popup').click(function(e){
+      e.stopPropagation();
     });
 });

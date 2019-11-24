@@ -61,7 +61,6 @@
     </div>
 </header>
 
-
 <div id="body">
     <div class="container">
         <div class="col-group">
@@ -316,12 +315,14 @@
     </div>
 </div>
 <footer id="footer">
+    
     <div class="container">
         &copy; 2019 <a href="https://CorPython.github.io/">code show的博客 By code show</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
         
-        博客已苟活<SPAN id=span_dt_dt style="color: #0196e3;"></SPAN>
+        </br>
+        博客已运行<SPAN id=span_dt_dt style="color: #0196e3;"></SPAN>
             <SCRIPT language=javascript>
             function show_date_time(){
             window.setTimeout("show_date_time()", 1000);
@@ -342,10 +343,7 @@
             }
             show_date_time();
             </SCRIPT>
-    </div>
-        
 </footer>
-
 
 
 <a id="rocket" href="#top"></a>
@@ -364,8 +362,9 @@ if (!doNotTrack) {
 
 
 
-    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
+    
 
 
 
@@ -373,6 +372,23 @@ if (!doNotTrack) {
 
     <script src="/js/love.js"></script>
 
+    <script src="/js/share.js"></script>
+  
+
+
+<script >
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 50);  
+        var countOffset = 20000;  
+       function fixCount() {                   
+         if ($("#busuanzi_container_site_pv").css("display") != "none")
+           {
+              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+              clearInterval(int); 
+         }  
+     }           
+    });
+</script>
 
 </body>
 </html>

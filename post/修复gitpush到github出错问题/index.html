@@ -65,10 +65,123 @@
     </div>
 </header>
 
-
 <div id="body">
         
+        <div id="virtual_toc_list" style="display: none">
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#当执行了-git-push-u-origin-master-时-有时候会出现下图中的错误-主要时本地的代码和远程代码仓库的代码出现了冲突-需要同步远程的master-分支">当执行了<code>git push -u origin master</code>时,有时候会出现下图中的错误,主要时本地的代码和远程代码仓库的代码出现了冲突,需要同步远程的master 分支</a></li>
+</ul></li>
+<li><a href="#要解决上述的冲突很简单-只需要下面两条指令即可完成">要解决上述的冲突很简单,只需要下面两条指令即可完成</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        <div id="float_toc_div" style="margin: 10px;border: 1px solid gray;z-index:99999;display: none;">
+            <header style="background-color: #f3f3f3;color: black;border-bottom: 1px solid gray;padding: 10px 10px 10px 10px;">
+                <strong id="toc_btn_open" style="color: black;font-size: large;">目录</strong>
+                <strong id="toc_btn_close" style="color: black;font-size: large;float: right">╳</strong>
+            </header>
+            <div id="toc_list" style="background-color: #f3f3f3;color: black;padding: 10px;">
         
+            </div>
+        </div>
+        <style type="text/css">
+            #float_toc_div {
+                position: fixed;
+                display: none;
+                 
+                height: auto;
+                font-size: 13px;
+            }
+        
+            #toc_list a:hover,
+            #toc_list a:active {
+                color: #ba3925;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                let tocNavElem = document.getElementById("TableOfContents");
+                let floatTocDivElem = document.getElementById("float_toc_div");
+                let tocListElem = floatTocDivElem.getElementsByTagName('div')[0];
+                let colGroupElem = document.getElementById("body").getElementsByClassName("col-group")[0]
+                let floatTocWidth = (document.body.clientWidth - colGroupElem.offsetWidth) / 2 - 16;
+                var useFloatToc = false;
+
+                if (floatTocWidth >= 100) {
+                    useFloatToc = true;
+                    document.getElementById("toc_list").appendChild(tocNavElem);
+                    floatTocDivElem.style.display = 'block';
+                    floatTocDivElem.style.width = floatTocWidth + 'px';
+                    top();
+                    floatTocDivElem.style.left = '0px';
+
+                    function top() {
+                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
+                            floatTocDivElem.style.top = '0px';
+                        } else {
+                            floatTocDivElem.style.top = window.innerHeight / 9 + 'px';
+                        }
+                    }
+
+                    function ishide() {
+                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
+                            floatTocDivElem.style.top = '0px';
+                        } else {
+                            floatTocDivElem.style.display = 'block';
+                        }
+                    }
+
+                    window.onscroll = function () {
+                        ishide();
+                        if ((document.documentElement.scrollTop != 0) && (floatTocDivElem.style.display == 'block')) {
+                            top();
+                        }
+                    };
+
+                    window.onresize = function () {
+                        ishide();
+                    }
+
+                    document.getElementById("toc_btn_open").addEventListener('click', function () {
+                        switch (tocListElem.style.display) {
+                            case "none":
+                                document.getElementById("toc_btn_close").style.display = "";
+                                tocListElem.style.display = "";
+                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "1px solid gray";
+                                break;
+                            default:
+                                break;
+                        }
+                    }, false);
+
+                    document.getElementById("toc_btn_close").addEventListener('click', function () {
+                        switch (tocListElem.style.display) {
+                            case "":
+                                document.getElementById("toc_btn_close").style.display = "none";
+                                tocListElem.style.display = "none";
+                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "";
+                                break;
+                            default:
+                                break;
+                        }
+                    }, false);
+                } else {
+                    let fixedTocElem = document.getElementsByClassName("toc-article")[0];
+                    fixedTocElem.appendChild(tocNavElem);
+                    fixedTocElem.parentElement.style.display = "";
+                }
+                document.getElementById("virtual_toc_list").remove();
+            };   
+        </script>
     <div class="container">
         <div class="col-group">
 
@@ -93,8 +206,15 @@
                         
                         <div class="post-meta">
                             <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span> 阅读</span></span>
+                            </div>
                         </div>
                         
+                        
+                        <div class="clear" style="display: none">
+                            <div class="toc-article">
+                                <div class="toc-title">文章目录</div>
+                            </div>
+                        </div>
                         
                         <div class="post-content">
                             
@@ -110,7 +230,6 @@ git push -u origin master
 </code></pre>
 
                         </div>
-
                         
 <div class="post-archive">
     <ul class="post-copyright">
@@ -142,7 +261,11 @@ git push -u origin master
     </ul>
 </div>
 
-
+                    </br>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                        
+                        <div class="social-share">
                         <div class="post-meta meta-tags">
                             
                             <ul class="clearfix">
@@ -152,6 +275,7 @@ git push -u origin master
                             </ul>
                             
                         </div>
+                    </br>
                     </article>
                     
 
@@ -344,12 +468,14 @@ git push -u origin master
     </div>
 </div>
 <footer id="footer">
+    
     <div class="container">
         &copy; 2019 <a href="https://CorPython.github.io/">code show的博客 By code show</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
         
-        博客已苟活<SPAN id=span_dt_dt style="color: #0196e3;"></SPAN>
+        </br>
+        博客已运行<SPAN id=span_dt_dt style="color: #0196e3;"></SPAN>
             <SCRIPT language=javascript>
             function show_date_time(){
             window.setTimeout("show_date_time()", 1000);
@@ -370,10 +496,7 @@ git push -u origin master
             }
             show_date_time();
             </SCRIPT>
-    </div>
-        
 </footer>
-
 
     
     <script type="text/javascript">
@@ -410,8 +533,9 @@ if (!doNotTrack) {
 
 
 
-    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
+    
 
 
 
@@ -419,5 +543,22 @@ if (!doNotTrack) {
 
     <script src="/js/love.js"></script>
 
+    <script src="/js/share.js"></script>
+  
+
+
+<script >
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 50);  
+        var countOffset = 20000;  
+       function fixCount() {                   
+         if ($("#busuanzi_container_site_pv").css("display") != "none")
+           {
+              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+              clearInterval(int); 
+         }  
+     }           
+    });
+</script>
 </body>
 </html>
