@@ -6,10 +6,19 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Nov 2019 20:25:21 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 20:06:38 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</title>
+      <link>https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Wed, 27 Nov 2019 20:06:38 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/</guid>
+      <description>前言 用hugo写博客可能图片是比较重要的一环吧.本来时指望在博客中使用本地的图片,但是由于自己的能力有限,并且看了一些大神都不推荐使用本地图片.推荐使用图床来管理自己的博客图片. 常见的免费图床建议参考这篇文章:盘点一下免费好用的图床 但是,今天不是介绍免费图床的使用,这次主要是介绍</description>
+    </item>
     
     <item>
       <title>vscode如何写latex</title>
