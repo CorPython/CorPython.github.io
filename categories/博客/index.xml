@@ -6,10 +6,19 @@
     <description>Recent content in 博客 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2019 13:31:15 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2019 22:15:53 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo使用本地的图片</title>
+      <link>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Thu, 28 Nov 2019 22:15:53 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/</guid>
+      <description>前言 ​ 上次出了一起关于搭建github图床的教程,里面也谈到了我当时并没有找到或者说实现本地图片在博客中的使用.所以才有了上次的图床博客教程.当时本人又比较又强迫症.于是我又不断的去找资料,终于在一个视频中找到了使用本地的图片的方法,我猜新手也不愿意自己搭建图床,所以请看下面的方</description>
+    </item>
     
     <item>
       <title>hugo添加博客字数统计功能</title>

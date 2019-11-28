@@ -6,10 +6,28 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Nov 2019 20:06:38 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2019 22:48:06 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1</title>
+      <link>https://CorPython.github.io/post/1/</link>
+      <pubDate>Thu, 28 Nov 2019 22:48:06 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo使用本地的图片</title>
+      <link>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Thu, 28 Nov 2019 22:15:53 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/</guid>
+      <description>前言 ​ 上次出了一起关于搭建github图床的教程,里面也谈到了我当时并没有找到或者说实现本地图片在博客中的使用.所以才有了上次的图床博客教程.当时本人又比较又强迫症.于是我又不断的去找资料,终于在一个视频中找到了使用本地的图片的方法,我猜新手也不愿意自己搭建图床,所以请看下面的方</description>
+    </item>
     
     <item>
       <title>GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</title>
