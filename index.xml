@@ -6,10 +6,19 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Nov 2019 22:15:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Nov 2019 18:00:17 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>工具推荐</title>
+      <link>https://CorPython.github.io/tool/</link>
+      <pubDate>Fri, 29 Nov 2019 18:00:17 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/tool/</guid>
+      <description>暂时没有更新</description>
+    </item>
     
     <item>
       <title>Hugo使用本地的图片</title>
@@ -17,7 +26,7 @@
       <pubDate>Thu, 28 Nov 2019 22:15:53 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/</guid>
-      <description>前言 ​ 上次出了一起关于搭建github图床的教程,里面也谈到了我当时并没有找到或者说实现本地图片在博客中的使用.所以才有了上次的图床博客教程.当时本人又比较又强迫症.于是我又不断的去找资料,终于在一个视频中找到了使用本地的图片的方法,我猜新手也不愿意自己搭建图床,所以请看下面的方</description>
+      <description>前言 ​ 上次出了一篇关于搭建github图床的教程,里面也谈到了我当时并没有找到或者说实现本地图片在博客中使用的方法.由于本人的强迫症.于是我又不断的去找资料,终于在一个视频中找到了在hugo使用本地的图片的方法,我猜新手也不愿意自己搭建图床,所以请接着看下面的方法吧! 使用方法 首先</description>
     </item>
     
     <item>
@@ -251,16 +260,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/about/</guid>
-      <description>关于本人 本人卑微大三狗,于2019/11/07搭建了这个博客,用来记录学习技术的过程,鉴于自己技术浅薄,所以博客中的内容可能无法解决你的问题或者误导了你,我先主动的表示抱歉.也欢迎随时和我沟通,也可以在下方的评论区评论,有时间的话我一定及时回复. 联系方式 下面是我的qq和微信联系方</description>
-    </item>
-    
-    <item>
-      <title>归档</title>
-      <link>https://CorPython.github.io/archives/</link>
-      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/archives/</guid>
-      <description></description>
+      <description>关于本人 本人卑微大三狗,于2019/11/07搭建了这个博客,用来记录学习技术的过程,鉴于自己技术浅薄,所以博客中的内容可能无法解决你的问题或者误导了你,我先主动的表示抱歉.也欢迎随时和我沟通,也可以在下方的评论区评论,有时间的话我一定及时回复. 联系方式 QQ wechat</description>
     </item>
     
     <item>
@@ -270,6 +270,15 @@
       
       <guid>https://CorPython.github.io/new/</guid>
       <description>最近正打算复习数据结构及学习基础的算法,刷一些leecode算法题</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://CorPython.github.io/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://CorPython.github.io/archives/</guid>
+      <description></description>
     </item>
     
   </channel>
