@@ -214,11 +214,13 @@
 
             <div id="secondary">
     <section class="widget">
-        <form id="search" action="//www.bing.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+        <form id="search" action="/search/" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
   
-  <input type="text" name="q" maxlength="20" placeholder="Search">
+  <input type="text" name="q" maxlength="20" placeholder="输入搜索的关键字">
+  <input type="hidden" name="sitesearch" value="https://CorPython.github.io/">
   <button type="submit" class="submit icon-search"></button>
 </form>
+
     </section>
     
     <section class="widget">
@@ -491,6 +493,8 @@ if (!doNotTrack) {
     <script src="/js/cus.js"></script>
 
     <script src="/js/app.js"></script>
+
+    <script src="/js/search.js"></script>
   
 
 

@@ -217,11 +217,13 @@
                 </div>
                 <div id="secondary">
     <section class="widget">
-        <form id="search" action="//www.bing.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+        <form id="search" action="/search/" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
   
-  <input type="text" name="q" maxlength="20" placeholder="Search">
+  <input type="text" name="q" maxlength="20" placeholder="输入搜索的关键字">
+  <input type="hidden" name="sitesearch" value="https://CorPython.github.io/">
   <button type="submit" class="submit icon-search"></button>
 </form>
+
     </section>
     
     <section class="widget">
@@ -512,6 +514,8 @@ if (!doNotTrack) {
     <script src="/js/cus.js"></script>
 
     <script src="/js/app.js"></script>
+
+    <script src="/js/search.js"></script>
   
 
 
@@ -528,6 +532,66 @@ if (!doNotTrack) {
      }           
     });
 </script>
+    <script type="text/javascript">
+        (function(){
+            if (typeof self === 'undefined' || !self.Prism || !self.document) {
+                return;
+            }
+            if (!Prism.plugins.toolbar) {
+                console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
+                return;
+            }
+            var ClipboardJS = window.ClipboardJS || undefined;
+            if (!ClipboardJS && typeof require === 'function') {
+                ClipboardJS = require('clipboard');
+            }
+            var callbacks = [];
+            if (!ClipboardJS) {
+                var script = document.createElement('script');
+                var head = document.querySelector('head');
+                script.onload = function() {
+                    ClipboardJS = window.ClipboardJS;
+                    if (ClipboardJS) {
+                        while (callbacks.length) {
+                            callbacks.pop()();
+                        }
+                    }
+                };
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
+                head.appendChild(script);
+            }
+            Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
+                var linkCopy = document.createElement('button');
+                linkCopy.textContent = '复制代码';
+                if (!ClipboardJS) {
+                    callbacks.push(registerClipboard);
+                } else {
+                    registerClipboard();
+                }
+                return linkCopy;
+                function registerClipboard() {
+                    var clip = new ClipboardJS(linkCopy, {
+                        'text': function () {
+                            return env.code;
+                        }
+                    });
+                    clip.on('success', function() {
+                        linkCopy.textContent = '复制成功!';
+                        resetText();
+                    });
+                    clip.on('error', function () {
+                        linkCopy.textContent = '按 Ctrl+C 复制';
+                        resetText();
+                    });
+                }
+                function resetText() {
+                    setTimeout(function () {
+                        linkCopy.textContent = '复制代码';
+                    }, 5000);
+                }
+            });
+        })();
+        </script>
 </body>
 
 </html>
