@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>快捷键 on code show的博客</title>
+    <link>https://CorPython.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+    <description>Recent content in 快捷键 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Dec 2019 20:46:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IDEA常用快捷键</title>
+      <link>https://CorPython.github.io/post/IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 04 Dec 2019 20:46:09 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>IDEA常用快捷键 1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + F 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,</description>
+    </item>
+    
+  </channel>
+</rss>
