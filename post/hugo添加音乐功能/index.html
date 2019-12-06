@@ -31,12 +31,16 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
-
+    
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
         <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
     
         <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+    
     
     
         <link rel="stylesheet" href="/css/hello.css">
@@ -218,12 +222,12 @@
                                 <span>|</span>
                                 
                                 <span class="meta-category"><a
-                                        href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">使用教程</a></span>
+                                        href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2">博客</a></span>
                                 
                             </div>
                             
 
-                            <span class="post-word-count">|502 words</span>
+                            <span class="post-word-count">|518 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
@@ -261,10 +265,9 @@
 
 <p>点击复制代码,粘贴在你的<code>博客</code>中</p>
 
-<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=413812448&auto=0&height=66"></iframe>
-<strong>缺点:</strong></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=413812448&auto=0&height=66"></iframe>
 
-<p><strong>每次添加音乐还要去官网生成外链,并且很多歌曲是不提供生成外链的(<span style="color:red">版权问题</span>),并且可以看到不能显示歌词</strong></p>
+<p><strong>缺点:每次添加音乐还要去官网生成外链,并且很多歌曲是不提供生成外链的(<span style="color:red">版权问题</span>),并且可以看到不能显示歌词</strong></p>
 
 <h2 id="使用-aplayer-和-metingjs-实现">使用<code>Aplayer</code> 和<code>MetingJS</code>实现</h2>
 
@@ -297,12 +300,14 @@
 <pre><code>https://music.163.com/#/song?id=413812448
 </code></pre>
 
-<p><strong>在博客开始添加代码</strong></p>
+<p><strong>在博客开始处添加代码</strong></p>
 
 <pre><code>&lt;meting-js auto=&quot;https://music.163.com/#/song?id=413812448&quot; list-folded=true&gt;&lt;/meting-js&gt;
 </code></pre>
 
-<p><strong>使用<code>hugo server</code>测试以下</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20191205211249.png" alt="" /></p>
+
+<p><strong>从上图看出,现在有歌词显示了,歌曲也正常播放了,还是很简单的!</strong></p>
 
                             </div>
                             <br>
@@ -467,7 +472,7 @@
     
     <li>
         <svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg>
-        <a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">使用教程 (2)</a></li>
+        <a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">使用教程 (1)</a></li>
     
     <li>
         <svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg>
@@ -475,7 +480,7 @@
     
     <li>
         <svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg>
-        <a href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/">博客 (6)</a></li>
+        <a href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/">博客 (7)</a></li>
     
     <li>
         <svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg>
@@ -700,9 +705,9 @@ if (!doNotTrack) {
 
     <script src="/js/app.js"></script>
 
-    <script src="/js/search.js"></script>
-
     <script src="/js/APlayer.min.js"></script>
+
+    <script src="/js/firework.js"></script>
   
 
 
