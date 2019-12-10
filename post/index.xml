@@ -6,10 +6,37 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Dec 2019 20:42:50 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2019 20:35:22 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sql server触发器及存储过程</title>
+      <link>https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/</link>
+      <pubDate>Tue, 10 Dec 2019 20:35:22 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/</guid>
+      <description>SQL server触发器及存储过程 删除触发器 /* 1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表S</description>
+    </item>
+    
+    <item>
+      <title>Git学习笔记</title>
+      <link>https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 08 Dec 2019 11:57:01 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>github及git版本控制 git基本操作 1.创建一个版本库 新建一个目录git_test,在git_test目录下创建一个版本库 git init 2.在git_test下创建一个新文件code.txt vi code.txt#创建一个新文件 cat code.txt#查看文件中的内容 3.新建一个文件版本（比</description>
+    </item>
+    
+    <item>
+      <title>maven配置</title>
+      <link>https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 08 Dec 2019 11:56:45 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/</guid>
+      <description>&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; ?&amp;gt; &amp;lt;!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --&amp;gt; &amp;lt;!-- | This is the configuration file for Maven. It can be specified at two levels: | | 1. User Level. This</description>
+    </item>
     
     <item>
       <title>hugo添加音乐功能</title>

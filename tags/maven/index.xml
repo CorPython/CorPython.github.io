@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>maven on code show的博客</title>
+    <link>https://CorPython.github.io/tags/maven/</link>
+    <description>Recent content in maven on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Dec 2019 11:56:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>maven配置</title>
+      <link>https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 08 Dec 2019 11:56:45 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/</guid>
+      <description>&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; ?&amp;gt; &amp;lt;!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --&amp;gt; &amp;lt;!-- | This is the configuration file for Maven. It can be specified at two levels: | | 1. User Level. This</description>
+    </item>
+    
+  </channel>
+</rss>
