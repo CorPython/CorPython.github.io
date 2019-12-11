@@ -28,8 +28,10 @@
         <link rel="stylesheet" href="/css/prism.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
+    
+    <script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    
     
 
     
@@ -42,12 +44,11 @@
     <script type="text/javascript" src="/js/fireworks.js"></script>
 
     
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
     
-        <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
         <link rel="stylesheet" href="/css/hello.css">
     
@@ -55,12 +56,12 @@
     
         <link rel="stylesheet" href="/css/APlayer.min.css">
     
+        <link rel="stylesheet" href="/css/viewer.css">
+    
 </head>
 
-    
-    <script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script>
 <body>
-    <header id="header" class="clearfix">
+<header id="header" class="clearfix">
     
         <div class="top-scroll-bar"></div>
     
@@ -74,6 +75,7 @@
                 
                 <p class="description">专注于Java、C/C&#43;&#43;、python</p>
             </div>
+            
             <div>
                 <nav id="nav-menu" class="clearfix">
                     
@@ -81,11 +83,11 @@
                     
                     <a class="current" href="https://CorPython.github.io/">首页</a>
                     
-                    <a  href="https://CorPython.github.io/new/" title="最新动态">最新动态</a>
-                    
                     <a  href="https://CorPython.github.io/archives/" title="归档">归档</a>
                     
                     <a  href="https://CorPython.github.io/categories/" title="分类">分类</a>
+                    
+                    <a  href="https://CorPython.github.io/tags/" title="标签">标签</a>
                     
                     <a  href="https://CorPython.github.io/tool/" title="工具">工具</a>
                     
@@ -96,10 +98,8 @@
         </div>
     </div>
 </header>
-
     <div id="body">
         
-
         <div class="container">
             <div class="col-group">
 
@@ -121,12 +121,14 @@
                                 
                             </div>
                             
-
                             <span class="post-word-count">|372 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
                                         阅读</span></span>
+                            </div>
+                            <div class="post-meta animated slower fadeInUp">
+                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约1分钟
                             </div>
                             
                             
@@ -163,6 +165,19 @@
 
 <h4 id="建议在使用windows系统使用-git-bash-这个终端-不仅使用git简单快速-还内置了-vim-并且支持许多-linux-下同样的命令-可以减少使用-cmd-这个让人上火的软件-软件地址在-这里-https-gitforwindows-org">建议在使用windows系统使用<code>git-bash</code>这个终端,不仅使用git简单快速,还内置了<code>vim</code>,并且支持许多<code>linux</code>下同样的命令,可以减少使用<code>cmd</code>这个让人上火的软件.软件地址在<a href="https://gitforwindows.org/" target="_blank">这里</a></h4>
 
+                                    <ol class="page-navigator">
+                                            <span class="a">
+                                            
+                                            <p style="text-align: left;"><a href="https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;Matlab学习笔记<br /><br/></p>
+                                            
+                                            </span>
+
+                                            <span class="b">
+                                            
+                                            <p style="text-align: right;"><a href="https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;hugo博客如何使用gittalk
+                                            
+                                            </span>
+                                    </ol>
                             </div>
                             <br>
                             <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
@@ -255,6 +270,10 @@
   <button type="submit" class="submit icon-search"></button>
 </form>
 
+    </section>
+
+    <section class="widget wow slow zoomIn">
+        <div id="calendar" class="calendar"></div>
     </section>
     
     <section class="widget">
@@ -368,7 +387,7 @@
 <div class="tagcloud">
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
+    <a href="">Gittalk</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/IEDA/">IEDA</a>
@@ -380,7 +399,7 @@
     <a href="https://CorPython.github.io/tags/github/">github</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">gittalk</a>
+    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
@@ -522,15 +541,24 @@
             }
             show_date_time();
             </SCRIPT>
+    </div>
 </footer>
 
+
     
+    <div id="outerdiv"
+            style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+            
+         <div id="innerdiv" style="position:absolute;">
+                   <img id="bigimg" style="border:5px solid #fff;" src=""/>
+              
+         </div>
+       </div>
     <script type="text/javascript">
         
         (function () {
             $("pre code").parent().addClass("line-numbers")
         }());
-
         window.MathJax = {
             tex2jax: {
                 inlineMath: [['$', '$']],
@@ -540,7 +568,6 @@
     </script>
     <script type="text/javascript" src="/js/prism.js" async="true"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
 
 
 <a id="rocket" href="#top"></a>
@@ -559,9 +586,8 @@ if (!doNotTrack) {
 
 
 
-<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
-    
 
 
 
@@ -578,22 +604,9 @@ if (!doNotTrack) {
     <script src="/js/snow.js"></script>
 
     <script src="/js/FunnyTitle.js"></script>
-  
 
+    <script src="/js/prism.js"></script>
 
-<script >
-    $(document).ready(function() {
-        var int = setInterval(fixCount, 50);  
-        var countOffset = 20000;  
-       function fixCount() {                   
-         if ($("#busuanzi_container_site_pv").css("display") != "none")
-           {
-              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
-              clearInterval(int); 
-         }  
-     }           
-    });
-</script>
     <script type="text/javascript">
         (function(){
             if (typeof self === 'undefined' || !self.Prism || !self.document) {
@@ -653,6 +666,7 @@ if (!doNotTrack) {
                 }
             });
         })();
+
         </script>
 </body>
 
