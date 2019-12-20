@@ -32,7 +32,6 @@
     
     <script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
     
-    
 
     
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -55,8 +54,6 @@
         <link rel="stylesheet" href="/css/style.extra.css">
     
         <link rel="stylesheet" href="/css/APlayer.min.css">
-    
-        <link rel="stylesheet" href="/css/viewer.css">
     
 </head>
 
@@ -121,7 +118,7 @@
                                 
                             </div>
                             
-                            <span class="post-word-count">|3694 words</span>
+                            <span class="post-word-count">|3853 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
@@ -375,6 +372,11 @@ git rm --cached 文件名 //保留本地的文件,相当于从暂存区中取出
 <pre><code>git branch -d dev
 </code></pre>
 
+<p>若当前有分支尚未合并,则使用<code>git branch -d 分支名</code>,则会提示你要使用<code>-D</code>来删除</p>
+
+<pre><code>git branch -D 未合并分支名
+</code></pre>
+
 <h2 id="冲突解决">冲突解决</h2>
 
 <p><strong>如果两个分支有文件同时被修改，需要解决这个冲突，否则合并失败</strong></p>
@@ -400,7 +402,7 @@ git rm --cached 文件名 //保留本地的文件,相当于从暂存区中取出
 
 <p><img src="http://q21emm1il.bkt.clouddn.com/20191208114941.png?picture" alt="" /></p>
 
-<p>3.进行快速合并时会出现弹窗<img src="http://q21emm1il.bkt.clouddn.com/20191208114925.png?picture" alt="" />)</p>
+<p>3.进行快速合并时会出现弹窗<img src="http://q21emm1il.bkt.clouddn.com/20191208114925.png?picture" alt="" /></p>
 
 <p>4.输入保存的记录名，按ctrl + x 离开，按Y保存，按Enter键退出</p>
 
@@ -424,21 +426,28 @@ git rm --cached 文件名 //保留本地的文件,相当于从暂存区中取出
 
 <p><img src="http://q21emm1il.bkt.clouddn.com/20191208114904.png?picture" alt="" /></p>
 
-<h2 id="bug分支">bug分支</h2>
+<p>查看当前没有合并的分支</p>
 
-<p>遇到紧急的的bug修改时，要现停下手头工作，但是当前自己的工作现场不能丢，需要先保存下来</p>
-
-<p>使用命令,保存现场</p>
-
-<pre><code>git stash
+<pre><code class="language-git">git branch --no-merged
 </code></pre>
 
-<p>修复完bug，在使用命令恢复工作现场</p>
+<p>查看当前已经合并的分支</p>
 
-<pre><code>git stash pop
+<pre><code class="language-git">git branch --merged
 </code></pre>
 
-<p>修复bug时可以切换到master分支，新建一个bug分支，修复完成之后，再使用<code>--no-ff</code>模式进行合并到master分支，之后删除bug分支。</p>
+<h2 id="暂存区">暂存区</h2>
+
+<blockquote>
+<p>当我们在当前分支尚未完成提交任务或者还不打算提交时,可以将当前未完成的工作暂存起来,这时再切换到另一个分支完成相应操作</p>
+</blockquote>
+
+<pre><code>git stash  //执行暂存命令
+git stash list // 查看当前分支的暂存区,一个分支可以有多个暂存区
+git drop 暂存区名 //删除暂存区
+git stash apply //恢复当前最近的暂存区,也可以指定暂存区名进行恢复
+git stash pop //恢复并删除当前暂存区
+</code></pre>
 
 <h2 id="gitignore">.gitignore</h2>
 
@@ -452,6 +461,18 @@ a.txt //忽略a.txt这个文件
 /folder //忽略floder这个文件夹
 /folder/a.txt //忽略floder目录下的a.txt文件
 /folder/**/*.txt //忽略folder及其子目录下的txt文件
+</code></pre>
+
+<h2 id="git-tag标签">git tag标签</h2>
+
+<blockquote>
+<p>对某个阶段的总结,比如发布的版本号,v1.0,v2.0等等,最好要在完成一个稳定的版本后</p>
+
+<p>再打上标签</p>
+</blockquote>
+
+<pre><code>git tag //显示当前所有标签
+git tag 标签名 //给当前工作设置一个标签
 </code></pre>
 
 <h2 id="alias简化命令">alias简化命令</h2>
@@ -878,7 +899,7 @@ git commit -m '提交'
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows安装latex">windows安装latex</a>
+        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
     </li>
     
     <li>
@@ -943,7 +964,7 @@ git commit -m '提交'
 <div class="tagcloud">
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
+    <a href="">Gittalk</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/IEDA/">IEDA</a>
@@ -955,7 +976,7 @@ git commit -m '提交'
     <a href="https://CorPython.github.io/tags/github/">github</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">gittalk</a>
+    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
@@ -1157,11 +1178,11 @@ if (!doNotTrack) {
 
     <script src="/js/firework.js"></script>
 
-    <script src="/js/snow.js"></script>
-
     <script src="/js/FunnyTitle.js"></script>
 
     <script src="/js/prism.js"></script>
+
+    <script src="/js/sakura.js"></script>
 
     <script type="text/javascript">
         (function(){
