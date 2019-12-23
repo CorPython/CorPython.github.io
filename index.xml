@@ -6,10 +6,37 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2019 20:35:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2019 14:19:00 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git操作笔记</title>
+      <link>https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 23 Dec 2019 14:19:00 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>github及git版本控制 git基本操作 1.创建一个版本库 新建一个目录git_test,在git_test目录下创建一个版本库 git init 2.在git_test下创建一个新文件code.txt vi code.txt#创建一个新文件 cat code.txt#查看文件中的内容 3.新建一个文件版本（比</description>
+    </item>
+    
+    <item>
+      <title>vscode如何写latex</title>
+      <link>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</link>
+      <pubDate>Fri, 20 Dec 2019 18:25:21 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</guid>
+      <description>介绍 以下介绍摘自百度百科,链接:https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80</description>
+    </item>
+    
+    <item>
+      <title>windows下载安装latex</title>
+      <link>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</link>
+      <pubDate>Thu, 19 Dec 2019 21:19:37 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</guid>
+      <description>下载方式 1.官网下载 下载地址 2.清华大学官方镜像站下载(推荐) 下载地址 2.安装 下载完成后,打开iso文件,点击下图箭头文件 点击修改更换路径,再点击advanced 修改一些选项 点击安装,等待安装完成即可 ! ! ! 3.验证安装是否成功 打开powershell或者cmd输入下列命令 xelatex -v 出现</description>
+    </item>
     
     <item>
       <title>Sql server触发器及存储过程</title>
@@ -17,16 +44,7 @@
       <pubDate>Tue, 10 Dec 2019 20:35:22 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/</guid>
-      <description>SQL server触发器及存储过程 删除触发器 /* 1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表S</description>
-    </item>
-    
-    <item>
-      <title>Git学习笔记</title>
-      <link>https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sun, 08 Dec 2019 11:57:01 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
-      <description>github及git版本控制 git基本操作 1.创建一个版本库 新建一个目录git_test,在git_test目录下创建一个版本库 git init 2.在git_test下创建一个新文件code.txt vi code.txt#创建一个新文件 cat code.txt#查看文件中的内容 3.新建一个文件版本（比</description>
+      <description>SQL server触发器及存储过程 删除触发器 /*1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表</description>
     </item>
     
     <item>
@@ -35,7 +53,7 @@
       <pubDate>Sun, 08 Dec 2019 11:56:45 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/</guid>
-      <description>&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; ?&amp;gt; &amp;lt;!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --&amp;gt; &amp;lt;!-- | This is the configuration file for Maven. It can be specified at two levels: | | 1. User Level. This</description>
+      <description>&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt; &amp;lt;!--Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the &amp;#34;License&amp;#34;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &amp;#34;AS IS&amp;#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --&amp;gt; &amp;lt;!--| This is the configuration file for Maven. It can be specified at two levels: | | 1. User Level. This settings.xml file</description>
     </item>
     
     <item>
@@ -81,24 +99,6 @@
       
       <guid>https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/</guid>
       <description>前言 用hugo写博客可能图片是比较重要的一环吧.本来时指望在博客中使用本地的图片,但是由于自己的能力有限,并且看了一些大神都不推荐使用本地图片.推荐使用图床来管理自己的博客图片. 常见的免费图床建议参考这篇文章:盘点一下免费好用的图床 但是,今天不是介绍免费图床的使用,这次主要是介绍</description>
-    </item>
-    
-    <item>
-      <title>vscode如何写latex</title>
-      <link>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</link>
-      <pubDate>Fri, 22 Nov 2019 20:25:21 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</guid>
-      <description>介绍 以下介绍摘自百度百科,链接:https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80</description>
-    </item>
-    
-    <item>
-      <title>windows下载安装latex</title>
-      <link>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</link>
-      <pubDate>Fri, 22 Nov 2019 20:21:37 +0800</pubDate>
-      
-      <guid>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</guid>
-      <description>下载方式 1.官网下载 下载地址 2.清华大学官方镜像站下载(推荐) 下载地址 2.安装 下载完成后,打开iso文件,点击下图箭头文件 点击修改更换路径,再点击advanced 修改一些选项 点击安装,等待安装完成即可 ! ! ! 3.验证安装是否成功 打开powershell或者cmd输入下列命令 xelatex -v 出现</description>
     </item>
     
     <item>
@@ -188,7 +188,7 @@
       <pubDate>Wed, 13 Nov 2019 16:05:31 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
-      <description>绘图 添加标签，标题，生成网格线，美化图形 x = [0:0.01:10]; y = sin(x); plot(x, y), xlabel(&#39;x&#39;), ylabel(&#39;Sin(x)&#39;), title(&#39;Sin(x) Graph&#39;), grid on,axis equal#添加网格线和美化图形 绘制多个函数 x = [0 : 0.01: 10]; y = sin(x); g = cos(x); plot(x, y, x, g, &#39;.-&#39;), legend(&#39;Sin(x)&#39;, &#39;Cos(x)&#39;) 绘制多个图象 plot(x,y,x,g) #等价于 plot(x,y) hold all#保留上次绘图并添加新的绘图 plot(x,g) 设置坐标轴的刻度范围 axis([xmin xmax ymin ymax]) axis([xmin xmax ymin ymax zmin zmax cmin cmax]); % 设置x，y，z轴的范围</description>
+      <description>绘图 添加标签，标题，生成网格线，美化图形 x = [0:0.01:10]; y = sin(x); plot(x, y), xlabel(&amp;#39;x&amp;#39;), ylabel(&amp;#39;Sin(x)&amp;#39;), title(&amp;#39;Sin(x) Graph&amp;#39;), grid on,axis equal#添加网格线和美化图形 绘制多个函数 x = [0 : 0.01: 10]; y = sin(x); g = cos(x); plot(x, y, x, g, &amp;#39;.-&amp;#39;), legend(&amp;#39;Sin(x)&amp;#39;, &amp;#39;Cos(x)&amp;#39;) 绘制多个图象 plot(x,y,x,g) #等价于 plot(x,y) hold all#保留上次绘图并添加新的绘图 plot(x,g) 设置坐标轴的刻度范围 axis([xmin xmax ymin ymax]) axis([xmin xmax ymin ymax zmin zmax cmin cmax]); % 设置x，y，z轴的范围</description>
     </item>
     
     <item>
@@ -224,7 +224,7 @@
       <pubDate>Mon, 11 Nov 2019 18:14:21 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/</guid>
-      <description>gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.</description>
+      <description>gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo 外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.找到配</description>
     </item>
     
     <item>
@@ -296,7 +296,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：ctrl+k,ctrl+u c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移 3、显示/隐藏左侧目录栏 ctrl + b</description>
+      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：[ctrl+k,ctrl+u] (按下ctrl不放，再按k + u) c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB</description>
     </item>
     
     <item>
@@ -305,7 +305,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/about/</guid>
-      <description>关于本人 本人卑微大三狗,于2019/11/07搭建了这个博客,用来记录学习技术的过程,鉴于自己技术浅薄,所以博客中的内容可能无法解决你的问题或者误导了你,我先主动的表示抱歉.也欢迎随时和我沟通,也可以在下方的评论区评论,有时间的话我一定及时回复. 联系方式 QQ wechat</description>
+      <description>关于本人 本人卑微大三狗,于2019/11/07搭建了这个博客,用来记录学习技术的过程,鉴于自己技术浅薄,所以博客中的内容可能无法解决你的问题或者误导了你,我先主动的表示抱歉.也欢迎随时和我沟通,也可以在下方的评论区评论,有时间的话我一定及时回复. 联系方式</description>
     </item>
     
     <item>

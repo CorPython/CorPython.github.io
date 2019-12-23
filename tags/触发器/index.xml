@@ -17,7 +17,7 @@
       <pubDate>Tue, 10 Dec 2019 20:35:22 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/</guid>
-      <description>SQL server触发器及存储过程 删除触发器 /* 1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表S</description>
+      <description>SQL server触发器及存储过程 删除触发器 /*1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表</description>
     </item>
     
   </channel>

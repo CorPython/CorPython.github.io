@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en-us">
+<!doctype html>
+<html lang="en-us">
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.61.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>hugo添加博客字数统计功能 | code show的博客</title>
     <meta property="og:title" content="hugo添加博客字数统计功能 - code show的博客">
     <meta property="og:type" content="article">
@@ -57,8 +58,9 @@
     
 </head>
 
+
 <body>
-<header id="header" class="clearfix">
+    <header id="header" class="clearfix">
     
         <div class="top-scroll-bar"></div>
     
@@ -96,64 +98,146 @@
     </div>
 </header>
     <div id="body">
-        
         <div class="container">
             <div class="col-group">
 
                 <div class="col-8" id="main">
-                    <div class="res-cons">
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">hugo添加博客字数统计功能</h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月15日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a
-                                        href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2">博客</a></span>
-                                
-                            </div>
-                            
-                            <span class="post-word-count">|260 words</span>
-                            
-                            <div class="post-meta">
-                                <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                                        阅读</span></span>
-                            </div>
-                            <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约1分钟
-                            </div>
-                            
-                            
-                            <div class="post-content">
-                                    
-                                    
-
-<p><img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20191128182604.png" alt="" /></p>
-
-<h4 id="1-在自己的博客的文章中找到你想将字数多少显示的具体位置-假如我想将它放在阅读数的后面-先定位到阅读数的源代码位置-找到对应的-class-位置">1.在自己的博客的文章中找到你想将字数多少显示的具体位置,假如我想将它放在阅读数的后面,先定位到阅读数的源代码位置,找到对应的<code>class</code>位置.</h4>
-
-<p><img src="https://i.loli.net/2019/11/15/mTAea9HniuLV8tZ.png" alt="hugo" /></p>
-
-<h4 id="2-在自己主题的-single-html-的配置中搜索第一步中的class的位置-并在-end-后面添加一下代码-比如我的主题对应的-single-html-路径为-themes-maupassant-layouts-default-single-html">2.在自己主题的<code>single.html</code>的配置中搜索第一步中的class的位置,并在<code>{{ end }}</code>后面添加一下代码,比如我的主题对应的<code>single.html</code>路径为<code>themes\maupassant\layouts\_default\single.html</code></h4>
-
-<pre><code class="language-html">&lt;span class=&quot;post-word-count&quot;&gt;, {{ .WordCount }} words&lt;/span&gt;
-</code></pre>
-
-<p><img src="https://i.loli.net/2019/11/15/AIRhNYarp4fwtGy.png" alt="" /></p>
-
-<h4 id="3-注意如果字数和估计的差别太大-很可能是因为默认没统计中文的字数-可以在你的-front-matter-中添加下列字段">3.注意如果字数和估计的差别太大,很可能是因为默认没统计中文的字数,可以在你的<code>Front matter</code>中添加下列字段</h4>
-
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">hugo添加博客字数统计功能</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月15日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2'>博客</a></span>
+            
+        </div>
+        
+        <span class="post-word-count">|260 words</span>
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        <div class="post-meta animated slower fadeInUp">
+            <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约1分钟
+        </div>
+        
+        
+        <div class="post-content">
+            <p><img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20191128182604.png" alt=""></p>
+<h4 id="1class">1.在自己的博客的文章中找到你想将字数多少显示的具体位置,假如我想将它放在阅读数的后面,先定位到阅读数的源代码位置,找到对应的<code>class</code>位置.</h4>
+<p><img src="https://i.loli.net/2019/11/15/mTAea9HniuLV8tZ.png" alt="hugo"></p>
+<h4 id="2singlehtmlclass-end-singlehtmlthemesmaupassantlayouts-defaultsinglehtml">2.在自己主题的<code>single.html</code>的配置中搜索第一步中的class的位置,并在<code>{{ end }}</code>后面添加一下代码,比如我的主题对应的<code>single.html</code>路径为<code>themes\maupassant\layouts\_default\single.html</code></h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">span</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;post-word-count&#34;</span>&gt;, {{ .WordCount }} words&lt;/<span style="color:#000080">span</span>&gt;
+</code></pre></div><p><img src="https://i.loli.net/2019/11/15/AIRhNYarp4fwtGy.png" alt=""></p>
+<h4 id="3front-matter">3.注意如果字数和估计的差别太大,很可能是因为默认没统计中文的字数,可以在你的<code>Front matter</code>中添加下列字段</h4>
 <pre><code>isCJKLanguage: true
 </code></pre>
+        </div>
 
-                            </div>
-                           
-                            
+        
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
@@ -164,27 +248,25 @@
 <br/>
 
 
-                            
-                            <br>
-                            <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
-                                <link rel="stylesheet"
-                                    href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-                                <script
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-                            </div>
-                            
-                            <ol class="page-navigator">
-                                <div class="a">
-                                
-                                <p style="text-align: left;"><a href="https://CorPython.github.io/post/WireShark%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8E%A5%E5%8F%A3%E6%88%96%E8%80%85%E7%BD%91%E5%8D%A1/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;WireShark找不到接口或者网卡<br /><br/></p>
-                                
+         
+         <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
+             <link rel="stylesheet"
+                 href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+             <script
+                 src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+         </div>
+         <ol class="page-navigator">
+            <div class="a">
+            
+            <p style="text-align: left;"><a href="https://CorPython.github.io/post/WireShark%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8E%A5%E5%8F%A3%E6%88%96%E8%80%85%E7%BD%91%E5%8D%A1/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;WireShark找不到接口或者网卡<br /><br/></p>
+            
+
+            
+            <p style="text-align: right;"><a href="https://CorPython.github.io/post/hugo%E5%A6%82%E4%BD%95%E5%B0%86%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;hugo如何将文章置顶
+            
+            </div>
+        </ol>
         
-                                
-                                <p style="text-align: right;"><a href="https://CorPython.github.io/post/hugo%E5%A6%82%E4%BD%95%E5%B0%86%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;hugo如何将文章置顶
-                                
-                                </div>
-                            </ol>
-                            
 
 <div class="post-archive">
     <h2>See Also</h2>
@@ -203,19 +285,19 @@
     </ul>
 </div>
 
-        
-                            <div class="post-meta meta-tags">
-                                
-                                <ul class="clearfix">
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/hugo">hugo</a></li>
-                                    
-                                </ul>
-                                
-                            </div>
-                            </br>
-                        </article>
-                        
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://CorPython.github.io/tags/hugo'>hugo</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+
+    
 
 
 
@@ -244,8 +326,10 @@
   })();
 </script>
 
-                    </div>
+</div>
+
                 </div>
+
                 <div id="secondary">
     <section class="widget">
         <form id="search" action='https://CorPython.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -267,12 +351,22 @@
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
+        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="git操作笔记">git操作笔记</a>
     </li>
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git学习笔记">Git学习笔记</a>
+        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
     </li>
     
     <li>
@@ -298,16 +392,6 @@
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/" title="GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床">GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
     </li>
     
     <li>
@@ -388,9 +472,6 @@
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
-    
-    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/idea/">idea</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/latex/">latex</a>
@@ -540,10 +621,6 @@
          </div>
        </div>
     <script type="text/javascript">
-        
-        (function () {
-            $("pre code").parent().addClass("line-numbers")
-        }());
         window.MathJax = {
             tex2jax: {
                 inlineMath: [['$', '$']],
@@ -551,12 +628,11 @@
                 }
             };
     </script>
-    <script type="text/javascript" src="/js/prism.js" async="true"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
-<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -576,83 +652,22 @@ if (!doNotTrack) {
 
 
 
-    <script src="/js/share.js"></script>
+    <script src='/js/share.js'\></script>
 
-    <script src="/js/cus.js"></script>
+    <script src='/js/cus.js'\></script>
 
-    <script src="/js/app.js"></script>
+    <script src='/js/app.js'\></script>
 
-    <script src="/js/APlayer.min.js"></script>
+    <script src='/js/APlayer.min.js'\></script>
 
-    <script src="/js/firework.js"></script>
+    <script src='/js/firework.js'\></script>
 
-    <script src="/js/FunnyTitle.js"></script>
+    <script src='/js/FunnyTitle.js'\></script>
 
-    <script src="/js/prism.js"></script>
+    <script src='/js/prism.js'\></script>
 
-    <script src="/js/sakura.js"></script>
+    <script src='/js/snow.js'\></script>
 
-    <script type="text/javascript">
-        (function(){
-            if (typeof self === 'undefined' || !self.Prism || !self.document) {
-                return;
-            }
-            if (!Prism.plugins.toolbar) {
-                console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
-                return;
-            }
-            var ClipboardJS = window.ClipboardJS || undefined;
-            if (!ClipboardJS && typeof require === 'function') {
-                ClipboardJS = require('clipboard');
-            }
-            var callbacks = [];
-            if (!ClipboardJS) {
-                var script = document.createElement('script');
-                var head = document.querySelector('head');
-                script.onload = function() {
-                    ClipboardJS = window.ClipboardJS;
-                    if (ClipboardJS) {
-                        while (callbacks.length) {
-                            callbacks.pop()();
-                        }
-                    }
-                };
-                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
-                head.appendChild(script);
-            }
-            Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-                var linkCopy = document.createElement('button');
-                linkCopy.textContent = '复制代码';
-                if (!ClipboardJS) {
-                    callbacks.push(registerClipboard);
-                } else {
-                    registerClipboard();
-                }
-                return linkCopy;
-                function registerClipboard() {
-                    var clip = new ClipboardJS(linkCopy, {
-                        'text': function () {
-                            return env.code;
-                        }
-                    });
-                    clip.on('success', function() {
-                        linkCopy.textContent = '复制成功!';
-                        resetText();
-                    });
-                    clip.on('error', function () {
-                        linkCopy.textContent = '按 Ctrl+C 复制';
-                        resetText();
-                    });
-                }
-                function resetText() {
-                    setTimeout(function () {
-                        linkCopy.textContent = '复制代码';
-                    }, 5000);
-                }
-            });
-        })();
-
-        </script>
 </body>
 
 </html>

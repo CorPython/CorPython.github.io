@@ -62,7 +62,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：ctrl+k,ctrl+u c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移 3、显示/隐藏左侧目录栏 ctrl + b</description>
+      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：[ctrl+k,ctrl+u] (按下ctrl不放，再按k + u) c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB</description>
     </item>
     
   </channel>

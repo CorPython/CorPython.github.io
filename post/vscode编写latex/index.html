@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="en-us">
+<!doctype html>
+<html lang="en-us">
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.61.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>vscode如何写latex | code show的博客</title>
     <meta property="og:title" content="vscode如何写latex - code show的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content="2019-11-22T20:25:21&#43;08:00">
+    <meta property="article:published_time" content="2019-12-20T18:25:21&#43;08:00">
         
         
-    <meta property="article:modified_time" content="2019-11-22T20:25:21&#43;08:00">
+    <meta property="article:modified_time" content="2019-12-20T18:25:21&#43;08:00">
         
     <meta name="Keywords" content="java,c,博客,c&#43;&#43;,python,linux">
     <meta name="description" content="vscode如何写latex">
@@ -57,8 +58,9 @@
     
 </head>
 
+
 <body>
-<header id="header" class="clearfix">
+    <header id="header" class="clearfix">
     
         <div class="top-scroll-bar"></div>
     
@@ -96,179 +98,242 @@
     </div>
 </header>
     <div id="body">
-        
         <div class="container">
             <div class="col-group">
 
                 <div class="col-8" id="main">
-                    <div class="res-cons">
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">vscode如何写latex</h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月22日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a
-                                        href="https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE">软件配置</a></span>
-                                
-                            </div>
-                            
-                            <span class="post-word-count">|661 words</span>
-                            
-                            <div class="post-meta">
-                                <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                                        阅读</span></span>
-                            </div>
-                            <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约2分钟
-                            </div>
-                            
-                            
-                            <div class="post-content">
-                                    
-                                    
-
-<h2 id="介绍">介绍</h2>
-
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">介绍</a></li>
+    <li><a href="#heading-1">准备工作</a></li>
+    <li><a href="#heading-2">配置工作</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">vscode如何写latex</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE'>软件配置</a></span>
+            
+        </div>
+        
+        <span class="post-word-count">|661 words</span>
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        <div class="post-meta animated slower fadeInUp">
+            <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约2分钟
+        </div>
+        
+        
+        <div class="post-content">
+            <h2 id="heading">介绍</h2>
 <blockquote>
-<p>以下介绍摘自百度百科,链接:<a href="https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin" target="_blank">https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin</a></p>
+<p>以下介绍摘自百度百科,链接:https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin</p>
 </blockquote>
-
-<p><code>LaTeX</code>（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（<code>Leslie Lamport</code>）在20世纪80年代初期开发，利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由<a href="https://baike.baidu.com/item/TeX/3794463" target="_blank">TeX</a>所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和<a href="https://baike.baidu.com/item/数学公式/10349953" target="_blank">数学公式</a>，这一点表现得尤为突出。因此它非常适用于生成高印刷质量的科技和数学类文档。这个系统同样适用于生成从简单的信件到完整书籍的所有其他种类的文档。</p>
-
-<h2 id="准备工作">准备工作</h2>
-
-<p>你需要现在自己的电脑上安装<code>texlive</code>,详情请见<a href="[https://corpython.github.io/post/windows%E5%AE%89%E8%A3%85latex/](https://corpython.github.io/post/windows安装latex/)" target="_blank"><span style='color:red'>这一篇博客</span></a></p>
-
-<p>另外需要在电脑上安装<code>vscode</code>,下载地址在<a href="https://code.visualstudio.com/" target="_blank"><span style='color:red'>这里</span></a></p>
-
-<h2 id="配置工作">配置工作</h2>
-
+<p><code>LaTeX</code>（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（<code>Leslie Lamport</code>）在20世纪80年代初期开发，利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由<a href="https://baike.baidu.com/item/TeX/3794463">TeX</a>所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和<a href="https://baike.baidu.com/item/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/10349953">数学公式</a>，这一点表现得尤为突出。因此它非常适用于生成高印刷质量的科技和数学类文档。这个系统同样适用于生成从简单的信件到完整书籍的所有其他种类的文档。</p>
+<h2 id="heading-1">准备工作</h2>
+<p>你需要现在自己的电脑上安装<code>texlive</code>,详情请见<a href="%5Bhttps://corpython.github.io/post/windows%E5%AE%89%E8%A3%85latex/%5D(https://corpython.github.io/post/windows%E5%AE%89%E8%A3%85latex/)"><!-- raw HTML omitted -->这一篇博客<!-- raw HTML omitted --></a></p>
+<p>另外需要在电脑上安装<code>vscode</code>,下载地址在<a href="https://code.visualstudio.com/"><!-- raw HTML omitted -->这里<!-- raw HTML omitted --></a></p>
+<h2 id="heading-2">配置工作</h2>
 <p><strong>1.新建一个目录存放你要写的<code>latex</code>文件,右键<code>open with code</code>打开<code>vscode</code></strong></p>
-
-<p><span style='color:red'>注意:不要使用中文路径(其实所有编译软件都不建议使用中文路径)</span></p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220195751.png?picture" alt="" /></p>
-
+<p><!-- raw HTML omitted -->注意:不要使用中文路径(其实所有编译软件都不建议使用中文路径)<!-- raw HTML omitted --></p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220195751.png?picture" alt=""></p>
 <p><strong>2.安装两个插件<code>LaTeX Workshop</code>和<code>LaTeX Extension Pack</code></strong></p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200349.png?picture" alt="" /></p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200409.png?picture" alt="" /></p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200349.png?picture" alt=""></p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200409.png?picture" alt=""></p>
 <p><strong>3.安装完成后,可以在旁边的插件中找到</strong></p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200658.png?picture" alt="" /></p>
-
-<p><strong><span style='color:red'>4.配置插件(重要的一步)</span></strong></p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200658.png?picture" alt=""></p>
+<p><strong><!-- raw HTML omitted -->4.配置插件(重要的一步)<!-- raw HTML omitted --></strong></p>
 <p><strong>打开设置,找到<code>setting.json</code></strong></p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220201440.png?picture" alt="" /></p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220201631.png?picture" alt="" /></p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220201440.png?picture" alt=""></p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220201631.png?picture" alt=""></p>
 <p>在一对<code>{}</code>中间添加以下配置文件</p>
-
-<pre><code class="language-json">    &quot;latex-workshop.latex.recipes&quot;: [
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#d14">&#34;latex-workshop.latex.recipes&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> [
         {
-            &quot;name&quot;: &quot;xelatex&quot;,
-            &quot;tools&quot;: [
-                &quot;xelatex&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;xelatex&#34;</span>,
+            <span style="color:#000080">&#34;tools&#34;</span>: [
+                <span style="color:#d14">&#34;xelatex&#34;</span>
             ]
         },
         {
-            &quot;name&quot;: &quot;xelate -&gt; xelatex&quot;,
-            &quot;tools&quot;: [
-                &quot;xelatex&quot;,
-                &quot;xelatex&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;xelate -&gt; xelatex&#34;</span>,
+            <span style="color:#000080">&#34;tools&#34;</span>: [
+                <span style="color:#d14">&#34;xelatex&#34;</span>,
+                <span style="color:#d14">&#34;xelatex&#34;</span>
             ]
         },
         {
-            &quot;name&quot;: &quot;xelatex -&gt;bibtex -&gt;bibtex -&gt;xelatex -&gt;xelatex&quot;,
-            &quot;tools&quot;: [
-                &quot;xelatex&quot;,
-                &quot;bibtex&quot;,
-                &quot;xelatex&quot;,
-                &quot;xelatex&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;xelatex -&gt;bibtex -&gt;bibtex -&gt;xelatex -&gt;xelatex&#34;</span>,
+            <span style="color:#000080">&#34;tools&#34;</span>: [
+                <span style="color:#d14">&#34;xelatex&#34;</span>,
+                <span style="color:#d14">&#34;bibtex&#34;</span>,
+                <span style="color:#d14">&#34;xelatex&#34;</span>,
+                <span style="color:#d14">&#34;xelatex&#34;</span>
             ]
         },
         {
-            &quot;name&quot;: &quot;latexmk&quot;,
-            &quot;tools&quot;: [
-                &quot;latexmk&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;latexmk&#34;</span>,
+            <span style="color:#000080">&#34;tools&#34;</span>: [
+                <span style="color:#d14">&#34;latexmk&#34;</span>
             ]
         },
         {
-            &quot;name&quot;: &quot;pdflatex -&gt;bibtex -&gt;pdflatex*2&quot;,
-            &quot;tools&quot;: [
-                &quot;pdflatex&quot;,
-                &quot;bibtex&quot;,
-                &quot;pdflatex&quot;,
-                &quot;pdflatex&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;pdflatex -&gt;bibtex -&gt;pdflatex*2&#34;</span>,
+            <span style="color:#000080">&#34;tools&#34;</span>: [
+                <span style="color:#d14">&#34;pdflatex&#34;</span>,
+                <span style="color:#d14">&#34;bibtex&#34;</span>,
+                <span style="color:#d14">&#34;pdflatex&#34;</span>,
+                <span style="color:#d14">&#34;pdflatex&#34;</span>
             ]
         }
-    ],
-    &quot;latex-workshop.latex.tools&quot;: [
+    ]<span style="color:#a61717;background-color:#e3d2d2">,</span>
+    <span style="color:#d14">&#34;latex-workshop.latex.tools&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> [
         {
-            &quot;name&quot;: &quot;latexmk&quot;,
-            &quot;command&quot;: &quot;latexmk&quot;,
-            &quot;args&quot;: [
-                &quot;-synctex=1&quot;,
-                &quot;-interaction=nonstopmode&quot;,
-                &quot;-file-line-error&quot;,
-                &quot;%DOC%&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;latexmk&#34;</span>,
+            <span style="color:#000080">&#34;command&#34;</span>: <span style="color:#d14">&#34;latexmk&#34;</span>,
+            <span style="color:#000080">&#34;args&#34;</span>: [
+                <span style="color:#d14">&#34;-synctex=1&#34;</span>,
+                <span style="color:#d14">&#34;-interaction=nonstopmode&#34;</span>,
+                <span style="color:#d14">&#34;-file-line-error&#34;</span>,
+                <span style="color:#d14">&#34;%DOC%&#34;</span>
             ]
         },
         {
-            &quot;name&quot;: &quot;pdflatex&quot;,
-            &quot;command&quot;: &quot;pdflatex&quot;,
-            &quot;args&quot;: [
-                &quot;-synctex=1&quot;,
-                &quot;-interaction=nonstopmode&quot;,
-                &quot;-file-line-error&quot;,
-                &quot;%DOC%&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;pdflatex&#34;</span>,
+            <span style="color:#000080">&#34;command&#34;</span>: <span style="color:#d14">&#34;pdflatex&#34;</span>,
+            <span style="color:#000080">&#34;args&#34;</span>: [
+                <span style="color:#d14">&#34;-synctex=1&#34;</span>,
+                <span style="color:#d14">&#34;-interaction=nonstopmode&#34;</span>,
+                <span style="color:#d14">&#34;-file-line-error&#34;</span>,
+                <span style="color:#d14">&#34;%DOC%&#34;</span>
             ]
         },
         {
-            &quot;name&quot;: &quot;bibtex&quot;,
-            &quot;command&quot;: &quot;bibtex&quot;,
-            &quot;args&quot;: [
-                &quot;%DOCFILE%&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;bibtex&#34;</span>,
+            <span style="color:#000080">&#34;command&#34;</span>: <span style="color:#d14">&#34;bibtex&#34;</span>,
+            <span style="color:#000080">&#34;args&#34;</span>: [
+                <span style="color:#d14">&#34;%DOCFILE%&#34;</span>
             ]
         },
         {
-            &quot;name&quot;: &quot;xelatex&quot;,
-            &quot;command&quot;: &quot;xelatex&quot;,
-            &quot;args&quot;: [
-                &quot;-synctex=1&quot;,
-                &quot;-interaction=nonstopmode&quot;,
-                &quot;-file-line-error&quot;,
-                &quot;%DOC%&quot;
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;xelatex&#34;</span>,
+            <span style="color:#000080">&#34;command&#34;</span>: <span style="color:#d14">&#34;xelatex&#34;</span>,
+            <span style="color:#000080">&#34;args&#34;</span>: [
+                <span style="color:#d14">&#34;-synctex=1&#34;</span>,
+                <span style="color:#d14">&#34;-interaction=nonstopmode&#34;</span>,
+                <span style="color:#d14">&#34;-file-line-error&#34;</span>,
+                <span style="color:#d14">&#34;%DOC%&#34;</span>
             ]
         },
-    ],
-    &quot;latex-workshop.view.pdf.viewer&quot;: &quot;tab&quot;,
-</code></pre>
-
-<p><strong>5.插件使用</strong></p>
-
+    ]<span style="color:#a61717;background-color:#e3d2d2">,</span>
+    <span style="color:#d14">&#34;latex-workshop.view.pdf.viewer&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> <span style="color:#d14">&#34;tab&#34;</span><span style="color:#a61717;background-color:#e3d2d2">,</span>
+</code></pre></div><p><strong>5.插件使用</strong></p>
 <p><strong>编译<code>.tex</code>文件</strong></p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200846.png?picture" alt="" /></p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200846.png?picture" alt=""></p>
 <p><strong>6.运行效果</strong></p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200957.png?picture" alt=""></p>
 
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191220200957.png?picture" alt="" /></p>
+        </div>
 
-                            </div>
-                           
-                            
+        
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
@@ -279,27 +344,25 @@
 <br/>
 
 
-                            
-                            <br>
-                            <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
-                                <link rel="stylesheet"
-                                    href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-                                <script
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-                            </div>
-                            
-                            <ol class="page-navigator">
-                                <div class="a">
-                                
-                                <p style="text-align: left;"><a href="https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床<br /><br/></p>
-                                
+         
+         <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
+             <link rel="stylesheet"
+                 href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+             <script
+                 src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+         </div>
+         <ol class="page-navigator">
+            <div class="a">
+            
+            <p style="text-align: left;"><a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;git操作笔记<br /><br/></p>
+            
+
+            
+            <p style="text-align: right;"><a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;windows下载安装latex
+            
+            </div>
+        </ol>
         
-                                
-                                <p style="text-align: right;"><a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;windows下载安装latex
-                                
-                                </div>
-                            </ol>
-                            
 
 <div class="post-archive">
     <h2>See Also</h2>
@@ -313,26 +376,26 @@
         
         <li><a href="/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/">Vscode快捷键</a></li>
         
-        <li><a href="/post/WireShark%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8E%A5%E5%8F%A3%E6%88%96%E8%80%85%E7%BD%91%E5%8D%A1/">WireShark找不到接口或者网卡</a></li>
+        <li><a href="/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/">Sql server触发器及存储过程</a></li>
         
     </ul>
 </div>
 
-        
-                            <div class="post-meta meta-tags">
-                                
-                                <ul class="clearfix">
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/vscode">vscode</a></li>
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/latex">latex</a></li>
-                                    
-                                </ul>
-                                
-                            </div>
-                            </br>
-                        </article>
-                        
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://CorPython.github.io/tags/vscode'>vscode</a></li>
+                
+                <li><a href='https://CorPython.github.io/tags/latex'>latex</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+
+    
 
 
 
@@ -361,8 +424,10 @@
   })();
 </script>
 
-                    </div>
+</div>
+
                 </div>
+
                 <div id="secondary">
     <section class="widget">
         <form id="search" action='https://CorPython.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -384,12 +449,22 @@
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
+        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="git操作笔记">git操作笔记</a>
     </li>
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git学习笔记">Git学习笔记</a>
+        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
     </li>
     
     <li>
@@ -415,16 +490,6 @@
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/" title="GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床">GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
     </li>
     
     <li>
@@ -505,9 +570,6 @@
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
-    
-    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/idea/">idea</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/latex/">latex</a>
@@ -657,10 +719,6 @@
          </div>
        </div>
     <script type="text/javascript">
-        
-        (function () {
-            $("pre code").parent().addClass("line-numbers")
-        }());
         window.MathJax = {
             tex2jax: {
                 inlineMath: [['$', '$']],
@@ -668,12 +726,11 @@
                 }
             };
     </script>
-    <script type="text/javascript" src="/js/prism.js" async="true"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
-<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -693,83 +750,22 @@ if (!doNotTrack) {
 
 
 
-    <script src="/js/share.js"></script>
+    <script src='/js/share.js'\></script>
 
-    <script src="/js/cus.js"></script>
+    <script src='/js/cus.js'\></script>
 
-    <script src="/js/app.js"></script>
+    <script src='/js/app.js'\></script>
 
-    <script src="/js/APlayer.min.js"></script>
+    <script src='/js/APlayer.min.js'\></script>
 
-    <script src="/js/firework.js"></script>
+    <script src='/js/firework.js'\></script>
 
-    <script src="/js/FunnyTitle.js"></script>
+    <script src='/js/FunnyTitle.js'\></script>
 
-    <script src="/js/prism.js"></script>
+    <script src='/js/prism.js'\></script>
 
-    <script src="/js/sakura.js"></script>
+    <script src='/js/snow.js'\></script>
 
-    <script type="text/javascript">
-        (function(){
-            if (typeof self === 'undefined' || !self.Prism || !self.document) {
-                return;
-            }
-            if (!Prism.plugins.toolbar) {
-                console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
-                return;
-            }
-            var ClipboardJS = window.ClipboardJS || undefined;
-            if (!ClipboardJS && typeof require === 'function') {
-                ClipboardJS = require('clipboard');
-            }
-            var callbacks = [];
-            if (!ClipboardJS) {
-                var script = document.createElement('script');
-                var head = document.querySelector('head');
-                script.onload = function() {
-                    ClipboardJS = window.ClipboardJS;
-                    if (ClipboardJS) {
-                        while (callbacks.length) {
-                            callbacks.pop()();
-                        }
-                    }
-                };
-                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
-                head.appendChild(script);
-            }
-            Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-                var linkCopy = document.createElement('button');
-                linkCopy.textContent = '复制代码';
-                if (!ClipboardJS) {
-                    callbacks.push(registerClipboard);
-                } else {
-                    registerClipboard();
-                }
-                return linkCopy;
-                function registerClipboard() {
-                    var clip = new ClipboardJS(linkCopy, {
-                        'text': function () {
-                            return env.code;
-                        }
-                    });
-                    clip.on('success', function() {
-                        linkCopy.textContent = '复制成功!';
-                        resetText();
-                    });
-                    clip.on('error', function () {
-                        linkCopy.textContent = '按 Ctrl+C 复制';
-                        resetText();
-                    });
-                }
-                function resetText() {
-                    setTimeout(function () {
-                        linkCopy.textContent = '复制代码';
-                    }, 5000);
-                }
-            });
-        })();
-
-        </script>
 </body>
 
 </html>

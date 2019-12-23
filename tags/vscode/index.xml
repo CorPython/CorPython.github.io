@@ -6,7 +6,7 @@
     <description>Recent content in vscode on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Nov 2019 20:25:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2019 18:25:21 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>vscode如何写latex</title>
       <link>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</link>
-      <pubDate>Fri, 22 Nov 2019 20:25:21 +0800</pubDate>
+      <pubDate>Fri, 20 Dec 2019 18:25:21 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</guid>
       <description>介绍 以下介绍摘自百度百科,链接:https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80</description>
@@ -44,7 +44,7 @@
       <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：ctrl+k,ctrl+u c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB左移 3、显示/隐藏左侧目录栏 ctrl + b</description>
+      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：[ctrl+k,ctrl+u] (按下ctrl不放，再按k + u) c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB</description>
     </item>
     
   </channel>

@@ -1,23 +1,24 @@
 <!doctype html>
 <html lang="en-us">
+<!doctype html>
+<html lang="en-us">
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.61.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Git学习笔记 | code show的博客</title>
-    <meta property="og:title" content="Git学习笔记 - code show的博客">
+    <title>git操作笔记 | code show的博客</title>
+    <meta property="og:title" content="git操作笔记 - code show的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content="2019-12-08T11:57:01&#43;08:00">
+    <meta property="article:published_time" content="2019-12-23T14:19:00&#43;08:00">
         
         
-    <meta property="article:modified_time" content="2019-12-08T11:57:01&#43;08:00">
+    <meta property="article:modified_time" content="2019-12-23T14:19:00&#43;08:00">
         
     <meta name="Keywords" content="java,c,博客,c&#43;&#43;,python,linux">
-    <meta name="description" content="Git学习笔记">
+    <meta name="description" content="git操作笔记">
         
     <meta name="author" content="code show">
     <meta property="og:url" content="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -57,8 +58,9 @@
     
 </head>
 
+
 <body>
-<header id="header" class="clearfix">
+    <header id="header" class="clearfix">
     
         <div class="top-scroll-bar"></div>
     
@@ -96,652 +98,450 @@
     </div>
 </header>
     <div id="body">
-        
         <div class="container">
             <div class="col-group">
 
                 <div class="col-8" id="main">
-                    <div class="res-cons">
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">Git学习笔记</h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年12月8日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a
-                                        href="https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">学习笔记</a></span>
-                                
-                            </div>
-                            
-                            <span class="post-word-count">|3853 words</span>
-                            
-                            <div class="post-meta">
-                                <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                                        阅读</span></span>
-                            </div>
-                            <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约8分钟
-                            </div>
-                            
-                            
-                            <div class="post-content">
-                                    
-                                    
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#git">git基本操作</a></li>
+    <li><a href="#git-1">git日志操作</a></li>
+    <li><a href="#git-2">git版本回退</a></li>
+    <li><a href="#heading">工作区和版本库</a></li>
+    <li><a href="#git-3">git管理修改</a></li>
+    <li><a href="#heading-1">撤销文件修改</a></li>
+    <li><a href="#heading-2">对比文件的不同</a></li>
+    <li><a href="#heading-3">更改版本库中的文件名称</a></li>
+    <li><a href="#amend">amend命令</a></li>
+    <li><a href="#heading-4">删除文件</a></li>
+    <li><a href="#git-4">git分支操作</a></li>
+    <li><a href="#heading-5">冲突解决</a></li>
+    <li><a href="#heading-6">分支管理策略</a></li>
+    <li><a href="#heading-7">暂存区</a></li>
+    <li><a href="#gitignore">.gitignore</a></li>
+    <li><a href="#git-tag">git tag标签</a></li>
+    <li><a href="#gitzip">git生成zip代码包</a></li>
+    <li><a href="#alias">alias简化命令</a></li>
+    <li><a href="#heading-8">常用别名</a></li>
+  </ul>
 
-<h1 id="github及git版本控制">github及git版本控制</h1>
-
-<h2 id="git基本操作">git基本操作</h2>
-
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1">1.创建仓库</a></li>
+        <li><a href="#2ssh">2.添加ssh账户</a></li>
+        <li><a href="#3">3.克隆项目</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-9">推送代码</a></li>
+    <li><a href="#github-1">关联远程github仓库</a></li>
+    <li><a href="#git-clone">git clone仓库提交数据</a></li>
+    <li><a href="#github-2">给github添加新分支</a></li>
+    <li><a href="#heading-10">从远程分支上拉取代码</a></li>
+    <li><a href="#heading-11">删除远程的分支</a></li>
+    <li><a href="#github-3">给别人的github仓库贡献代码</a></li>
+    <li><a href="#ideagit">IDEA配置git</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">git操作笔记</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月23日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0'>学习笔记</a></span>
+            
+        </div>
+        
+        <span class="post-word-count">|3414 words</span>
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        <div class="post-meta animated slower fadeInUp">
+            <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约7分钟
+        </div>
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h1 id="githubgit">github及git版本控制</h1>
+<h2 id="git">git基本操作</h2>
 <p>1.创建一个版本库</p>
-
 <p>新建一个目录git_test,在git_test目录下创建一个版本库</p>
-
-<pre><code>git init
-</code></pre>
-
-<p>2.在git_test下创建一个新文件code.txt</p>
-
-<pre><code>vi code.txt#创建一个新文件
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git init
+</code></pre></div><p>2.在git_test下创建一个新文件code.txt</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi code.txt#创建一个新文件
 cat code.txt#查看文件中的内容
-</code></pre>
-
-<p>3.新建一个文件版本（比如将上面的code.txt保存为一个版本）</p>
-
-<pre><code>git add code.txt
+</code></pre></div><p>3.新建一个文件版本（比如将上面的code.txt保存为一个版本）</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add code.txt
 git add . //一次添加所有文件
-git commit -m '版本一'（-m 后面是说明信息）
-</code></pre>
-
-<p>4.设置自己的github信息</p>
-
-<pre><code> git config --global user.email &quot;1337425156zhang@gmail.com&quot;
- git config --global user.name &quot;CorPython&quot;
-</code></pre>
-
-<p>5.查看提交的版本记录</p>
-
-<pre><code>git log  //查看日志
-</code></pre>
-
-<p>Commit：版本编号</p>
-
-<p>Author：用户名&lt;邮箱&gt;</p>
-
-<p>Date：创建时间</p>
-
-<p>简短的显示方式</p>
-
-<pre><code>git log --oneline
-</code></pre>
-
-<p>6.再次创建一个新版本(与第三步的操作相同)</p>
-
-<h2 id="git日志操作">git日志操作</h2>
-
-<p><code>git log</code>常用操作命令</p>
-
-<pre><code>git log -p //还可以查看文件不同
-git log -1 //最近一次的提交
-git log -2 //显示行号
-git log --oneline -p //简短显示且显示文件修改
-git log --name-only //显示发生变化的文件名 
-git log --name-status //查看发生变化的文件及其变化类型
-</code></pre>
-
-<h2 id="git版本回退">git版本回退</h2>
-
+git commit -m <span style="color:#d14">&#39;版本一&#39;</span>（-m 后面是说明信息）
+</code></pre></div><p>4.设置自己的github信息</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> git config --global user.email <span style="color:#d14">&#34;1337425156zhang@gmail.com&#34;</span>
+ git config --global user.name <span style="color:#d14">&#34;CorPython&#34;</span>
+</code></pre></div><p>5.查看提交的版本记录</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git log  //查看日志
+</code></pre></div><h2 id="git-1">git日志操作</h2>
+<ol>
+<li>查看日志 <code>git log</code></li>
+<li>查看最近2次提交日志并显示文件差异 <code>git log -p -2</code></li>
+<li>显示已修改的文件清单 <code>git log --name-only</code></li>
+<li>显示新增、修改、删除的文件清单 <code>git log --name-status</code></li>
+<li>一行显示 <code>git log --oneline</code></li>
+</ol>
+<h2 id="git-2">git版本回退</h2>
 <p>git版本回退就是回到之前的版本，<strong>版本是由一个叫HEAD的指针来指向</strong></p>
-
 <p>回到某个版本的时候，如上我们创建了两个版本库：版本一和版本二</p>
-
 <p>当前版本：HEAD</p>
-
 <p>前一版本：HEAD^(多少个^号代表前多少个版本)</p>
-
 <p>HEAD~100（后面的数字代表第多少个版本）</p>
-
 <p>回到上一版本使用命令如下：</p>
-
-<pre><code>git reset --hard HEAD^
-</code></pre>
-
-<p>如果想回到当前版本</p>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git reset --hard HEAD^
+</code></pre></div><p>如果想回到当前版本</p>
 <p>版本标号就是commit之后的内容</p>
-
-<pre><code>git reset --hard 版本编号
-</code></pre>
-
-<p>如果终端关闭了不知道版本号了，可以使用命令查看历史操作记录</p>
-
-<pre><code>git reflog
-</code></pre>
-
-<h2 id="工作区和版本库">工作区和版本库</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git reset --hard 版本编号
+</code></pre></div><p>如果终端关闭了不知道版本号了，可以使用命令查看历史操作记录</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git reflog
+</code></pre></div><h2 id="heading">工作区和版本库</h2>
 <p>工作区：用来编辑的目录如上文的git_test</p>
-
-<p>版本库：工作区的一个隐藏目录<strong>.git</strong>就是版本库</p>
-
+<p>版本库：工作区的一个隐藏目录<code>.git</code>就是版本库</p>
 <p>暂存区：版本库中保存了许多东西，其中最重要的就是<strong>stage</strong>，这就是暂存区</p>
-
 <p><code>git</code>还为我们自动创建了第一个分支<code>master</code>，以及指向master的指针<code>HEAD</code></p>
-
-<p><span style='color:red'>git add</span>:将文件保存道暂存区中</p>
-
-<p><span style='color:red'>git commit</span>:将暂存区中的文件一次性提交到当前分支，就是一次版本记录</p>
-
+<p><!-- raw HTML omitted -->git add<!-- raw HTML omitted -->:将文件保存道暂存区中</p>
+<p><!-- raw HTML omitted -->git commit<!-- raw HTML omitted -->:将暂存区中的文件一次性提交到当前分支，就是一次版本记录</p>
 <p>git status：查看当前文件的状态(是否修改或者提交)</p>
-
-<h2 id="git管理修改">git管理修改</h2>
-
+<h2 id="git-3">git管理修改</h2>
 <p>注意：git管理文件的修改，它只会提交暂存区中的修改来创建版本</p>
-
 <p>也就是说，文件修改后要及时使用git add 添加到暂存区，否则不会保存在记录中</p>
-
 <p>取消暂存区中的文件的暂存</p>
-
-<pre><code>git reset HEAD 文件名
-</code></pre>
-
-<h2 id="撤销文件修改">撤销文件修改</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git reset HEAD 文件名
+</code></pre></div><h2 id="heading-1">撤销文件修改</h2>
 <p>使用命令来撤销</p>
-
-<pre><code>git checkout -- 文件名
-</code></pre>
-
-<p>恢复文件(vim 操作和内容无关)</p>
-
-<pre><code>vim -r 文件名
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout -- 文件名
+</code></pre></div><p>恢复文件(vim 操作和内容无关)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim -r 文件名
+</code></pre></div><ul>
 <li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git  checkout  &ndash;  file。</li>
 <li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git  reset HEAD  file，就回到了场景1，第二步按场景1操作。</li>
 <li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一~</li>
 </ul>
-
-<h2 id="对比文件的不同">对比文件的不同</h2>
-
+<h2 id="heading-2">对比文件的不同</h2>
 <p><strong>对比工作区中的文件和版本库中的文件的不同</strong></p>
-
-<pre><code>git diff HEAD -- 文件名
-</code></pre>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208120503.png?picture" alt="" /></p>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git diff HEAD -- 文件名
+</code></pre></div><p><img src="http://q21emm1il.bkt.clouddn.com/20191208120503.png?picture" alt=""></p>
 <p>+：工作区的文件</p>
-
 <p>-：版本库中的文件</p>
-
 <p>其他为公共文件</p>
-
 <p><strong>对比两个不同的版本库中的文件的不同</strong></p>
-
-<pre><code>git diff HEAD HEAD^ -- 文件名
-</code></pre>
-
-<h2 id="更改版本库中的文件名称">更改版本库中的文件名称</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git diff HEAD HEAD^ -- 文件名
+</code></pre></div><h2 id="heading-3">更改版本库中的文件名称</h2>
 <p>修改提交的文件名字</p>
-
-<pre><code class="language-git">git mv 旧文件名 新文件名
-</code></pre>
-
-<h2 id="amend命令">amend命令</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git mv 旧文件名 新文件名
+</code></pre></div><h2 id="amend">amend命令</h2>
 <p>1.修改最新一次提交的更新</p>
-
-<pre><code>git commit --amend 
-</code></pre>
-
-<p>2.将一个新文件加入到上一次提交中</p>
-
-<pre><code class="language-git">git add 新文件名
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git commit --amend 
+</code></pre></div><p>2.将一个新文件加入到上一次提交中</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add 新文件名
 git commit --amend //增加提交信息
-</code></pre>
-
-<h2 id="删除文件">删除文件</h2>
-
+</code></pre></div><h2 id="heading-4">删除文件</h2>
 <p>linux删除命令</p>
-
-<pre><code>rm 文件名
-</code></pre>
-
-<p>接下来将其加入暂存区(没有加入到暂存区，git无法保存删除的文件)</p>
-
-<pre><code>git add 文件名
-####或者
-git rm '文件名' //会删除本地的文件
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rm 文件名
+</code></pre></div><p>接下来将其加入暂存区(没有加入到暂存区，git无法保存删除的文件)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add 文件名
+<span style="color:#998;font-style:italic">####或者</span>
+git rm <span style="color:#d14">&#39;文件名&#39;</span> //会删除本地的文件
 git rm --cached 文件名 //保留本地的文件,相当于从暂存区中取出这个文件
-</code></pre>
-
-<p>创建记录</p>
-
-<pre><code>git commit -m '描述'
-</code></pre>
-
-<h2 id="git分支操作">git分支操作</h2>
-
+</code></pre></div><p>创建记录</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git commit -m <span style="color:#d14">&#39;描述&#39;</span>
+</code></pre></div><h2 id="git-4">git分支操作</h2>
 <p>创建分支</p>
-
-<pre><code>git branch 分支名
-</code></pre>
-
-<p>切换分支</p>
-
-<pre><code>git checkout 分支名
-</code></pre>
-
-<p>查看当前所有分支</p>
-
-<pre><code>git branch
-</code></pre>
-
-<p>创建并切换到一个新分支，作为备用分支</p>
-
-<pre><code>git checkout -b dev
-</code></pre>
-
-<p>当前状态</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208120816.png?picture" alt="" /></p>
-
-<p>修改文件内容，创建版本记录，提交到新分支</p>
-
-<p>分支切换</p>
-
-<pre><code>git checkout 分支名
-</code></pre>
-
-<p>分支合并（Fast - forward 快速合并）</p>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch 分支名
+</code></pre></div><p>切换分支</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout 分支名
+</code></pre></div><p>查看当前所有分支</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch
+</code></pre></div><p>创建并切换到一个新分支，作为备用分支</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout -b dev
+</code></pre></div><p>分支切换</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout 分支名
+</code></pre></div><p>分支合并（Fast - forward 快速合并）</p>
 <p>将某分支合并到当前分支</p>
-
-<pre><code>git merge 分支名
-</code></pre>
-
-<p>合并完成后，删除分支dev</p>
-
-<pre><code>git branch -d dev
-</code></pre>
-
-<p>若当前有分支尚未合并,则使用<code>git branch -d 分支名</code>,则会提示你要使用<code>-D</code>来删除</p>
-
-<pre><code>git branch -D 未合并分支名
-</code></pre>
-
-<h2 id="冲突解决">冲突解决</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git merge 分支名
+</code></pre></div><p>合并完成后，删除分支dev</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch -d dev
+</code></pre></div><p>若当前有分支尚未合并,则使用<code>git branch -d 分支名</code>,则会提示你要使用<code>-D</code>来删除</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch -D 未合并分支名
+</code></pre></div><h2 id="heading-5">冲突解决</h2>
 <p><strong>如果两个分支有文件同时被修改，需要解决这个冲突，否则合并失败</strong></p>
-
 <p><strong>可以手动将该冲突解决，再提交到主分支</strong></p>
-
 <p>查看冲突解决</p>
-
-<pre><code>git log --graph --pretty=oneline
-</code></pre>
-
-<h2 id="分支管理策略">分支管理策略</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git log --graph --pretty<span style="color:#000;font-weight:bold">=</span>oneline
+</code></pre></div><h2 id="heading-6">分支管理策略</h2>
 <p>当两个分支之间的内容没有冲突时(即没有修改同一个文件)，这时后不能使用快速合并(Fast-forward)</p>
-
 <p>例如：</p>
-
 <p>1.新建一个dev分支，创建一个新文件code3.txt并提交一次记录</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208114952.png?picture" alt="" /></p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191208114952.png?picture" alt=""></p>
 <p>2.在master分支下修改文件code.txt，并提交记录</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208114941.png?picture" alt="" /></p>
-
-<p>3.进行快速合并时会出现弹窗<img src="http://q21emm1il.bkt.clouddn.com/20191208114925.png?picture" alt="" /></p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191208114941.png?picture" alt=""></p>
+<p>3.进行快速合并时会出现弹窗<img src="http://q21emm1il.bkt.clouddn.com/20191208114925.png?picture" alt=""></p>
 <p>4.输入保存的记录名，按ctrl + x 离开，按Y保存，按Enter键退出</p>
-
-<p><img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20191208114736.png" alt="" /></p>
-
+<p><img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20191208114736.png" alt=""></p>
 <p>5.查看修改记录</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208114831.png?picture" alt="" /></p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191208114831.png?picture" alt=""></p>
 <p>注意：在这次合并时，可以不采用快速合并的方式，可以将快速合并方式给禁用</p>
-
 <p>使用快速合并模式时，命令是</p>
-
-<pre><code>git merge dev
-</code></pre>
-
-<p>禁用快速合并模式：</p>
-
-<pre><code>git merge --no-ff -m '禁用fast-forward' dev
-</code></pre>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208114904.png?picture" alt="" /></p>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git merge dev
+</code></pre></div><p>禁用快速合并模式：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git merge --no-ff -m <span style="color:#d14">&#39;禁用fast-forward&#39;</span> dev
+</code></pre></div><p><img src="http://q21emm1il.bkt.clouddn.com/20191208114904.png?picture" alt=""></p>
 <p>查看当前没有合并的分支</p>
-
-<pre><code class="language-git">git branch --no-merged
-</code></pre>
-
-<p>查看当前已经合并的分支</p>
-
-<pre><code class="language-git">git branch --merged
-</code></pre>
-
-<h2 id="暂存区">暂存区</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch --no-merged
+</code></pre></div><p>查看当前已经合并的分支</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch --merged
+</code></pre></div><h2 id="heading-7">暂存区</h2>
 <blockquote>
 <p>当我们在当前分支尚未完成提交任务或者还不打算提交时,可以将当前未完成的工作暂存起来,这时再切换到另一个分支完成相应操作</p>
 </blockquote>
-
-<pre><code>git stash  //执行暂存命令
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git stash  //执行暂存命令
 git stash list // 查看当前分支的暂存区,一个分支可以有多个暂存区
 git drop 暂存区名 //删除暂存区
 git stash apply //恢复当前最近的暂存区,也可以指定暂存区名进行恢复
 git stash pop //恢复并删除当前暂存区
-</code></pre>
-
-<h2 id="gitignore">.gitignore</h2>
-
+</code></pre></div><h2 id="gitignore">.gitignore</h2>
 <p>在这个文件添加你要取消跟踪的文件</p>
-
-<p><span style='color:red'>注意: git中文件夹中没有文件默认时不跟踪的</span></p>
-
-<pre><code class="language-git">*.txt //忽略所有后缀为.txt的文件
+<p><!-- raw HTML omitted -->注意: git中文件夹中没有文件默认时不跟踪的<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">*.txt //忽略所有后缀为.txt的文件
 a.txt //忽略a.txt这个文件
 !a.txt //这个文件重新跟踪
 /folder //忽略floder这个文件夹
 /folder/a.txt //忽略floder目录下的a.txt文件
 /folder/**/*.txt //忽略folder及其子目录下的txt文件
-</code></pre>
-
-<h2 id="git-tag标签">git tag标签</h2>
-
+</code></pre></div><h2 id="git-tag">git tag标签</h2>
 <blockquote>
 <p>对某个阶段的总结,比如发布的版本号,v1.0,v2.0等等,最好要在完成一个稳定的版本后</p>
-
 <p>再打上标签</p>
 </blockquote>
-
-<pre><code>git tag //显示当前所有标签
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git tag //显示当前所有标签
 git tag 标签名 //给当前工作设置一个标签
-</code></pre>
-
-<h2 id="alias简化命令">alias简化命令</h2>
-
-<pre><code class="language-git">git config --global alias.a add //将给git a定义为git add
-</code></pre>
-
-<p>在<code>gitconfig</code>中可以看到<code>[alias]</code>中看到添加的命令</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191211211911.png?picture" alt="" /></p>
-
-<h1 id="github的使用">github的使用</h1>
-
-<h3 id="1-创建仓库">1.创建仓库</h3>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/1565515373255.png?picture" alt="" /></p>
-
-<p>创建成功<img src="http://q21emm1il.bkt.clouddn.com/1565515438840.png?picture" alt="" /></p>
-
+</code></pre></div><h2 id="gitzip">git生成zip代码包</h2>
+<p>使用命令如下</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git archive master --prefix<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;解压后的文件夹/&#39;</span> --forma<span style="color:#000;font-weight:bold">=</span>zip &gt; 压缩文件夹名.zip
+</code></pre></div><p>打开当前windows路径的文件管理器</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">explorer .    //打开本地资源管理器
+</code></pre></div><h2 id="alias">alias简化命令</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config --global alias.a add //将给git a定义为git add
+</code></pre></div><p>在<code>gitconfig</code>中可以看到<code>[alias]</code>中看到添加的命令</p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191211211911.png?picture" alt=""></p>
+<h2 id="heading-8">常用别名</h2>
+<p>在 <code>~/.bash_profile</code> 文件中定义常用的别名指令,在<code>git-bash</code>中使用以下指令打开</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#0086b3">cd</span>
+vim .bash_profile
+</code></pre></div><p>添加以下命令, <!-- raw HTML omitted --><strong>重启之后生效</strong><!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#0086b3">alias</span> <span style="color:#008080">gs</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;git status&#34;</span>
+<span style="color:#0086b3">alias</span> <span style="color:#008080">gc</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;git commit -m &#34;</span>
+<span style="color:#0086b3">alias</span> <span style="color:#008080">gl</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;git log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit  &#34;</span>
+<span style="color:#0086b3">alias</span> <span style="color:#008080">gb</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;git branch&#34;</span>
+<span style="color:#0086b3">alias</span> <span style="color:#008080">ga</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;git add .&#34;</span>
+<span style="color:#0086b3">alias</span> <span style="color:#008080">go</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;git checkout&#34;</span>
+</code></pre></div><h1 id="github">github的使用</h1>
+<h3 id="1">1.创建仓库</h3>
+<p><img src="http://q21emm1il.bkt.clouddn.com/1565515373255.png?picture" alt=""></p>
+<p>创建成功<img src="http://q21emm1il.bkt.clouddn.com/1565515438840.png?picture" alt=""></p>
 <p>.gitignore里标注了忽略的文件类型</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115211.png?picture" alt="" /></p>
-
-<h3 id="2-添加ssh账户">2.添加ssh账户</h3>
-
-<p>添加ssk公钥之后，本机才能与github仓库进行交互</p>
-
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115211.png?picture" alt=""></p>
+<h3 id="2ssh">2.添加ssh账户</h3>
+<p>添加ssk公钥之后，本地仓库才能与github远程仓库进行交互</p>
 <p>使用命令生成公钥，一直按Enter键就好了</p>
-
-<pre><code>ssh-keygen -t rsa -C '邮箱地址'
-</code></pre>
-
-<p><img src="C:Users张福平Desktop截图截图_2019-08-12_01-41-16.png" alt="截图_2019-08-12_01-41-16" /></p>
-
-<p>会生成在/ho文件夹下，打开里面的文件id_rsa.pub获取公钥</p>
-
-<pre><code>cd /home/zhangfp/.ssh/
-ls -a
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh -keygen -t rsa -C <span style="color:#d14">&#39;邮箱地址&#39;</span>
+</code></pre></div><p>会生成在/ho文件夹下，打开里面的文件id_rsa.pub获取公钥</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#0086b3">cd</span> /home/zhangfp/.ssh/
 cat id_rsa.pub 
-</code></pre>
-
-<p>把ssh公钥信息添加到github的设置中</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115230.png?picture" alt="" /></p>
-
-<h3 id="3-克隆项目">3.克隆项目</h3>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115317.png?picture" alt="" /></p>
-
+</code></pre></div><p>把ssh公钥信息添加到github的设置中</p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115230.png?picture" alt=""></p>
+<h3 id="3">3.克隆项目</h3>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115317.png?picture" alt=""></p>
 <p>使用命令</p>
-
-<pre><code>git clone + '链接'
-</code></pre>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115345.png?picture" alt="" /></p>
-
-<p>如果遇到Broken pipe错误，参考以下代码</p>
-
-<pre><code>vim ~/.ssh/config #打开.ssh文件夹下的config目录 
- 
-#添加内容
-
-Host *
-IPQoS lowdelay throughput
- 
-#修改权限
-chmod 644  ~/.ssh/config
-</code></pre>
-
-<h2 id="推送代码">推送代码</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone + <span style="color:#d14">&#39;链接&#39;</span>
+</code></pre></div><p><img src="http://q21emm1il.bkt.clouddn.com/20191208115345.png?picture" alt=""></p>
+<h2 id="heading-9">推送代码</h2>
 <p>日常开发时，可以新建并切换到这个新的分支，比如smart</p>
-
-<pre><code>git checkout -b smart
-</code></pre>
-
-<p>把完成的代码提交一次版本记录</p>
-
-<pre><code>git add 文件名
-git commit -m '提交'
-</code></pre>
-
-<p>将该分支推送到远程的github服务器上</p>
-
-<pre><code>git push origin 分支名
-</code></pre>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115433.png?picture" alt="" /></p>
-
-<h2 id="github跟踪远程">github跟踪远程</h2>
-
-<p>和远程的仓库进行链接</p>
-
-<pre><code>git remote add origin git@gitee.com:liaoxuefeng/learngit.git//建议使用ssh方式
-</code></pre>
-
-<p>为了检查当前工作分支和github上分支的信息是否同步</p>
-
-<p>让本地的某个分支跟踪远程的分支，使用命令</p>
-
-<pre><code>git branch --set-upstream-to=origin/smart smart
-</code></pre>
-
-<p>分支 &lsquo;smart&rsquo; 设置为跟踪来自 &lsquo;origin&rsquo; 的远程分支 &lsquo;smart&rsquo;。</p>
-
-<p>跟踪之后，可以直接使用</p>
-
-<pre><code>git push
-</code></pre>
-
-<p>将该分支推送到远端</p>
-
-<p><img src="http://q21emm1il.bkt.clouddn.com/20191208115510.png?picture" alt="" /></p>
-
-<h2 id="从远程分支上拉取代码">从远程分支上拉取代码</h2>
-
-<p>将github上的origin的分支拉取到本地</p>
-
-<pre><code>git pull origin 分支名
-</code></pre>
-
-<p>master:用户保存发布的代码，1.0版本，2.0版本</p>
-
-<p>dev:用户在开发过程中的代码。</p>
-
-<h2 id="给别人的github仓库贡献代码">给别人的github仓库贡献代码</h2>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout -b smart
+</code></pre></div><p>把完成的代码提交一次版本记录s</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add 文件名
+git commit -m <span style="color:#d14">&#39;提交&#39;</span>
+</code></pre></div><p>将该分支推送到远程的github服务器上</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git push origin 分支名
+</code></pre></div><p><img src="http://q21emm1il.bkt.clouddn.com/20191208115433.png?picture" alt=""></p>
+<h2 id="github-1">关联远程github仓库</h2>
+<p>下图箭头指向的内容就是关联的仓库地址</p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191221225902.png?picture" alt=""></p>
+<p>1.添加远程仓库</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git remote add origin git@github.com:CorPython/CorPython.github.io.git //建议使用ssh方式
+</code></pre></div><p>2.查看远程库</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> git remote -v
+</code></pre></div><p>3.推送数据到远程仓库</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git push -u origin master
+</code></pre></div><p>4.删除远程仓库关联</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git remote rm origin
+</code></pre></div><blockquote>
+<p><!-- raw HTML omitted -->通过 clone 克隆的仓库，本地与远程已经自动关联，上面几步都可以省略。<!-- raw HTML omitted --></p>
+</blockquote>
+<h2 id="git-clone">git clone仓库提交数据</h2>
+<ol>
+<li>克隆自己github的某个仓库</li>
+</ol>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone git@github.com:CorPython/java_repo.git
+</code></pre></div><p>本地提交数据</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#0086b3">cd</span> java_repo
+vim a.txt
+git push
+</code></pre></div><p><img src="http://q21emm1il.bkt.clouddn.com/20191221231304.png?picture" alt=""></p>
+<p>3.查看<code>github</code>仓库状态</p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191221231435.png?picture" alt=""></p>
+<h2 id="github-2">给github添加新分支</h2>
+<p><strong>在本地仓库中添加一个新分支,并提交</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git check -b <span style="color:#0086b3">test</span>
+vim a.txt
+git add .
+git commit -m <span style="color:#d14">&#39;new commit&#39;</span>
+git push
+</code></pre></div><p><strong>这时会出现一个错误</strong></p>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191221232823.png?picture" alt=""></p>
+<p><strong>使用上图的命令即可推送成功</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git push --set-upstream origin <span style="color:#0086b3">test</span>
+</code></pre></div><p>使用以下命令可以查看当前所有分支状态</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch -a
+</code></pre></div><p><img src="http://q21emm1il.bkt.clouddn.com/20191221233421.png?picture" alt=""></p>
+<h2 id="heading-10">从远程分支上拉取代码</h2>
+<p>将<code>github</code>上的<code>origin</code>的分支拉取到本地</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git pull origin test:test //把远程的test分支拉取到当前分支
+</code></pre></div><h2 id="heading-11">删除远程的分支</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git push origin --delete 要删除的分支名
+git branch -d 本地分支 //删除本地分支
+</code></pre></div><h2 id="github-3">给别人的github仓库贡献代码</h2>
 <p>1.将别人的仓库fork过来(直接克隆没有修改的权限)</p>
-
 <p>2.打开终端，使用git  clone + 你的项目地址</p>
-
 <p>3.进行项目修改，下一步可以上传到你的github，可以使用git status检查是否修改成功</p>
-
 <p>4.本地提交一次</p>
-
 <p>5.推动到远端的github项目里</p>
-
-<pre><code>git push origin 分支名
-</code></pre>
-
-<p>6.新建一个pull request ，注意要在你推送的分支里</p>
-
-<p><img src="https://img-blog.csdn.net/20160812185447413" alt="img" /></p>
-
-<p><img src="https://img-blog.csdn.net/20160812185521241" alt="img" /></p>
-
-<p><img src="https://img-blog.csdn.net/20160812185605101" alt="img" /></p>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git push origin 分支名
+</code></pre></div><p>6.新建一个pull request ，注意要在你推送的分支里</p>
+<p><img src="https://img-blog.csdn.net/20160812185447413" alt="img"></p>
+<p><img src="https://img-blog.csdn.net/20160812185605101" alt="img"></p>
 <p>7.等待github仓库主人的同意，就能合并成功</p>
-
-<hr />
-
-<h2 id="idea配置git">IDEA配置git</h2>
-
+<hr>
+<h2 id="ideagit">IDEA配置git</h2>
 <blockquote>
 <ol>
-<li>电脑必须已经装好了git 的客户端git客户端  下载地址<a href="https://link.jianshu.com?t=https://gitscm.com/downloads" target="_blank">git</a></li>
+<li>电脑必须已经装好了git 的客户端git客户端  下载地址<a href="https://gitforwindows.org/">git</a></li>
 <li>打开IDEA设置界面找到git选好git安装的路径点击Test测试如果出这个提示就是成功了</li>
 </ol>
 </blockquote>
+<p><img src="http://q21emm1il.bkt.clouddn.com/20191223140514.png?picture" alt=""></p>
 
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-0843d07326337ed2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
+        </div>
 
-<p>配置git.png</p>
-
-<hr />
-
-<h2 id="使用详情">使用详情</h2>
-
-<h3 id="把项目上传到本地库和远程库">把项目上传到本地库和远程库</h3>
-
-<p>1.为新建的项目添加本地git库</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-2a9094f25f62fe71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p>2.选择项目根目录点击确定</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-90faa6e3635032f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/642/format/webp" alt="img" /></p>
-
-<p>3.可以看到现在文件都是红色的说明还没被跟踪</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-7bec44900cde91ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p>4.把所有文件跟踪添加到stage区文件都变成了绿色</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-61f20730f1d5d1b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p>5.提交到本地库远程库</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-ca01f73eb098c9ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p>6.可以在commitmessage里面写本次提交的详情然后Commit and Push</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-83a78cbcafff192e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p>7.第一次提交到远程库需要配置一下远程库的地址(使用ssh)输入账号密码点Push提交</p>
-
-<p>如果push被rejected，尝试在终端输入下列命令</p>
-
-<pre><code class="language-cmd">git pull origin master --allow-unrelated-histories
-</code></pre>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-1146769eccc38771.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/782/format/webp" alt="img" /></p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-58a8dd37e431c626.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/573/format/webp" alt="img" /></p>
-
-<hr />
-
-<h3 id="从远程git仓库获取项目源码">从远程Git仓库获取项目源码</h3>
-
-<p>1.如果有人要下载项目源码需要先配置好git点击Configure&gt;settings剩下的按照IDEA配置git的步骤</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-4ff4e33930e3536a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/781/format/webp" alt="img" /></p>
-
-<p>2.下载项目源码,填写地址下载路径,点击clone下载</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-6c132581d584cf60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/783/format/webp" alt="img" /></p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-4c385a7fb2763403.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/783/format/webp" alt="img" /></p>
-
-<hr />
-
-<h3 id="获取别人提交的代码提交自己更新的代码">获取别人提交的代码提交自己更新的代码</h3>
-
-<p>1.在每次提交更新的代码前先把别人提交的代码下下来</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-63d83dae8abfe66d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p>2.提交更新的代码</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-4ead66564a914aa7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-e881298cc9399794.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<hr />
-
-<h3 id="创建分支并在分支上开发">创建分支并在分支上开发</h3>
-
-<p>建分支也是一个常用的操作，例如临时修改bug、开发不确定是否加入的功能等，都可以创建一个分支，再等待合适的时机合并到主干
- 1.创建一个分支</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-03e150cfe21fa09e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p>2.可以看到右下角已经切换到了新创建的分支上面LocalBranches是本地分支RemotBranches是远程分支</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-6f7ef4a9dce6aa43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" />
- 3.把新的分支提交到远程库</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-d45ee224f094dc37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-48824b0c0fc929f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/782/format/webp" alt="img" /></p>
-
-<hr />
-
-<h3 id="合并分支">合并分支</h3>
-
-<p>1.如果分支上的代码已经没有问题需要合并到主分支先切换到主分支</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-62b92576664d0bc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/487/format/webp" alt="img" /></p>
-
-<p>2.把分支合并到主分支点击merge合并</p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-48e47631b7711c18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img" /></p>
-
-<p><img src="https:////upload-images.jianshu.io/upload_images/7911291-867ccc5539b3606b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/441/format/webp" alt="img" /></p>
-
-                            </div>
-                           
-                            
+        
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
@@ -752,27 +552,23 @@ git commit -m '提交'
 <br/>
 
 
-                            
-                            <br>
-                            <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
-                                <link rel="stylesheet"
-                                    href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-                                <script
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-                            </div>
-                            
-                            <ol class="page-navigator">
-                                <div class="a">
-                                
-                                <p style="text-align: left;"><a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;Sql server触发器及存储过程<br /><br/></p>
-                                
+         
+         <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
+             <link rel="stylesheet"
+                 href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+             <script
+                 src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+         </div>
+         <ol class="page-navigator">
+            <div class="a">
+            
+
+            
+            <p style="text-align: right;"><a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;vscode如何写latex
+            
+            </div>
+        </ol>
         
-                                
-                                <p style="text-align: right;"><a href="https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;maven配置
-                                
-                                </div>
-                            </ol>
-                            
 
 <div class="post-archive">
     <h2>See Also</h2>
@@ -786,28 +582,26 @@ git commit -m '提交'
         
         <li><a href="/post/github%E7%9B%B8%E5%85%B3/">github基本操作</a></li>
         
-        <li><a href="/post/maven%E9%85%8D%E7%BD%AE/">maven配置</a></li>
+        <li><a href="/post/vscode%E7%BC%96%E5%86%99latex/">vscode如何写latex</a></li>
         
     </ul>
 </div>
 
-        
-                            <div class="post-meta meta-tags">
-                                
-                                <ul class="clearfix">
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/git">git</a></li>
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/github">github</a></li>
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/idea">idea</a></li>
-                                    
-                                </ul>
-                                
-                            </div>
-                            </br>
-                        </article>
-                        
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://CorPython.github.io/tags/git'>git</a></li>
+                
+                <li><a href='https://CorPython.github.io/tags/github'>github</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+
+    
 
 
 
@@ -836,8 +630,10 @@ git commit -m '提交'
   })();
 </script>
 
-                    </div>
+</div>
+
                 </div>
+
                 <div id="secondary">
     <section class="widget">
         <form id="search" action='https://CorPython.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -859,12 +655,22 @@ git commit -m '提交'
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
+        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="git操作笔记">git操作笔记</a>
     </li>
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git学习笔记">Git学习笔记</a>
+        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
     </li>
     
     <li>
@@ -890,16 +696,6 @@ git commit -m '提交'
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/" title="GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床">GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
     </li>
     
     <li>
@@ -980,9 +776,6 @@ git commit -m '提交'
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
-    
-    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/idea/">idea</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/latex/">latex</a>
@@ -1132,10 +925,6 @@ git commit -m '提交'
          </div>
        </div>
     <script type="text/javascript">
-        
-        (function () {
-            $("pre code").parent().addClass("line-numbers")
-        }());
         window.MathJax = {
             tex2jax: {
                 inlineMath: [['$', '$']],
@@ -1143,12 +932,11 @@ git commit -m '提交'
                 }
             };
     </script>
-    <script type="text/javascript" src="/js/prism.js" async="true"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
-<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1168,83 +956,22 @@ if (!doNotTrack) {
 
 
 
-    <script src="/js/share.js"></script>
+    <script src='/js/share.js'\></script>
 
-    <script src="/js/cus.js"></script>
+    <script src='/js/cus.js'\></script>
 
-    <script src="/js/app.js"></script>
+    <script src='/js/app.js'\></script>
 
-    <script src="/js/APlayer.min.js"></script>
+    <script src='/js/APlayer.min.js'\></script>
 
-    <script src="/js/firework.js"></script>
+    <script src='/js/firework.js'\></script>
 
-    <script src="/js/FunnyTitle.js"></script>
+    <script src='/js/FunnyTitle.js'\></script>
 
-    <script src="/js/prism.js"></script>
+    <script src='/js/prism.js'\></script>
 
-    <script src="/js/sakura.js"></script>
+    <script src='/js/snow.js'\></script>
 
-    <script type="text/javascript">
-        (function(){
-            if (typeof self === 'undefined' || !self.Prism || !self.document) {
-                return;
-            }
-            if (!Prism.plugins.toolbar) {
-                console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
-                return;
-            }
-            var ClipboardJS = window.ClipboardJS || undefined;
-            if (!ClipboardJS && typeof require === 'function') {
-                ClipboardJS = require('clipboard');
-            }
-            var callbacks = [];
-            if (!ClipboardJS) {
-                var script = document.createElement('script');
-                var head = document.querySelector('head');
-                script.onload = function() {
-                    ClipboardJS = window.ClipboardJS;
-                    if (ClipboardJS) {
-                        while (callbacks.length) {
-                            callbacks.pop()();
-                        }
-                    }
-                };
-                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
-                head.appendChild(script);
-            }
-            Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-                var linkCopy = document.createElement('button');
-                linkCopy.textContent = '复制代码';
-                if (!ClipboardJS) {
-                    callbacks.push(registerClipboard);
-                } else {
-                    registerClipboard();
-                }
-                return linkCopy;
-                function registerClipboard() {
-                    var clip = new ClipboardJS(linkCopy, {
-                        'text': function () {
-                            return env.code;
-                        }
-                    });
-                    clip.on('success', function() {
-                        linkCopy.textContent = '复制成功!';
-                        resetText();
-                    });
-                    clip.on('error', function () {
-                        linkCopy.textContent = '按 Ctrl+C 复制';
-                        resetText();
-                    });
-                }
-                function resetText() {
-                    setTimeout(function () {
-                        linkCopy.textContent = '复制代码';
-                    }, 5000);
-                }
-            });
-        })();
-
-        </script>
 </body>
 
 </html>

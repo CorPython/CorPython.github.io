@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en-us">
+<!doctype html>
+<html lang="en-us">
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.61.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>vscode配置文档 | code show的博客</title>
     <meta property="og:title" content="vscode配置文档 - code show的博客">
     <meta property="og:type" content="article">
@@ -57,8 +58,9 @@
     
 </head>
 
+
 <body>
-<header id="header" class="clearfix">
+    <header id="header" class="clearfix">
     
         <div class="top-scroll-bar"></div>
     
@@ -96,88 +98,172 @@
     </div>
 </header>
     <div id="body">
-        
         <div class="container">
             <div class="col-group">
 
                 <div class="col-8" id="main">
-                    <div class="res-cons">
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">vscode配置文档</h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年11月7日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a
-                                        href="https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE">软件配置</a></span>
-                                
-                            </div>
-                            
-                            <span class="post-word-count">|1252 words</span>
-                            
-                            <div class="post-meta">
-                                <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                                        阅读</span></span>
-                            </div>
-                            <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约3分钟
-                            </div>
-                            
-                            
-                            <div class="post-content">
-                                    
-                                    
-
-<p><strong><code>vscode</code>作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件</strong></p>
-
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#span-stylecolorredspanmingw64">注意:在所有的mingw64的位置改为自己电脑上的配置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">vscode配置文档</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月7日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE'>软件配置</a></span>
+            
+        </div>
+        
+        <span class="post-word-count">|1252 words</span>
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        <div class="post-meta animated slower fadeInUp">
+            <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约3分钟
+        </div>
+        
+        
+        <div class="post-content">
+            <p><strong><code>vscode</code>作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件</strong></p>
 <p><strong>使用者只要直接在<code>.vscode</code> 文件夹下建立<code>launch.json</code>和<code>tasks.json</code>配置文件即可</strong></p>
-
-<h3 id="span-style-color-red-注意-span-在所有的mingw64的位置改为自己电脑上的配置"><span style='color:red'><code>注意:</code></span>在所有的mingw64的位置改为自己电脑上的配置</h3>
-
-<h4 id="launch-json"><code>launch.json</code></h4>
-
-<pre><code class="language-json">{
-    &quot;version&quot;: &quot;0.2.0&quot;,
-    &quot;configurations&quot;: [
+<h3 id="span-stylecolorredspanmingw64"><!-- raw HTML omitted --><code>注意:</code><!-- raw HTML omitted -->在所有的mingw64的位置改为自己电脑上的配置</h3>
+<h4 id="launchjson"><code>launch.json</code></h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#000080">&#34;version&#34;</span>: <span style="color:#d14">&#34;0.2.0&#34;</span>,
+    <span style="color:#000080">&#34;configurations&#34;</span>: [
         {
-            // 配置 VS Code 调试行为：
-            &quot;name&quot;: &quot;c/c++&quot;, // 设置在启动配置下拉菜单中显示调试配置的名称。
-            &quot;preLaunchTask&quot;: &quot;Compile&quot;, // 调试会话开始前要运行的任务。
-            &quot;type&quot;: &quot;cppdbg&quot;, // 设置要使用的基础调试器。使用 GDB 或 LLDB 时必须是 cppdbg 。
-            &quot;request&quot;: &quot;launch&quot;, // 设置启动程序还是附加到已经运行的实例。启动或附加 ( launch | attach ).
-            &quot;program&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}.exe&quot;, // 调试器将启动或附加的可执行文件的完整路径。
-            &quot;externalConsole&quot;: false, // 设置是否显示外部控制台。
-            // 配置目标应用程序：
-            &quot;args&quot;: [], // 设置调试时传递给程序的命令行参数。
-            &quot;cwd&quot;: &quot;${workspaceFolder}&quot;, // 设置调试器启动的应用程序的工作目录。
-            &quot;environment&quot;: [], // 设置调试时添加到程序环境中的环境变量，例如: [ { &quot;name&quot;: &quot;squid&quot;, &quot;value&quot;: &quot;clam&quot; } ]。
-            // 自定义 GDB 或者 LLDB：
-            &quot;windows&quot;: {
-                &quot;MIMode&quot;: &quot;gdb&quot;, // 指定 VS Code 连接的调试器，必须为 gdb 或者 lldb。
-                &quot;miDebuggerPath&quot;: &quot;D:/mingw64/mingw64/bin/gdb.exe&quot; // 调试器的路径，修改为你的安装路径
+            <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">配</span><span style="color:#a61717;background-color:#e3d2d2">置</span> <span style="color:#a61717;background-color:#e3d2d2">V</span><span style="color:#a61717;background-color:#e3d2d2">S</span> <span style="color:#a61717;background-color:#e3d2d2">C</span><span style="color:#a61717;background-color:#e3d2d2">o</span><span style="color:#a61717;background-color:#e3d2d2">d</span><span style="color:#a61717;background-color:#e3d2d2">e</span> <span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">行</span><span style="color:#a61717;background-color:#e3d2d2">为</span><span style="color:#a61717;background-color:#e3d2d2">：</span>
+            <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;c/c++&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">在</span><span style="color:#a61717;background-color:#e3d2d2">启</span><span style="color:#a61717;background-color:#e3d2d2">动</span><span style="color:#a61717;background-color:#e3d2d2">配</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">下</span><span style="color:#a61717;background-color:#e3d2d2">拉</span><span style="color:#a61717;background-color:#e3d2d2">菜</span><span style="color:#a61717;background-color:#e3d2d2">单</span><span style="color:#a61717;background-color:#e3d2d2">中</span><span style="color:#a61717;background-color:#e3d2d2">显</span><span style="color:#a61717;background-color:#e3d2d2">示</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">配</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">名</span><span style="color:#a61717;background-color:#e3d2d2">称</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#000080">&#34;preLaunchTask&#34;</span>: <span style="color:#d14">&#34;Compile&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">会</span><span style="color:#a61717;background-color:#e3d2d2">话</span><span style="color:#a61717;background-color:#e3d2d2">开</span><span style="color:#a61717;background-color:#e3d2d2">始</span><span style="color:#a61717;background-color:#e3d2d2">前</span><span style="color:#a61717;background-color:#e3d2d2">要</span><span style="color:#a61717;background-color:#e3d2d2">运</span><span style="color:#a61717;background-color:#e3d2d2">行</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">任</span><span style="color:#a61717;background-color:#e3d2d2">务</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#000080">&#34;type&#34;</span>: <span style="color:#d14">&#34;cppdbg&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">要</span><span style="color:#a61717;background-color:#e3d2d2">使</span><span style="color:#a61717;background-color:#e3d2d2">用</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">基</span><span style="color:#a61717;background-color:#e3d2d2">础</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">。</span><span style="color:#a61717;background-color:#e3d2d2">使</span><span style="color:#a61717;background-color:#e3d2d2">用</span> <span style="color:#a61717;background-color:#e3d2d2">G</span><span style="color:#a61717;background-color:#e3d2d2">D</span><span style="color:#a61717;background-color:#e3d2d2">B</span> <span style="color:#a61717;background-color:#e3d2d2">或</span> <span style="color:#a61717;background-color:#e3d2d2">L</span><span style="color:#a61717;background-color:#e3d2d2">L</span><span style="color:#a61717;background-color:#e3d2d2">D</span><span style="color:#a61717;background-color:#e3d2d2">B</span> <span style="color:#a61717;background-color:#e3d2d2">时</span><span style="color:#a61717;background-color:#e3d2d2">必</span><span style="color:#a61717;background-color:#e3d2d2">须</span><span style="color:#a61717;background-color:#e3d2d2">是</span> <span style="color:#a61717;background-color:#e3d2d2">c</span><span style="color:#a61717;background-color:#e3d2d2">p</span><span style="color:#a61717;background-color:#e3d2d2">p</span><span style="color:#a61717;background-color:#e3d2d2">d</span><span style="color:#a61717;background-color:#e3d2d2">b</span><span style="color:#a61717;background-color:#e3d2d2">g</span> <span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#000080">&#34;request&#34;</span>: <span style="color:#d14">&#34;launch&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">启</span><span style="color:#a61717;background-color:#e3d2d2">动</span><span style="color:#a61717;background-color:#e3d2d2">程</span><span style="color:#a61717;background-color:#e3d2d2">序</span><span style="color:#a61717;background-color:#e3d2d2">还</span><span style="color:#a61717;background-color:#e3d2d2">是</span><span style="color:#a61717;background-color:#e3d2d2">附</span><span style="color:#a61717;background-color:#e3d2d2">加</span><span style="color:#a61717;background-color:#e3d2d2">到</span><span style="color:#a61717;background-color:#e3d2d2">已</span><span style="color:#a61717;background-color:#e3d2d2">经</span><span style="color:#a61717;background-color:#e3d2d2">运</span><span style="color:#a61717;background-color:#e3d2d2">行</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">实</span><span style="color:#a61717;background-color:#e3d2d2">例</span><span style="color:#a61717;background-color:#e3d2d2">。</span><span style="color:#a61717;background-color:#e3d2d2">启</span><span style="color:#a61717;background-color:#e3d2d2">动</span><span style="color:#a61717;background-color:#e3d2d2">或</span><span style="color:#a61717;background-color:#e3d2d2">附</span><span style="color:#a61717;background-color:#e3d2d2">加</span> <span style="color:#a61717;background-color:#e3d2d2">(</span> <span style="color:#a61717;background-color:#e3d2d2">l</span><span style="color:#a61717;background-color:#e3d2d2">a</span><span style="color:#a61717;background-color:#e3d2d2">u</span><span style="color:#a61717;background-color:#e3d2d2">n</span><span style="color:#a61717;background-color:#e3d2d2">c</span><span style="color:#a61717;background-color:#e3d2d2">h</span> <span style="color:#a61717;background-color:#e3d2d2">|</span> <span style="color:#a61717;background-color:#e3d2d2">a</span><span style="color:#a61717;background-color:#e3d2d2">t</span><span style="color:#a61717;background-color:#e3d2d2">t</span><span style="color:#a61717;background-color:#e3d2d2">a</span><span style="color:#a61717;background-color:#e3d2d2">c</span><span style="color:#a61717;background-color:#e3d2d2">h</span> <span style="color:#a61717;background-color:#e3d2d2">)</span><span style="color:#a61717;background-color:#e3d2d2">.</span>
+            <span style="color:#000080">&#34;program&#34;</span>: <span style="color:#d14">&#34;${fileDirname}/${fileBasenameNoExtension}.exe&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">将</span><span style="color:#a61717;background-color:#e3d2d2">启</span><span style="color:#a61717;background-color:#e3d2d2">动</span><span style="color:#a61717;background-color:#e3d2d2">或</span><span style="color:#a61717;background-color:#e3d2d2">附</span><span style="color:#a61717;background-color:#e3d2d2">加</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">可</span><span style="color:#a61717;background-color:#e3d2d2">执</span><span style="color:#a61717;background-color:#e3d2d2">行</span><span style="color:#a61717;background-color:#e3d2d2">文</span><span style="color:#a61717;background-color:#e3d2d2">件</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">完</span><span style="color:#a61717;background-color:#e3d2d2">整</span><span style="color:#a61717;background-color:#e3d2d2">路</span><span style="color:#a61717;background-color:#e3d2d2">径</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#000080">&#34;externalConsole&#34;</span>: <span style="color:#000;font-weight:bold">false</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">是</span><span style="color:#a61717;background-color:#e3d2d2">否</span><span style="color:#a61717;background-color:#e3d2d2">显</span><span style="color:#a61717;background-color:#e3d2d2">示</span><span style="color:#a61717;background-color:#e3d2d2">外</span><span style="color:#a61717;background-color:#e3d2d2">部</span><span style="color:#a61717;background-color:#e3d2d2">控</span><span style="color:#a61717;background-color:#e3d2d2">制</span><span style="color:#a61717;background-color:#e3d2d2">台</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">配</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">目</span><span style="color:#a61717;background-color:#e3d2d2">标</span><span style="color:#a61717;background-color:#e3d2d2">应</span><span style="color:#a61717;background-color:#e3d2d2">用</span><span style="color:#a61717;background-color:#e3d2d2">程</span><span style="color:#a61717;background-color:#e3d2d2">序</span><span style="color:#a61717;background-color:#e3d2d2">：</span>
+            <span style="color:#000080">&#34;args&#34;</span>: [], <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">时</span><span style="color:#a61717;background-color:#e3d2d2">传</span><span style="color:#a61717;background-color:#e3d2d2">递</span><span style="color:#a61717;background-color:#e3d2d2">给</span><span style="color:#a61717;background-color:#e3d2d2">程</span><span style="color:#a61717;background-color:#e3d2d2">序</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">命</span><span style="color:#a61717;background-color:#e3d2d2">令</span><span style="color:#a61717;background-color:#e3d2d2">行</span><span style="color:#a61717;background-color:#e3d2d2">参</span><span style="color:#a61717;background-color:#e3d2d2">数</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#000080">&#34;cwd&#34;</span>: <span style="color:#d14">&#34;${workspaceFolder}&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">启</span><span style="color:#a61717;background-color:#e3d2d2">动</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">应</span><span style="color:#a61717;background-color:#e3d2d2">用</span><span style="color:#a61717;background-color:#e3d2d2">程</span><span style="color:#a61717;background-color:#e3d2d2">序</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">工</span><span style="color:#a61717;background-color:#e3d2d2">作</span><span style="color:#a61717;background-color:#e3d2d2">目</span><span style="color:#a61717;background-color:#e3d2d2">录</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#000080">&#34;environment&#34;</span>: [], <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">时</span><span style="color:#a61717;background-color:#e3d2d2">添</span><span style="color:#a61717;background-color:#e3d2d2">加</span><span style="color:#a61717;background-color:#e3d2d2">到</span><span style="color:#a61717;background-color:#e3d2d2">程</span><span style="color:#a61717;background-color:#e3d2d2">序</span><span style="color:#a61717;background-color:#e3d2d2">环</span><span style="color:#a61717;background-color:#e3d2d2">境</span><span style="color:#a61717;background-color:#e3d2d2">中</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">环</span><span style="color:#a61717;background-color:#e3d2d2">境</span><span style="color:#a61717;background-color:#e3d2d2">变</span><span style="color:#a61717;background-color:#e3d2d2">量</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">例</span><span style="color:#a61717;background-color:#e3d2d2">如</span><span style="color:#a61717;background-color:#e3d2d2">:</span> <span style="color:#a61717;background-color:#e3d2d2">[</span> <span style="color:#a61717;background-color:#e3d2d2">{</span> <span style="color:#000080">&#34;name&#34;</span>: <span style="color:#d14">&#34;squid&#34;</span>, <span style="color:#000080">&#34;value&#34;</span>: <span style="color:#d14">&#34;clam&#34;</span> } ]<span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">自</span><span style="color:#a61717;background-color:#e3d2d2">定</span><span style="color:#a61717;background-color:#e3d2d2">义</span> <span style="color:#a61717;background-color:#e3d2d2">G</span><span style="color:#a61717;background-color:#e3d2d2">D</span><span style="color:#a61717;background-color:#e3d2d2">B</span> <span style="color:#a61717;background-color:#e3d2d2">或</span><span style="color:#a61717;background-color:#e3d2d2">者</span> <span style="color:#a61717;background-color:#e3d2d2">L</span><span style="color:#a61717;background-color:#e3d2d2">L</span><span style="color:#a61717;background-color:#e3d2d2">D</span><span style="color:#a61717;background-color:#e3d2d2">B</span><span style="color:#a61717;background-color:#e3d2d2">：</span>
+            <span style="color:#d14">&#34;windows&#34;</span>: {
+                <span style="color:#000080">&#34;MIMode&#34;</span>: <span style="color:#d14">&#34;gdb&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">指</span><span style="color:#a61717;background-color:#e3d2d2">定</span> <span style="color:#a61717;background-color:#e3d2d2">V</span><span style="color:#a61717;background-color:#e3d2d2">S</span> <span style="color:#a61717;background-color:#e3d2d2">C</span><span style="color:#a61717;background-color:#e3d2d2">o</span><span style="color:#a61717;background-color:#e3d2d2">d</span><span style="color:#a61717;background-color:#e3d2d2">e</span> <span style="color:#a61717;background-color:#e3d2d2">连</span><span style="color:#a61717;background-color:#e3d2d2">接</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">必</span><span style="color:#a61717;background-color:#e3d2d2">须</span><span style="color:#a61717;background-color:#e3d2d2">为</span> <span style="color:#a61717;background-color:#e3d2d2">g</span><span style="color:#a61717;background-color:#e3d2d2">d</span><span style="color:#a61717;background-color:#e3d2d2">b</span> <span style="color:#a61717;background-color:#e3d2d2">或</span><span style="color:#a61717;background-color:#e3d2d2">者</span> <span style="color:#a61717;background-color:#e3d2d2">l</span><span style="color:#a61717;background-color:#e3d2d2">l</span><span style="color:#a61717;background-color:#e3d2d2">d</span><span style="color:#a61717;background-color:#e3d2d2">b</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+                <span style="color:#000080">&#34;miDebuggerPath&#34;</span>: <span style="color:#d14">&#34;D:/mingw64/mingw64/bin/gdb.exe&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">路</span><span style="color:#a61717;background-color:#e3d2d2">径</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">修</span><span style="color:#a61717;background-color:#e3d2d2">改</span><span style="color:#a61717;background-color:#e3d2d2">为</span><span style="color:#a61717;background-color:#e3d2d2">你</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">安</span><span style="color:#a61717;background-color:#e3d2d2">装</span><span style="color:#a61717;background-color:#e3d2d2">路</span><span style="color:#a61717;background-color:#e3d2d2">径</span>
             },
-            &quot;miDebuggerArgs&quot;: &quot;&quot;, // 传递给调试器的附加参数
-            &quot;stopAtEntry&quot;: false, // 设置调试器是否停止在目标的入口（附加时忽略）。默认值为 false。
-            &quot;setupCommands&quot;: [
-                { // 执行下面的命令数组以设置 GDB 或 LLDB
-                    &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
-                    &quot;text&quot;: &quot;-enable-pretty-printing&quot;, // 鼠标悬停查看变量的值，需要启用 pretty-printing 。
-                    &quot;ignoreFailures&quot;: true // 忽略失败的命令，默认为 false 。
+            <span style="color:#000080">&#34;miDebuggerArgs&#34;</span>: <span style="color:#d14">&#34;&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">传</span><span style="color:#a61717;background-color:#e3d2d2">递</span><span style="color:#a61717;background-color:#e3d2d2">给</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">附</span><span style="color:#a61717;background-color:#e3d2d2">加</span><span style="color:#a61717;background-color:#e3d2d2">参</span><span style="color:#a61717;background-color:#e3d2d2">数</span>
+            <span style="color:#000080">&#34;stopAtEntry&#34;</span>: <span style="color:#000;font-weight:bold">false</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">调</span><span style="color:#a61717;background-color:#e3d2d2">试</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">是</span><span style="color:#a61717;background-color:#e3d2d2">否</span><span style="color:#a61717;background-color:#e3d2d2">停</span><span style="color:#a61717;background-color:#e3d2d2">止</span><span style="color:#a61717;background-color:#e3d2d2">在</span><span style="color:#a61717;background-color:#e3d2d2">目</span><span style="color:#a61717;background-color:#e3d2d2">标</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">入</span><span style="color:#a61717;background-color:#e3d2d2">口</span><span style="color:#a61717;background-color:#e3d2d2">（</span><span style="color:#a61717;background-color:#e3d2d2">附</span><span style="color:#a61717;background-color:#e3d2d2">加</span><span style="color:#a61717;background-color:#e3d2d2">时</span><span style="color:#a61717;background-color:#e3d2d2">忽</span><span style="color:#a61717;background-color:#e3d2d2">略</span><span style="color:#a61717;background-color:#e3d2d2">）</span><span style="color:#a61717;background-color:#e3d2d2">。</span><span style="color:#a61717;background-color:#e3d2d2">默</span><span style="color:#a61717;background-color:#e3d2d2">认</span><span style="color:#a61717;background-color:#e3d2d2">值</span><span style="color:#a61717;background-color:#e3d2d2">为</span> <span style="color:#a61717;background-color:#e3d2d2">f</span><span style="color:#a61717;background-color:#e3d2d2">a</span><span style="color:#a61717;background-color:#e3d2d2">l</span><span style="color:#a61717;background-color:#e3d2d2">s</span><span style="color:#a61717;background-color:#e3d2d2">e</span><span style="color:#a61717;background-color:#e3d2d2">。</span>
+            <span style="color:#000080">&#34;setupCommands&#34;</span>: [
+                { <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">执</span><span style="color:#a61717;background-color:#e3d2d2">行</span><span style="color:#a61717;background-color:#e3d2d2">下</span><span style="color:#a61717;background-color:#e3d2d2">面</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">命</span><span style="color:#a61717;background-color:#e3d2d2">令</span><span style="color:#a61717;background-color:#e3d2d2">数</span><span style="color:#a61717;background-color:#e3d2d2">组</span><span style="color:#a61717;background-color:#e3d2d2">以</span><span style="color:#a61717;background-color:#e3d2d2">设</span><span style="color:#a61717;background-color:#e3d2d2">置</span> <span style="color:#a61717;background-color:#e3d2d2">G</span><span style="color:#a61717;background-color:#e3d2d2">D</span><span style="color:#a61717;background-color:#e3d2d2">B</span> <span style="color:#a61717;background-color:#e3d2d2">或</span> <span style="color:#a61717;background-color:#e3d2d2">L</span><span style="color:#a61717;background-color:#e3d2d2">L</span><span style="color:#a61717;background-color:#e3d2d2">D</span><span style="color:#a61717;background-color:#e3d2d2">B</span>
+                    <span style="color:#000080">&#34;description&#34;</span>: <span style="color:#d14">&#34;Enable pretty-printing for gdb&#34;</span>,
+                    <span style="color:#000080">&#34;text&#34;</span>: <span style="color:#d14">&#34;-enable-pretty-printing&#34;</span>, <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">鼠</span><span style="color:#a61717;background-color:#e3d2d2">标</span><span style="color:#a61717;background-color:#e3d2d2">悬</span><span style="color:#a61717;background-color:#e3d2d2">停</span><span style="color:#a61717;background-color:#e3d2d2">查</span><span style="color:#a61717;background-color:#e3d2d2">看</span><span style="color:#a61717;background-color:#e3d2d2">变</span><span style="color:#a61717;background-color:#e3d2d2">量</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">值</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">需</span><span style="color:#a61717;background-color:#e3d2d2">要</span><span style="color:#a61717;background-color:#e3d2d2">启</span><span style="color:#a61717;background-color:#e3d2d2">用</span> <span style="color:#a61717;background-color:#e3d2d2">p</span><span style="color:#a61717;background-color:#e3d2d2">r</span><span style="color:#a61717;background-color:#e3d2d2">e</span><span style="color:#a61717;background-color:#e3d2d2">t</span><span style="color:#a61717;background-color:#e3d2d2">t</span><span style="color:#a61717;background-color:#e3d2d2">y</span><span style="color:#a61717;background-color:#e3d2d2">-</span><span style="color:#a61717;background-color:#e3d2d2">p</span><span style="color:#a61717;background-color:#e3d2d2">r</span><span style="color:#a61717;background-color:#e3d2d2">i</span><span style="color:#a61717;background-color:#e3d2d2">n</span><span style="color:#a61717;background-color:#e3d2d2">t</span><span style="color:#a61717;background-color:#e3d2d2">i</span><span style="color:#a61717;background-color:#e3d2d2">n</span><span style="color:#a61717;background-color:#e3d2d2">g</span> <span style="color:#a61717;background-color:#e3d2d2">。</span>
+                    <span style="color:#000080">&#34;ignoreFailures&#34;</span>: <span style="color:#000;font-weight:bold">true</span> <span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#a61717;background-color:#e3d2d2">/</span> <span style="color:#a61717;background-color:#e3d2d2">忽</span><span style="color:#a61717;background-color:#e3d2d2">略</span><span style="color:#a61717;background-color:#e3d2d2">失</span><span style="color:#a61717;background-color:#e3d2d2">败</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">命</span><span style="color:#a61717;background-color:#e3d2d2">令</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">默</span><span style="color:#a61717;background-color:#e3d2d2">认</span><span style="color:#a61717;background-color:#e3d2d2">为</span> <span style="color:#000;font-weight:bold">false</span> <span style="color:#a61717;background-color:#e3d2d2">。</span>
                 }
             ]
         }
-    ]
-}
-</code></pre>
-
-<h4 id="tasks-json"><code>tasks.json</code></h4>
-
-<pre><code class="language-json{">{
+    <span style="color:#a61717;background-color:#e3d2d2">]</span>
+<span style="color:#a61717;background-color:#e3d2d2">}</span>
+</code></pre></div><h4 id="tasksjson"><code>tasks.json</code></h4>
+<pre><code class="language-json{" data-lang="json{">{
     // 有关 tasks.json 格式的参考文档：https://go.microsoft.com/fwlink/?LinkId=733558 。
     &quot;version&quot;: &quot;2.0.0&quot;,
     &quot;tasks&quot;: [{
@@ -247,10 +333,9 @@
     }]
 }
 </code></pre>
+        </div>
 
-                            </div>
-                           
-                            
+        
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
@@ -261,27 +346,25 @@
 <br/>
 
 
-                            
-                            <br>
-                            <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
-                                <link rel="stylesheet"
-                                    href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-                                <script
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-                            </div>
-                            
-                            <ol class="page-navigator">
-                                <div class="a">
-                                
-                                <p style="text-align: left;"><a href="https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;Windows大量软件安装后乱码解决<br /><br/></p>
-                                
+         
+         <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
+             <link rel="stylesheet"
+                 href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+             <script
+                 src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+         </div>
+         <ol class="page-navigator">
+            <div class="a">
+            
+            <p style="text-align: left;"><a href="https://CorPython.github.io/post/windows%E5%A4%A7%E9%87%8F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%90%8E%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;Windows大量软件安装后乱码解决<br /><br/></p>
+            
+
+            
+            <p style="text-align: right;"><a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;hugo发布博客流程
+            
+            </div>
+        </ol>
         
-                                
-                                <p style="text-align: right;"><a href="https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;hugo发布博客流程
-                                
-                                </div>
-                            </ol>
-                            
 
 <div class="post-archive">
     <h2>See Also</h2>
@@ -300,19 +383,19 @@
     </ul>
 </div>
 
-        
-                            <div class="post-meta meta-tags">
-                                
-                                <ul class="clearfix">
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/vscode">vscode</a></li>
-                                    
-                                </ul>
-                                
-                            </div>
-                            </br>
-                        </article>
-                        
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://CorPython.github.io/tags/vscode'>vscode</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+
+    
 
 
 
@@ -341,8 +424,10 @@
   })();
 </script>
 
-                    </div>
+</div>
+
                 </div>
+
                 <div id="secondary">
     <section class="widget">
         <form id="search" action='https://CorPython.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -364,12 +449,22 @@
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
+        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="git操作笔记">git操作笔记</a>
     </li>
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git学习笔记">Git学习笔记</a>
+        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
     </li>
     
     <li>
@@ -395,16 +490,6 @@
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/" title="GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床">GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
     </li>
     
     <li>
@@ -485,9 +570,6 @@
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
-    
-    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/idea/">idea</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/latex/">latex</a>
@@ -637,10 +719,6 @@
          </div>
        </div>
     <script type="text/javascript">
-        
-        (function () {
-            $("pre code").parent().addClass("line-numbers")
-        }());
         window.MathJax = {
             tex2jax: {
                 inlineMath: [['$', '$']],
@@ -648,12 +726,11 @@
                 }
             };
     </script>
-    <script type="text/javascript" src="/js/prism.js" async="true"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
-<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -673,83 +750,22 @@ if (!doNotTrack) {
 
 
 
-    <script src="/js/share.js"></script>
+    <script src='/js/share.js'\></script>
 
-    <script src="/js/cus.js"></script>
+    <script src='/js/cus.js'\></script>
 
-    <script src="/js/app.js"></script>
+    <script src='/js/app.js'\></script>
 
-    <script src="/js/APlayer.min.js"></script>
+    <script src='/js/APlayer.min.js'\></script>
 
-    <script src="/js/firework.js"></script>
+    <script src='/js/firework.js'\></script>
 
-    <script src="/js/FunnyTitle.js"></script>
+    <script src='/js/FunnyTitle.js'\></script>
 
-    <script src="/js/prism.js"></script>
+    <script src='/js/prism.js'\></script>
 
-    <script src="/js/sakura.js"></script>
+    <script src='/js/snow.js'\></script>
 
-    <script type="text/javascript">
-        (function(){
-            if (typeof self === 'undefined' || !self.Prism || !self.document) {
-                return;
-            }
-            if (!Prism.plugins.toolbar) {
-                console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
-                return;
-            }
-            var ClipboardJS = window.ClipboardJS || undefined;
-            if (!ClipboardJS && typeof require === 'function') {
-                ClipboardJS = require('clipboard');
-            }
-            var callbacks = [];
-            if (!ClipboardJS) {
-                var script = document.createElement('script');
-                var head = document.querySelector('head');
-                script.onload = function() {
-                    ClipboardJS = window.ClipboardJS;
-                    if (ClipboardJS) {
-                        while (callbacks.length) {
-                            callbacks.pop()();
-                        }
-                    }
-                };
-                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
-                head.appendChild(script);
-            }
-            Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-                var linkCopy = document.createElement('button');
-                linkCopy.textContent = '复制代码';
-                if (!ClipboardJS) {
-                    callbacks.push(registerClipboard);
-                } else {
-                    registerClipboard();
-                }
-                return linkCopy;
-                function registerClipboard() {
-                    var clip = new ClipboardJS(linkCopy, {
-                        'text': function () {
-                            return env.code;
-                        }
-                    });
-                    clip.on('success', function() {
-                        linkCopy.textContent = '复制成功!';
-                        resetText();
-                    });
-                    clip.on('error', function () {
-                        linkCopy.textContent = '按 Ctrl+C 复制';
-                        resetText();
-                    });
-                }
-                function resetText() {
-                    setTimeout(function () {
-                        linkCopy.textContent = '复制代码';
-                    }, 5000);
-                }
-            });
-        })();
-
-        </script>
 </body>
 
 </html>

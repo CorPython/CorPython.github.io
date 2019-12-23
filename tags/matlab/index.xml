@@ -17,7 +17,7 @@
       <pubDate>Wed, 13 Nov 2019 16:05:31 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
-      <description>绘图 添加标签，标题，生成网格线，美化图形 x = [0:0.01:10]; y = sin(x); plot(x, y), xlabel(&#39;x&#39;), ylabel(&#39;Sin(x)&#39;), title(&#39;Sin(x) Graph&#39;), grid on,axis equal#添加网格线和美化图形 绘制多个函数 x = [0 : 0.01: 10]; y = sin(x); g = cos(x); plot(x, y, x, g, &#39;.-&#39;), legend(&#39;Sin(x)&#39;, &#39;Cos(x)&#39;) 绘制多个图象 plot(x,y,x,g) #等价于 plot(x,y) hold all#保留上次绘图并添加新的绘图 plot(x,g) 设置坐标轴的刻度范围 axis([xmin xmax ymin ymax]) axis([xmin xmax ymin ymax zmin zmax cmin cmax]); % 设置x，y，z轴的范围</description>
+      <description>绘图 添加标签，标题，生成网格线，美化图形 x = [0:0.01:10]; y = sin(x); plot(x, y), xlabel(&amp;#39;x&amp;#39;), ylabel(&amp;#39;Sin(x)&amp;#39;), title(&amp;#39;Sin(x) Graph&amp;#39;), grid on,axis equal#添加网格线和美化图形 绘制多个函数 x = [0 : 0.01: 10]; y = sin(x); g = cos(x); plot(x, y, x, g, &amp;#39;.-&amp;#39;), legend(&amp;#39;Sin(x)&amp;#39;, &amp;#39;Cos(x)&amp;#39;) 绘制多个图象 plot(x,y,x,g) #等价于 plot(x,y) hold all#保留上次绘图并添加新的绘图 plot(x,g) 设置坐标轴的刻度范围 axis([xmin xmax ymin ymax]) axis([xmin xmax ymin ymax zmin zmax cmin cmax]); % 设置x，y，z轴的范围</description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content in latex on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Nov 2019 20:25:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2019 18:25:21 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>vscode如何写latex</title>
       <link>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</link>
-      <pubDate>Fri, 22 Nov 2019 20:25:21 +0800</pubDate>
+      <pubDate>Fri, 20 Dec 2019 18:25:21 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</guid>
       <description>介绍 以下介绍摘自百度百科,链接:https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80</description>
@@ -23,7 +23,7 @@
     <item>
       <title>windows下载安装latex</title>
       <link>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</link>
-      <pubDate>Fri, 22 Nov 2019 20:21:37 +0800</pubDate>
+      <pubDate>Thu, 19 Dec 2019 21:19:37 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/</guid>
       <description>下载方式 1.官网下载 下载地址 2.清华大学官方镜像站下载(推荐) 下载地址 2.安装 下载完成后,打开iso文件,点击下图箭头文件 点击修改更换路径,再点击advanced 修改一些选项 点击安装,等待安装完成即可 ! ! ! 3.验证安装是否成功 打开powershell或者cmd输入下列命令 xelatex -v 出现</description>

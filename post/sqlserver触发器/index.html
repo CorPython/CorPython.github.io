@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en-us">
+<!doctype html>
+<html lang="en-us">
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.61.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Sql server触发器及存储过程 | code show的博客</title>
     <meta property="og:title" content="Sql server触发器及存储过程 - code show的博客">
     <meta property="og:type" content="article">
@@ -57,8 +58,9 @@
     
 </head>
 
+
 <body>
-<header id="header" class="clearfix">
+    <header id="header" class="clearfix">
     
         <div class="top-scroll-bar"></div>
     
@@ -96,253 +98,222 @@
     </div>
 </header>
     <div id="body">
-        
         <div class="container">
             <div class="col-group">
 
                 <div class="col-8" id="main">
-                    <div class="res-cons">
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">Sql server触发器及存储过程</h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年12月10日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a
-                                        href="https://CorPython.github.io/categories/%E7%BC%96%E7%A8%8B">编程</a></span>
-                                
-                            </div>
-                            
-                            <span class="post-word-count">|1490 words</span>
-                            
-                            <div class="post-meta">
-                                <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                                        阅读</span></span>
-                            </div>
-                            <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约3分钟
-                            </div>
-                            
-                            
-                            <div class="post-content">
-                                    
-                                    
-
-<h2 id="sql-server触发器及存储过程">SQL server触发器及存储过程</h2>
-
-<h4 id="删除触发器">删除触发器</h4>
-
-<pre><code class="language-sql">/*
-1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student
-中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表SC中SNO为30的选课记录是否也一起删除；
-*/
-create trigger t_std2 on student
-instead of  delete
-as
-begin
-  declare @id char(5)
-  select @id=sno from deleted
-  delete from sc where SNo =@id
-  delete from student where SNo=@id
-  end
-  go
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Sql server触发器及存储过程</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月10日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://CorPython.github.io/categories/%E7%BC%96%E7%A8%8B'>编程</a></span>
+            
+        </div>
+        
+        <span class="post-word-count">|1566 words</span>
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        <div class="post-meta animated slower fadeInUp">
+            <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约4分钟
+        </div>
+        
+        
+        <div class="post-content">
+            <h2 id="sql-server">SQL server触发器及存储过程</h2>
+<h4 id="heading">删除触发器</h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">
+</span><span style="color:#998;font-style:italic">1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student
+</span><span style="color:#998;font-style:italic">中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表SC中SNO为30的选课记录是否也一起删除；
+</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">trigger</span> t_std2 <span style="color:#000;font-weight:bold">on</span> student
+<span style="color:#000;font-weight:bold">instead</span> <span style="color:#000;font-weight:bold">of</span>  <span style="color:#000;font-weight:bold">delete</span>
+<span style="color:#000;font-weight:bold">as</span>
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">declare</span> <span style="color:#000;font-weight:bold">@</span>id <span style="color:#0086b3">char</span>(<span style="color:#099">5</span>)
+  <span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span>id<span style="color:#000;font-weight:bold">=</span>sno <span style="color:#000;font-weight:bold">from</span> deleted
+  <span style="color:#000;font-weight:bold">delete</span> <span style="color:#000;font-weight:bold">from</span> sc <span style="color:#000;font-weight:bold">where</span> SNo <span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">@</span>id
+  <span style="color:#000;font-weight:bold">delete</span> <span style="color:#000;font-weight:bold">from</span> student <span style="color:#000;font-weight:bold">where</span> SNo<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">@</span>id
+  <span style="color:#000;font-weight:bold">end</span>
+  <span style="color:#000;font-weight:bold">go</span>
  
-delete from Student where SNo='00002'
-</code></pre>
+<span style="color:#000;font-weight:bold">delete</span> <span style="color:#000;font-weight:bold">from</span> Student <span style="color:#000;font-weight:bold">where</span> SNo<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">00002</span><span style="color:#d14">&#39;</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">
+</span><span style="color:#998;font-style:italic">2.	创建一个名为tri_Delete_C的触发器，要求首先判断数据库中是否已经存在名为tri_Delete_C的触发器，
+</span><span style="color:#998;font-style:italic">如果存在，首先删除，再创建，触发器要求删除一门课程时候，首先判断该课程有否有人选，如果有人选
+</span><span style="color:#998;font-style:italic">则不能删除,并通过测试数据验证该触发器的执行情况。
+</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">exists</span> (<span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">from</span>  sysobjects <span style="color:#000;font-weight:bold">where</span> xtype<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">tr</span><span style="color:#d14">&#39;</span> <span style="color:#000;font-weight:bold">and</span> name<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">tri_Delete_C</span><span style="color:#d14">&#39;</span>))
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">drop</span> <span style="color:#000;font-weight:bold">trigger</span> tri_Delete_C
+  print <span style="color:#d14">&#39;</span><span style="color:#d14">已删除</span><span style="color:#d14">&#39;</span>
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">go</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">trigger</span> tri_Delete_C <span style="color:#000;font-weight:bold">on</span> course
+<span style="color:#000;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">delete</span>
+<span style="color:#000;font-weight:bold">as</span>	
+<span style="color:#000;font-weight:bold">begin</span>
+	<span style="color:#000;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">exists</span> (<span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">from</span> sc <span style="color:#000;font-weight:bold">inner</span> <span style="color:#000;font-weight:bold">join</span> deleted <span style="color:#000;font-weight:bold">on</span> sc.CNo<span style="color:#000;font-weight:bold">=</span>deleted.CNo)
+	<span style="color:#000;font-weight:bold">begin</span>
+	  print <span style="color:#d14">&#39;</span><span style="color:#d14">不能删除</span><span style="color:#d14">&#39;</span>
+	  <span style="color:#000;font-weight:bold">rollback</span> <span style="color:#000;font-weight:bold">transaction</span>
+	<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">go</span>
+<span style="color:#000;font-weight:bold">alter</span> <span style="color:#000;font-weight:bold">table</span> sc <span style="color:#000;font-weight:bold">drop</span> <span style="color:#000;font-weight:bold">constraint</span> FK__sc__CNo__08B54D69
+<span style="color:#000;font-weight:bold">delete</span> course <span style="color:#000;font-weight:bold">where</span> CNo<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">001</span><span style="color:#d14">&#39;</span>
+<span style="color:#000;font-weight:bold">alter</span> <span style="color:#000;font-weight:bold">table</span> sc <span style="color:#000;font-weight:bold">add</span> <span style="color:#000;font-weight:bold">constraint</span> FK__sc__CNo__08B54D69 <span style="color:#000;font-weight:bold">foreign</span> <span style="color:#000;font-weight:bold">key</span>(cno) <span style="color:#000;font-weight:bold">references</span> course(cno) 
+</code></pre></div><h4 id="heading-1">插入触发器</h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">
+</span><span style="color:#998;font-style:italic">3.在表Course中增加一个职业规划选修课，为(005,职业规划,4,0014)，在表SC中建立一个触发器，
+</span><span style="color:#998;font-style:italic">实现规定年龄24岁以上（包括24岁）的学生才能选修职业规划这门课程，如果年龄小于24岁，则输出’
+</span><span style="color:#998;font-style:italic">年龄小于24，不能选修该门课程’，插入失败，用SQL语句在SC表中分别插入(‘00001’,’005’,null)和
+</span><span style="color:#998;font-style:italic">(‘00005’,’005’,null)看看结果；
+</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">trigger</span> t_sc <span style="color:#000;font-weight:bold">on</span> sc
+<span style="color:#000;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">insert</span>
+<span style="color:#000;font-weight:bold">as</span>
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">declare</span> <span style="color:#000;font-weight:bold">@</span>id <span style="color:#0086b3">char</span>(<span style="color:#099">5</span>)
+  <span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span>id<span style="color:#000;font-weight:bold">=</span>sno <span style="color:#000;font-weight:bold">from</span> inserted
+  <span style="color:#000;font-weight:bold">if</span>((<span style="color:#000;font-weight:bold">select</span> cno <span style="color:#000;font-weight:bold">from</span> inserted)<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">005</span><span style="color:#d14">&#39;</span> <span style="color:#000;font-weight:bold">and</span> (<span style="color:#000;font-weight:bold">select</span> sage <span style="color:#000;font-weight:bold">from</span> student <span style="color:#000;font-weight:bold">where</span> SNo<span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">@</span>id )<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#099">24</span>)
+  <span style="color:#000;font-weight:bold">begin</span>
+  print <span style="color:#d14">&#39;</span><span style="color:#d14">年龄小于24，不能选修该门课程 </span><span style="color:#d14">&#39;</span>
+  <span style="color:#000;font-weight:bold">rollback</span> <span style="color:#000;font-weight:bold">transaction</span>
+  <span style="color:#000;font-weight:bold">end</span>
+  <span style="color:#000;font-weight:bold">else</span>
+   print <span style="color:#d14">&#39;</span><span style="color:#d14">nice!</span><span style="color:#d14">&#39;</span>
+   <span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">go</span>
+<span style="color:#000;font-weight:bold">insert</span> <span style="color:#000;font-weight:bold">into</span> course <span style="color:#000;font-weight:bold">values</span>(<span style="color:#d14">&#39;</span><span style="color:#d14">005</span><span style="color:#d14">&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">职业规划</span><span style="color:#d14">&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">4</span><span style="color:#d14">&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">0014</span><span style="color:#d14">&#39;</span>)
+<span style="color:#000;font-weight:bold">insert</span> <span style="color:#000;font-weight:bold">into</span> sc <span style="color:#000;font-weight:bold">values</span>(<span style="color:#d14">&#39;</span><span style="color:#d14">00001</span><span style="color:#d14">&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">005</span><span style="color:#d14">&#39;</span>,<span style="color:#000;font-weight:bold">null</span>)
+<span style="color:#000;font-weight:bold">insert</span> <span style="color:#000;font-weight:bold">into</span> sc <span style="color:#000;font-weight:bold">values</span>(<span style="color:#d14">&#39;</span><span style="color:#d14">00005</span><span style="color:#d14">&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">005</span><span style="color:#d14">&#39;</span>,<span style="color:#000;font-weight:bold">null</span>)
+<span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">from</span> sc
+</code></pre></div><h4 id="heading-2">更新触发器</h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">
+</span><span style="color:#998;font-style:italic">4.在表SC中建立更改触发器，实现表SC中的修改后的成绩不能低于修改前的成绩，
+</span><span style="color:#998;font-style:italic">如果修改后的成绩低于修改前的成绩，则输出’修改后的成绩比修改前低，不能修改’，
+</span><span style="color:#998;font-style:italic">修改失败，用SQL语句把学号为00001，课程号为001的成绩分别改为90和70，看看结果；
+</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">trigger</span> t2_sc <span style="color:#000;font-weight:bold">on</span> sc
+<span style="color:#000;font-weight:bold">after</span> <span style="color:#000;font-weight:bold">update</span>
+<span style="color:#000;font-weight:bold">as</span>
+<span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">update</span>(score))
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">declare</span> <span style="color:#000;font-weight:bold">@</span>score1 <span style="color:#0086b3">numeric</span>(<span style="color:#099">3</span>,<span style="color:#099">1</span>),<span style="color:#000;font-weight:bold">@</span>score2 <span style="color:#0086b3">numeric</span>(<span style="color:#099">3</span>,<span style="color:#099">1</span>)
+  <span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span>score1<span style="color:#000;font-weight:bold">=</span>score <span style="color:#000;font-weight:bold">from</span> inserted
+  <span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span>score2<span style="color:#000;font-weight:bold">=</span>score <span style="color:#000;font-weight:bold">from</span> deleted
+  <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">@</span>score1<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">@</span>score2 )
+   	print <span style="color:#d14">&#39;</span><span style="color:#d14">nice! </span><span style="color:#d14">&#39;</span>
+  <span style="color:#000;font-weight:bold">else</span>
+   	<span style="color:#000;font-weight:bold">update</span> sc
+    <span style="color:#000;font-weight:bold">set</span> sc.Score<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">@</span>score2 <span style="color:#000;font-weight:bold">from</span> sc,deleted
+    <span style="color:#000;font-weight:bold">where</span> sc.SNo<span style="color:#000;font-weight:bold">=</span>deleted.SNo andsc.CNo<span style="color:#000;font-weight:bold">=</span>deleted.CNo
+    print <span style="color:#d14">&#39;</span><span style="color:#d14">失败</span><span style="color:#d14">&#39;</span>
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">update</span> sc <span style="color:#000;font-weight:bold">set</span> Score<span style="color:#000;font-weight:bold">=</span><span style="color:#099">70</span> <span style="color:#000;font-weight:bold">where</span> SNo<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">00001</span><span style="color:#d14">&#39;</span> <span style="color:#000;font-weight:bold">and</span> CNo<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">001</span><span style="color:#d14">&#39;</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">
+</span><span style="color:#998;font-style:italic">5.在表Teacher中创建更新触发器，实现如果更新了表Teacher中的年龄和工资，
+</span><span style="color:#998;font-style:italic">则输出’更新了年龄和工资’，如果更新了年龄没有更新工资，则输出’更新了年龄’，
+</span><span style="color:#998;font-style:italic">如果更新了工资而没有更新年龄，则输出’更新了工资’，创建完后使用SQL语句把
+</span><span style="color:#998;font-style:italic">tno为001的年龄加1，把tno为002的工资加1，把tno为003的年龄和工资都加1，看看结果；
+</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">trigger</span> t_teacher <span style="color:#000;font-weight:bold">on</span> teacher
+<span style="color:#000;font-weight:bold">after</span> <span style="color:#000;font-weight:bold">update</span>
+<span style="color:#000;font-weight:bold">as</span>
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">declare</span> <span style="color:#000;font-weight:bold">@</span>age <span style="color:#0086b3">int</span>,<span style="color:#000;font-weight:bold">@</span>sal <span style="color:#0086b3">float</span>
+  <span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span>age<span style="color:#000;font-weight:bold">=</span>age <span style="color:#000;font-weight:bold">from</span> deleted
+  <span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span>sal<span style="color:#000;font-weight:bold">=</span>sal <span style="color:#000;font-weight:bold">from</span> deleted
+  <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">@</span>age <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&gt;</span> (<span style="color:#000;font-weight:bold">select</span> age <span style="color:#000;font-weight:bold">from</span> inserted )<span style="color:#000;font-weight:bold">and</span> <span style="color:#000;font-weight:bold">@</span>sal <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&gt;</span>(<span style="color:#000;font-weight:bold">select</span> sal <span style="color:#000;font-weight:bold">from</span> inserted))
+  print <span style="color:#d14">&#39;</span><span style="color:#d14">更新了年龄和工资 </span><span style="color:#d14">&#39;</span>
+  <span style="color:#000;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">@</span>age <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&gt;</span> (<span style="color:#000;font-weight:bold">select</span> age <span style="color:#000;font-weight:bold">from</span> inserted )<span style="color:#000;font-weight:bold">and</span> <span style="color:#000;font-weight:bold">@</span>sal <span style="color:#000;font-weight:bold">=</span>(<span style="color:#000;font-weight:bold">select</span> sal <span style="color:#000;font-weight:bold">from</span> inserted))
+  print <span style="color:#d14">&#39;</span><span style="color:#d14">更新了工资 </span><span style="color:#d14">&#39;</span>
+  <span style="color:#000;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">@</span>age <span style="color:#000;font-weight:bold">=</span> (<span style="color:#000;font-weight:bold">select</span> age <span style="color:#000;font-weight:bold">from</span> inserted )<span style="color:#000;font-weight:bold">and</span> <span style="color:#000;font-weight:bold">@</span>sal <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&gt;</span>(<span style="color:#000;font-weight:bold">select</span> sal <span style="color:#000;font-weight:bold">from</span> inserted))
+   print <span style="color:#d14">&#39;</span><span style="color:#d14">更新了年龄 </span><span style="color:#d14">&#39;</span>
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">update</span> Teacher <span style="color:#000;font-weight:bold">set</span> age<span style="color:#000;font-weight:bold">=</span>age<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span> <span style="color:#000;font-weight:bold">where</span> Tno<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">0001</span><span style="color:#d14">&#39;</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">
+</span><span style="color:#998;font-style:italic">6.当更新的sno值大于当前的sno值,才能更新成功,否则输出相应的错误信息
+</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">trigger</span> t_sc <span style="color:#000;font-weight:bold">on</span> a
+<span style="color:#000;font-weight:bold">after</span> <span style="color:#000;font-weight:bold">update</span>
+<span style="color:#000;font-weight:bold">as</span>
+<span style="color:#000;font-weight:bold">declare</span> <span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">old</span> <span style="color:#0086b3">char</span>(<span style="color:#099">10</span>)
+<span style="color:#000;font-weight:bold">declare</span> <span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">new</span> <span style="color:#0086b3">char</span>(<span style="color:#099">10</span>)
+<span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">new</span><span style="color:#000;font-weight:bold">=</span>sno <span style="color:#000;font-weight:bold">from</span> inserted
+<span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">old</span><span style="color:#000;font-weight:bold">=</span>sno <span style="color:#000;font-weight:bold">from</span> deleted
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">old</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">new</span>)
+    print<span style="color:#d14">&#39;</span><span style="color:#d14">cc</span><span style="color:#d14">&#39;</span>
+  <span style="color:#000;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">old</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">new</span>)
+    <span style="color:#000;font-weight:bold">begin</span>
+    raiserror(<span style="color:#d14">&#39;</span><span style="color:#d14">aa</span><span style="color:#d14">&#39;</span>,<span style="color:#099">10</span>,<span style="color:#099">1</span>)
+    <span style="color:#000;font-weight:bold">rollback</span> <span style="color:#000;font-weight:bold">transaction</span>
+    <span style="color:#000;font-weight:bold">end</span>
+  <span style="color:#000;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">old</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">new</span>)
+    <span style="color:#000;font-weight:bold">begin</span>
+      raiserror(<span style="color:#d14">&#39;</span><span style="color:#d14">bb</span><span style="color:#d14">&#39;</span>,<span style="color:#099">10</span>,<span style="color:#099">1</span>)
+      <span style="color:#000;font-weight:bold">rollback</span> <span style="color:#000;font-weight:bold">transaction</span>
+    <span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">go</span>
 
-<pre><code class="language-sql">/*
-2.	创建一个名为tri_Delete_C的触发器，要求首先判断数据库中是否已经存在名为tri_Delete_C的触发器，
-如果存在，首先删除，再创建，触发器要求删除一门课程时候，首先判断该课程有否有人选，如果有人选
-则不能删除,并通过测试数据验证该触发器的执行情况。
-*/
-if(exists (select * from  sysobjects where xtype='tr' and name='tri_Delete_C'))
-begin
-  drop trigger tri_Delete_C
-  print '已删除'
-end
-go
-create trigger tri_Delete_C on course
-for delete
-as	
-begin
-	if exists (select * from sc inner join deleted on sc.CNo=deleted.CNo)
-	begin
-	  print '不能删除'
-	  rollback transaction
-	end
-end
-go
-alter table sc drop constraint FK__sc__CNo__08B54D69
-delete course where CNo='001'
-alter table sc add constraint FK__sc__CNo__08B54D69 foreign key(cno) references course(cno) 
-</code></pre>
+<span style="color:#000;font-weight:bold">update</span> a <span style="color:#000;font-weight:bold">set</span> sno<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">14</span><span style="color:#d14">&#39;</span> <span style="color:#000;font-weight:bold">where</span> Sname<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;</span><span style="color:#d14">aa</span><span style="color:#d14">&#39;</span>
+</code></pre></div><h4 id="heading-3">使触发器失效</h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#099">7</span>.<span style="color:#a61717;background-color:#e3d2d2">在</span><span style="color:#a61717;background-color:#e3d2d2">不</span><span style="color:#a61717;background-color:#e3d2d2">删</span><span style="color:#a61717;background-color:#e3d2d2">除</span><span style="color:#a61717;background-color:#e3d2d2">触</span><span style="color:#a61717;background-color:#e3d2d2">发</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">前</span><span style="color:#a61717;background-color:#e3d2d2">提</span><span style="color:#a61717;background-color:#e3d2d2">下</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">使</span><span style="color:#a61717;background-color:#e3d2d2">创</span><span style="color:#a61717;background-color:#e3d2d2">建</span><span style="color:#a61717;background-color:#e3d2d2">的</span><span style="color:#a61717;background-color:#e3d2d2">触</span><span style="color:#a61717;background-color:#e3d2d2">发</span><span style="color:#a61717;background-color:#e3d2d2">器</span>t_teacher为无效<span style="color:#a61717;background-color:#e3d2d2">；</span>
+<span style="color:#000;font-weight:bold">alter</span> <span style="color:#000;font-weight:bold">table</span> teacher disable <span style="color:#000;font-weight:bold">trigger</span> t_teacher
+</code></pre></div><h2 id="heading-4">存储过程</h2>
+<h4 id="heading-5">不带参数的存储过程</h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">执行一次存储过程,id值+1</span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">procedure</span> add_id <span style="color:#000;font-weight:bold">as</span>
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">update</span> login
+  <span style="color:#000;font-weight:bold">set</span> id<span style="color:#000;font-weight:bold">=</span>id<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">go</span>
+<span style="color:#000;font-weight:bold">execute</span> add_id
+</code></pre></div><h4 id="heading-6">带参数的存储过程</h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">根据输入的id值查找用户,并将username设为@NEW_USERNAME</span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">procedure</span> update_us (<span style="color:#000;font-weight:bold">@</span>NEW_USERNAME <span style="color:#0086b3">varchar</span>(<span style="color:#099">10</span>),<span style="color:#000;font-weight:bold">@</span>id <span style="color:#0086b3">INT</span>)
+<span style="color:#000;font-weight:bold">AS</span>
+<span style="color:#000;font-weight:bold">begin</span>
+  <span style="color:#000;font-weight:bold">update</span> login
+  <span style="color:#000;font-weight:bold">set</span> username<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">@</span>NEW_USERNAME
+  <span style="color:#000;font-weight:bold">where</span> id <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">@</span>id
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#000;font-weight:bold">go</span>
+<span style="color:#998;font-style:italic">--将id=1的用户的用户名改为aa
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">execute</span> update_us <span style="color:#d14">&#39;</span><span style="color:#d14">aa</span><span style="color:#d14">&#39;</span>,<span style="color:#099">1</span>
+</code></pre></div><h4 id="heading-7">带返回值的存储过程</h4>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#998;font-style:italic">/*</span><span style="color:#998;font-style:italic">返回值为为@b</span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">create</span> <span style="color:#000;font-weight:bold">procedure</span> a1 (<span style="color:#000;font-weight:bold">@</span>a <span style="color:#0086b3">int</span>, <span style="color:#000;font-weight:bold">@</span>b <span style="color:#0086b3">char</span>(<span style="color:#099">10</span>) <span style="color:#000;font-weight:bold">output</span> )
+<span style="color:#000;font-weight:bold">as</span>
+<span style="color:#000;font-weight:bold">begin</span>
+<span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span>b<span style="color:#000;font-weight:bold">=</span>sno <span style="color:#000;font-weight:bold">from</span> b <span style="color:#000;font-weight:bold">where</span> id<span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">@</span>a
+<span style="color:#000;font-weight:bold">end</span>
+<span style="color:#998;font-style:italic">--声明一个out变量接收@b的值
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">declare</span> <span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">out</span> <span style="color:#0086b3">char</span>(<span style="color:#099">10</span>)
+<span style="color:#998;font-style:italic">--执行存储过程
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">execute</span> a1 <span style="color:#099">1</span>,<span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">out</span> <span style="color:#000;font-weight:bold">output</span>
+<span style="color:#998;font-style:italic">--显示结果
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">select</span> <span style="color:#000;font-weight:bold">@</span><span style="color:#000;font-weight:bold">out</span>
+</code></pre></div>
+        </div>
 
-<h4 id="插入触发器">插入触发器</h4>
-
-<pre><code class="language-sql">/*
-3.在表Course中增加一个职业规划选修课，为(005,职业规划,4,0014)，在表SC中建立一个触发器，
-实现规定年龄24岁以上（包括24岁）的学生才能选修职业规划这门课程，如果年龄小于24岁，则输出’
-年龄小于24，不能选修该门课程’，插入失败，用SQL语句在SC表中分别插入(‘00001’,’005’,null)和
-(‘00005’,’005’,null)看看结果；
-*/
-create trigger t_sc on sc
-for insert
-as
-begin
-  declare @id char(5)
-  select @id=sno from inserted
-  if((select cno from inserted)='005' and (select sage from student where SNo= @id )&lt;24)
-  begin
-  print '年龄小于24，不能选修该门课程 '
-  rollback transaction
-  end
-  else
-   print 'nice!'
-   end
-go
-insert into course values('005','职业规划','4','0014')
-insert into sc values('00001','005',null)
-insert into sc values('00005','005',null)
-select * from sc
-</code></pre>
-
-<h4 id="更新触发器">更新触发器</h4>
-
-<pre><code class="language-sql">/*
-4.在表SC中建立更改触发器，实现表SC中的修改后的成绩不能低于修改前的成绩，
-如果修改后的成绩低于修改前的成绩，则输出’修改后的成绩比修改前低，不能修改’，
-修改失败，用SQL语句把学号为00001，课程号为001的成绩分别改为90和70，看看结果；
-*/
-create trigger t2_sc on sc
-after update
-as
-if(update(score))
-begin
-  declare @score1 numeric(3,1),@score2 numeric(3,1)
-  select @score1=score from inserted
-  select @score2=score from deleted
-  if(@score1&gt;@score2 )
-   	print 'nice! '
-  else
-   	update sc
-    set sc.Score=@score2 from sc,deleted
-    where sc.SNo=deleted.SNo andsc.CNo=deleted.CNo
-    print '失败'
-end
-update sc set Score=70 where SNo='00001' and CNo='001'
-</code></pre>
-
-<pre><code class="language-sql">/*
-5.在表Teacher中创建更新触发器，实现如果更新了表Teacher中的年龄和工资，
-则输出’更新了年龄和工资’，如果更新了年龄没有更新工资，则输出’更新了年龄’，
-如果更新了工资而没有更新年龄，则输出’更新了工资’，创建完后使用SQL语句把
-tno为001的年龄加1，把tno为002的工资加1，把tno为003的年龄和工资都加1，看看结果；
-*/
-create trigger t_teacher on teacher
-after update
-as
-begin
-  declare @age int,@sal float
-  select @age=age from deleted
-  select @sal=sal from deleted
-  if(@age &lt;&gt; (select age from inserted )and @sal &lt;&gt;(select sal from inserted))
-  print '更新了年龄和工资 '
-  else if(@age &lt;&gt; (select age from inserted )and @sal =(select sal from inserted))
-  print '更新了工资 '
-  else if(@age = (select age from inserted )and @sal &lt;&gt;(select sal from inserted))
-   print '更新了年龄 '
-end
-update Teacher set age=age+1 where Tno='0001'
-</code></pre>
-
-<pre><code class="language-sql">/*
-6.当更新的sno值大于当前的sno值,才能更新成功,否则输出相应的错误信息
-*/
-create trigger t_sc on a
-after update
-as
-declare @old char(10)
-declare @new char(10)
-select @new=sno from inserted
-select @old=sno from deleted
-begin
-  if(@old&lt;@new)
-    print'cc'
-  else if(@old=@new)
-    begin
-    raiserror('aa',10,1)
-    rollback transaction
-    end
-  else if(@old&gt;@new)
-    begin
-      raiserror('bb',10,1)
-      rollback transaction
-    end
-end
-go
-
-update a set sno='14' where Sname='aa'
-</code></pre>
-
-<h4 id="使触发器失效">使触发器失效</h4>
-
-<pre><code class="language-sql">7.在不删除触发器的前提下，使创建的触发器t_teacher为无效；
-alter table teacher disable trigger t_teacher
-</code></pre>
-
-<h2 id="存储过程">存储过程</h2>
-
-<h4 id="不带参数的存储过程">不带参数的存储过程</h4>
-
-<pre><code class="language-sql">/*执行一次存储过程,id值+1*/
-create procedure add_id as
-begin
-  update login
-  set id=id+1
-end
-go
-execute add_id
-</code></pre>
-
-<h4 id="带参数的存储过程">带参数的存储过程</h4>
-
-<pre><code class="language-sql">/*根据输入的id值查找用户,并将username设为@NEW_USERNAME*/
-create procedure update_us (@NEW_USERNAME varchar(10),@id INT)
-AS
-begin
-  update login
-  set username=@NEW_USERNAME
-  where id = @id
-end
-go
---将id=1的用户的用户名改为aa
-execute update_us 'aa',1
-</code></pre>
-
-<h4 id="带返回值的存储过程">带返回值的存储过程</h4>
-
-<pre><code class="language-sql">/*返回值为为@b*/
-create procedure a1 (@a int, @b char(10) output )
-as
-begin
-select @b=sno from b where id= @a
-end
---声明一个out变量接收@b的值
-declare @out char(10)
---执行存储过程
-execute a1 1,@out output
---显示结果
-select @out
-</code></pre>
-
-                            </div>
-                           
-                            
+        
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
@@ -353,31 +324,29 @@ select @out
 <br/>
 
 
-                            
-                            <br>
-                            <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
-                                <link rel="stylesheet"
-                                    href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-                                <script
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-                            </div>
-                            
-                            <ol class="page-navigator">
-                                <div class="a">
-                                
+         
+         <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
+             <link rel="stylesheet"
+                 href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+             <script
+                 src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+         </div>
+         <ol class="page-navigator">
+            <div class="a">
+            
+            <p style="text-align: left;"><a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/"><span style="color: crimson;">&lt;&lt;上一篇&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;windows下载安装latex<br /><br/></p>
+            
+
+            
+            <p style="text-align: right;"><a href="https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;maven配置
+            
+            </div>
+        </ol>
         
-                                
-                                <p style="text-align: right;"><a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span style="color: crimson;">下一篇>>&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;Git学习笔记
-                                
-                                </div>
-                            </ol>
-                            
 
 <div class="post-archive">
     <h2>See Also</h2>
     <ul class="listing">
-        
-        <li><a href="/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Git学习笔记</a></li>
         
         <li><a href="/post/maven%E9%85%8D%E7%BD%AE/">maven配置</a></li>
         
@@ -387,24 +356,26 @@ select @out
         
         <li><a href="/tool/">工具推荐</a></li>
         
+        <li><a href="/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/">Hugo使用本地的图片</a></li>
+        
     </ul>
 </div>
 
-        
-                            <div class="post-meta meta-tags">
-                                
-                                <ul class="clearfix">
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/sql">sql</a></li>
-                                    
-                                    <li><a href="https://CorPython.github.io/tags/%E8%A7%A6%E5%8F%91%E5%99%A8">触发器</a></li>
-                                    
-                                </ul>
-                                
-                            </div>
-                            </br>
-                        </article>
-                        
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://CorPython.github.io/tags/sql'>sql</a></li>
+                
+                <li><a href='https://CorPython.github.io/tags/%E8%A7%A6%E5%8F%91%E5%99%A8'>触发器</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+
+    
 
 
 
@@ -433,8 +404,10 @@ select @out
   })();
 </script>
 
-                    </div>
+</div>
+
                 </div>
+
                 <div id="secondary">
     <section class="widget">
         <form id="search" action='https://CorPython.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -456,12 +429,22 @@ select @out
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
+        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="git操作笔记">git操作笔记</a>
     </li>
     
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git学习笔记">Git学习笔记</a>
+        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
+    </li>
+    
+    <li>
+            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
     </li>
     
     <li>
@@ -487,16 +470,6 @@ select @out
     <li>
             <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/" title="GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床">GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/" title="vscode如何写latex">vscode如何写latex</a>
-    </li>
-    
-    <li>
-            <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
     </li>
     
     <li>
@@ -577,9 +550,6 @@ select @out
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
-    
-    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/idea/">idea</a>
     
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/latex/">latex</a>
@@ -729,10 +699,6 @@ select @out
          </div>
        </div>
     <script type="text/javascript">
-        
-        (function () {
-            $("pre code").parent().addClass("line-numbers")
-        }());
         window.MathJax = {
             tex2jax: {
                 inlineMath: [['$', '$']],
@@ -740,12 +706,11 @@ select @out
                 }
             };
     </script>
-    <script type="text/javascript" src="/js/prism.js" async="true"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
-<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -765,83 +730,22 @@ if (!doNotTrack) {
 
 
 
-    <script src="/js/share.js"></script>
+    <script src='/js/share.js'\></script>
 
-    <script src="/js/cus.js"></script>
+    <script src='/js/cus.js'\></script>
 
-    <script src="/js/app.js"></script>
+    <script src='/js/app.js'\></script>
 
-    <script src="/js/APlayer.min.js"></script>
+    <script src='/js/APlayer.min.js'\></script>
 
-    <script src="/js/firework.js"></script>
+    <script src='/js/firework.js'\></script>
 
-    <script src="/js/FunnyTitle.js"></script>
+    <script src='/js/FunnyTitle.js'\></script>
 
-    <script src="/js/prism.js"></script>
+    <script src='/js/prism.js'\></script>
 
-    <script src="/js/sakura.js"></script>
+    <script src='/js/snow.js'\></script>
 
-    <script type="text/javascript">
-        (function(){
-            if (typeof self === 'undefined' || !self.Prism || !self.document) {
-                return;
-            }
-            if (!Prism.plugins.toolbar) {
-                console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
-                return;
-            }
-            var ClipboardJS = window.ClipboardJS || undefined;
-            if (!ClipboardJS && typeof require === 'function') {
-                ClipboardJS = require('clipboard');
-            }
-            var callbacks = [];
-            if (!ClipboardJS) {
-                var script = document.createElement('script');
-                var head = document.querySelector('head');
-                script.onload = function() {
-                    ClipboardJS = window.ClipboardJS;
-                    if (ClipboardJS) {
-                        while (callbacks.length) {
-                            callbacks.pop()();
-                        }
-                    }
-                };
-                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
-                head.appendChild(script);
-            }
-            Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-                var linkCopy = document.createElement('button');
-                linkCopy.textContent = '复制代码';
-                if (!ClipboardJS) {
-                    callbacks.push(registerClipboard);
-                } else {
-                    registerClipboard();
-                }
-                return linkCopy;
-                function registerClipboard() {
-                    var clip = new ClipboardJS(linkCopy, {
-                        'text': function () {
-                            return env.code;
-                        }
-                    });
-                    clip.on('success', function() {
-                        linkCopy.textContent = '复制成功!';
-                        resetText();
-                    });
-                    clip.on('error', function () {
-                        linkCopy.textContent = '按 Ctrl+C 复制';
-                        resetText();
-                    });
-                }
-                function resetText() {
-                    setTimeout(function () {
-                        linkCopy.textContent = '复制代码';
-                    }, 5000);
-                }
-            });
-        })();
-
-        </script>
 </body>
 
 </html>
