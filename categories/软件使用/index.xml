@@ -6,10 +6,19 @@
     <description>Recent content in 软件使用 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Dec 2019 20:46:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Dec 2019 13:05:52 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IAR快捷键</title>
+      <link>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Tue, 24 Dec 2019 13:05:52 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>帮助文档：F1 Make：F7 跳转到定义：F4 全速运行：F5 单步运行：F10 添加断点：F9 使能/使能断点：Ctrl+F9 烧录程序：Ctrl + D 注释多行：Ctrl+K（单行也是这个） 取消注释：Ctrl+Shfit+K 烧录程序：Ctrl+D（进入调试程序） 退出调试：Ctrl+Shift</description>
+    </item>
     
     <item>
       <title>IDEA常用快捷键</title>

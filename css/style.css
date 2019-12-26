@@ -99,10 +99,12 @@ mark {
     background: #fffdd1;
 }
 pre, code {
+    background:#f8f8f8;
     font-family:Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
     font-size:.92857em;
 }
 pre {
+    margin: 2em 0;
     overflow:auto;
     border: 1px solid #ddd;
     display: block;
@@ -282,8 +284,6 @@ textarea {
     margin:0;
     color:#555;
     text-align:left;
-    /**font:bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;**/
-    font-size: 1.5em;
     font-weight: bold;
 }
 .post-title a, .keyword {
@@ -394,11 +394,17 @@ textarea {
     border-bottom: 1px solid #eee;
     overflow: hidden;
 }
-.post-content pre{
-    padding: 1em;
+/* .post-content pre, .comment-content pre {
+    max-height: 320px;
+} */
+.post-content pre, .comment-content pre {
+    padding: 1em 1.5em;
 }
-.post-content code{
+.post-content p code, .comment-content p code {
     display:inline;
+    margin:0 5px;
+    padding:3px 5px;
+    border: 1px solid #ddd;
 }
 .post-content p {
     margin:0 0 1.1em;
@@ -548,7 +554,7 @@ button.submit {
     width:100%;
     outline:none;
     color: #fff;
-    background:#272727;
+    background:#0789e0;
     height: 38px;
 }
 button.submit:hover {
@@ -634,6 +640,7 @@ textarea.textarea {
     word-wrap:break-word;
     padding:10px 40px 10px 0;
 }
+
 .post-content h2, .comment-content h2 {
     font-size:1.28571em;
 }
@@ -1064,3 +1071,4 @@ table tr th, table tr td {
     padding: 0.5em 1em;
     text-align: left;
 }
+/**/

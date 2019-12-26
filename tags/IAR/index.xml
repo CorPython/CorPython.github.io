@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IAR on code show的博客</title>
+    <link>https://CorPython.github.io/tags/IAR/</link>
+    <description>Recent content in IAR on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Dec 2019 13:05:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/IAR/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IAR快捷键</title>
+      <link>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Tue, 24 Dec 2019 13:05:52 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>帮助文档：F1 Make：F7 跳转到定义：F4 全速运行：F5 单步运行：F10 添加断点：F9 使能/使能断点：Ctrl+F9 烧录程序：Ctrl + D 注释多行：Ctrl+K（单行也是这个） 取消注释：Ctrl+Shfit+K 烧录程序：Ctrl+D（进入调试程序） 退出调试：Ctrl+Shift</description>
+    </item>
+    
+  </channel>
+</rss>

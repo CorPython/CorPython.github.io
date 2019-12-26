@@ -6,10 +6,28 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Dec 2019 14:19:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2019 21:53:10 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C语言排序</title>
+      <link>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Wed, 25 Dec 2019 21:53:10 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/</guid>
+      <description>#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;#include&amp;lt;string.h&amp;gt; #define MAXSIZE 100typedef struct { int key; }record; typedef struct { record r[MAXSIZE+1]; int length; }Sqlist; void Initsqlist(Sqlist &amp;amp;L)/*初始化线性表*/ { int i; printf(&amp;#34;请输入你要排序的数字的个数:\n&amp;#34;); scanf(&amp;#34;%d&amp;#34;,&amp;amp;L.length); printf(&amp;#34;请输入你的数据:\n&amp;#34;); for(i=1;i&amp;lt;=L.length;i++) scanf(&amp;#34;%d&amp;#34;,&amp;amp;L.r[i].key); } void InsertSort(Sqlist &amp;amp;L)/*书上的直接插入排序*/ { int i,j; for(i=2;i&amp;lt;=L.length;i++) { if(L.r</description>
+    </item>
+    
+    <item>
+      <title>IAR快捷键</title>
+      <link>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Tue, 24 Dec 2019 13:05:52 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>帮助文档：F1 Make：F7 跳转到定义：F4 全速运行：F5 单步运行：F10 添加断点：F9 使能/使能断点：Ctrl+F9 烧录程序：Ctrl + D 注释多行：Ctrl+K（单行也是这个） 取消注释：Ctrl+Shfit+K 烧录程序：Ctrl+D（进入调试程序） 退出调试：Ctrl+Shift</description>
+    </item>
     
     <item>
       <title>git操作笔记</title>
