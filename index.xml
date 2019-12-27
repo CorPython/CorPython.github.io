@@ -327,6 +327,17 @@
     </item>
     
     <item>
+      <title>书单</title>
+      <link>https://CorPython.github.io/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://CorPython.github.io/books/</guid>
+      <description>C语言  c primer plus第六版 c和指针 c陷阱缺陷  c++  c++ priper plus C++Primer  java  Java核心技术卷一 java核心技术卷二 java编程思想(难)  python  Python编程从入门到实战 Python核心编程 流畅的python  go  Go语言实战  javaEE  Spring实战 Spring Boot实战 Spring技术内幕(源码分析)  数据库   MySQL必知必会
+  高性能MySQL
+  linux  鸟哥的Linux私房菜 基础学习篇第四版 Unix环境高级编程  计算机网络  TCP/IP详解 计算机网络 自顶向下方法  算法  啊哈算法 算法第四版  代码质量  重构 改善既有代码的设计  </description>
+    </item>
+    
+    <item>
       <title>归档</title>
       <link>https://CorPython.github.io/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
