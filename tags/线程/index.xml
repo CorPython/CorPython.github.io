@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线程 on code show的博客</title>
+    <link>https://CorPython.github.io/tags/%E7%BA%BF%E7%A8%8B/</link>
+    <description>Recent content in 线程 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Dec 2019 20:10:15 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/%E7%BA%BF%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>java线程基础</title>
+      <link>https://CorPython.github.io/post/java%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 28 Dec 2019 20:10:15 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/java%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/</guid>
+      <description>学习视频 java多线程的不可见性 假设现在有一个布尔型变量a=true,后面将其修改为false,随后输出这个值,显而易见应该为false,现在在主函数中建立一个线程读取变量a的值,那a的值能否读到false呢? 现在来写一下这个代码 public class test { static boolean a = true; public static void main(String[] args) throws InterruptedException { new Thread(() -&amp;gt; { //a为</description>
+    </item>
+    
+  </channel>
+</rss>

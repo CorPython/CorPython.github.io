@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020 on code show的博客</title>
+    <link>https://CorPython.github.io/tags/2020/</link>
+    <description>Recent content in 2020 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 2020 20:42:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/2020/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>你好,2020</title>
+      <link>https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/</link>
+      <pubDate>Wed, 01 Jan 2020 20:42:17 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/</guid>
+      <description>告别2019,展望2020 ​ 2019年走完最后一天,迎来了全新的2020年.去年这一年总的来说并不是很满意,学习成绩表现没有2018年那么令人满意了,可能是因为我自己对于考试的漫不经心,也可能是我自己没有追求高分的欲望.面对着自己不是特别感兴趣的硬件似乎丧失了我的学习动力!但是好</description>
+    </item>
+    
+  </channel>
+</rss>

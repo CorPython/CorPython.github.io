@@ -6,10 +6,19 @@
     <description>Recent content in git on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Dec 2019 14:19:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Dec 2019 17:27:01 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>fatal: remote error: You can&#39;t push to git 解决办法</title>
+      <link>https://CorPython.github.io/post/gitpush%E5%87%BA%E9%94%99/</link>
+      <pubDate>Sun, 29 Dec 2019 17:27:01 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/gitpush%E5%87%BA%E9%94%99/</guid>
+      <description>错误描述 fatal: remote error: You can&amp;#39;t push to git://github.com:CorPython/java_repo.git Use git@github.com:CorPython/java_repo.git 原因:如果在git clone的时候用的是git://github.com:xx/xxx.git的形式,那么就会出现这个问题 解决方案 输入下面的指令 git remote rm origin git remote add origin git@github.com:CorPython/java_repo.git git push origin 会出现下面的提示 输入上述的命令即可 git push --set-upstream origin master 成功上传!</description>
+    </item>
     
     <item>
       <title>git操作笔记</title>
@@ -21,12 +30,12 @@
     </item>
     
     <item>
-      <title>git push -u origin master出错解决方案</title>
+      <title>解决git远程和本地分支不同步</title>
       <link>https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/</link>
       <pubDate>Mon, 11 Nov 2019 18:46:33 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/%E4%BF%AE%E5%A4%8Dgitpush%E5%88%B0github%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/</guid>
-      <description>当执行了git push -u origin master时,有时候会出现下图中的错误,主要时本地的代码和远程代码仓库的代码出现了冲突,需要同步远程的master 分支 要解决上述的冲突很简单,只需要下面两条指令即可完成 git pull origin master git push -u origin master</description>
+      <description>error: failed to push some refs to &amp;lsquo;git@github.com:xxx. git&amp;rsquo; 当执行了git push -u origin master时,有时候会出现下图中的错误,主要时本地的代码和远程代码仓库的代码出现了冲突,需要同步远程的master 分支 要解决上述的冲突很简单,只需要下面两条指令即可完成 git pull origin master git push -u origin master</description>
     </item>
     
   </channel>

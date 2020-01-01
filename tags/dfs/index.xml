@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dfs on code show的博客</title>
+    <link>https://CorPython.github.io/tags/dfs/</link>
+    <description>Recent content in dfs on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Dec 2019 21:43:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>初探BFS,DFS</title>
+      <link>https://CorPython.github.io/post/%E5%88%9D%E6%8E%A2BFSDFS/</link>
+      <pubDate>Sat, 28 Dec 2019 21:43:51 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E5%88%9D%E6%8E%A2BFSDFS/</guid>
+      <description>图结构 BFS BFS又称广度优先搜索,通常用队列的思想来实现 # 输出不同结点为起始点的BFS结果 def BFS(graph,s): queue = [] a = [] queue.append(s) seen = set() seen.add(s) while(len(queue) &amp;gt; 0): vertex = queue.pop(0) nodes = graph[vertex] for w in nodes: if w not in seen: queue.append(w) seen.add(w) if(vertex is not None): a.append(vertex) return a graph = { &amp;#34;A&amp;#34;: [&amp;#34;B&amp;#34;,&amp;#34;C&amp;#34;], &amp;#34;B&amp;#34;: [&amp;#34;A&amp;#34;,&amp;#34;C&amp;#34;,&amp;#34;D&amp;#34;], &amp;#34;C&amp;#34;: [&amp;#34;A&amp;#34;,&amp;#34;B&amp;#34;,&amp;#34;D&amp;#34;,&amp;#34;E&amp;#34;], &amp;#34;D&amp;#34;: [&amp;#34;B&amp;#34;,&amp;#34;C&amp;#34;,&amp;#34;E&amp;#34;,&amp;#34;F&amp;#34;], &amp;#34;E&amp;#34;: [&amp;#34;C&amp;#34;,&amp;#34;D&amp;#34;], &amp;#34;F&amp;#34;: [&amp;#34;D&amp;#34;] } array = [&amp;#34;A&amp;#34;,&amp;#34;B&amp;#34;,&amp;#34;C&amp;#34;,&amp;#34;D&amp;#34;,&amp;#34;E&amp;#34;,&amp;#34;F&amp;#34;] for w in array: print(BFS(graph,w)) 运行结果: $ python -u &amp;#34;d:\python\BFS.py&amp;#34; [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;D&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;F&amp;#39;] [&amp;#39;B&amp;#39;, &amp;#39;A&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;D&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;F&amp;#39;] [&amp;#39;C&amp;#39;, &amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;D&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;F&amp;#39;] [&amp;#39;D&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;F&amp;#39;,</description>
+    </item>
+    
+  </channel>
+</rss>
