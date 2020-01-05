@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on code show的博客</title>
+    <link>https://CorPython.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jan 2020 16:51:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;基础笔记</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 05 Jan 2020 16:51:13 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/</guid>
+      <description>输入输出 #include &amp;lt;iostream&amp;gt;using namespace std; //c++输入输出 int main() { string str = &amp;#34;hello world!&amp;#34;; int a; //endl有换行的功能 cout &amp;lt;&amp;lt; str &amp;lt;&amp;lt; endl; cin &amp;gt;&amp;gt; a; cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34;\n&amp;#34;; cout &amp;lt;&amp;lt; a; return 0; } 数据类型 #include &amp;lt;iostream&amp;gt;#include &amp;lt;limits&amp;gt; using namespace std; int main() { /** *求数据类型的字节数和数据范围 */ cout &amp;lt;&amp;lt; sizeof(int) &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;int的最大长度为:&amp;#34; &amp;lt;&amp;lt; numeric_limits&amp;lt;int&amp;gt;::max() &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;int的最小长度为:&amp;#34</description>
+    </item>
+    
+  </channel>
+</rss>

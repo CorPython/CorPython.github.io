@@ -6,10 +6,19 @@
     <description>Recent content in Tags on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2020 20:42:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2020 16:51:13 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://CorPython.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 05 Jan 2020 16:51:13 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>2020</title>
@@ -265,19 +274,19 @@
     
     <item>
       <title>gittalk</title>
-      <link>https://CorPython.github.io/tags/gittalk/</link>
+      <link></link>
       <pubDate>Mon, 11 Nov 2019 18:59:30 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/tags/gittalk/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
     <item>
       <title>Gittalk</title>
-      <link></link>
+      <link>https://CorPython.github.io/tags/Gittalk/</link>
       <pubDate>Mon, 11 Nov 2019 18:14:21 +0800</pubDate>
       
-      <guid></guid>
+      <guid>https://CorPython.github.io/tags/Gittalk/</guid>
       <description></description>
     </item>
     

@@ -25,7 +25,11 @@
 
     
 
-
+         
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+         <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+     
+         <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
     
         <link rel="stylesheet" href='/css/APlayer.min.css'>
@@ -81,6 +85,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/" title="你好,2020">你好,2020</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年1月1日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://CorPython.github.io/categories/%E6%96%B0%E5%B9%B4%E7%AF%87'>新年篇</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            告别2019,展望2020 ​ 2019年走完了最后一天,迎来了全新的2020年.去年这一年总的来说并不是很满意,学习成绩表现没有2018年那么令人满意了,可能是因为我自己对于考试的漫不经心,也可能是我自己没有追求高分的欲望.面对着自己不是特别感兴趣的硬件似乎丧失了我的学习动力!但是……
+        </div>
+        <p class="readmore"><a href="https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://CorPython.github.io/post/gitpush%E5%87%BA%E9%94%99/" title="fatal: remote error: You can&#39;t push to git 解决办法">fatal: remote error: You can&#39;t push to git 解决办法</a>
             </h1>
         </header>
@@ -121,7 +150,7 @@
         </div>
         
         <div class="post-content">
-            图结构 BFS DFS又称广度优先搜索,通常用队列的思想来实现 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 # 输出不同结点为起始点的BFS结果 def BFS(graph,s): queue = [] a = [] queue.append(s) seen = set() seen.add(s) while(len(queue) &gt; 0): vertex = queue.pop(0) nodes = graph[vertex] for w in nodes: if w not in seen: queue.append(w) seen.add(w) if(vertex is not None): a.append(vertex) return a graph = { &#34;A&#34;: [&#34;B&#34;,&#34;C&#34;], &#34;B&#34;: [&#34;A&#34;,&#34;C&#34;,&#34;D&#34;], &#34;C&#34;: [&#34;A&#34;,&#34;B&#34;,&#34;D&#34;,&#34;E&#34;], &#34;D&#34;: [&#34;B&#34;,&#34;C&#34;,&#34;E&#34;,&#34;F&#34;], &#34;E&#34;: [&#34;C&#34;,&#34;D&#34;], &#34;F&#34;: [&#34;D&#34;] } array = [&#34;A&#34;,&#34;B&#34;,&#34;C&#34;,&#34;D&#34;,&#34;E&#34;,&#34;F&#34;] for w in array: print(BFS(graph,w)) 运行……
+            图结构 BFS BFS又称广度优先搜索,通常用队列的思想来实现 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 # 输出不同结点为起始点的BFS结果 def BFS(graph,s): queue = [] a = [] queue.append(s) seen = set() seen.add(s) while(len(queue) &gt; 0): vertex = queue.pop(0) nodes = graph[vertex] for w in nodes: if w not in seen: queue.append(w) seen.add(w) if(vertex is not None): a.append(vertex) return a graph = { &#34;A&#34;: [&#34;B&#34;,&#34;C&#34;], &#34;B&#34;: [&#34;A&#34;,&#34;C&#34;,&#34;D&#34;], &#34;C&#34;: [&#34;A&#34;,&#34;B&#34;,&#34;D&#34;,&#34;E&#34;], &#34;D&#34;: [&#34;B&#34;,&#34;C&#34;,&#34;E&#34;,&#34;F&#34;], &#34;E&#34;: [&#34;C&#34;,&#34;D&#34;], &#34;F&#34;: [&#34;D&#34;] } array = [&#34;A&#34;,&#34;B&#34;,&#34;C&#34;,&#34;D&#34;,&#34;E&#34;,&#34;F&#34;] for w in array: print(BFS(graph,w)) 运行……
         </div>
         <p class="readmore"><a href="https://CorPython.github.io/post/%E5%88%9D%E6%8E%A2BFSDFS/">阅读全文</a></p>
     </article>
@@ -303,31 +332,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2019年12月10日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://CorPython.github.io/categories/%E7%BC%96%E7%A8%8B'>编程</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            SQL server触发器及存储过程 删除触发器 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 /*1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Stud……
-        </div>
-        <p class="readmore"><a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -380,6 +384,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/" title="你好,2020">你好,2020</a>
+    </li>
+    
+    <li>
         <a href="https://CorPython.github.io/post/gitpush%E5%87%BA%E9%94%99/" title="fatal: remote error: You can&#39;t push to git 解决办法">fatal: remote error: You can&#39;t push to git 解决办法</a>
     </li>
     
@@ -415,10 +423,6 @@
         <a href="https://CorPython.github.io/post/windows%E5%AE%89%E8%A3%85latex/" title="windows下载安装latex">windows下载安装latex</a>
     </li>
     
-    <li>
-        <a href="https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/" title="Sql server触发器及存储过程">Sql server触发器及存储过程</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -438,6 +442,8 @@
     
     <li><a href="https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记 (3)</a></li>
     
+    <li><a href="https://CorPython.github.io/categories/%E6%96%B0%E5%B9%B4%E7%AF%87/">新年篇 (1)</a></li>
+    
     <li><a href="https://CorPython.github.io/categories/%E7%BC%96%E7%A8%8B/">编程 (5)</a></li>
     
     <li><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">解决办法 (6)</a></li>
@@ -455,7 +461,9 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="">Gittalk</a>
+    <a href="https://CorPython.github.io/tags/2020/">2020</a>
+    
+    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
     
     <a href="https://CorPython.github.io/tags/IAR/">IAR</a>
     
@@ -471,7 +479,7 @@
     
     <a href="https://CorPython.github.io/tags/github/">github</a>
     
-    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
+    <a href="">gittalk</a>
     
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
     
@@ -563,7 +571,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2019 <a href="https://CorPython.github.io/">code show的博客 By code show</a>.
+        &copy; 2020 <a href="https://CorPython.github.io/">code show的博客 By code show</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
         

@@ -6,7 +6,7 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2020 20:42:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2020 16:51:13 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,16 @@
       <pubDate>Wed, 01 Jan 2020 20:42:17 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/</guid>
-      <description>告别2019,展望2020 ​ 2019年走完最后一天,迎来了全新的2020年.去年这一年总的来说并不是很满意,学习成绩表现没有2018年那么令人满意了,可能是因为我自己对于考试的漫不经心,也可能是我自己没有追求高分的欲望.面对着自己不是特别感兴趣的硬件似乎丧失了我的学习动力!但是好</description>
+      <description>告别2019,展望2020 ​ 2019年走完了最后一天,迎来了全新的2020年.去年这一年总的来说并不是很满意,学习成绩表现没有2018年那么令人满意了,可能是因为我自己对于考试的漫不经心,也可能是我自己没有追求高分的欲望.面对着自己不是特别感兴趣的硬件似乎丧失了我的学习动力!但是</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;基础笔记</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 05 Jan 2020 16:51:13 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/</guid>
+      <description>输入输出 #include &amp;lt;iostream&amp;gt;using namespace std; //c++输入输出 int main() { string str = &amp;#34;hello world!&amp;#34;; int a; //endl有换行的功能 cout &amp;lt;&amp;lt; str &amp;lt;&amp;lt; endl; cin &amp;gt;&amp;gt; a; cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34;\n&amp;#34;; cout &amp;lt;&amp;lt; a; return 0; } 数据类型 #include &amp;lt;iostream&amp;gt;#include &amp;lt;limits&amp;gt; using namespace std; int main() { /** *求数据类型的字节数和数据范围 */ cout &amp;lt;&amp;lt; sizeof(int) &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;int的最大长度为:&amp;#34; &amp;lt;&amp;lt; numeric_limits&amp;lt;int&amp;gt;::max() &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;int的最小长度为:&amp;#34</description>
     </item>
     
     <item>
