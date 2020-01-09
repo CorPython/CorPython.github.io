@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c语言 on code show的博客</title>
+    <link>https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in c语言 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jan 2020 17:07:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C语言宏定义</title>
+      <link>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E5%AE%8F%E5%AE%9A%E4%B9%89/</link>
+      <pubDate>Thu, 09 Jan 2020 17:07:56 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E5%AE%8F%E5%AE%9A%E4%B9%89/</guid>
+      <description>c语言宏定义初识 带参数的宏的原则: 一切都要括号 整个值要括号 参数出现的每个地方都要括号 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt; #define MAX( x, y ) ( ((x) &amp;gt; (y)) ? (x) : (y) )#define MIN( x, y ) ( ((x) &amp;lt; (y)) ? (x) : (y) )#define UPCASE( c ) ( ((c) &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; (c) &amp;lt;= &amp;#39;z&amp;#39;) ? ((c) - 0x20) : (c) )//大小写转换 #define Cube(x) ((x) * (x) * (x) )#define func(x) ((x) /3) #define PI 3.14//#undef PI 撤销宏定义 int main() { printf(&amp;#34;%.2f\n&amp;#34;,PI); printf(&amp;#34;%d\n&amp;#34;,MAX(15,20)); printf(&amp;#34;%.1f\n&amp;#34;,MAX(15.5,20.5)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;a&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;b&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;c&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;D&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;E&amp;#39;)); printf(&amp;#34;%d\n&amp;#34;,Cube(5)); printf(&amp;#34;%d\n&amp;#34;,func(5 + 4)); return 0; }</description>
+    </item>
+    
+  </channel>
+</rss>

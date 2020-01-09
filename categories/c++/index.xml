@@ -6,10 +6,28 @@
     <description>Recent content in c&#43;&#43; on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jan 2020 16:51:13 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 11:53:35 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C&#43;&#43;面向对象程序设计</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Wed, 08 Jan 2020 11:53:35 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
+      <description>类和对象 #include &amp;lt;iostream&amp;gt; using namespace std; class Box { public: double length; // 长度 double breadth; // 宽度 double height; // 高度 }; int main( ) { Box Box1; // 声明 Box1，类型为 Box Box Box2; // 声明 Box2，类型为 Box double volume = 0.0; // 用于存储体积 // box 1 详述 Box1.height = 5.0; Box1.length = 6.0; Box1.breadth = 7.0; // box 2 详述 Box2.height = 10.0; Box2.length = 12.0; Box2.breadth = 13.0; // box 1 的体积 volume = Box1.height * Box1.length * Box1.breadth; cout &amp;lt;&amp;lt; &amp;#34;Box1 的体积: &amp;#34; &amp;lt;&amp;lt; volume &amp;lt;&amp;lt; endl; // box 2 的体积 volume = Box2.height * Box2.length * Box2.breadth; cout &amp;lt;&amp;lt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;编译错误</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 07 Jan 2020 15:50:02 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%AC%94%E8%AE%B0/</guid>
+      <description>编译cpp文件时报错: ld.exe: can not open file ...xxx.exe:permission denied collect2.exe error ld returned 1 exit status 原因:代码当前目录（包括子目录）下有同名的.exe文件，会报此错误，只要把名字改一下就行了</description>
+    </item>
     
     <item>
       <title>C&#43;&#43;基础笔记</title>
@@ -17,7 +35,7 @@
       <pubDate>Sun, 05 Jan 2020 16:51:13 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/</guid>
-      <description>输入输出 #include &amp;lt;iostream&amp;gt;using namespace std; //c++输入输出 int main() { string str = &amp;#34;hello world!&amp;#34;; int a; //endl有换行的功能 cout &amp;lt;&amp;lt; str &amp;lt;&amp;lt; endl; cin &amp;gt;&amp;gt; a; cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34;\n&amp;#34;; cout &amp;lt;&amp;lt; a; return 0; } 数据类型 #include &amp;lt;iostream&amp;gt;#include &amp;lt;limits&amp;gt; using namespace std; int main() { /** *求数据类型的字节数和数据范围 */ cout &amp;lt;&amp;lt; sizeof(int) &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;int的最大长度为:&amp;#34; &amp;lt;&amp;lt; numeric_limits&amp;lt;int&amp;gt;::max() &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;int的最小长度为:&amp;#34</description>
+      <description>输入输出 #include &amp;lt;iostream&amp;gt;using namespace std; //c++输入输出 int main() { string str = &amp;#34;hello world!&amp;#34;; int a; //endl有换行的功能 cout &amp;lt;&amp;lt; str &amp;lt;&amp;lt; endl; cin &amp;gt;&amp;gt; a; cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34;\n&amp;#34;; cout &amp;lt;&amp;lt; a; return 0; } using namespace std ,它声明了命名空间 std,后续如果有未指定命名空间的符号,那么默认使用 std,这样就可以使用 cin,cout,vector 等。 cin 用于从控制台获取用户输入,cout 用于将数据输出到控制台 cin</description>
     </item>
     
   </channel>
