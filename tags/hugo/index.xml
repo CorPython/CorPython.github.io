@@ -6,10 +6,19 @@
     <description>Recent content in hugo on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Dec 2019 20:42:50 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 19:23:38 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo添加latex公式渲染</title>
+      <link>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Thu, 16 Jan 2020 19:23:38 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</guid>
+      <description>使用方法 经过一番google后找到的这个方案!这个想法是通过将所有内容都包含在同一代码中&amp;lt; script &amp;gt;并添加async来实现渲染 &amp;lt;script type=&amp;#34;text/javascript&amp;#34; async src=&amp;#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&amp;gt; MathJax.Hub.Config({ tex2jax: { inlineMath: [[&amp;#39;$&amp;#39;,&amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;,&amp;#39;\\)&amp;#39;]], displayMath: [[&amp;#39;$$&amp;#39;,&amp;#39;$$&amp;#39;]], processEscapes: true, processEnvironments: true, skipTags: [&amp;#39;script&amp;#39;, &amp;#39;noscript&amp;#39;, &amp;#39;style&amp;#39;, &amp;#39;textarea&amp;#39;, &amp;#39;pre&amp;#39;], TeX: { equationNumbers: { autoNumber: &amp;#34;AMS&amp;#34; }, extensions: [&amp;#34;AMSmath.js&amp;#34;, &amp;#34;AMSsymbols.js&amp;#34;] } } }); MathJax.Hub.Queue(function() { // Fix &amp;lt;code&amp;gt; tags after MathJax finishes running. This is a // hack to overcome a shortcoming of Markdown. Discussion at // https://github.com/mojombo/jekyll/issues/199 var all = MathJax.Hub.getAllJax(), i; for(i = 0; i &amp;lt; all.length; i += 1)</description>
+    </item>
     
     <item>
       <title>hugo添加音乐功能</title>

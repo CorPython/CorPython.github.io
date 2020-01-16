@@ -6,10 +6,19 @@
     <description>Recent content in c on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2020 17:07:56 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2020 21:37:59 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一道有趣的c语言习题</title>
+      <link>https://CorPython.github.io/post/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84c%E8%AF%AD%E8%A8%80%E4%B9%A0%E9%A2%98/</link>
+      <pubDate>Thu, 09 Jan 2020 21:37:59 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84c%E8%AF%AD%E8%A8%80%E4%B9%A0%E9%A2%98/</guid>
+      <description>这道题来自于浙江大学翁恺老师的C语言程序设计CAP课程中的一道课堂测试题 题目: #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;string.h&amp;gt; #define TOUPPER(c) (&amp;#39;a&amp;#39;&amp;lt;=(c)&amp;amp;&amp;amp;(c)&amp;lt;=&amp;#39;z&amp;#39;?(c)-&amp;#39;a&amp;#39;+&amp;#39;A&amp;#39;:(c)) int main(int argc, char const *argv[]) { char s[10]; strcpy(s, &amp;#34;abcd&amp;#34;); int i = 0; printf(&amp;#34;%c\n&amp;#34;,TOUPPER(s[++i])); return 0; } 输出结果是什么呢?我相信很多人猜的都是B,你也可以自己试着填一下答案,或者把我上面这个程序运行一下. 最终的答案是D! 那么过程是怎样的呢,我们在终端依次输</description>
+    </item>
     
     <item>
       <title>C语言宏定义</title>
@@ -17,7 +26,7 @@
       <pubDate>Thu, 09 Jan 2020 17:07:56 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E5%AE%8F%E5%AE%9A%E4%B9%89/</guid>
-      <description>c语言宏定义初识 带参数的宏的原则: 一切都要括号 整个值要括号 参数出现的每个地方都要括号 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt; #define MAX( x, y ) ( ((x) &amp;gt; (y)) ? (x) : (y) )#define MIN( x, y ) ( ((x) &amp;lt; (y)) ? (x) : (y) )#define UPCASE( c ) ( ((c) &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; (c) &amp;lt;= &amp;#39;z&amp;#39;) ? ((c) - 0x20) : (c) )//大小写转换 #define Cube(x) ((x) * (x) * (x) )#define func(x) ((x) /3) #define PI 3.14//#undef PI 撤销宏定义 int main() { printf(&amp;#34;%.2f\n&amp;#34;,PI); printf(&amp;#34;%d\n&amp;#34;,MAX(15,20)); printf(&amp;#34;%.1f\n&amp;#34;,MAX(15.5,20.5)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;a&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;b&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;c&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;D&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;E&amp;#39;)); printf(&amp;#34;%d\n&amp;#34;,Cube(5)); printf(&amp;#34;%d\n&amp;#34;,func(5 + 4)); return 0; }</description>
+      <description>c语言宏定义初识 带参数的宏的原则: 一切都要括号 整个值要括号 参数出现的每个地方都要括号 注意:结尾千万不要加上分号 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt; #define MAX( x, y ) ( ((x) &amp;gt; (y)) ? (x) : (y) )#define MIN( x, y ) ( ((x) &amp;lt; (y)) ? (x) : (y) )#define UPCASE( c ) ( ((c) &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; (c) &amp;lt;= &amp;#39;z&amp;#39;) ? ((c) - 0x20) : (c) )//大小写转换 #define Cube(x) ((x) * (x) * (x) )#define func(x) ((x) /3) #define PI 3.14//#undef PI 撤销宏定义 int main() { printf(&amp;#34;%.2f\n&amp;#34;,PI); printf(&amp;#34;%d\n&amp;#34;,MAX(15,20)); printf(&amp;#34;%.1f\n&amp;#34;,MAX(15.5,20.5)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;a&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;b&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;c&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;D&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;E&amp;#39;)); printf(&amp;#34;%d\n&amp;#34;,Cube(5));</description>
     </item>
     
     <item>

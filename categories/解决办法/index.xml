@@ -6,10 +6,19 @@
     <description>Recent content in 解决办法 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Dec 2019 17:27:01 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 18:10:24 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IDEA2019中文字体渲染问题</title>
+      <link>https://CorPython.github.io/post/IDEA2019%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 11 Jan 2020 18:10:24 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IDEA2019%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%97%AE%E9%A2%98/</guid>
+      <description>IDEA 2018.2升级到 IDEA 2019.3,中文字体渲染问题 原文链接 解决方案 修改一下备用字体就可以 共需要修改两处： 1、Setting -&amp;gt; Editor -&amp;gt; Font 修改 Fallback font 为 simsun 2、Setting -&amp;gt; Editor -&amp;gt; Color Scheme -&amp;gt; Color Scheme Font 修改 Fallback font 为 simsun</description>
+    </item>
     
     <item>
       <title>fatal: remote error: You can&#39;t push to git 解决办法</title>

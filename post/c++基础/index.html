@@ -3,12 +3,12 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.62.0" />
+    <meta name="generator" content="Hugo 0.62.2" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>C&#43;&#43;基础笔记 | code show的博客</title>
-    <meta property="og:title" content="C&#43;&#43;基础笔记 - code show的博客">
+    <title>C&#43;&#43;基础笔记(1) | code show的博客</title>
+    <meta property="og:title" content="C&#43;&#43;基础笔记(1) - code show的博客">
     <meta property="og:type" content="article">
         
     <meta property="article:published_time" content="2020-01-05T16:51:13&#43;08:00">
@@ -17,7 +17,7 @@
     <meta property="article:modified_time" content="2020-01-05T16:51:13&#43;08:00">
         
     <meta name="Keywords" content="java,c,博客,c&#43;&#43;,python,linux">
-    <meta name="description" content="C&#43;&#43;基础笔记">
+    <meta name="description" content="C&#43;&#43;基础笔记(1)">
         
     <meta name="author" content="code show">
     <meta property="og:url" content="https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/">
@@ -97,31 +97,43 @@
         <div id="virtual_toc_list" style="display: none">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">输入输出</a></li>
-    <li><a href="#heading-1">数据类型及范围</a></li>
-    <li><a href="#heading-2">枚举</a></li>
-    <li><a href="#c-">C++ 中的左值和右值</a></li>
-    <li><a href="#c">c++变量(函数)的声明和定义</a></li>
-    <li><a href="#c-1">c++变量</a></li>
-    <li><a href="#static">static关键字</a></li>
-    <li><a href="#heading-3">常量</a></li>
-    <li><a href="#const">const小补充</a></li>
-    <li><a href="#heading-4">赋值运算符</a></li>
-    <li><a href="#heading-5">函数</a>
+    <li><a href="#输入输出">输入输出</a></li>
+    <li><a href="#数据类型及范围">数据类型及范围</a></li>
+    <li><a href="#枚举">枚举</a></li>
+    <li><a href="#c-中的左值和右值">C++ 中的左值和右值</a></li>
+    <li><a href="#c变量函数的声明和定义">c++变量(函数)的声明和定义</a></li>
+    <li><a href="#c变量">c++变量</a></li>
+    <li><a href="#static关键字">static关键字</a></li>
+    <li><a href="#常量">常量</a></li>
+    <li><a href="#const小补充">const小补充</a></li>
+    <li><a href="#赋值运算符">赋值运算符</a></li>
+    <li><a href="#函数">函数</a>
       <ul>
-        <li><a href="#heading-6">函数占位</a></li>
-        <li><a href="#heading-7">函数重载</a></li>
+        <li><a href="#函数占位">函数占位</a></li>
+        <li><a href="#函数重载">函数重载</a></li>
       </ul>
     </li>
-    <li><a href="#c--1">C++ 随机数</a></li>
-    <li><a href="#c-2">c++数组</a></li>
-    <li><a href="#c-string">c++ string字符串</a></li>
-    <li><a href="#c-3">c++指针</a></li>
-    <li><a href="#c--vs-">C++ 引用 vs 指针</a></li>
-    <li><a href="#c---">c++ 日期 & 时间</a></li>
-    <li><a href="#c-4">c++结构体</a></li>
-    <li><a href="#c-5">c++文件</a></li>
-    <li><a href="#heading-8">异常处理</a></li>
+    <li><a href="#c-随机数">C++ 随机数</a></li>
+    <li><a href="#c数组">c++数组</a></li>
+    <li><a href="#c-string字符串">c++ string字符串</a></li>
+    <li><a href="#c指针">c++指针</a></li>
+    <li><a href="#c-引用-vs-指针">C++ 引用 vs 指针</a></li>
+    <li><a href="#c-日期--时间">c++ 日期 & 时间</a></li>
+    <li><a href="#c结构体">c++结构体</a></li>
+    <li><a href="#c文件">c++文件</a></li>
+    <li><a href="#异常处理">异常处理</a></li>
+    <li><a href="#c动态内存">c++动态内存</a>
+      <ul>
+        <li><a href="#三维数组">三维数组</a></li>
+        <li><a href="#对象的动态内存分配">对象的动态内存分配</a></li>
+      </ul>
+    </li>
+    <li><a href="#命名空间">命名空间</a>
+      <ul>
+        <li><a href="#using指令">using指令</a></li>
+        <li><a href="#嵌套的命名空间">嵌套的命名空间</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
@@ -214,31 +226,43 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">输入输出</a></li>
-    <li><a href="#heading-1">数据类型及范围</a></li>
-    <li><a href="#heading-2">枚举</a></li>
-    <li><a href="#c-">C++ 中的左值和右值</a></li>
-    <li><a href="#c">c++变量(函数)的声明和定义</a></li>
-    <li><a href="#c-1">c++变量</a></li>
-    <li><a href="#static">static关键字</a></li>
-    <li><a href="#heading-3">常量</a></li>
-    <li><a href="#const">const小补充</a></li>
-    <li><a href="#heading-4">赋值运算符</a></li>
-    <li><a href="#heading-5">函数</a>
+    <li><a href="#输入输出">输入输出</a></li>
+    <li><a href="#数据类型及范围">数据类型及范围</a></li>
+    <li><a href="#枚举">枚举</a></li>
+    <li><a href="#c-中的左值和右值">C++ 中的左值和右值</a></li>
+    <li><a href="#c变量函数的声明和定义">c++变量(函数)的声明和定义</a></li>
+    <li><a href="#c变量">c++变量</a></li>
+    <li><a href="#static关键字">static关键字</a></li>
+    <li><a href="#常量">常量</a></li>
+    <li><a href="#const小补充">const小补充</a></li>
+    <li><a href="#赋值运算符">赋值运算符</a></li>
+    <li><a href="#函数">函数</a>
       <ul>
-        <li><a href="#heading-6">函数占位</a></li>
-        <li><a href="#heading-7">函数重载</a></li>
+        <li><a href="#函数占位">函数占位</a></li>
+        <li><a href="#函数重载">函数重载</a></li>
       </ul>
     </li>
-    <li><a href="#c--1">C++ 随机数</a></li>
-    <li><a href="#c-2">c++数组</a></li>
-    <li><a href="#c-string">c++ string字符串</a></li>
-    <li><a href="#c-3">c++指针</a></li>
-    <li><a href="#c--vs-">C++ 引用 vs 指针</a></li>
-    <li><a href="#c---">c++ 日期 & 时间</a></li>
-    <li><a href="#c-4">c++结构体</a></li>
-    <li><a href="#c-5">c++文件</a></li>
-    <li><a href="#heading-8">异常处理</a></li>
+    <li><a href="#c-随机数">C++ 随机数</a></li>
+    <li><a href="#c数组">c++数组</a></li>
+    <li><a href="#c-string字符串">c++ string字符串</a></li>
+    <li><a href="#c指针">c++指针</a></li>
+    <li><a href="#c-引用-vs-指针">C++ 引用 vs 指针</a></li>
+    <li><a href="#c-日期--时间">c++ 日期 & 时间</a></li>
+    <li><a href="#c结构体">c++结构体</a></li>
+    <li><a href="#c文件">c++文件</a></li>
+    <li><a href="#异常处理">异常处理</a></li>
+    <li><a href="#c动态内存">c++动态内存</a>
+      <ul>
+        <li><a href="#三维数组">三维数组</a></li>
+        <li><a href="#对象的动态内存分配">对象的动态内存分配</a></li>
+      </ul>
+    </li>
+    <li><a href="#命名空间">命名空间</a>
+      <ul>
+        <li><a href="#using指令">using指令</a></li>
+        <li><a href="#嵌套的命名空间">嵌套的命名空间</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -271,7 +295,7 @@
 </script>
                         <article class="post">
                             <header>
-                                <h1 class="post-title">C&#43;&#43;基础笔记</h1>
+                                <h1 class="post-title">C&#43;&#43;基础笔记(1)</h1>
                             </header>
                             <date class="post-meta meta-date">
                                 2020年1月5日
@@ -285,14 +309,14 @@
                                 
                             </div>
                             
-                            <span class="post-word-count">|4263 words</span>
+                            <span class="post-word-count">|6264 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
                                         阅读</span></span>
                             </div>
                             <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约9分钟
+                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约13分钟
                             </div>
                             
                             
@@ -304,7 +328,7 @@
                             
                             <div class="post-content">
                                     
-                                    <h2 id="heading">输入输出</h2>
+                                    <h2 id="输入输出">输入输出</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 <span style="color:#998;font-style:italic">//c++输入输出
@@ -322,7 +346,7 @@
 </code></pre></div><p><strong>using namespace std</strong> ,它声明了命名空间 <strong>std</strong>,后续如果有未指定命名空间的符号,那么默认使用 <strong>std</strong>,这样就可以使用 <strong>cin,cout,vector</strong> 等。</p>
 <p><strong>cin</strong> 用于从控制台获取用户输入,<strong>cout</strong> 用于将数据输出到控制台</p>
 <p><strong>cin</strong> 是输入流对象,<strong>cout</strong> 是输出流对象,它们分别可以用 <strong>&raquo;</strong> 和 <strong>&laquo;</strong>,是因为分别在其类中对相应运算符进行了重载。</p>
-<h2 id="heading-1">数据类型及范围</h2>
+<h2 id="数据类型及范围">数据类型及范围</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;limits&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
@@ -373,7 +397,7 @@ max(<span style="color:#458;font-weight:bold">double</span>)<span style="color:#
 min(<span style="color:#458;font-weight:bold">double</span>)<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">2.22507e-308</span>
 max(<span style="color:#458;font-weight:bold">long</span> <span style="color:#458;font-weight:bold">double</span>)<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">1.18973e+4932</span>
 min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#458;font-weight:bold">double</span>)<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">3.3621e-4932</span>
-</code></pre></div><h2 id="heading-2">枚举</h2>
+</code></pre></div><h2 id="枚举">枚举</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
@@ -394,7 +418,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> size_t(yellow) <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c-">C++ 中的左值和右值</h2>
+</code></pre></div><h2 id="c-中的左值和右值">C++ 中的左值和右值</h2>
 <p>C++ 中有两种类型的表达式：</p>
 <ul>
 <li>**左值（lvalue）：**指向内存位置的表达式被称为左值（lvalue）表达式。左值可以出现在赋值号的左边或右边。</li>
@@ -404,7 +428,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 <pre><code>int g = 20;
 </code></pre><p>但是下面这个就不是一个有效的语句，会生成编译时错误：</p>
 <pre><code>10 = 20;
-</code></pre><h2 id="c">c++变量(函数)的声明和定义</h2>
+</code></pre><h2 id="c变量函数的声明和定义">c++变量(函数)的声明和定义</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
@@ -422,7 +446,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 </span><span style="color:#998;font-style:italic"></span>    func();
     cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> a <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
 }
-</code></pre></div><h2 id="c-1">c++变量</h2>
+</code></pre></div><h2 id="c变量">c++变量</h2>
 <p>全局变量:在所有函数外部声明的变量，称为全局变量。</p>
 <p>局部变量:在函数或一个代码块内部声明的变量，称为局部变量。</p>
 <p>形式参数:在函数参数的定义中声明的变量，称为形式参数。</p>
@@ -447,7 +471,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 </code></pre></div><p>如果现在函数中访问同名的全局变量,需要配加上域名解析<code>::</code></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>a <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl; <span style="color:#998;font-style:italic">//20
 </span></code></pre></div><p><strong>输出结果: 15 15</strong></p>
-<h2 id="static">static关键字</h2>
+<h2 id="static关键字">static关键字</h2>
 <p><strong>static</strong> 存储类指示编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用 static 修饰局部变量可以在函数调用之间保持局部变量的值</p>
 <p>static 修饰符也可以应用于全局变量。当 static 修饰全局变量时，会使变量的作用域限制在声明它的文件内</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
@@ -463,7 +487,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> func() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl; <span style="color:#998;font-style:italic">//11
 </span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="heading-3">常量</h2>
+</code></pre></div><h2 id="常量">常量</h2>
 <p>在 C++ 中，有两种简单的定义常量的方式：</p>
 <ul>
 <li>使用 <strong>#define</strong> 预处理器。</li>
@@ -475,7 +499,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 <p>整数常量也可以带一个后缀，后缀是 U 和 L 的组合，U 表示无符号整数（unsigned），L 表示长整数（long）。后缀可以是大写，也可以是小写，U 和 L 的顺序任意</p>
 <p>宏定义可以使用 <code>#undef </code>来取消</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">undef  MAX_NUM;</span><span style="color:#999;font-weight:bold;font-style:italic">
-</span></code></pre></div><h2 id="const"><strong>const小补充</strong></h2>
+</span></code></pre></div><h2 id="const小补充"><strong>const小补充</strong></h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;stdio.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;stdlib.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#998;font-style:italic">/**
@@ -509,7 +533,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     m2<span style="color:#000;font-weight:bold">=</span>p1;<span style="color:#998;font-style:italic">//可以将char * 指向 const char *
 </span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="heading-4">赋值运算符</h2>
+</code></pre></div><h2 id="赋值运算符">赋值运算符</h2>
 <p>下表列出了 C++ 支持的赋值运算符：</p>
 <table>
 <thead>
@@ -577,7 +601,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 </tr>
 </tbody>
 </table>
-<h2 id="heading-5">函数</h2>
+<h2 id="函数">函数</h2>
 <p>形参有默认值时如果没有在调用时给出具体值,会采用默认值</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
@@ -617,7 +641,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 </tr>
 </tbody>
 </table>
-<h3 id="heading-6">函数占位</h3>
+<h3 id="函数占位">函数占位</h3>
 <p><strong>给函数一个类型但是没有变量名</strong></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
@@ -633,7 +657,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 	func(<span style="color:#099">10</span>);
 	<span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h3 id="heading-7">函数重载</h3>
+</code></pre></div><h3 id="函数重载">函数重载</h3>
 <p>作用：函数名可以相同，提高复用性函数</p>
 <p>重载满足条件:</p>
 <ul>
@@ -702,7 +726,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 	func(<span style="color:#099">10</span>);
 	<span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c--1">C++ 随机数</h2>
+</code></pre></div><h2 id="c-随机数">C++ 随机数</h2>
 <p>需要加上<code>ctime</code>头文件</p>
 <p>C/C++产生随机数用到两个函数<code>rand()</code> 和 <code>srand()</code></p>
 <ol>
@@ -751,7 +775,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     }
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c-2">c++数组</h2>
+</code></pre></div><h2 id="c数组">c++数组</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;vector&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
@@ -776,7 +800,35 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 </span><span style="color:#998;font-style:italic"></span>    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> a.size() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c-string">c++ string字符串</h2>
+</code></pre></div><p><strong>数组和向量之间的相互转换</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;vector&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>argv[])
+{
+    <span style="color:#458;font-weight:bold">int</span> array[<span style="color:#099">10</span>] <span style="color:#000;font-weight:bold">=</span> {<span style="color:#099">1</span>,<span style="color:#099">2</span>,<span style="color:#099">3</span>,<span style="color:#099">4</span>,<span style="color:#099">5</span>,<span style="color:#099">6</span>,<span style="color:#099">7</span>,<span style="color:#099">8</span>,<span style="color:#099">9</span>,<span style="color:#099">10</span>};
+    <span style="color:#998;font-style:italic">//数组转向量
+</span><span style="color:#998;font-style:italic"></span>    vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> vec(array, array <span style="color:#000;font-weight:bold">+</span> <span style="color:#000;font-weight:bold">sizeof</span>(array)<span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">sizeof</span>(array[<span style="color:#099">0</span>]));
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">10</span> ; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> vec[i] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    }
+    <span style="color:#998;font-style:italic">//向量转数组
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>arr <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span>[vec.size()];
+    <span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">!</span>vec.empty())
+    {
+        memcpy(arr,<span style="color:#000;font-weight:bold">&amp;</span>vec[<span style="color:#099">0</span>],vec.size()<span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">sizeof</span>(<span style="color:#458;font-weight:bold">int</span>));
+    }
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">10</span>; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> arr[i] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    }
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+
+</code></pre></div><h2 id="c-string字符串">c++ string字符串</h2>
 <p><strong>部分函数如下:</strong><a href="https://www.cnblogs.com/this-543273659/archive/2011/07/21/2113172.html">详见这篇博客</a></p>
 <ul>
 <li>append() &ndash; 在字符串的末尾添加字符</li>
@@ -795,6 +847,9 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 {
    string str1 <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Hello</span><span style="color:#d14">&#34;</span>;
    string str2 <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">World</span><span style="color:#d14">&#34;</span>;
+   string str;
+   <span style="color:#998;font-style:italic">//获取一段字符串
+</span><span style="color:#998;font-style:italic"></span>   getline(cin,str);
    <span style="color:#998;font-style:italic">//拷贝字符串
 </span><span style="color:#998;font-style:italic"></span>   string s(str1,<span style="color:#099">0</span>,<span style="color:#099">3</span>);
    string s1(str1);
@@ -830,7 +885,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 </span><span style="color:#998;font-style:italic"></span>   cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> str1.insert(<span style="color:#099">0</span>,<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">H</span><span style="color:#d14">&#34;</span>) <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c-3">c++指针</h2>
+</code></pre></div><h2 id="c指针">c++指针</h2>
 <p><strong>最基础操作:</strong></p>
 <p><code>&amp;</code>符号的意思是取地址，也就是返回一个对象在内存中的地址。</p>
 <p><code>*</code> 符号的意思是取得一个指针所指向的对象。 也就是如果一个指针保存着一个内存地址，那么它就返回在那个地址的对象。</p>
@@ -858,7 +913,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
  
    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c--vs-">C++ 引用 vs 指针</h2>
+</code></pre></div><h2 id="c-引用-vs-指针">C++ 引用 vs 指针</h2>
 <p>引用容易与指针混淆，它们之间有三个主要的不同：</p>
 <ul>
 <li>不存在空引用。引用必须连接到一块合法的内存。</li>
@@ -895,7 +950,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">原变量的值: </span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c---">c++ 日期 &amp; 时间</h2>
+</code></pre></div><h2 id="c-日期--时间">c++ 日期 &amp; 时间</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;ctime&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span> 
@@ -917,7 +972,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">UTC 日期和时间：</span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> dt <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c-4">c++结构体</h2>
+</code></pre></div><h2 id="c结构体">c++结构体</h2>
 <p><img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200108203103.png" alt=""></p>
 <p>C 语言的 struct 定义了一组变量的集合，C 编译器并不认为这是一种新的类型。</p>
 <p>C++ 中的 struct 是一个新类型的定义声明, 所以可以省略 typedef, 定义变量的时候也可以省略 struct, 而不用向c语言那样没用 typedef 取新名字, 就需要用 <strong>struct 结构体名</strong> 这种形式定义变量。</p>
@@ -966,7 +1021,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 </span><span style="color:#998;font-style:italic">   */</span>
    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
-</code></pre></div><h2 id="c-5">c++文件</h2>
+</code></pre></div><h2 id="c文件">c++文件</h2>
 <p>要在 C++ 中进行文件处理，必须在 C++ 源代码文件中包含头文件 <code>&lt;iostream&gt;</code> 和 <code>&lt;fstream&gt;</code></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;fstream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
@@ -998,11 +1053,335 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
 }
 </code></pre></div><p><code>cin.getline()</code>会从外部读取一行!</p>
 <p>对于 <strong>cin</strong> 的操作 使用 <em><em>getline(cin，str)<strong>往往可以实现更加简单以及安全的字符串操作,不同于</strong>cin.getline(char</em>, int a)</em>*，前者可以直接对字符串进行操作。</p>
-<h2 id="heading-8">异常处理</h2>
+<h2 id="异常处理">异常处理</h2>
+<p>C++ 异常处理涉及到三个关键字：<strong>try、catch、throw</strong>。</p>
+<ul>
+<li><strong>throw:</strong> 当问题出现时，程序会抛出一个异常。这是通过使用 <strong>throw</strong> 关键字来完成的。</li>
+<li><strong>catch:</strong> 在您想要处理问题的地方，通过异常处理程序捕获异常。<strong>catch</strong> 关键字用于捕获异常。</li>
+<li><strong>try:</strong> <strong>try</strong> 块中的代码标识将被激活的特定异常。它后面通常跟着一个或多个 catch 块。</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
+<span style="color:#458;font-weight:bold">double</span> <span style="color:#900;font-weight:bold">division</span>(<span style="color:#458;font-weight:bold">int</span> a, <span style="color:#458;font-weight:bold">int</span> b)
+{
+   <span style="color:#000;font-weight:bold">if</span>( b <span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span> )
+   {
+      <span style="color:#000;font-weight:bold">throw</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Division by zero condition!</span><span style="color:#d14">&#34;</span>;
+   }
+   <span style="color:#000;font-weight:bold">return</span> (a<span style="color:#000;font-weight:bold">/</span>b);
+}
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">getNum</span>(<span style="color:#458;font-weight:bold">int</span> a)
+{
+	<span style="color:#000;font-weight:bold">if</span>(a <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">10</span>)
+	{
+		<span style="color:#000;font-weight:bold">throw</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">the number is more than 10!</span><span style="color:#d14">&#34;</span>;
+	}
+	<span style="color:#000;font-weight:bold">return</span> a;
+}
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>argv[])
+{
+	<span style="color:#000;font-weight:bold">try</span>{
+		division(<span style="color:#099">15</span>,<span style="color:#099">0</span>);
+	}<span style="color:#000;font-weight:bold">catch</span>(<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">*</span> msg){
+		cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> msg <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+	}
+	<span style="color:#000;font-weight:bold">try</span>{
+		getNum(<span style="color:#099">15</span>);
+	}
+	<span style="color:#000;font-weight:bold">catch</span>(<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">*</span>error){
+		cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> error <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+	}
+	<span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><h2 id="c动态内存">c++动态内存</h2>
+<p>C++ 程序中的内存分为两个部分：</p>
+<ul>
+<li>**栈：**在函数内部声明的所有变量都将占用栈内存。</li>
+<li>**堆：**这是程序中未使用的内存，在程序运行时可用于动态分配内存。</li>
+</ul>
+<p>很多时候，无法提前预知需要多少内存来存储某个定义变量中的特定信息，所需内存的大小需要在运行时才能确定。</p>
+<p>在 C++ 中，您可以使用特殊的运算符为给定类型的变量在运行时分配堆内的内存，这会返回所分配的空间地址。这种运算符即 <strong>new</strong> 运算符。</p>
+<p>如果您不再需要动态分配的内存空间，可以使用 <strong>delete</strong> 运算符，删除之前由 new 运算符分配的内存。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span> ()
+{
+    <span style="color:#998;font-style:italic">//基本数据类型的内存分配
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">double</span> <span style="color:#000;font-weight:bold">*</span>value <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">NULL</span>;
+    value <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">double</span>;
+    <span style="color:#000;font-weight:bold">*</span>value <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">15.50</span>;
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">*</span>value <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    <span style="color:#000;font-weight:bold">delete</span> value;
+
+    <span style="color:#998;font-style:italic">//一维数组的动态内存分配
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>array <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span>[<span style="color:#099">10</span>];
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">10</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        cin <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> array[i];
+    }
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">10</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> array[i] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    }
+    <span style="color:#000;font-weight:bold">delete</span> []array;
+
+    <span style="color:#998;font-style:italic">//二维数组的动态分配
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">*</span>array_two, m, n;
+    <span style="color:#998;font-style:italic">// 假定数组第一维长度为 m， 第二维长度为 n
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">// 动态分配空间
+</span><span style="color:#998;font-style:italic"></span>    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">请输入行(m)和列(n)的值:</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    cin <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> m <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> n;
+    array_two <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>[m];
+    <span style="color:#000;font-weight:bold">for</span> ( <span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> m; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span> )
+    {
+        array_two[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span> [n]  ;
+    }
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> m; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; j <span style="color:#000;font-weight:bold">&lt;</span> n; j<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+        {
+            cin <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> array_two[i][j];
+        }
+    }
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> m; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; j <span style="color:#000;font-weight:bold">&lt;</span> n; j<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+        {
+            cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> array_two[i][j] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+        }
+    }
+    <span style="color:#998;font-style:italic">//释放
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">for</span> ( <span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> m; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span> )
+    {
+        <span style="color:#000;font-weight:bold">delete</span> [] array_two[i];
+    }
+    <span style="color:#000;font-weight:bold">delete</span> [] array_two;
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><h3 id="三维数组">三维数组</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span> ()
+{
+    <span style="color:#998;font-style:italic">//a[2][3][4]
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">*</span>a;
+    a <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">*</span>[<span style="color:#099">2</span>];
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">2</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        a[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>[<span style="color:#099">3</span>];
+        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; j <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">3</span>; j<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+        {
+            a[i][j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span>[<span style="color:#099">4</span>];
+        }
+    }
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">2</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; j <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">3</span>; j<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+        {
+            <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; n <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">4</span>; n<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+            {
+                a[i][j][n] <span style="color:#000;font-weight:bold">=</span> i <span style="color:#000;font-weight:bold">+</span> j <span style="color:#000;font-weight:bold">+</span> n;
+            }
+        }
+    }
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">2</span>; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    {
+        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; j <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">3</span>; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>j)
+        {
+            <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; n <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">4</span>; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>n)
+            {
+                cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> a[i][j][n] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+            }
+        }
+    }
+    <span style="color:#998;font-style:italic">//释放内存
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">2</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; j <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">3</span>; j<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+        {
+            <span style="color:#000;font-weight:bold">delete</span> [] a[i][j];
+        }
+    }
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">2</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        <span style="color:#000;font-weight:bold">delete</span> [] a[i];
+    }
+    <span style="color:#000;font-weight:bold">delete</span> [] a;
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+
+}
+</code></pre></div><h3 id="对象的动态内存分配">对象的动态内存分配</h3>
+<p>使用<code>new</code>关键字的对象会调用对象的构造函数,并且使用<code>delete</code>关键字时会调用析构函数</p>
+<p>但是使用<code>malloc</code>函数不会调用构造函数,使用<code>free</code>关键字也不会调用析构函数</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;malloc.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">TEST</span>
+{
+<span style="color:#000;font-weight:bold">private</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#458;font-weight:bold">int</span> num1;
+    <span style="color:#458;font-weight:bold">int</span> num2;
+
+<span style="color:#000;font-weight:bold">public</span><span style="color:#000;font-weight:bold">:</span>
+    TEST()
+    {
+        num1 <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">10</span>;
+        num2 <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">20</span>;
+    }
+    <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">Print</span>()
+    {
+        std<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> num1 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> </span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> num2 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> std<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>endl;
+    }
+};
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">void</span>)
+{
+    <span style="color:#998;font-style:italic">// 用malloc()函数在堆区分配一块内存空间，然后用强制类型转换将该块内存空间
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">// 解释为是一个TEST类对象，这不会调用TEST的默认构造函数
+</span><span style="color:#998;font-style:italic"></span>    TEST <span style="color:#000;font-weight:bold">*</span>pObj1 <span style="color:#000;font-weight:bold">=</span> (TEST <span style="color:#000;font-weight:bold">*</span>)malloc(<span style="color:#000;font-weight:bold">sizeof</span>(TEST));
+    pObj1<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>Print();
+
+    <span style="color:#998;font-style:italic">// 用new在堆区创建一个TEST类的对象，这会调用TEST类的默认构造函数
+</span><span style="color:#998;font-style:italic"></span>    TEST <span style="color:#000;font-weight:bold">*</span>pObj2 <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> TEST;
+    pObj2<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>Print();
+    <span style="color:#000;font-weight:bold">delete</span> pObj1;
+    <span style="color:#000;font-weight:bold">delete</span> pObj2;
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><p><strong>运行结果:</strong></p>
+<pre><code>6957200 0
+10 20
+69572000
+1020
+</code></pre><h2 id="命名空间">命名空间</h2>
+<p>举一个计算机系统中的例子，一个文件夹(目录)中可以包含多个文件夹，每个文件夹中不能有相同的文件名，但不同文件夹中的文件可以重名。为了让不同库中的同名函数,变量可以共存,所以引入了命名空间这个概念</p>
+<p>如下图中的例子</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+ 
+<span style="color:#998;font-style:italic">// 第一个命名空间
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">namespace</span> first_space{
+   <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">func</span>(){
+      cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Inside first_space</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   }
+}
+<span style="color:#998;font-style:italic">// 第二个命名空间
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">namespace</span> second_space{
+   <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">func</span>(){
+      cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Inside second_space</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   }
+}
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span> ()
+{
+   <span style="color:#998;font-style:italic">// 调用第一个命名空间中的函数
+</span><span style="color:#998;font-style:italic"></span>   first_space<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>func();
+
+   <span style="color:#998;font-style:italic">// 调用第二个命名空间中的函数
+</span><span style="color:#998;font-style:italic"></span>   second_space<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>func(); 
+   
+   <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><h3 id="using指令">using指令</h3>
+<p>您可以使用 <strong>using namespace</strong> 指令，这样在使用命名空间时就可以不用在前面加上命名空间的名称。这个指令会告诉编译器，后续的代码将使用指定的命名空间中的名称,<!-- raw HTML omitted --><code>using</code>必须使用已经存在的命名空间.<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#998;font-style:italic">// 第一个命名空间
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">namespace</span> first_space{
+   <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">func</span>(){
+      cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Inside first_space</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   }
+}
+<span style="color:#998;font-style:italic">// 第二个命名空间
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">namespace</span> second_space{
+   <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">func</span>(){
+      cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Inside second_space</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   }
+}
+<span style="color:#000;font-weight:bold">namespace</span> third_space{
+   <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">func</span>(){
+      cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Inside third_space</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   }
+}
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> second_space;
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span> ()
+{
+ 
+   func();
+   <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><h3 id="嵌套的命名空间">嵌套的命名空间</h3>
+<p>命名空间可以嵌套，您可以在一个命名空间中定义另一个命名空间，如下所示：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">namespace</span> namespace_name1 {   
+		<span style="color:#998;font-style:italic">// 代码
+</span><span style="color:#998;font-style:italic"></span>	<span style="color:#000;font-weight:bold">namespace</span> namespace_name2{      
+		<span style="color:#998;font-style:italic">// 代码   
+</span><span style="color:#998;font-style:italic"></span>	} 
+}
+</code></pre></div><p>您可以通过使用 <code>::</code> 运算符来访问嵌套的命名空间中的成员：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#998;font-style:italic">// 访问 namespace_name2 中的成员 using namespace namespace_name1::namespace_name2;  
+</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">// 访问 namespace:name1 中的成员 using namespace namespace_name1;
+</span></code></pre></div><p>在上面的语句中，如果使用的是 <code>namespace_name1</code>，那么在该范围内<code>namespace_name2</code>中的元素也是可用的，</p>
+<p>全局变量 <code>a</code> 表达为 <strong>::a</strong>,用于当有同名的局部变量时来区别两者!</p>
+<p>如下所示：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">300</span>;<span style="color:#998;font-style:italic">//全局变量
+</span><span style="color:#998;font-style:italic"></span>
+<span style="color:#998;font-style:italic">// 第一个命名空间
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">namespace</span> first_space{
+   <span style="color:#458;font-weight:bold">int</span> a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">15</span>;
+   <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">func</span>(){
+      
+      cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Inside first_space</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   }
+   <span style="color:#000;font-weight:bold">namespace</span> second_space{
+      <span style="color:#458;font-weight:bold">int</span> a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">30</span>;
+      <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">func</span>()
+      {
+         cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Inside second_space</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+      }
+   }
+}
+
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> first_space;<span style="color:#998;font-style:italic">//必须在定义之后
+</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span> ()
+{
+   func();
+   <span style="color:#458;font-weight:bold">int</span> a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">100</span>;<span style="color:#998;font-style:italic">//局部变量
+</span><span style="color:#998;font-style:italic"></span>   cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">局部变量a: </span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> a <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">全局变量a: </span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>a <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">第一个命名空间变量a: </span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> first_space<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>a <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>endl;
+   cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">第二个命令空间变量a: </span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> second_space<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>a<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>endl;
+   <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div>
                             </div>
                            
                             
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <span>打赏</span></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1.png
+                " alt="WeChat Pay"></a>
+            <p>微信打赏</p>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/蜂蜜浏览器_蜂蜜浏览器_蜂蜜浏览器_IMG_20200116_184041 (2).jpg" alt="Alipay"></a>
+            <p>支付宝打赏</p>
+        </div>
+    </div>
+</div> 
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://CorPython.github.io/">code show</a></li>
@@ -1086,6 +1465,36 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/" title="Hugo添加latex公式渲染">Hugo添加latex公式渲染</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/STL%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/" title="STL基础用法">STL基础用法</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/" title="C&#43;&#43;基础笔记(2)">C&#43;&#43;基础笔记(2)</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/IDEA2019%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%97%AE%E9%A2%98/" title="IDEA2019中文字体渲染问题">IDEA2019中文字体渲染问题</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84c%E8%AF%AD%E8%A8%80%E4%B9%A0%E9%A2%98/" title="一道有趣的c语言习题">一道有趣的c语言习题</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84c&#43;&#43;%E6%A0%87%E5%87%86/" title="查看自己的编译器支持的c&#43;&#43;标准">查看自己的编译器支持的c&#43;&#43;标准</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E5%AE%8F%E5%AE%9A%E4%B9%89/" title="C语言宏定义">C语言宏定义</a>
     </li>
     
@@ -1099,36 +1508,6 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
         <a href="https://CorPython.github.io/post/sumblime%E5%88%9B%E5%BB%BAc_c&#43;&#43;%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" title="Sublime Text搭建c/c&#43;&#43;编译运行环境">Sublime Text搭建c/c&#43;&#43;编译运行环境</a>
     </li>
     
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%AC%94%E8%AE%B0/" title="C&#43;&#43;编译错误">C&#43;&#43;编译错误</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/" title="C&#43;&#43;基础笔记">C&#43;&#43;基础笔记</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/gitpush%E5%87%BA%E9%94%99/" title="fatal: remote error: You can&#39;t push to git 解决办法">fatal: remote error: You can&#39;t push to git 解决办法</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/%E5%88%9D%E6%8E%A2BFSDFS/" title="初探BFS,DFS">初探BFS,DFS</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/%E5%85%AB%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/" title="八皇后问题">八皇后问题</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/java%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/" title="java线程基础">java线程基础</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -1138,9 +1517,9 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (3)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (6)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (1)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (2)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/github/">github (2)</a></li>
     
@@ -1148,7 +1527,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/">入门教程 (6)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/">博客 (7)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%8D%9A%E5%AE%A2/">博客 (8)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记 (3)</a></li>
     
@@ -1156,7 +1535,7 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E7%BC%96%E7%A8%8B/">编程 (5)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">解决办法 (6)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">解决办法 (7)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/">软件使用 (2)</a></li>
     
@@ -1229,6 +1608,11 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/hugo/">hugo</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/idea/">idea</a>
     </li>
     
     <li>
@@ -1313,6 +1697,11 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/%E5%9F%BA%E7%A1%80/">基础</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/%E5%AE%8F%E5%AE%9A%E4%B9%89/">宏定义</a>
     </li>
     
@@ -1334,6 +1723,11 @@ min(<span style="color:#458;font-weight:bold">long</span> <span style="color:#45
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/%E7%8E%AF%E5%A2%83/">环境</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
     </li>
     
     <li>
@@ -1533,6 +1927,34 @@ if (!doNotTrack) {
         })();
 
         </script>
+        <script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+        });
+        MathJax.Hub.Queue(function() {
+          
+          
+          
+          var all = MathJax.Hub.getAllJax(), i;
+          for(i = 0; i < all.length; i += 1) {
+              all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+        });
+      
+        MathJax.Hub.Config({
+        
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+      </script>
 </body>
 
 </html>

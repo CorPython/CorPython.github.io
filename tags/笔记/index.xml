@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔记 on code show的博客</title>
+    <link>https://CorPython.github.io/tags/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jan 2020 10:52:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;基础笔记(2)</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/</link>
+      <pubDate>Tue, 14 Jan 2020 10:52:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/</guid>
+      <description>c++模板 c++提供了函数模板(function template)所谓函数模板，实际上是建立一个通用函数，其函数类型和形参类型不具体制定，用一个虚拟的类型来代表。这个通用函数就成为函数模板。凡是函数体相同的函数都可以用这个模板代替，不必定义多个函数，只需在模板中定义一次即可。在调</description>
+    </item>
+    
+  </channel>
+</rss>

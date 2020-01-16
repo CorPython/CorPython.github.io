@@ -6,7 +6,7 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2020 17:07:56 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 19:23:38 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,66 @@
     </item>
     
     <item>
+      <title>Hugo添加latex公式渲染</title>
+      <link>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Thu, 16 Jan 2020 19:23:38 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</guid>
+      <description>使用方法 经过一番google后找到的这个方案!这个想法是通过将所有内容都包含在同一代码中&amp;lt; script &amp;gt;并添加async来实现渲染 &amp;lt;script type=&amp;#34;text/javascript&amp;#34; async src=&amp;#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&amp;gt; MathJax.Hub.Config({ tex2jax: { inlineMath: [[&amp;#39;$&amp;#39;,&amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;,&amp;#39;\\)&amp;#39;]], displayMath: [[&amp;#39;$$&amp;#39;,&amp;#39;$$&amp;#39;]], processEscapes: true, processEnvironments: true, skipTags: [&amp;#39;script&amp;#39;, &amp;#39;noscript&amp;#39;, &amp;#39;style&amp;#39;, &amp;#39;textarea&amp;#39;, &amp;#39;pre&amp;#39;], TeX: { equationNumbers: { autoNumber: &amp;#34;AMS&amp;#34; }, extensions: [&amp;#34;AMSmath.js&amp;#34;, &amp;#34;AMSsymbols.js&amp;#34;] } } }); MathJax.Hub.Queue(function() { // Fix &amp;lt;code&amp;gt; tags after MathJax finishes running. This is a // hack to overcome a shortcoming of Markdown. Discussion at // https://github.com/mojombo/jekyll/issues/199 var all = MathJax.Hub.getAllJax(), i; for(i = 0; i &amp;lt; all.length; i += 1)</description>
+    </item>
+    
+    <item>
+      <title>STL基础用法</title>
+      <link>https://CorPython.github.io/post/STL%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 14 Jan 2020 20:35:27 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/STL%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/</guid>
+      <description>排序 1.sort()模板函数 #include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; int main() { int a[10]= {9,6,3,8,5,2,7,4,1,0}; for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; cout&amp;lt;&amp;lt;endl; //数组长度 cout &amp;lt;&amp;lt; sizeof(a)/sizeof(a[0]) &amp;lt;&amp;lt; endl; sort(a,a+10);//注意是加上数组长度 for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; return 0; } 2.桶排序 #include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; int main() { int x, n; cin &amp;gt;&amp;gt; n; int a[100] = {0}; for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; x; a[x]++; } for (int i = 0; i &amp;lt; 100; i++) { for (int m = 1; m &amp;lt;= a[i]; m++) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#34;&amp;#34;; } } } 3.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;基础笔记(2)</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/</link>
+      <pubDate>Tue, 14 Jan 2020 10:52:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/</guid>
+      <description>c++模板 c++提供了函数模板(function template)所谓函数模板，实际上是建立一个通用函数，其函数类型和形参类型不具体制定，用一个虚拟的类型来代表。这个通用函数就成为函数模板。凡是函数体相同的函数都可以用这个模板代替，不必定义多个函数，只需在模板中定义一次即可。在调</description>
+    </item>
+    
+    <item>
+      <title>IDEA2019中文字体渲染问题</title>
+      <link>https://CorPython.github.io/post/IDEA2019%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 11 Jan 2020 18:10:24 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IDEA2019%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%97%AE%E9%A2%98/</guid>
+      <description>IDEA 2018.2升级到 IDEA 2019.3,中文字体渲染问题 原文链接 解决方案 修改一下备用字体就可以 共需要修改两处： 1、Setting -&amp;gt; Editor -&amp;gt; Font 修改 Fallback font 为 simsun 2、Setting -&amp;gt; Editor -&amp;gt; Color Scheme -&amp;gt; Color Scheme Font 修改 Fallback font 为 simsun</description>
+    </item>
+    
+    <item>
+      <title>一道有趣的c语言习题</title>
+      <link>https://CorPython.github.io/post/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84c%E8%AF%AD%E8%A8%80%E4%B9%A0%E9%A2%98/</link>
+      <pubDate>Thu, 09 Jan 2020 21:37:59 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84c%E8%AF%AD%E8%A8%80%E4%B9%A0%E9%A2%98/</guid>
+      <description>这道题来自于浙江大学翁恺老师的C语言程序设计CAP课程中的一道课堂测试题 题目: #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;string.h&amp;gt; #define TOUPPER(c) (&amp;#39;a&amp;#39;&amp;lt;=(c)&amp;amp;&amp;amp;(c)&amp;lt;=&amp;#39;z&amp;#39;?(c)-&amp;#39;a&amp;#39;+&amp;#39;A&amp;#39;:(c)) int main(int argc, char const *argv[]) { char s[10]; strcpy(s, &amp;#34;abcd&amp;#34;); int i = 0; printf(&amp;#34;%c\n&amp;#34;,TOUPPER(s[++i])); return 0; } 输出结果是什么呢?我相信很多人猜的都是B,你也可以自己试着填一下答案,或者把我上面这个程序运行一下. 最终的答案是D! 那么过程是怎样的呢,我们在终端依次输</description>
+    </item>
+    
+    <item>
+      <title>查看自己的编译器支持的c&#43;&#43;标准</title>
+      <link>https://CorPython.github.io/post/%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84c&#43;&#43;%E6%A0%87%E5%87%86/</link>
+      <pubDate>Thu, 09 Jan 2020 19:28:20 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84c&#43;&#43;%E6%A0%87%E5%87%86/</guid>
+      <description>在自己的编译器中运行下面代码 #include &amp;lt;iostream&amp;gt;using namespace std; int main(int argc, char const *argv[]) { cout &amp;lt;&amp;lt; __cplusplus &amp;lt;&amp;lt; endl; return 0; } 我的编译器的运行结果是:201402 下面是对应的c++标准的值: C ++ 98：__cplusplus是199711L。 C ++ 11：__cplusplus是201103L。 C ++ 14：__cplusplus是201402L。</description>
+    </item>
+    
+    <item>
       <title>C语言宏定义</title>
       <link>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E5%AE%8F%E5%AE%9A%E4%B9%89/</link>
       <pubDate>Thu, 09 Jan 2020 17:07:56 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E5%AE%8F%E5%AE%9A%E4%B9%89/</guid>
-      <description>c语言宏定义初识 带参数的宏的原则: 一切都要括号 整个值要括号 参数出现的每个地方都要括号 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt; #define MAX( x, y ) ( ((x) &amp;gt; (y)) ? (x) : (y) )#define MIN( x, y ) ( ((x) &amp;lt; (y)) ? (x) : (y) )#define UPCASE( c ) ( ((c) &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; (c) &amp;lt;= &amp;#39;z&amp;#39;) ? ((c) - 0x20) : (c) )//大小写转换 #define Cube(x) ((x) * (x) * (x) )#define func(x) ((x) /3) #define PI 3.14//#undef PI 撤销宏定义 int main() { printf(&amp;#34;%.2f\n&amp;#34;,PI); printf(&amp;#34;%d\n&amp;#34;,MAX(15,20)); printf(&amp;#34;%.1f\n&amp;#34;,MAX(15.5,20.5)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;a&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;b&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;c&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;D&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;E&amp;#39;)); printf(&amp;#34;%d\n&amp;#34;,Cube(5)); printf(&amp;#34;%d\n&amp;#34;,func(5 + 4)); return 0; }</description>
+      <description>c语言宏定义初识 带参数的宏的原则: 一切都要括号 整个值要括号 参数出现的每个地方都要括号 注意:结尾千万不要加上分号 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt; #define MAX( x, y ) ( ((x) &amp;gt; (y)) ? (x) : (y) )#define MIN( x, y ) ( ((x) &amp;lt; (y)) ? (x) : (y) )#define UPCASE( c ) ( ((c) &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; (c) &amp;lt;= &amp;#39;z&amp;#39;) ? ((c) - 0x20) : (c) )//大小写转换 #define Cube(x) ((x) * (x) * (x) )#define func(x) ((x) /3) #define PI 3.14//#undef PI 撤销宏定义 int main() { printf(&amp;#34;%.2f\n&amp;#34;,PI); printf(&amp;#34;%d\n&amp;#34;,MAX(15,20)); printf(&amp;#34;%.1f\n&amp;#34;,MAX(15.5,20.5)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;a&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;b&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;c&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;D&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;E&amp;#39;)); printf(&amp;#34;%d\n&amp;#34;,Cube(5));</description>
     </item>
     
     <item>
@@ -57,7 +111,7 @@
     </item>
     
     <item>
-      <title>C&#43;&#43;基础笔记</title>
+      <title>C&#43;&#43;基础笔记(1)</title>
       <link>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sun, 05 Jan 2020 16:51:13 +0800</pubDate>
       
