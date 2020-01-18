@@ -35,7 +35,7 @@
       <pubDate>Thu, 09 Jan 2020 19:28:20 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84c&#43;&#43;%E6%A0%87%E5%87%86/</guid>
-      <description>在自己的编译器中运行下面代码 #include &amp;lt;iostream&amp;gt;using namespace std; int main(int argc, char const *argv[]) { cout &amp;lt;&amp;lt; __cplusplus &amp;lt;&amp;lt; endl; return 0; } 我的编译器的运行结果是:201402 下面是对应的c++标准的值: C ++ 98：__cplusplus是199711L。 C ++ 11：__cplusplus是201103L。 C ++ 14：__cplusplus是201402L。</description>
+      <description>在自己的编译器中运行下面代码 #include &amp;lt;iostream&amp;gt;using namespace std; int main(int argc, char const *argv[]) { cout &amp;lt;&amp;lt; __cplusplus &amp;lt;&amp;lt; endl; return 0; } 我的编译器的运行结果是: 201402 下面是对应的c++标准的值: C ++ 98：__cplusplus是199711L。 C ++ 11：__cplusplus是201103L。 C ++ 14：__cplusplus是201402L。 C ++ 17：</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Tue, 07 Jan 2020 16:06:27 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/sumblime%E5%88%9B%E5%BB%BAc_c&#43;&#43;%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</guid>
-      <description>前言 我配置的c/c++环境主要是为了写一些简单的算法或者小程序,看重的是Sublime Text 3的轻量,启动速度快,其次你必须先将自己的cmd设置为默认utf-8编码,这样做主要是为了防止一些编码问题,如果你习惯使用GBK编码,请不要看下面的配置 ! ! !设置cmd为默认UTF-8 使用快捷</description>
+      <description>前言 我配置的c/c++环境主要是为了写一些简单的算法或者小程序,看重的是Sublime Text 3的轻量,启动速度快,其次你必须先将自己的cmd设置为默认utf-8编码,这样做主要是为了防止一些编码问题,如果你习惯使用GBK编码,请不要看下面的配置 ! ! ! 设置cmd为默认UTF-8 使用快捷</description>
     </item>
     
     <item>

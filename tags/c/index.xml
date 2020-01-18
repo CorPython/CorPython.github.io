@@ -35,7 +35,7 @@
       <pubDate>Tue, 07 Jan 2020 16:06:27 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/sumblime%E5%88%9B%E5%BB%BAc_c&#43;&#43;%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</guid>
-      <description>前言 我配置的c/c++环境主要是为了写一些简单的算法或者小程序,看重的是Sublime Text 3的轻量,启动速度快,其次你必须先将自己的cmd设置为默认utf-8编码,这样做主要是为了防止一些编码问题,如果你习惯使用GBK编码,请不要看下面的配置 ! ! !设置cmd为默认UTF-8 使用快捷</description>
+      <description>前言 我配置的c/c++环境主要是为了写一些简单的算法或者小程序,看重的是Sublime Text 3的轻量,启动速度快,其次你必须先将自己的cmd设置为默认utf-8编码,这样做主要是为了防止一些编码问题,如果你习惯使用GBK编码,请不要看下面的配置 ! ! ! 设置cmd为默认UTF-8 使用快捷</description>
     </item>
     
     <item>

@@ -6,7 +6,7 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jan 2020 19:23:38 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jan 2020 09:05:35 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/</guid>
       <description>告别2019,展望2020 ​ 2019年走完了最后一天,迎来了全新的2020年.去年这一年总的来说并不是很满意,学习成绩表现没有2018年那么令人满意了,可能是因为我自己对于考试的漫不经心,也可能是我自己没有追求高分的欲望.面对着自己不是特别感兴趣的硬件似乎丧失了我的学习动力!但是</description>
+    </item>
+    
+    <item>
+      <title>Hugo0.60以上缺少html标签内的内容</title>
+      <link>https://CorPython.github.io/post/hugo6.0%E4%BB%A5%E4%B8%8A%E7%BC%BA%E5%B0%91html%E6%A0%87%E7%AD%BE%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Sat, 18 Jan 2020 09:05:35 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo6.0%E4%BB%A5%E4%B8%8A%E7%BC%BA%E5%B0%91html%E6%A0%87%E7%AD%BE%E5%86%85%E5%AE%B9/</guid>
+      <description>新版Hugo无法渲染html标签 在更新到Hugo版本0.62之后,我发现生成的HTML文件中缺少所有使用HTML标记的图像。原因是.以前,Hugo使用 Blackfriday渲染Markdown文件。从Hugo 0.60版本开始，默认的Markdown渲染器已更改为goldmark。</description>
     </item>
     
     <item>
@@ -71,7 +80,7 @@
       <pubDate>Thu, 09 Jan 2020 19:28:20 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84c&#43;&#43;%E6%A0%87%E5%87%86/</guid>
-      <description>在自己的编译器中运行下面代码 #include &amp;lt;iostream&amp;gt;using namespace std; int main(int argc, char const *argv[]) { cout &amp;lt;&amp;lt; __cplusplus &amp;lt;&amp;lt; endl; return 0; } 我的编译器的运行结果是:201402 下面是对应的c++标准的值: C ++ 98：__cplusplus是199711L。 C ++ 11：__cplusplus是201103L。 C ++ 14：__cplusplus是201402L。</description>
+      <description>在自己的编译器中运行下面代码 #include &amp;lt;iostream&amp;gt;using namespace std; int main(int argc, char const *argv[]) { cout &amp;lt;&amp;lt; __cplusplus &amp;lt;&amp;lt; endl; return 0; } 我的编译器的运行结果是: 201402 下面是对应的c++标准的值: C ++ 98：__cplusplus是199711L。 C ++ 11：__cplusplus是201103L。 C ++ 14：__cplusplus是201402L。 C ++ 17：</description>
     </item>
     
     <item>
@@ -98,7 +107,7 @@
       <pubDate>Tue, 07 Jan 2020 16:06:27 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/sumblime%E5%88%9B%E5%BB%BAc_c&#43;&#43;%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</guid>
-      <description>前言 我配置的c/c++环境主要是为了写一些简单的算法或者小程序,看重的是Sublime Text 3的轻量,启动速度快,其次你必须先将自己的cmd设置为默认utf-8编码,这样做主要是为了防止一些编码问题,如果你习惯使用GBK编码,请不要看下面的配置 ! ! !设置cmd为默认UTF-8 使用快捷</description>
+      <description>前言 我配置的c/c++环境主要是为了写一些简单的算法或者小程序,看重的是Sublime Text 3的轻量,启动速度快,其次你必须先将自己的cmd设置为默认utf-8编码,这样做主要是为了防止一些编码问题,如果你习惯使用GBK编码,请不要看下面的配置 ! ! ! 设置cmd为默认UTF-8 使用快捷</description>
     </item>
     
     <item>

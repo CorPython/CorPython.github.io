@@ -110,11 +110,25 @@
       <ul>
         <li><a href="#vector初始化">vector初始化</a></li>
         <li><a href="#vector常见用法">vector常见用法</a></li>
-        <li><a href="#vector使用迭代器访问">vector使用迭代器访问</a></li>
+        <li><a href="#vector使用迭代器等访问的四种方式">vector使用迭代器等访问的四种方式</a></li>
         <li><a href="#vector常用增删操作">vector常用增删操作</a></li>
       </ul>
     </li>
-    <li><a href="#string">string</a></li>
+    <li><a href="#string">string</a>
+      <ul>
+        <li><a href="#初始化">初始化</a></li>
+        <li><a href="#操作">+=操作</a></li>
+        <li><a href="#字符串排序">字符串排序</a></li>
+        <li><a href="#for循环访问和vector差不多">for循环访问(和vector差不多)</a></li>
+        <li><a href="#erase函数">erase函数</a></li>
+        <li><a href="#substr函数">substr函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#stack">stack</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
@@ -220,11 +234,25 @@
       <ul>
         <li><a href="#vector初始化">vector初始化</a></li>
         <li><a href="#vector常见用法">vector常见用法</a></li>
-        <li><a href="#vector使用迭代器访问">vector使用迭代器访问</a></li>
+        <li><a href="#vector使用迭代器等访问的四种方式">vector使用迭代器等访问的四种方式</a></li>
         <li><a href="#vector常用增删操作">vector常用增删操作</a></li>
       </ul>
     </li>
-    <li><a href="#string">string</a></li>
+    <li><a href="#string">string</a>
+      <ul>
+        <li><a href="#初始化">初始化</a></li>
+        <li><a href="#操作">+=操作</a></li>
+        <li><a href="#字符串排序">字符串排序</a></li>
+        <li><a href="#for循环访问和vector差不多">for循环访问(和vector差不多)</a></li>
+        <li><a href="#erase函数">erase函数</a></li>
+        <li><a href="#substr函数">substr函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#stack">stack</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -271,14 +299,14 @@
                                 
                             </div>
                             
-                            <span class="post-word-count">|1806 words</span>
+                            <span class="post-word-count">|2620 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
                                         阅读</span></span>
                             </div>
                             <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约4分钟
+                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约6分钟
                             </div>
                             
                             
@@ -503,26 +531,44 @@ vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#4
 </tr>
 </tbody>
 </table>
-<h3 id="vector使用迭代器访问"><strong>vector使用迭代器访问</strong></h3>
-<p><strong><!-- raw HTML omitted -->注意:但凡使用了迭代器的循环体，都不要向迭代器所属的容器添加元素！<!-- raw HTML omitted --></strong></p>
+<h3 id="vector使用迭代器等访问的四种方式"><strong>vector使用迭代器等访问的四种方式</strong></h3>
+<p><strong><span style='color:red'>注意:但凡使用了迭代器的循环体，都不要向迭代器所属的容器添加元素！</span></strong></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;vector&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
-</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
-<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span> ()
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>argv[])
 {
-    vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> v1{<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>, <span style="color:#099">4</span>, <span style="color:#099">5</span>, <span style="color:#099">6</span>};
-    <span style="color:#998;font-style:italic">//正向迭代
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">for</span> (vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>iterator i <span style="color:#000;font-weight:bold">=</span> v1.begin(); i <span style="color:#000;font-weight:bold">!</span><span style="color:#000;font-weight:bold">=</span> v1.end(); <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> v;
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">10</span>; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    {
+        v.push_back(i);
+    }
+
+    <span style="color:#000;font-weight:bold">for</span> (vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>iterator i <span style="color:#000;font-weight:bold">=</span> v.begin(); i <span style="color:#000;font-weight:bold">!</span><span style="color:#000;font-weight:bold">=</span> v.end(); <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
     {
         cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">*</span>i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> </span><span style="color:#d14">&#34;</span>;
     }
     cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
-    <span style="color:#998;font-style:italic">//方向迭代
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">for</span> (vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>reverse_iterator i <span style="color:#000;font-weight:bold">=</span> v1.rbegin(); i <span style="color:#000;font-weight:bold">!</span><span style="color:#000;font-weight:bold">=</span> v1.rend(); <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+
+    <span style="color:#000;font-weight:bold">for</span> (vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>reverse_iterator i <span style="color:#000;font-weight:bold">=</span> v.rbegin(); i <span style="color:#000;font-weight:bold">!</span><span style="color:#000;font-weight:bold">=</span> v.rend(); <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
     {
         cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">*</span>i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> </span><span style="color:#d14">&#34;</span>;
     }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#000;font-weight:bold">auto</span> i <span style="color:#000;font-weight:bold">=</span> v.cbegin(); i <span style="color:#000;font-weight:bold">&lt;</span> v.cend(); i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">*</span>i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14"> </span><span style="color:#d14">&#39;</span>;
+    }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#000;font-weight:bold">auto</span> <span style="color:#900;font-weight:bold">i</span> : v)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14"> </span><span style="color:#d14">&#39;</span>;
+    }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
 </code></pre></div><p><strong>输出结果:</strong></p>
@@ -602,7 +648,168 @@ vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#4
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
 </code></pre></div><h2 id="string">string</h2>
+<p>在c++11中如果你使用了这种字符串初始化方法(<strong>不建议使用这种方式初始化</strong>)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">*</span>s <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>;
+</code></pre></div><p>你将会得到下面的警告:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#900;font-weight:bold">warning</span>: ISO C<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span> forbids converting a string constant to <span style="color:#a61717;background-color:#e3d2d2">&#39;</span><span style="color:#458;font-weight:bold">char</span><span style="color:#000;font-weight:bold">*</span><span style="color:#a61717;background-color:#e3d2d2">&#39;</span> [<span style="color:#000;font-weight:bold">-</span>Wwrite<span style="color:#000;font-weight:bold">-</span>strings]
+     <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">*</span>s <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>;
+</code></pre></div><p>修改方式有下面两种</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#099">1.</span><span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>s <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>;
+<span style="color:#099">2.</span><span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>s <span style="color:#000;font-weight:bold">=</span>  (<span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">*</span>)<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>;
+</code></pre></div><h3 id="初始化">初始化</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">string str <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>
+<span style="color:#998;font-style:italic">//或者
+</span><span style="color:#998;font-style:italic"></span>string s;
+getline(cin,s);
+</code></pre></div><h3 id="操作">+=操作</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;algorithm&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>argv[])
+{
+    string s;
+    s <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>;
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    s <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> world</span><span style="color:#d14">&#34;</span>;
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    s <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">5</span><span style="color:#d14">&#39;</span>;
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    s <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#099">10</span>; <span style="color:#998;font-style:italic">//10对应的asc码是换行
+</span><span style="color:#998;font-style:italic"></span>    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    <span style="color:#458;font-weight:bold">int</span> a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>; <span style="color:#998;font-style:italic">//想把5加入字符串
+</span><span style="color:#998;font-style:italic"></span>    s <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> (a <span style="color:#000;font-weight:bold">+</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">0</span><span style="color:#d14">&#39;</span>);
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><h3 id="字符串排序">字符串排序</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">string str <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">acb</span><span style="color:#d14">&#34;</span>;
+sort(str.begin(),str.end());
+cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> str <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+</code></pre></div><h3 id="for循环访问和vector差不多">for循环访问(和vector差不多)</h3>
+<p>四种方式</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;algorithm&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>argv[])
+{
+    string s <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello,world!</span><span style="color:#d14">&#34;</span>;
+    <span style="color:#000;font-weight:bold">for</span> (size_t i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> s.length(); i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s[i] ;
+    }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    
+    <span style="color:#000;font-weight:bold">for</span> (string<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>iterator i <span style="color:#000;font-weight:bold">=</span> s.begin(); i <span style="color:#000;font-weight:bold">!</span><span style="color:#000;font-weight:bold">=</span> s.end(); <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">*</span>i ;
+    }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#000;font-weight:bold">auto</span> i <span style="color:#000;font-weight:bold">=</span> s.begin(); i <span style="color:#000;font-weight:bold">&lt;</span> s.end(); i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">*</span>i ;
+    }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#000;font-weight:bold">auto</span> <span style="color:#900;font-weight:bold">i</span> : s)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> i ;
+    }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><p>注:使用下列代码可能会出现警告</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> s.length(); <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+{
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s[i] ;
+}
+</code></pre></div><pre><code>warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string&lt;char&gt;::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+</code></pre><p>因为:string::length() 返回值为<code>size_t</code>类型为<code>unsigned int</code>,警告是因为<code>int</code> 类型跟<code>unsigned int</code>类型比较，类型不对。只要将int修改为size_t即可</p>
+<h3 id="erase函数">erase函数</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">string s<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>;
+s.erase(s.begin());<span style="color:#998;font-style:italic">//删除第一个
+</span><span style="color:#998;font-style:italic"></span>s.erase(<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span>s.end());<span style="color:#998;font-style:italic">//删除最后一个
+</span><span style="color:#998;font-style:italic"></span>cout<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>s;
+</code></pre></div><h3 id="substr函数">substr函数</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">string s<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">hello</span><span style="color:#d14">&#34;</span>;
+s<span style="color:#000;font-weight:bold">=</span>s.substr(<span style="color:#099">1</span>,<span style="color:#099">3</span>);<span style="color:#998;font-style:italic">//取418,取索引为1，往后截断3个
+</span><span style="color:#998;font-style:italic"></span>s<span style="color:#000;font-weight:bold">=</span>s.substr(<span style="color:#099">1</span>,<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>);<span style="color:#998;font-style:italic">//索引为1，截断到最后
+</span><span style="color:#998;font-style:italic"></span>cout<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>s;
+</code></pre></div><h2 id="stack">stack</h2>
+<h4 id="基础操作">基础操作</h4>
+<table>
+<thead>
+<tr>
+<th><strong>push</strong></th>
+<th><strong>入栈一个元素</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pop</strong></td>
+<td><strong>出栈一个元素，pop无返回值</strong></td>
+</tr>
+<tr>
+<td><strong>top</strong></td>
+<td><strong>取栈顶元素</strong></td>
+</tr>
+<tr>
+<td><strong>size</strong></td>
+<td><strong>查看元素个数</strong></td>
+</tr>
+<tr>
+<td><strong>to_string(num)</strong></td>
+<td><strong>将数字转化为字符串(c++11)</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;algorithm&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;stack&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>argv[])
+{
+    stack<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> s;
+
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">5</span>; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    {
+        s.push(i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>);
+    }
+    <span style="color:#998;font-style:italic">//访问栈内所有元素
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">for</span> (size_t i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> s.size(); i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s.top() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+        s.pop();
+    }
+
+    <span style="color:#000;font-weight:bold">while</span> (<span style="color:#000;font-weight:bold">!</span>s.empty())
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> s.top() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+        s.pop();
+    }
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#998;font-style:italic">//十进制转换为二进制
+</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">itob</span>(<span style="color:#458;font-weight:bold">int</span> decimal) {
+    stack<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> s;
+    <span style="color:#458;font-weight:bold">int</span> res <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
+    <span style="color:#000;font-weight:bold">while</span> (decimal <span style="color:#000;font-weight:bold">!</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>) {
+        s.push(decimal <span style="color:#000;font-weight:bold">%</span> <span style="color:#099">2</span>);
+        decimal <span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#099">2</span>;
+    }
+    <span style="color:#000;font-weight:bold">while</span> (<span style="color:#000;font-weight:bold">!</span>s.empty()) {
+        res <span style="color:#000;font-weight:bold">=</span> res <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">10</span> <span style="color:#000;font-weight:bold">+</span> s.top();
+        s.pop();
+    }
+    <span style="color:#000;font-weight:bold">return</span> res;
+}
+</code></pre></div>
                             </div>
                            
                             
@@ -633,8 +840,15 @@ vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#4
 <br/>
 
 
-
                             
+                            <br>
+                            <div class="social-share"><span>喜欢的话,您可以选择分享在</span>
+                                <link rel="stylesheet"
+                                    href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                                <script
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                            </div>
+                            <br>
                             <ol class="page-navigator">
                                 <div class="a">
                                 
@@ -708,6 +922,11 @@ vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#4
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/hugo6.0%E4%BB%A5%E4%B8%8A%E7%BC%BA%E5%B0%91html%E6%A0%87%E7%AD%BE%E5%86%85%E5%AE%B9/" title="Hugo0.60以上缺少html标签内的内容">Hugo0.60以上缺少html标签内的内容</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/" title="Hugo添加latex公式渲染">Hugo添加latex公式渲染</a>
     </li>
     
@@ -746,11 +965,6 @@ vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#4
         <a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="C&#43;&#43;面向对象程序设计">C&#43;&#43;面向对象程序设计</a>
     </li>
     
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/sumblime%E5%88%9B%E5%BB%BAc_c&#43;&#43;%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" title="Sublime Text搭建c/c&#43;&#43;编译运行环境">Sublime Text搭建c/c&#43;&#43;编译运行环境</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -765,6 +979,8 @@ vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#4
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (2)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/github/">github (2)</a></li>
+    
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/hugo/">hugo (1)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">使用教程 (2)</a></li>
     
