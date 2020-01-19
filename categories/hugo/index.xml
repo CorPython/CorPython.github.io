@@ -13,10 +13,10 @@
     
     <item>
       <title>hugo添加fancybox功能</title>
-      <link>https://CorPython.github.io/post/%E6%B5%8B%E8%AF%95fancybox%E5%8A%9F%E8%83%BD/</link>
+      <link>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8fancybox%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Sat, 18 Jan 2020 10:23:53 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/%E6%B5%8B%E8%AF%95fancybox%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8fancybox%E5%8A%9F%E8%83%BD/</guid>
       <description>前言 一直想给博客加上图片灯箱功能,可是一直google不到解决方案,或者一堆没有用的教程,今天通过查阅fancybox官网找到了解决方案.通过在博客中添加&amp;lt; a &amp;gt;标签来实现该功能 使用说明 1.加载jqury和fancybox文件,在博客文件footer.html中添加下面</description>
     </item>
     
@@ -27,6 +27,78 @@
       
       <guid>https://CorPython.github.io/post/hugo6.0%E4%BB%A5%E4%B8%8A%E7%BC%BA%E5%B0%91html%E6%A0%87%E7%AD%BE%E5%86%85%E5%AE%B9/</guid>
       <description>新版Hugo无法渲染html标签 在更新到Hugo版本0.62之后,我发现生成的HTML文件中缺少所有使用HTML标记的图像。原因是.以前,Hugo使用 Blackfriday渲染Markdown文件。从Hugo 0.60版本开始，默认的Markdown渲染器已更改为goldmark。</description>
+    </item>
+    
+    <item>
+      <title>Hugo添加latex公式渲染</title>
+      <link>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Thu, 16 Jan 2020 19:23:38 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0latex%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</guid>
+      <description>使用方法 经过一番google后找到的这个方案!这个想法是通过将所有内容都包含在同一代码中&amp;lt; script &amp;gt;并添加async来实现渲染 &amp;lt;script type=&amp;#34;text/javascript&amp;#34; async src=&amp;#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&amp;gt; MathJax.Hub.Config({ tex2jax: { inlineMath: [[&amp;#39;$&amp;#39;,&amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;,&amp;#39;\\)&amp;#39;]], displayMath: [[&amp;#39;$$&amp;#39;,&amp;#39;$$&amp;#39;]], processEscapes: true, processEnvironments: true, skipTags: [&amp;#39;script&amp;#39;, &amp;#39;noscript&amp;#39;, &amp;#39;style&amp;#39;, &amp;#39;textarea&amp;#39;, &amp;#39;pre&amp;#39;], TeX: { equationNumbers: { autoNumber: &amp;#34;AMS&amp;#34; }, extensions: [&amp;#34;AMSmath.js&amp;#34;, &amp;#34;AMSsymbols.js&amp;#34;] } } }); MathJax.Hub.Queue(function() { // Fix &amp;lt;code&amp;gt; tags after MathJax finishes running. This is a // hack to overcome a shortcoming of Markdown. Discussion at // https://github.com/mojombo/jekyll/issues/199 var all = MathJax.Hub.getAllJax(), i; for(i = 0; i &amp;lt; all.length; i += 1)</description>
+    </item>
+    
+    <item>
+      <title>hugo添加音乐功能</title>
+      <link>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Thu, 05 Dec 2019 20:42:50 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E5%8A%9F%E8%83%BD/</guid>
+      <description>前言 最近参考很多博客的搭建过程,发现他们的博客都有这个音乐功能.我想着有人在访问你的博客有音乐听听好像也不错(其实就是想把博客功能做好一点).有了这个想法之后,我谷歌了很多方法,也从很多博客找简单一点的实现方法,毕竟本人没有学过html和js,所以很多教程都无法复现他们的操作,导</description>
+    </item>
+    
+    <item>
+      <title>Hugo使用本地的图片</title>
+      <link>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Thu, 28 Nov 2019 22:15:53 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E5%9B%BE%E7%89%87/</guid>
+      <description>前言 ​ 上次出了一篇关于搭建github图床的教程,里面也谈到了我当时并没有找到或者说实现本地图片在博客中使用的方法.由于本人的强迫症.于是我又不断的去找资料,终于在一个视频中找到了在hugo使用本地的图片的方法,我猜新手也不愿意自己搭建图床,所以请接着看下面的方法吧! 使用方法 首先</description>
+    </item>
+    
+    <item>
+      <title>hugo添加博客字数统计功能</title>
+      <link>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Fri, 15 Nov 2019 13:31:15 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <description>1.在自己的博客的文章中找到你想将字数多少显示的具体位置,假如我想将它放在阅读数的后面,先定位到阅读数的源代码位置,找到对应的class位置. 2.在自己主题的single.html的配置中搜索第一步中的class的位置,并在{{ end }}后面添加一下代码,比如我的主题对应的singl</description>
+    </item>
+    
+    <item>
+      <title>hugo如何将文章置顶</title>
+      <link>https://CorPython.github.io/post/hugo%E5%A6%82%E4%BD%95%E5%B0%86%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</link>
+      <pubDate>Fri, 15 Nov 2019 13:04:44 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E5%A6%82%E4%BD%95%E5%B0%86%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</guid>
+      <description>在创建的博客或者写过的博客的Front matter中添加下列字段 weight:1</description>
+    </item>
+    
+    <item>
+      <title>hugo限制摘要字数显示</title>
+      <link>https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/</link>
+      <pubDate>Wed, 13 Nov 2019 16:09:51 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E9%99%90%E5%88%B6%E6%91%98%E8%A6%81%E5%AD%97%E6%95%B0%E6%98%BE%E7%A4%BA/</guid>
+      <description>在首页显示博客时,我们通常不希望将所有的内容显示出来,只希望显示部分内容.我们通常会在config.toml中设定摘要的字数 summaryLength = 180 但是,只在配置文件中这样设置是没有效果的!!!!我们需要在每一篇博客的开头加上这样一句 isCJKLanguage: true 为了避免每次写博客时手动添加,我们可以将这一句写入模板中,打</description>
+    </item>
+    
+    <item>
+      <title>hugo博客如何使用gittalk</title>
+      <link>https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 11 Nov 2019 18:59:30 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
+      <description>1.进入github官方网站,登陆自己的github-&amp;gt;settings-&amp;gt;Devloper settings-&amp;gt;Github Apps会出现下图 Application name:给应用起个名字,根据自己的想法 Homepage:写你的博客地址 Application description:为你的应用写一段描述 Application callback URL:回调地址,可以写你的博客</description>
+    </item>
+    
+    <item>
+      <title>hugo发布博客流程</title>
+      <link>https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Thu, 07 Nov 2019 19:54:17 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%8F%90%E4%BA%A4%E5%8D%9A%E5%AE%A2/</guid>
+      <description>在博客根目录下运行下面命令,并在post目录下生成markdown博客文件 hugo new post/xxxx.md 在博客根目录下运行下面命令 hugo //将本地文件重新编译 hugo server//在本地生成 注意,可以在本地查看博客变化,等自己觉得合适了就可以使用下面命令提交到github 在hugo本地的public目录下使用如</description>
     </item>
     
   </channel>

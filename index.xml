@@ -6,7 +6,7 @@
     <description>Recent content on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jan 2020 10:23:53 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 15:47:07 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,11 +21,20 @@
     </item>
     
     <item>
+      <title>Leetcode229题</title>
+      <link>https://CorPython.github.io/post/leetcode229%E9%A2%98/</link>
+      <pubDate>Sun, 19 Jan 2020 15:47:07 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode229%E9%A2%98/</guid>
+      <description>题目 给定一个大小为 n 的数组，找出其中所有出现超过 ⌊ n/3 ⌋ 次的元素。 说明: 要求算法的时间复杂度为 O(n)，空间复杂度为 O(1)。 示例 1: 输入: [3,2,3] 输出: [3] 示例 2: 输入: [1,1,1,3,3,2,2,2] 输出: [1,2] 题解 1.投票法 由于要求找到的是出现次数超过⌊ n/3 ⌋ 的元素,所以最多可以找到两个不同的数字,假定两个结果候选人者,遍</description>
+    </item>
+    
+    <item>
       <title>hugo添加fancybox功能</title>
-      <link>https://CorPython.github.io/post/%E6%B5%8B%E8%AF%95fancybox%E5%8A%9F%E8%83%BD/</link>
+      <link>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8fancybox%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Sat, 18 Jan 2020 10:23:53 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/%E6%B5%8B%E8%AF%95fancybox%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://CorPython.github.io/post/hugo%E4%BD%BF%E7%94%A8fancybox%E5%8A%9F%E8%83%BD/</guid>
       <description>前言 一直想给博客加上图片灯箱功能,可是一直google不到解决方案,或者一堆没有用的教程,今天通过查阅fancybox官网找到了解决方案.通过在博客中添加&amp;lt; a &amp;gt;标签来实现该功能 使用说明 1.加载jqury和fancybox文件,在博客文件footer.html中添加下面</description>
     </item>
     
@@ -486,6 +495,16 @@
       
       <guid>https://CorPython.github.io/about/</guid>
       <description>关于本站 建立时间: 2019/11/07 关于本人 懒得写,没啥好写的 联系方式</description>
+    </item>
+    
+    <item>
+      <title>leetcode</title>
+      <link>https://CorPython.github.io/leetcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://CorPython.github.io/leetcode/</guid>
+      <description>leetcode刷题汇总 leetcode229 [众数] (投票法/暴力破解)
+解题链接:点这里</description>
     </item>
     
     <item>
