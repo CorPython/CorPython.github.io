@@ -726,13 +726,15 @@
     </div>
     <!DOCTYPE html>
 <html>
-<head> 
+
+<head>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 </head>
+
 <body>
     <div class="demo">
         <div id="player1">
@@ -740,38 +742,39 @@
     </div>
     <script>
         var ap = new APlayer
-                ({
-                    element: document.getElementById('player1'),
-                    narrow: false,
-                    fixed:true,
-                    autoplay: false,
-                    showlrc: false,
-                    mini: true,
-                    theme: '#FADFA3',
-                    loop: 'all',
-                    order: 'random',
-                    preload: 'auto',
-                    volume: 0.7,
-                    mutex: false,
-                    listFolded: false,
-                    listMaxHeight: 90,
-                    lrcType: 1,
-                    music:
+            ({
+                element: document.getElementById('player1'),
+                narrow: false,
+                fixed: true,
+                autoplay: false,
+                showlrc: false,
+                mini: true,
+                theme: '#FADFA3',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.7,
+                mutex: false,
+                listFolded: false,
+                listMaxHeight: 90,
+                lrcType: 1,
+                music:
                     [
-                    {
-        name: '惊蛰',
-        artist: '音阙诗听/王梓钰',
-        url: 'http://m10.music.126.net/20200119214837/de600c4fb3bcc84ffe1bdf4bc549820a/ymusic/9543/f8a5/52e2/897135fdcb0ef95c75e96df65f790994.mp3',
-        cover: 'http://p1.music.126.net/5MmXpaP9r88tNzExPGMI8Q==/109951163370350985.jpg?param=130y130',
-      },{
-          name: '삐삐',
-          artist: 'IU',
-          url:'http://m10.music.126.net/20200119221045/2b32d4688dcfb30da67de56b364b419b/ymusic/05d4/df2a/1b43/4367535ff4101202781b449957d08ea0.mp3',
-          cover:'http://p1.music.126.net/gxo54B2ypqq0Y6tmahBnIw==/109951163596240238.jpg'
-      }
-    ]
-});
-    ap.init();
+                        {
+                            name: '要不要买菜',
+                            artist: '下山',
+                            url: 'https://sharefs.yun.kugou.com/202001192159/203f75e19edc8d4abf66b2e7a7668422/G177/M04/18/07/8Q0DAF3VSvKAc3KNACpan3BcZnU587.mp3',
+                            cover: 'https://p3fx.kgimg.com/stdmusic/20191120/20191120204014790242.jpg'
+                        },{
+                            name: '悬日',
+                            artist:'田馥甄',
+                            url:'http://cdn.knowempty.xyz/%E7%94%B0%E9%A6%A5%E7%94%84%20-%20%E6%82%AC%E6%97%A5.mp3',
+                            cover:'http://p1.music.126.net/qX7ixB5ZT2wVJwgACuf_nA==/109951164623078367.jpg',
+                        }
+                    ]
+                    
+        });
+        ap.init();
     </script>
 </body>
     <footer id="footer">
