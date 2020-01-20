@@ -6,7 +6,7 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jan 2020 15:47:07 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jan 2020 21:26:23 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,24 @@
       
       <guid>https://CorPython.github.io/post/%E4%BD%A0%E5%A5%BD2020/</guid>
       <description>告别2019,展望2020 ​ 2019年走完了最后一天,迎来了全新的2020年.去年这一年总的来说并不是很满意,学习成绩表现没有2018年那么令人满意了,可能是因为我自己对于考试的漫不经心,也可能是我自己没有追求高分的欲望.面对着自己不是特别感兴趣的硬件似乎丧失了我的学习动力!但是</description>
+    </item>
+    
+    <item>
+      <title>Hugo添加音乐最终章之悬浮音乐播放器</title>
+      <link>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%9C%80%E7%BB%88%E7%AB%A0%E4%B9%8B%E6%82%AC%E6%B5%AE%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</link>
+      <pubDate>Mon, 20 Jan 2020 21:26:23 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%9C%80%E7%BB%88%E7%AB%A0%E4%B9%8B%E6%82%AC%E6%B5%AE%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
+      <description>前言 上一次添加音乐的方式是使用Aplayer和Meting在文章内添加音乐 具体参考这一篇文章,不过在文章内添加音乐好像没内味,感觉不大符合阅读时候的逻辑,我想做到的是在文章的一处放置播放器,先打开的时候就打开,所以生命不息,折腾不止.我又开始到各大网站去找参考方案.最后在Apla</description>
+    </item>
+    
+    <item>
+      <title>记第一次备案踩过的那些坑</title>
+      <link>https://CorPython.github.io/post/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%87%E6%A1%88%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</link>
+      <pubDate>Mon, 20 Jan 2020 20:00:35 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%87%E6%A1%88%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</guid>
+      <description>备案的由来 关于备案的解释:以下来自百度百科 网站备案是指向主管机关报告事由存案以备查考。行政法角度看备案，实践中主要是《立法法》和《法规规章备案条例》的规定。网站备案的目的就是为了防止在网上从事非法的网站经营活动，打击不良互联网信息的传播，如果网站不备案的话，很有可能被查处以后关停</description>
     </item>
     
     <item>
