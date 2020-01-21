@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程篇 on code show的博客</title>
+    <link>https://CorPython.github.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/</link>
+    <description>Recent content in 教程篇 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jan 2020 11:19:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>七牛云绑定自定义域名</title>
+      <link>https://CorPython.github.io/post/%E4%B8%83%E7%89%9B%E4%BA%91%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</link>
+      <pubDate>Tue, 21 Jan 2020 11:19:53 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E4%B8%83%E7%89%9B%E4%BA%91%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</guid>
+      <description>上一篇文章记录了我备案的一些坑,这篇博客主要是关于如何使用自己备案之后的域名配合七牛图床使用 关于如何配置七牛图床,请看我的这篇文章 为什么要绑定自定义域名 七牛云免费送10g的存储空间,但是如果你没有自己的域名,那么它会给你30天的免费体验.在这期间,你所使用的域名是七牛云的测试域名</description>
+    </item>
+    
+    <item>
+      <title>IAR快捷键</title>
+      <link>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Tue, 24 Dec 2019 13:05:52 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IAR%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>帮助文档：F1 Make：F7 跳转到定义：F4 全速运行：F5 单步运行：F10 添加断点：F9 使能/使能断点：Ctrl+F9 烧录程序：Ctrl + D 注释多行：Ctrl+K（单行也是这个） 取消注释：Ctrl+Shfit+K 烧录程序：Ctrl+D（进入调试程序） 退出调试：Ctrl+Shift</description>
+    </item>
+    
+    <item>
+      <title>vscode如何写latex</title>
+      <link>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</link>
+      <pubDate>Fri, 20 Dec 2019 18:25:21 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E7%BC%96%E5%86%99latex/</guid>
+      <description>介绍 以下介绍摘自百度百科,链接:https://baike.baidu.com/item/LaTeX/1212106?fr=aladdin LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80</description>
+    </item>
+    
+    <item>
+      <title>IDEA常用快捷键</title>
+      <link>https://CorPython.github.io/post/IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 04 Dec 2019 20:46:09 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>IDEA常用快捷键 1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + F 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,</description>
+    </item>
+    
+    <item>
+      <title>GitHub&#43;jsDelivr&#43;PicGo打造稳定快速高效图床</title>
+      <link>https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Wed, 27 Nov 2019 20:06:38 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/GitHub&#43;jsDelivr&#43;PicGo%E6%89%93%E9%80%A0%E7%A8%B3%E5%AE%9A%E5%BF%AB%E9%80%9F%E9%AB%98%E6%95%88%E5%9B%BE%E5%BA%8A/</guid>
+      <description>前言 用hugo写博客可能图片是比较重要的一环吧.本来时指望在博客中使用本地的图片,但是由于自己的能力有限,并且看了一些大神都不推荐使用本地图片.推荐使用图床来管理自己的博客图片. 常见的免费图床建议参考这篇文章:盘点一下免费好用的图床 但是,今天不是介绍免费图床的使用,这次主要是介绍</description>
+    </item>
+    
+    <item>
+      <title>Github同步已fork的项目</title>
+      <link>https://CorPython.github.io/post/github%E5%90%8C%E6%AD%A5fork%E7%9A%84%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Wed, 13 Nov 2019 18:30:44 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/github%E5%90%8C%E6%AD%A5fork%E7%9A%84%E9%A1%B9%E7%9B%AE/</guid>
+      <description>给出两种方法 1.使用git指令进行更新 git remote -v git remote add upstream git@github.com:xxx/xxx.git git fetch upstream git merge upstream/master 2.在Github Desktop上更新</description>
+    </item>
+    
+    <item>
+      <title>Vim如何安装插件</title>
+      <link>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</guid>
+      <description>vim 安装插件 vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc linux下安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 将以下信息写入.vimrc中 &amp;quot; Specify a directory for plugins &amp;quot; - For Neovim: stdpath(&#39;data&#39;) . &#39;/plugged&#39; &amp;quot; - Avoid using standard Vim directory names like &#39;plugin&#39; call plug#begin(&#39;~/.vim/plugged&#39;) &amp;quot; Make sure you use single quotes &amp;quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align Plug &#39;junegunn/vim-easy-align&#39; &amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Pacman包管理命令</title>
+      <link>https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 13 Nov 2019 16:51:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</guid>
+      <description>Pacman指令 1.安装软件 sudo pacman -S 软件名 2.更新软件源并更新你的软件 sudo pacman -Syu 3.查询软件 sudo pacman -Ss 软件名 4.请理已安装的软件的缓存(安装包) sudo pacman -Sc 5.删除某个软件 只删除安装包 sudo pacman -R 软件名 删除安装包及其依赖 sudo pacman -Rs 软件名 在上面的基础上删除该软件的全局配置(推荐) sudo pacman -Rns 软件名 6.查询本地已经</description>
+    </item>
+    
+    <item>
+      <title>windows连接mongodb数据库</title>
+      <link>https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Sun, 10 Nov 2019 20:30:14 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/windows%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>1.打开git-bash或者其他命令行工具,输入下列命令 mongod --dbpath /d/MongoDB/Server/4.0/data/db //dbpath后面是mongodb数据库的绝对路径 2.打开mongodb compass数据库管理软件,连接数据库 3.连接成功</description>
+    </item>
+    
+    <item>
+      <title>github基本操作</title>
+      <link>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/github%E7%9B%B8%E5%85%B3/</guid>
+      <description>1.创建一个新仓库repo mkdir repo//创建一个新文件夹 cd repo//进入这个文件夹 git init//初始化这个仓库 ll .git/.git文件中的相关信息 .git文件中的信息有以下 config 文件包含了项目特有的配置选项 description仓库的描述 HEAD 文件指向当前分支 hooks 目录保存了客户端或服务端</description>
+    </item>
+    
+    <item>
+      <title>linux编译c/c&#43;&#43;命令</title>
+      <link>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/linux%E5%91%BD%E4%BB%A4/</guid>
+      <description>linux下g++编译运行c++ g++ -std=c++11 -o test test.cpp(在c++11标准下编译) ./test linux下gcc编译c语言 gcc -o test test.c ./test linux基本命令 cd 或者cd ~ 返回用户工作目录 ls cd - 返回上一个访问的目录 mkdir 文件夹名 创建文件夹 cd ..// 返回上一级目录 cd ../.. 返回上两级目录,以此类推 pwd 打印当前路径 export //</description>
+    </item>
+    
+    <item>
+      <title>Vscode快捷键</title>
+      <link>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 07 Nov 2019 19:23:28 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>vscode vs code 的常用快捷键 1、注释： a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/ b) 取消单行注释：[ctrl+k,ctrl+u] (按下ctrl不放，再按k + u) c) 多行注释：[alt+shift+A] d) 多行注释：/** 2、移动行：alt+up/down，选中按TAB右移，按SHIFT+TAB</description>
+    </item>
+    
+  </channel>
+</rss>

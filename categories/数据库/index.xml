@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on code show的博客</title>
+    <link>https://CorPython.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Dec 2019 20:35:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sql server触发器及存储过程</title>
+      <link>https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/</link>
+      <pubDate>Tue, 10 Dec 2019 20:35:22 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/</guid>
+      <description>SQL server触发器及存储过程 删除触发器 /*1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表</description>
+    </item>
+    
+  </channel>
+</rss>
