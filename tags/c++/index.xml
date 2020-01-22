@@ -6,10 +6,19 @@
     <description>Recent content in c&#43;&#43; on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jan 2020 20:35:27 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 15:12:24 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>c&#43;&#43;中的大小写转换</title>
+      <link>https://CorPython.github.io/post/%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Wed, 22 Jan 2020 15:12:24 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/</guid>
+      <description>在不适用库函数的基础上将字符串中的字母进行大小写转换 所有的小写字母转换为大写字母 #include &amp;lt;iostream&amp;gt;using namespace std; string toLower(string s) { for(auto &amp;amp;i:s) { i &amp;amp;= -33; } return s; } int main(int argc, char const *argv[]) { string str = &amp;#34;aAAb&amp;#34;; cout &amp;lt;&amp;lt; toLower(str) &amp;lt;&amp;lt; endl; return 0; } 输出结果:AAAB 所有的大写字母转换为小写字母 #include &amp;lt;iostream&amp;gt;using namespace std; string toLower(string s) { for(auto &amp;amp;i:s) { i |= 32; } return s; } int main(int argc, char const *argv[]) { string str = &amp;#34;aAAb&amp;#34;; cout &amp;lt;&amp;lt; toLower(str) &amp;lt;&amp;lt; endl; return 0; } 输出结</description>
+    </item>
     
     <item>
       <title>STL基础用法</title>

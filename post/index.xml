@@ -6,10 +6,46 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jan 2020 11:19:53 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 18:13:45 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode1323题</title>
+      <link>https://CorPython.github.io/post/6%E5%92%8C9%E7%BB%84%E6%88%90%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Wed, 22 Jan 2020 18:13:45 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/6%E5%92%8C9%E7%BB%84%E6%88%90%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97/</guid>
+      <description>题目 给你一个仅由数字 6 和 9 组成的正整数 num.你最多只能翻转一位数字，将 6 变成 9，或者把 9 变成 6 。 请返回你可以得到的最大数字。 测试样例: 输入 6969 9666 输出 9969 9966 题解 1.将数字转化为字符串,遍历字符串,遇到第一个6将其转化为9即可. int maximum69Number (int num) { int res; string strNum; stringstream ss; stringstream sa; ss &amp;lt;&amp;lt; num; ss &amp;gt;&amp;gt; strNum; for (auto &amp;amp;i : strNum) { if (i == &amp;#39;6&amp;#39;)</description>
+    </item>
+    
+    <item>
+      <title>leetcode771题</title>
+      <link>https://CorPython.github.io/post/%E5%AE%9D%E7%9F%B3%E5%92%8C%E7%9F%B3%E5%A4%B4/</link>
+      <pubDate>Wed, 22 Jan 2020 16:43:24 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E5%AE%9D%E7%9F%B3%E5%92%8C%E7%9F%B3%E5%A4%B4/</guid>
+      <description>题目 给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。 J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此&amp;quot;a&amp;quot;和&amp;quot;A&amp;quot;是不同类型的石头</description>
+    </item>
+    
+    <item>
+      <title>Leetcode709题</title>
+      <link>https://CorPython.github.io/post/leetcode709/</link>
+      <pubDate>Wed, 22 Jan 2020 15:20:05 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode709/</guid>
+      <description>写在前面 首先需要知道一般的大小写转换的规则,小写字母对应的ASCII码的值比大写字母大,A对应的是65,a对应的是97,差值为32 所以大小写转换可以这么写: 大写--&amp;gt;小写:(char)(字符 + (&#39;a&#39; - &#39;A&#39;)) 小写--&amp;gt;大写:(char)(字符 - (&#39;a&#39; - &#39;A&#39;)) java实现 class Solution { public String toLowerCase(String str) {</description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;中的大小写转换</title>
+      <link>https://CorPython.github.io/post/%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Wed, 22 Jan 2020 15:12:24 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/</guid>
+      <description>在不适用库函数的基础上将字符串中的字母进行大小写转换 所有的小写字母转换为大写字母 #include &amp;lt;iostream&amp;gt;using namespace std; string toLower(string s) { for(auto &amp;amp;i:s) { i &amp;amp;= -33; } return s; } int main(int argc, char const *argv[]) { string str = &amp;#34;aAAb&amp;#34;; cout &amp;lt;&amp;lt; toLower(str) &amp;lt;&amp;lt; endl; return 0; } 输出结果:AAAB 所有的大写字母转换为小写字母 #include &amp;lt;iostream&amp;gt;using namespace std; string toLower(string s) { for(auto &amp;amp;i:s) { i |= 32; } return s; } int main(int argc, char const *argv[]) { string str = &amp;#34;aAAb&amp;#34;; cout &amp;lt;&amp;lt; toLower(str) &amp;lt;&amp;lt; endl; return 0; } 输出结</description>
+    </item>
     
     <item>
       <title>七牛云绑定自定义域名</title>
