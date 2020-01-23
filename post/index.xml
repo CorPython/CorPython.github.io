@@ -6,10 +6,37 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2020 18:13:45 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 16:14:05 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode1题</title>
+      <link>https://CorPython.github.io/post/leetcode1%E9%A2%98/</link>
+      <pubDate>Thu, 23 Jan 2020 16:14:05 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode1%E9%A2%98/</guid>
+      <description>题目 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数,并返回他们的数组下标。 你可以假设每种输入只会对应一个答案.但是,你不能重复利用这个数组中同样的元素。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums[0] + nums[1] = 2 + 7 = 9 所以返回 [0, 1] 题解 遍历nums数组,判断t</description>
+    </item>
+    
+    <item>
+      <title>Leetcode13题</title>
+      <link>https://CorPython.github.io/post/leetcode13%E9%A2%98/</link>
+      <pubDate>Thu, 23 Jan 2020 12:43:09 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode13%E9%A2%98/</guid>
+      <description>题目 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。 字符 数值 I 1 V 5 X 10 L 50 C 100 D 500 M 1000 例如， 罗马数字 2 写做II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做 XXVII, 即为 XX + V + II 。 通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。</description>
+    </item>
+    
+    <item>
+      <title>Leetcode11题</title>
+      <link>https://CorPython.github.io/post/leetcode11%E9%A2%98/</link>
+      <pubDate>Thu, 23 Jan 2020 10:41:27 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode11%E9%A2%98/</guid>
+      <description>题目 给定 n 个非负整数 a1，a2，&amp;hellip;，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。 说明：你不能倾斜容器，且 n 的值至少为 2。 图中垂直线代表输入数组 [1,8</description>
+    </item>
     
     <item>
       <title>leetcode1323题</title>
