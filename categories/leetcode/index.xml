@@ -6,10 +6,46 @@
     <description>Recent content in leetcode on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jan 2020 16:14:05 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 13:41:51 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode461题</title>
+      <link>https://CorPython.github.io/post/leetcode461%E9%A2%98/</link>
+      <pubDate>Fri, 24 Jan 2020 13:41:51 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode461%E9%A2%98/</guid>
+      <description>题目 两个整数之间的汉明距离指的是这两个数字对应二进制位不同的位置的数目。 给出两个整数 x 和 y，计算它们之间的汉明距离。 注意： 0 ≤ x, y &amp;lt; 2^31 示例: 输入: x = 1, y = 4 输出: 2 解释: 1 (0 0 0 1) 4 (0 1 0 0) ↑ ↑ 上面的箭头指出了对应二进制位不同的位置。 题解 将两个数进行异或操作,数有多少个1即可,</description>
+    </item>
+    
+    <item>
+      <title>Leetcode202题</title>
+      <link>https://CorPython.github.io/post/leetcode202%E9%A2%98/</link>
+      <pubDate>Fri, 24 Jan 2020 12:56:29 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode202%E9%A2%98/</guid>
+      <description>题目 编写一个算法来判断一个数是不是快乐数。 一个快乐数定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，也可能是无限循环但始终变不到 1。如果可以变为 1，那么这个数就是快乐数。 示例: 输入: 19 输出: true 解释: 1 * 1 + 9*9 = 82 8*8 + 2*2 = 68 6*6</description>
+    </item>
+    
+    <item>
+      <title>Leetcode1281题</title>
+      <link>https://CorPython.github.io/post/leetcode1281%E9%A2%98/</link>
+      <pubDate>Fri, 24 Jan 2020 12:16:31 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode1281%E9%A2%98/</guid>
+      <description>题目 给你一个整数 n，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。 示例 1： 输入：n = 234 输出：15 解释： 各位数之积 = 2 * 3 * 4 = 24 各位数之和 = 2 + 3 + 4 = 9 结果 = 24 - 9 = 15 示例 2： 输入：n = 4421 输出：21 解释： 各位数之积 = 4 * 4 * 2 * 1 = 32 各位数之和 = 4 + 4 + 2 + 1</description>
+    </item>
+    
+    <item>
+      <title>Leetcode20题</title>
+      <link>https://CorPython.github.io/post/leetcode20%E9%A2%98/</link>
+      <pubDate>Fri, 24 Jan 2020 11:28:59 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode20%E9%A2%98/</guid>
+      <description>题目 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串，判断字符串是否有效。 有效字符串需满足： 左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。 注意空字符串可被认为是有效字符串。 示例 1: 输入: &amp;quot;()&amp;quot; 输出: true 示例 2: 输入: &amp;quot;()[]{}&amp;quot; 输出: true 示例 3: 输入: &amp;quot;(]&amp;quot; 输出: false 示例 4:</description>
+    </item>
     
     <item>
       <title>Leetcode1题</title>
