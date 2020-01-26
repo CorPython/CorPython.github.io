@@ -6,10 +6,19 @@
     <description>Recent content in 算法与数据结构 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Dec 2019 21:43:51 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 09:52:35 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法基础之位运算</title>
+      <link>https://CorPython.github.io/post/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E4%B9%8B%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Sat, 25 Jan 2020 09:52:35 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E4%B9%8B%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <description>运算符 含义 运算符 左移（后面补0） &amp;laquo; 右移（正数前面补0，负数补1） &amp;raquo; 按位或 ︳ 按位与 &amp;amp; 按位取反 ~ 按位异或 (相同为0不同为1) ^ 异或 两个相同的数异或的结果为0 任何数和0异或的结果为其本身 数学表达式如下 $$ \begin{aligned} &amp;amp;a \oplus 0=a\ &amp;amp;a \oplus a=0 \end{aligned} $$ 经典实例: 1.交换两个数的值 def change_num(num1,num2): num1 = num1 ^ num2 num2 = num1 ^ num2 num1 = num1 ^ num2 return num1,num2</description>
+    </item>
     
     <item>
       <title>初探BFS,DFS</title>
