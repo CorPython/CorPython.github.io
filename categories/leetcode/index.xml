@@ -6,10 +6,19 @@
     <description>Recent content in leetcode on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2020 22:45:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2020 14:33:37 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode349题</title>
+      <link>https://CorPython.github.io/post/leetcode349%E9%A2%98/</link>
+      <pubDate>Mon, 27 Jan 2020 14:33:37 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode349%E9%A2%98/</guid>
+      <description>题目 给定两个数组，编写一个函数来计算它们的交集。 示例 1: 输入: nums1 = [1,2,2,1], nums2 = [2,2] 输出: [2] 示例 2: 输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4] 输出: [9,4] 说明: 输出结果中的每个元素一定是唯一的。 我们可以不考虑输出结果的顺序。 题解 Hashset集合 1.使用两个Hashset,首先遍历数组1加入到set1中,再遍历数组2,判</description>
+    </item>
     
     <item>
       <title>Leetcode290题</title>

@@ -26,7 +26,7 @@
       <pubDate>Tue, 14 Jan 2020 20:35:27 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/STL%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/</guid>
-      <description>排序 1.sort()模板函数 #include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; int main() { int a[10]= {9,6,3,8,5,2,7,4,1,0}; for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; cout&amp;lt;&amp;lt;endl; //数组长度 cout &amp;lt;&amp;lt; sizeof(a)/sizeof(a[0]) &amp;lt;&amp;lt; endl; sort(a,a+10);//注意是加上数组长度 for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; return 0; } 2.桶排序 #include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; int main() { int x, n; cin &amp;gt;&amp;gt; n; int a[100] = {0}; for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; x; a[x]++; } for (int i = 0; i &amp;lt; 100; i++) { for (int m = 1; m &amp;lt;= a[i]; m++) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#34;&amp;#34;; } } } 3.</description>
+      <description>STL:Standard Template Library 标准模板库 序列式容器[Sequential Containers] Array(数组) Vector(单向变长数组) Deque(双向变长数组) List(双向链表) Forward-List(单向链表) 关联式容器[Associative Containers] Set/Multiset(不重复/可重复集合) Map/Multim</description>
     </item>
     
     <item>

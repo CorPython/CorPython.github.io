@@ -6,10 +6,37 @@
     <description>Recent content in 教程篇 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jan 2020 11:19:53 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2020 19:46:12 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pacman命令</title>
+      <link>https://CorPython.github.io/post/Pacman%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 28 Jan 2020 19:46:12 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/Pacman%E5%91%BD%E4%BB%A4/</guid>
+      <description>Pacman指令 1.安装软件 sudo pacman -S 软件名 2.更新软件源并更新你的软件 sudo pacman -Syu 3.查询软件 sudo pacman -Ss 软件名 4.请理已安装的软件的缓存(安装包) sudo pacman -Sc 5.删除某个软件 只删除安装包 sudo pacman -R 软件名 删除安装包及其依赖 sudo pacman -Rs 软件名 在上面的基础上删除该软件的全局配置(推荐) sudo pacman -Rns 软件名 6.查询本地已经</description>
+    </item>
+    
+    <item>
+      <title>gcc和g&#43;&#43;的异与同</title>
+      <link>https://CorPython.github.io/post/gcc%E5%92%8Cg&#43;&#43;%E7%9A%84%E5%BC%82%E5%90%8C/</link>
+      <pubDate>Mon, 27 Jan 2020 11:04:30 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/gcc%E5%92%8Cg&#43;&#43;%E7%9A%84%E5%BC%82%E5%90%8C/</guid>
+      <description>三个概念 GCC: GNU Compiler Collection(GUN 编译器集合),它可以编译C、C++、Java、Fortran、Pascal、Object-C等语言。 gcc: GCC中的GUN C Compiler（C 编译器） g++: GCC中的GUN C++ Compiler（C++编译器） gcc和g++区别 对于 *.c和 *.cpp文件，gcc分别当做c和</description>
+    </item>
+    
+    <item>
+      <title>vs2019快捷键</title>
+      <link>https://CorPython.github.io/post/vs2019%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Mon, 27 Jan 2020 10:38:12 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vs2019%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>快捷键 说明 ctrl + d 剪切粘贴一次完成 ctrl + alt + 上/下 多光标操作 ctrl + shift + / 多行注释 ctrl + / 单行注释 alt + 上/下 移动上/下行 ctrl + K,ctrl + d(或者ctrl + k + d) 格式化代码</description>
+    </item>
     
     <item>
       <title>七牛云绑定自定义域名</title>
@@ -44,7 +71,7 @@
       <pubDate>Wed, 04 Dec 2019 20:46:09 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>IDEA常用快捷键 1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + F 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,</description>
+      <description>1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + F 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,自动修正 ctrl + enter 9.</description>
     </item>
     
     <item>
