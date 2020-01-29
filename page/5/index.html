@@ -146,7 +146,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/" title="C语言排序" >C语言排序</a>
+                                    <a href="https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/" title="C/c&#43;&#43;排序" >C/c&#43;&#43;排序</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -158,10 +158,12 @@
                                 
                                 <span class="meta-category"><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80">c语言</a></span>
                                 
+                                <span class="meta-category"><a href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a></span>
+                                
                             </div>
                             
                             <div class="post-content">
-                                #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;#include&lt;string.h&gt; #define MAXSIZE 100typedef struct { int key; }record; typedef struct { record r[MAXSIZE+1]; int length; }Sqlist; void Initsqlist(Sqlist &amp;L)/*初始化线性表*/ { int i; printf(&#34;请输入你要排序的数字的个数:\n&#34;); scanf(&#34;%d&#34;,&amp;L.length); printf(&#34;请输入你的数据:\n&#34;); for(i=1;i&lt;=L.length;i++) scanf(&#34;%d&#34;,&amp;L.r[i].key); } void InsertSort(Sqlist &amp;L)/*书上的直接插入排序*/ { int i,j; for(i=2;i&lt;=L.length;i++) { if(L.r……
+                                c++ 1.sort()函数 头文件#include&lt;algorithm&gt; #include&lt;iostream&gt;#include&lt;algorithm&gt; using namespace std; int main() { int a[10]= {9,6,3,8,5,2,7,4,1,0}; for(int i=0; i&lt;10; i++) cout&lt;&lt;a[i]&lt;&lt;&#34;&#34;; cout&lt;&lt;endl; //数组长度 cout &lt;&lt; sizeof(a)/sizeof(a[0]) &lt;&lt; endl; sort(a,a+10);//注意是加上数组长度 for(int i=0; i&lt;10; i++) cout&lt;&lt;a[i]&lt;&lt;&#34;&#34;; return 0; } sort()自定义函数 #include&lt;iostream&gt;#include&lt;vector&gt;#include&lt;algorithm&gt; using namespace std; bool Comp(const int &amp;a,const int &amp;b) { return a&gt;b; } int main() { vector&lt;int&gt; v; for (int i = 0; i &lt; 10; ++i) { v.push_back(i +……
                             </div>
                             <p class="readmore"><a href="https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/">阅读全文</a></p>
                         </article>
@@ -472,7 +474,7 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (7)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (8)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (3)</a></li>
     
@@ -510,7 +512,7 @@
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
+    <a href="">Gittalk</a>
     </li>
     
     <li>
@@ -570,7 +572,7 @@
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">gittalk</a>
+    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
     </li>
     
     <li>

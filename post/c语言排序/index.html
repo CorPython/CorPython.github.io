@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>C语言排序 | code show的博客</title>
-    <meta property="og:title" content="C语言排序 - code show的博客">
+    <title>C/c&#43;&#43;排序 | code show的博客</title>
+    <meta property="og:title" content="C/c&#43;&#43;排序 - code show的博客">
     <meta property="og:type" content="article">
         
     <meta property="article:published_time" content="2019-12-25T21:53:10&#43;08:00">
@@ -17,7 +17,7 @@
     <meta property="article:modified_time" content="2019-12-25T21:53:10&#43;08:00">
         
     <meta name="Keywords" content="java,c,博客,c&#43;&#43;,python,linux">
-    <meta name="description" content="C语言排序">
+    <meta name="description" content="C/c&#43;&#43;排序">
         
     <meta name="author" content="code show">
     <meta property="og:url" content="https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/">
@@ -92,15 +92,154 @@
 
     <div id="body">
         
+        <div id="virtual_toc_list" style="display: none">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#c">c++</a>
+      <ul>
+        <li><a href="#1sort函数">1.sort()函数</a></li>
+        <li><a href="#2桶排序">2.桶排序</a></li>
+        <li><a href="#3冒泡排序">3.冒泡排序</a></li>
+        <li><a href="#4选择排序">4.选择排序</a></li>
+        <li><a href="#5快速排序">5.快速排序</a></li>
+      </ul>
+    </li>
+    <li><a href="#c语言">c语言</a></li>
+  </ul>
+</nav>
+        </div>
+        <div id="float_toc_div" style="margin: 10px;border: 1px solid gray;z-index:99999;display: none;">
+            <header
+                style="background-color: #f3f3f3;color: black;border-bottom: 1px solid gray;padding: 10px 10px 10px 10px;">
+                <strong id="toc_btn_open" style="color: black;font-size: large;">目录</strong>
+                <strong id="toc_btn_close" style="color: black;font-size: large;float: right">╳</strong>
+            </header>
+            <div id="toc_list" style="background-color: #f3f3f3;color: black;padding: 10px;">
+
+            </div>
+        </div>
+        <style type="text/css">
+            #float_toc_div {
+                position: fixed;
+                display: none;
+                 
+                height: auto;
+                font-size: 13px;
+            }
+
+            #toc_list a:hover,
+            #toc_list a:active {
+                color: #ba3925;
+            }
+        </style>
         <div class="container">
             <div class="col-group">
 
                 <div class="col-8" id="main">
                     <div class="res-cons">
-                        
+                        <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#c">c++</a>
+      <ul>
+        <li><a href="#1sort函数">1.sort()函数</a></li>
+        <li><a href="#2桶排序">2.桶排序</a></li>
+        <li><a href="#3冒泡排序">3.冒泡排序</a></li>
+        <li><a href="#4选择排序">4.选择排序</a></li>
+        <li><a href="#5快速排序">5.快速排序</a></li>
+      </ul>
+    </li>
+    <li><a href="#c语言">c语言</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
                         <article class="post">
                             <header>
-                                <h1 class="post-title">C语言排序</h1>
+                                <h1 class="post-title">C/c&#43;&#43;排序</h1>
                             </header>
                             <date class="post-meta meta-date">
                                 2019年12月25日
@@ -112,22 +251,184 @@
                                 <span class="meta-category"><a
                                         href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80">c语言</a></span>
                                 
+                                <span class="meta-category"><a
+                                        href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a></span>
+                                
                             </div>
                             
-                            <span class="post-word-count">|1426 words</span>
+                            <span class="post-word-count">|2419 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
                                         阅读</span></span>
                             </div>
                             <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约3分钟
+                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约5分钟
                             </div>
                             
                             
+                            <div class="clear" style="display: none">
+                                <div class="toc-article">
+                                    <div class="toc-title"><span></span>文章目录</div>
+                                </div>
+                            </div>
+                            
                             <div class="post-content">
                                     
-                                    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;stdio.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+                                    <h2 id="c">c++</h2>
+<h3 id="1sort函数">1.sort()函数</h3>
+<p>头文件<code>#include&lt;algorithm&gt;</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;algorithm&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>() {
+   <span style="color:#458;font-weight:bold">int</span> a[<span style="color:#099">10</span>]<span style="color:#000;font-weight:bold">=</span> {<span style="color:#099">9</span>,<span style="color:#099">6</span>,<span style="color:#099">3</span>,<span style="color:#099">8</span>,<span style="color:#099">5</span>,<span style="color:#099">2</span>,<span style="color:#099">7</span>,<span style="color:#099">4</span>,<span style="color:#099">1</span>,<span style="color:#099">0</span>};
+
+   <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">0</span>; i<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#099">10</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+      cout<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>a[i]<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> </span><span style="color:#d14">&#34;</span>;
+   cout<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>endl;
+   <span style="color:#998;font-style:italic">//数组长度
+</span><span style="color:#998;font-style:italic"></span>   cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#000;font-weight:bold">sizeof</span>(a)<span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">sizeof</span>(a[<span style="color:#099">0</span>]) <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+
+   sort(a,a<span style="color:#000;font-weight:bold">+</span><span style="color:#099">10</span>);<span style="color:#998;font-style:italic">//注意是加上数组长度   
+</span><span style="color:#998;font-style:italic"></span>
+   <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">0</span>; i<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#099">10</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+      cout<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>a[i]<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> </span><span style="color:#d14">&#34;</span>;
+   <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+   
+}
+</code></pre></div><p><strong>sort()自定义函数</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;vector&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;algorithm&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span> 
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+ 
+<span style="color:#458;font-weight:bold">bool</span> <span style="color:#900;font-weight:bold">Comp</span>(<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">&amp;</span>a,<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">&amp;</span>b)
+{
+    <span style="color:#000;font-weight:bold">return</span> a<span style="color:#000;font-weight:bold">&gt;</span>b;
+}
+ 
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>()
+{
+    vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> v;
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">10</span>; <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>i)
+    {
+        v.push_back(i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>);
+    }
+ 
+    <span style="color:#998;font-style:italic">//用降序 需要自定义一个降序函数
+</span><span style="color:#998;font-style:italic"></span>    sort(v.begin(),v.end(),Comp);
+ 
+ 
+    <span style="color:#000;font-weight:bold">for</span>(<span style="color:#000;font-weight:bold">auto</span> <span style="color:#900;font-weight:bold">num</span> : v)
+    {
+        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> num <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> </span><span style="color:#d14">&#34;</span>;
+    }
+    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+ 
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><h3 id="2桶排序">2.桶排序</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>() {
+   <span style="color:#458;font-weight:bold">int</span> x, n;
+   cin <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> n;
+   <span style="color:#458;font-weight:bold">int</span> a[<span style="color:#099">100</span>] <span style="color:#000;font-weight:bold">=</span> {<span style="color:#099">0</span>};
+   <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> n; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>) {
+      cin <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> x;
+      a[x]<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>;
+   }
+   <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">100</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>) {
+      <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> m <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; m <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> a[i]; m<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>) {
+         cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14"> </span><span style="color:#d14">&#34;</span>;
+      }
+
+   }
+}
+</code></pre></div><h3 id="3冒泡排序">3.冒泡排序</h3>
+<p><strong>核心代码:</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; i <span style="color:#000;font-weight:bold">&lt;</span> n; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>) {
+      <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; j <span style="color:#000;font-weight:bold">&lt;</span> n <span style="color:#000;font-weight:bold">-</span> i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>; j<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>) {
+         <span style="color:#000;font-weight:bold">if</span> (a[j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">&gt;</span> a[j])
+         { 
+             temp <span style="color:#000;font-weight:bold">=</span> a[j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>];
+             a[j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">=</span> a[j];
+             a[j] <span style="color:#000;font-weight:bold">=</span> temp;
+         }
+      }
+   }
+</code></pre></div><p><strong>时间复杂度：</strong> $O\left(n^{2}\right)$</p>
+<p><strong>空间复杂度：</strong> $O\left(n^{2}\right)$</p>
+<p><strong>稳定</strong></p>
+<h3 id="4选择排序">4.选择排序</h3>
+<p><strong>核心代码:</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">selectSort</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> len)
+{
+   <span style="color:#458;font-weight:bold">int</span> mindex, temp;
+   <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i<span style="color:#000;font-weight:bold">&lt;</span>len<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>;i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+   {
+       mindex <span style="color:#000;font-weight:bold">=</span> i; <span style="color:#998;font-style:italic">//假设当前数字是最小值
+</span><span style="color:#998;font-style:italic"></span>       <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> i<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>; j<span style="color:#000;font-weight:bold">&lt;</span>len; j<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+      {
+          <span style="color:#000;font-weight:bold">if</span>(a[j]<span style="color:#000;font-weight:bold">&lt;</span>a[mindex])<span style="color:#998;font-style:italic">//找到后面的数字中最小的那个
+</span><span style="color:#998;font-style:italic"></span>            mindex <span style="color:#000;font-weight:bold">=</span> j;
+      
+      }
+      temp <span style="color:#000;font-weight:bold">=</span> a[i];
+      a[i] <span style="color:#000;font-weight:bold">=</span> a[mindex];
+      a[mindex] <span style="color:#000;font-weight:bold">=</span> temp;
+   }
+}
+</code></pre></div><p><strong>空间复杂度：$O\left(1{}\right)$</strong></p>
+<p><strong>最坏时间复杂度： $O\left(n^{2}\right)$</strong></p>
+<p><strong>最好时间复杂度:    $O\left(n^{2}\right)$</strong></p>
+<p><strong>平均时间复杂度：$O\left(n^{2}\right)$</strong></p>
+<p><strong>不稳定</strong></p>
+<h3 id="5快速排序">5.快速排序</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
+
+<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">quickSort</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> low , <span style="color:#458;font-weight:bold">int</span> high)
+{
+   <span style="color:#000;font-weight:bold">if</span> (low <span style="color:#000;font-weight:bold">&lt;</span> high) <span style="color:#998;font-style:italic">//判断是否满足排序条件，递归的终止条件
+</span><span style="color:#998;font-style:italic"></span>   {
+      <span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> low, j <span style="color:#000;font-weight:bold">=</span> high;
+      <span style="color:#458;font-weight:bold">int</span> x <span style="color:#000;font-weight:bold">=</span> a[low];
+      <span style="color:#998;font-style:italic">//将待排序数组的第一个元素作为哨兵，将数组划分为大于哨兵以及小于哨兵的两部分
+</span><span style="color:#998;font-style:italic"></span>      <span style="color:#000;font-weight:bold">while</span> (i <span style="color:#000;font-weight:bold">&lt;</span> j)
+      {
+         <span style="color:#000;font-weight:bold">while</span> (i <span style="color:#000;font-weight:bold">&lt;</span> j <span style="color:#000;font-weight:bold">&amp;</span><span style="color:#000;font-weight:bold">&amp;</span> a[j] <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">=</span> x) j<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span>; <span style="color:#998;font-style:italic">//从最右侧元素开始，如果比哨兵大，那么它的位置就正确，然后判断前一个元素，直到不满足条件
+</span><span style="color:#998;font-style:italic"></span>         <span style="color:#000;font-weight:bold">if</span> (i <span style="color:#000;font-weight:bold">&lt;</span> j) a[i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>] <span style="color:#000;font-weight:bold">=</span> a[j]; <span style="color:#998;font-style:italic">//把不满足位次条件的那个元素值赋值给哨兵,并把i的加1
+</span><span style="color:#998;font-style:italic"></span>         <span style="color:#000;font-weight:bold">while</span> (i <span style="color:#000;font-weight:bold">&lt;</span> j <span style="color:#000;font-weight:bold">&amp;</span><span style="color:#000;font-weight:bold">&amp;</span> a[i] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> x) i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>; <span style="color:#998;font-style:italic">//换成左侧下标为i的元素开始与哨兵比较大小，比其小，那么它所处的位置就正确，然后判断后一个，直到不满足条件
+</span><span style="color:#998;font-style:italic"></span>         <span style="color:#000;font-weight:bold">if</span> (i <span style="color:#000;font-weight:bold">&lt;</span> j) a[j<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span>] <span style="color:#000;font-weight:bold">=</span> a[i]; <span style="color:#998;font-style:italic">//把不满足位次条件的那个元素值赋值给下标为j的元素，（下标为j的元素已经保存到前面，不会丢失）并把j的加1
+</span><span style="color:#998;font-style:italic"></span>      }
+      a[i] <span style="color:#000;font-weight:bold">=</span> x;   <span style="color:#998;font-style:italic">//完成一次排序，把哨兵赋值到下标为i的位置，即前面的都比它小，后面的都比它大
+</span><span style="color:#998;font-style:italic"></span>      quickSort(a, low , i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>); <span style="color:#998;font-style:italic">//递归进行哨兵前后两部分元素排序 ， low,high的值不发生变化，i处于中间
+</span><span style="color:#998;font-style:italic"></span>      quickSort(a, i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span> , high);
+   }
+}
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">*</span>argv[])
+{
+   <span style="color:#458;font-weight:bold">int</span> a[<span style="color:#099">10</span>] <span style="color:#000;font-weight:bold">=</span> {<span style="color:#099">9</span>, <span style="color:#099">6</span>, <span style="color:#099">3</span>, <span style="color:#099">8</span>, <span style="color:#099">5</span>, <span style="color:#099">2</span>, <span style="color:#099">7</span>, <span style="color:#099">4</span>, <span style="color:#099">1</span>, <span style="color:#099">0</span>};
+   quickSort(a, <span style="color:#099">0</span>, <span style="color:#099">9</span>);
+   <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">10</span>; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+   {
+      cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> a[i] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+   }
+   <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><p><strong>最坏时间复杂度： $O\left(n\right)$</strong></p>
+<p><strong>最好时间复杂度:    $O\left(nlog(n)\right)$</strong></p>
+<p><strong>平均时间复杂度：$O\left(log(n)\right)$</strong></p>
+<p><strong>不稳定</strong></p>
+<h2 id="c语言">c语言</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;stdio.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;stdlib.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;string.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
@@ -403,6 +704,8 @@
                                     
                                     <li><a href="https://CorPython.github.io/tags/%E6%8E%92%E5%BA%8F">排序</a></li>
                                     
+                                    <li><a href="https://CorPython.github.io/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+                                    
                                 </ul>
                                 
                             </div>
@@ -488,7 +791,7 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (7)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (8)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (3)</a></li>
     
@@ -526,7 +829,7 @@
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
+    <a href="">Gittalk</a>
     </li>
     
     <li>
@@ -586,7 +889,7 @@
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">gittalk</a>
+    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
     </li>
     
     <li>

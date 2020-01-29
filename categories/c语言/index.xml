@@ -30,12 +30,12 @@
     </item>
     
     <item>
-      <title>C语言排序</title>
+      <title>C/c&#43;&#43;排序</title>
       <link>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Wed, 25 Dec 2019 21:53:10 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/</guid>
-      <description>#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;#include&amp;lt;string.h&amp;gt; #define MAXSIZE 100typedef struct { int key; }record; typedef struct { record r[MAXSIZE+1]; int length; }Sqlist; void Initsqlist(Sqlist &amp;amp;L)/*初始化线性表*/ { int i; printf(&amp;#34;请输入你要排序的数字的个数:\n&amp;#34;); scanf(&amp;#34;%d&amp;#34;,&amp;amp;L.length); printf(&amp;#34;请输入你的数据:\n&amp;#34;); for(i=1;i&amp;lt;=L.length;i++) scanf(&amp;#34;%d&amp;#34;,&amp;amp;L.r[i].key); } void InsertSort(Sqlist &amp;amp;L)/*书上的直接插入排序*/ { int i,j; for(i=2;i&amp;lt;=L.length;i++) { if(L.r</description>
+      <description>c++ 1.sort()函数 头文件#include&amp;lt;algorithm&amp;gt; #include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; int main() { int a[10]= {9,6,3,8,5,2,7,4,1,0}; for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; cout&amp;lt;&amp;lt;endl; //数组长度 cout &amp;lt;&amp;lt; sizeof(a)/sizeof(a[0]) &amp;lt;&amp;lt; endl; sort(a,a+10);//注意是加上数组长度 for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; return 0; } sort()自定义函数 #include&amp;lt;iostream&amp;gt;#include&amp;lt;vector&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; bool Comp(const int &amp;amp;a,const int &amp;amp;b) { return a&amp;gt;b; } int main() { vector&amp;lt;int&amp;gt; v; for (int i = 0; i &amp;lt; 10; ++i) { v.push_back(i +</description>
     </item>
     
   </channel>
