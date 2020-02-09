@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>neovim on code show的博客</title>
+    <link>https://CorPython.github.io/tags/neovim/</link>
+    <description>Recent content in neovim on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Feb 2020 21:36:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>服务器安装neovim</title>
+      <link>https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/</link>
+      <pubDate>Sat, 08 Feb 2020 21:36:02 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/</guid>
+      <description>neovim的官方安装文档https://github.com/neovim/neovim/wiki/Installing-Neovim 安装nvim 1.使用命令在服务器上安装neovim,我用的服务器的linux系统是centos7 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm yum install -y neovim python3-neovim 2.使用nvim命令进入 3.创</description>
+    </item>
+    
+  </channel>
+</rss>

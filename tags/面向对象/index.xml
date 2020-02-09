@@ -6,18 +6,27 @@
     <description>Recent content in 面向对象 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 11:53:35 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 18:50:05 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>C&#43;&#43;面向对象程序设计</title>
+      <title>C&#43;&#43;面向对象程序设计(2)</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/</link>
+      <pubDate>Thu, 30 Jan 2020 18:50:05 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/</guid>
+      <description>Static static function没有this pointer,静态函数只能处理静态的数据. class template 类模板 声明方法： template &amp;lt;typename 标识符&amp;gt; 编译器从调用实参的类型，推导出函数模板的类型的参数。 template &amp;lt;typename T&amp;gt; class complex { public: complex(T r = 0, T i = 0 ) : re (r), im (i) { } complex&amp;amp; operator += ( const complex&amp;amp; ); T real () const {return re;} T imag () const {return im;} void real(T r) { re = r; } T func(const complex&amp;amp; param) { return param.re</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;面向对象程序设计(1)</title>
       <link>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Wed, 08 Jan 2020 11:53:35 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
-      <description>类和对象 #include &amp;lt;iostream&amp;gt; using namespace std; class Box { public: double length; // 长度 double breadth; // 宽度 double height; // 高度 }; int main( ) { Box Box1; // 声明 Box1，类型为 Box Box Box2; // 声明 Box2，类型为 Box double volume = 0.0; // 用于存储体积 // box 1 详述 Box1.height = 5.0; Box1.length = 6.0; Box1.breadth = 7.0; // box 2 详述 Box2.height = 10.0; Box2.length = 12.0; Box2.breadth = 13.0; // box 1 的体积 volume = Box1.height * Box1.length * Box1.breadth; cout &amp;lt;&amp;lt; &amp;#34;Box1 的体积: &amp;#34; &amp;lt;&amp;lt; volume &amp;lt;&amp;lt; endl; // box 2 的体积 volume = Box2.height * Box2.length * Box2.breadth; cout &amp;lt;&amp;lt;</description>
+      <description>Classes的两个经典分类 Class without pointer member(s) ![]( Class with pointer member(s) ) Header中的防卫式声明 complex.h #ifndef __COMPLEX__ #define __COMPLEX__ #endif inline function 函数若在class body内定义完成，便自动成为inline function的候选人. class body之外定义的函数，需要加上inline关键字，以此建议编译器将其编译为inline function constr</description>
     </item>
     
   </channel>

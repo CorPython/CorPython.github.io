@@ -105,6 +105,121 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/c&#43;&#43;11%E9%83%A8%E5%88%86%E6%96%B0%E7%89%B9%E6%80%A7/">C&#43;&#43;11部分新特性</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2020年2月3日
+                            </date>
+                            
+                            <div class="post-meta meta-category">
+                                |
+                                
+                                    <a href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                Variadic Templates 数量不定的模板参数 template &lt;typename T1, typename... TS&gt; //可以接受至少一个模板类型 template &lt;typename... TS&gt; //至少0个 递归分解可变参数函数的参数包 #include&lt;iostream&gt;#include&lt;bitset&gt; using namespace std; //当参数到0时,必须定义一个边界,不写这个报错 void print() {} //...就是pack（包） template&lt;typename T, typename... Types&gt; //模板参数包 void print(const T&amp;fristArg, const Types &amp;...args) {//types函数参数类型包，args函数参数包……
+                                <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;11%E9%83%A8%E5%88%86%E6%96%B0%E7%89%B9%E6%80%A7/">阅读全文</a></p>
+                            </div>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E7%9A%84const/">C&#43;&#43;中的const</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2020年2月2日
+                            </date>
+                            
+                            <div class="post-meta meta-category">
+                                |
+                                
+                                    <a href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                const 变量 const变量指的是,此变量是只读的,不能被改变 如果我们在程序中试图改变const变量的值,编译器将报错,因此每次定义一个const变量时必须进行初始化 const int num = 15;//正确 const int num;//错误,必须进行初始化 const 结构体 和const int相同,必须在定义的时候进行初始化,并且……
+                                <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E7%9A%84const/">阅读全文</a></p>
+                            </div>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF2/">C&#43;&#43;编译错误2</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2020年2月1日
+                            </date>
+                            
+                            <div class="post-meta meta-category">
+                                |
+                                
+                                    <a href="https://CorPython.github.io/categories/%E8%B8%A9%E5%9D%91%E7%AF%87">踩坑篇</a>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                &lsquo;shared_ptr&rsquo; was not declared in this scope 在我编译下面这段代码时,对于智能指针shared_ptr编译出错 #include &lt;string&gt;#include &lt;iostream&gt;#include &lt;memory&gt; //shared_ptr class Base1 { }; class Derived1: public Base1 { }; class Base2 { }; class Derived2: public Base2 { }; template &lt;class T1, class T2&gt; struct pair { typedef T1 first_type; typedef T2 second_type; T1 first; T2 second; pair() : first(T1()), second(T2()) {} pair(const T1&amp; a, const T2&amp; b) : first(a), second(b) {} template &lt;class U1, class U2&gt; pair(const pair&lt;U1, U2&gt;&amp; p) : first(p.first), second(p.second) {} }; int main(int argc, char const *argv[]) { pair&lt;Derived1, Derived2&gt; p; pair&lt;Base1, Base2&gt; p2(pair&lt;Derived1, Derived2&gt;()); pair&lt;Base1, Base2&gt; p3(p); // pair&lt;Derived1, Derived2&gt; p4(p3); // error: no matching function for call to……
+                                <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF2/">阅读全文</a></p>
+                            </div>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/">C&#43;&#43;编译错误之与标准库函数冲突</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2020年2月1日
+                            </date>
+                            
+                            <div class="post-meta meta-category">
+                                |
+                                
+                                    <a href="https://CorPython.github.io/categories/%E8%B8%A9%E5%9D%91%E7%AF%87">踩坑篇</a>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                error: call of overloaded &lsquo;swap(int&amp;, int&amp;)&rsquo; is ambiguous swap(a,b); 最近使用模板template写了一个swap函数,编译之后竟然出错了 代码如下: #include &lt;iostream&gt; using namespace std; template&lt;class T&gt; void swap(T&amp; a, T&amp; b) { T temp = b; b = a; a = temp; } int main(int argc, char const *argv[]) { int a = 15,b = 20; swap(a,b); cout &lt;&lt; a &lt;&lt; endl; cout &lt;&lt; b &lt;&lt; endl; float m = 15,n = 22; swap(m,n); cout &lt;&lt; m &lt;&lt; endl; cout &lt;&lt; n &lt;&lt; endl; return 0; } 报错信息 原因是因为标准库中已经定义过这个函数,只……
+                                <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/">阅读全文</a></p>
+                            </div>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/">C&#43;&#43;面向对象程序设计(2)</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2020年1月30日
+                            </date>
+                            
+                            <div class="post-meta meta-category">
+                                |
+                                
+                                    <a href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                Static static function没有this pointer,静态函数只能处理静态的数据. class template 类模板 声明方法： template &lt;typename 标识符&gt; 编译器从调用实参的类型，推导出函数模板的类型的参数。 template &lt;typename T&gt; class complex { public: complex(T r = 0, T i = 0 ) : re (r), im (i) { } complex&amp; operator += ( const complex&amp; ); T real () const {return re;} T imag () const {return im;} void real(T r) { re = r; } T func(const complex&amp; param) { return param.re……
+                                <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/">阅读全文</a></p>
+                            </div>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
                                     <a href="https://CorPython.github.io/post/%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/">c&#43;&#43;中的大小写转换</a>
                                 </h1>
                             </header>
@@ -166,7 +281,7 @@
                             </div>
                             
                             <div class="post-content">
-                                c++模板 c++提供了函数模板(function template)所谓函数模板，实际上是建立一个通用函数，其函数类型和形参类型不具体制定，用一个虚拟的类型来代表。这个通用函数就成为函数模板。凡是函数体相同的函数都可以用这个模板代替，不必定义多个函数，只需在模板中定义一次即可。在调……
+                                转换函数 [conversion function] #include &lt;iostream&gt; using namespace std; class Fraction { public: Fraction(int num, int den = 1) : m_numerator(num), m_denominator(den) {} operator double() const { //转换函数,将Fraction转换为double return (double)m_numerator / m_denominator; } private: int m_numerator;//分子 int m_denominator;//分母 }; int main() { Fraction f(3, 5); double d = 4 + f; cout &lt;&lt; d &lt;&lt; endl; cout &lt;&lt; f &lt;&lt; endl; //f的值为0.6 return 0; } 任何Fractio……
                                 <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/">阅读全文</a></p>
                             </div>
                         </article>
@@ -197,7 +312,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">C&#43;&#43;面向对象程序设计</a>
+                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">C&#43;&#43;面向对象程序设计(1)</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -212,109 +327,35 @@
                             </div>
                             
                             <div class="post-content">
-                                类和对象 #include &lt;iostream&gt; using namespace std; class Box { public: double length; // 长度 double breadth; // 宽度 double height; // 高度 }; int main( ) { Box Box1; // 声明 Box1，类型为 Box Box Box2; // 声明 Box2，类型为 Box double volume = 0.0; // 用于存储体积 // box 1 详述 Box1.height = 5.0; Box1.length = 6.0; Box1.breadth = 7.0; // box 2 详述 Box2.height = 10.0; Box2.length = 12.0; Box2.breadth = 13.0; // box 1 的体积 volume = Box1.height * Box1.length * Box1.breadth; cout &lt;&lt; &#34;Box1 的体积: &#34; &lt;&lt; volume &lt;&lt; endl; // box 2 的体积 volume = Box2.height * Box2.length * Box2.breadth; cout &lt;&lt;……
+                                Classes的两个经典分类 Class without pointer member(s) ![]( Class with pointer member(s) ) Header中的防卫式声明 complex.h #ifndef __COMPLEX__ #define __COMPLEX__ #endif inline function 函数若在class body内定义完成，便自动成为inline function的候选人. class body之外定义的函数，需要加上inline关键字，以此建议编译器将其编译为inline function constr……
                                 <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">阅读全文</a></p>
                             </div>
                         </article>
                     
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/sumblime%E5%88%9B%E5%BB%BAc_c&#43;&#43;%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/">Sublime Text搭建c/c&#43;&#43;编译运行环境</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2020年1月7日
-                            </date>
-                            
-                            <div class="post-meta meta-category">
-                                |
-                                
-                                    <a href="https://CorPython.github.io/categories/%E9%85%8D%E7%BD%AE%E7%AF%87">配置篇</a>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                前言 我配置的c/c++环境主要是为了写一些简单的算法或者小程序,看重的是Sublime Text 3的轻量,启动速度快,其次你必须先将自己的cmd设置为默认utf-8编码,这样做主要是为了防止一些编码问题,如果你习惯使用GBK编码,请不要看下面的配置 ! ! ! 设置cmd为默认UTF-8 使用快捷……
-                                <p class="readmore"><a href="https://CorPython.github.io/post/sumblime%E5%88%9B%E5%BB%BAc_c&#43;&#43;%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/">阅读全文</a></p>
-                            </div>
-                        </article>
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%AC%94%E8%AE%B0/">C&#43;&#43;编译错误</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2020年1月7日
-                            </date>
-                            
-                            <div class="post-meta meta-category">
-                                |
-                                
-                                    <a href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                编译cpp文件时报错: ld.exe: can not open file ...xxx.exe:permission denied collect2.exe error ld returned 1 exit status 原因:代码当前目录（包括子目录）下有同名的.exe文件，会报此错误，只要把名字改一下就行了……
-                                <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%AC%94%E8%AE%B0/">阅读全文</a></p>
-                            </div>
-                        </article>
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/">C&#43;&#43;基础笔记(1)</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2020年1月5日
-                            </date>
-                            
-                            <div class="post-meta meta-category">
-                                |
-                                
-                                    <a href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                输入输出 #include &lt;iostream&gt;using namespace std; //c++输入输出 int main() { string str = &#34;hello world!&#34;; int a; //endl有换行的功能 cout &lt;&lt; str &lt;&lt; endl; cin &gt;&gt; a; cout &lt;&lt; a &lt;&lt; &#34;\n&#34;; cout &lt;&lt; a; return 0; } using namespace std ,它声明了命名空间 std,后续如果有未指定命名空间的符号,那么默认使用 std,这样就可以使用 cin,cout,vector 等。 cin 用于从控制台获取用户输入,cout 用于将数据输出到控制台 cin……
-                                <p class="readmore"><a href="https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80/">阅读全文</a></p>
-                            </div>
-                        </article>
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/">C/c&#43;&#43;排序</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年12月25日
-                            </date>
-                            
-                            <div class="post-meta meta-category">
-                                |
-                                
-                                    <a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80">c语言</a>
-                                
-                                    <a href="https://CorPython.github.io/categories/c&#43;&#43;">c&#43;&#43;</a>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                c++ 1.sort()函数 头文件#include&lt;algorithm&gt; #include&lt;iostream&gt;#include&lt;algorithm&gt; using namespace std; int main() { int a[10]= {9,6,3,8,5,2,7,4,1,0}; for(int i=0; i&lt;10; i++) cout&lt;&lt;a[i]&lt;&lt;&#34;&#34;; cout&lt;&lt;endl; //数组长度 cout &lt;&lt; sizeof(a)/sizeof(a[0]) &lt;&lt; endl; sort(a,a+10);//注意是加上数组长度 for(int i=0; i&lt;10; i++) cout&lt;&lt;a[i]&lt;&lt;&#34;&#34;; return 0; } sort()自定义函数 #include&lt;iostream&gt;#include&lt;vector&gt;#include&lt;algorithm&gt; using namespace std; bool Comp(const int &amp;a,const int &amp;b) { return a&gt;b; } int main() { vector&lt;int&gt; v; for (int i = 0; i &lt; 10; ++i) { v.push_back(i +……
-                                <p class="readmore"><a href="https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/">阅读全文</a></p>
-                            </div>
-                        </article>
-                    
 
                     
 
 
+
+<ol class="page-navigator">
+    
+
+    
+    <li  class="current">
+        <a href="https://CorPython.github.io/tags/c&#43;&#43;/">1</a>
+    </li>
+    
+    <li >
+        <a href="https://CorPython.github.io/tags/c&#43;&#43;/page/2/">2</a>
+    </li>
+    
+
+    
+    <li class="next">
+        <a href="https://CorPython.github.io/tags/c&#43;&#43;/page/2/">下一页</a>
+    </li>
+    
+</ol>
 
 
 
@@ -337,52 +378,52 @@
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/Pacman%E5%91%BD%E4%BB%A4/" title="Pacman命令">Pacman命令</a>
+        <a href="https://CorPython.github.io/post/linux%E4%B8%8B%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8E%8B%E7%BC%A9%E5%8C%85/" title="Linux下解压安装压缩包">Linux下解压安装压缩包</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode349%E9%A2%98/" title="Leetcode349题">Leetcode349题</a>
+        <a href="https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/" title="Centos系统yum下载错误">Centos系统yum下载错误</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/gcc%E5%92%8Cg&#43;&#43;%E7%9A%84%E5%BC%82%E5%90%8C/" title="gcc和g&#43;&#43;的异与同">gcc和g&#43;&#43;的异与同</a>
+        <a href="https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/" title="服务器安装neovim">服务器安装neovim</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vs2019%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="vs2019快捷键">vs2019快捷键</a>
+        <a href="https://CorPython.github.io/post/leetcode287%E9%A2%98/" title="leetcode287题">leetcode287题</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vs2019%E4%BB%A3%E7%A0%81%E6%99%BA%E8%83%BD%E6%8F%90%E9%86%92%E9%BB%98%E8%AE%A4%E9%80%89%E4%B8%AD/" title="vs2019代码智能提醒默认选中">vs2019代码智能提醒默认选中</a>
+        <a href="https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/" title="markdown语法补充">markdown语法补充</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode290%E9%A2%98/" title="Leetcode290题">Leetcode290题</a>
+        <a href="https://CorPython.github.io/post/c&#43;&#43;11%E9%83%A8%E5%88%86%E6%96%B0%E7%89%B9%E6%80%A7/" title="C&#43;&#43;11部分新特性">C&#43;&#43;11部分新特性</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode137%E9%A2%98/" title="Leetcode137题">Leetcode137题</a>
+        <a href="https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E7%9A%84const/" title="C&#43;&#43;中的const">C&#43;&#43;中的const</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E4%B9%8B%E4%BD%8D%E8%BF%90%E7%AE%97/" title="算法基础之位运算">算法基础之位运算</a>
+        <a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF2/" title="C&#43;&#43;编译错误2">C&#43;&#43;编译错误2</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode832%E9%A2%98/" title="Leetcode832题">Leetcode832题</a>
+        <a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/" title="C&#43;&#43;编译错误之与标准库函数冲突">C&#43;&#43;编译错误之与标准库函数冲突</a>
     </li>
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode461%E9%A2%98/" title="Leetcode461题">Leetcode461题</a>
+        <a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/" title="C&#43;&#43;面向对象程序设计(2)">C&#43;&#43;面向对象程序设计(2)</a>
     </li>
     
 </ul>
@@ -394,7 +435,7 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (8)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (11)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (3)</a></li>
     
@@ -402,9 +443,9 @@
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/java/">java (1)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (15)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (16)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/">教程篇 (15)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/">教程篇 (17)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库 (1)</a></li>
     
@@ -414,7 +455,7 @@
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构 (3)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E8%B8%A9%E5%9D%91%E7%AF%87/">踩坑篇 (10)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E8%B8%A9%E5%9D%91%E7%AF%87/">踩坑篇 (14)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E9%85%8D%E7%BD%AE%E7%AF%87/">配置篇 (5)</a></li>
     
@@ -467,7 +508,22 @@
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/centos/">centos</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/const/">const</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/dfs/">dfs</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/error/">error</a>
     </li>
     
     <li>
@@ -527,6 +583,11 @@
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/markdown/">markdown</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/matlab/">matlab</a>
     </li>
     
@@ -538,6 +599,11 @@
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/mongodb/">mongodb</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/neovim/">neovim</a>
     </li>
     
     <li>

@@ -17,7 +17,7 @@
       <pubDate>Mon, 27 Jan 2020 10:38:12 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vs2019%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>快捷键 说明 ctrl + d 剪切粘贴一次完成 ctrl + alt + 上/下 多光标操作 ctrl + shift + / 多行注释 ctrl + / 单行注释 alt + 上/下 移动上/下行 ctrl + K,ctrl + d(或者ctrl + k + d) 格式化代码</description>
+      <description>快捷键 说明 ctrl + c 复制该行 ctrl + x 删除该行 ctrl + d 剪切粘贴一次完成 ctrl + alt + 上/下 多光标操作 ctrl + shift + / 或者 ctrl + K +C 多行注释 ctrl + / 单行注释 alt + 上/下 移动上/下行 ctrl + K,ctrl + d(或者ctrl + k + d) 格式化代码 ctrl + 上/下 移动代码区不改变光标位置 shift + F12 查看所有引用 ctrl + shift + v 查看剪切板 ctrl + 减号[注意要</description>
     </item>
     
     <item>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>const on code show的博客</title>
+    <link>https://CorPython.github.io/tags/const/</link>
+    <description>Recent content in const on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Feb 2020 11:12:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/const/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;中的const</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E7%9A%84const/</link>
+      <pubDate>Sun, 02 Feb 2020 11:12:17 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E7%9A%84const/</guid>
+      <description>const 变量 const变量指的是,此变量是只读的,不能被改变 如果我们在程序中试图改变const变量的值,编译器将报错,因此每次定义一个const变量时必须进行初始化 const int num = 15;//正确 const int num;//错误,必须进行初始化 const 结构体 和const int相同,必须在定义的时候进行初始化,并且</description>
+    </item>
+    
+  </channel>
+</rss>

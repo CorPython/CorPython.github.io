@@ -6,10 +6,46 @@
     <description>Recent content in 踩坑篇 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2020 23:23:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 19:33:41 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E8%B8%A9%E5%9D%91%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux下解压安装压缩包</title>
+      <link>https://CorPython.github.io/post/linux%E4%B8%8B%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8E%8B%E7%BC%A9%E5%8C%85/</link>
+      <pubDate>Sun, 09 Feb 2020 19:33:41 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/linux%E4%B8%8B%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8E%8B%E7%BC%A9%E5%8C%85/</guid>
+      <description>linux 下安装.tar.gz文件的安装方法 1.找到你下载的压缩包,解压 tar xvf xxxx.tar.gz 2.解压之后会在当前目录出现一个和压缩包名同名的文件夹,进入这个文件夹 ls //查看目录当前的文件 3.不同文件对应的编译方式 你观察一下这个目录中包含了以下哪一个文件：configure、Makefile还是Imak</description>
+    </item>
+    
+    <item>
+      <title>Centos系统yum下载错误</title>
+      <link>https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Sat, 08 Feb 2020 23:49:16 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/</guid>
+      <description>错误描述 File contains no section headers. file: file:///etc/yum.repos.d/mcepl-vim8-epel-7.repo, line: 2 原因 原因是没有配置yum源 解决 删除之前的yum源文件,自己获取阿里的源,命令 //删除该目录下所有文件 rm -f /etc/yum.repos.d/* //获取阿里源 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo //清理缓存 yum clean all //下载测试安装 yum install vim</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;编译错误2</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF2/</link>
+      <pubDate>Sat, 01 Feb 2020 16:22:33 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF2/</guid>
+      <description>&amp;lsquo;shared_ptr&amp;rsquo; was not declared in this scope 在我编译下面这段代码时,对于智能指针shared_ptr编译出错 #include &amp;lt;string&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;memory&amp;gt; //shared_ptr class Base1 { }; class Derived1: public Base1 { }; class Base2 { }; class Derived2: public Base2 { }; template &amp;lt;class T1, class T2&amp;gt; struct pair { typedef T1 first_type; typedef T2 second_type; T1 first; T2 second; pair() : first(T1()), second(T2()) {} pair(const T1&amp;amp; a, const T2&amp;amp; b) : first(a), second(b) {} template &amp;lt;class U1, class U2&amp;gt; pair(const pair&amp;lt;U1, U2&amp;gt;&amp;amp; p) : first(p.first), second(p.second) {} }; int main(int argc, char const *argv[]) { pair&amp;lt;Derived1, Derived2&amp;gt; p; pair&amp;lt;Base1, Base2&amp;gt; p2(pair&amp;lt;Derived1, Derived2&amp;gt;()); pair&amp;lt;Base1, Base2&amp;gt; p3(p); // pair&amp;lt;Derived1, Derived2&amp;gt; p4(p3); // error: no matching function for call to</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;编译错误之与标准库函数冲突</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/</link>
+      <pubDate>Sat, 01 Feb 2020 15:10:38 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/</guid>
+      <description>error: call of overloaded &amp;lsquo;swap(int&amp;amp;, int&amp;amp;)&amp;rsquo; is ambiguous swap(a,b); 最近使用模板template写了一个swap函数,编译之后竟然出错了 代码如下: #include &amp;lt;iostream&amp;gt; using namespace std; template&amp;lt;class T&amp;gt; void swap(T&amp;amp; a, T&amp;amp; b) { T temp = b; b = a; a = temp; } int main(int argc, char const *argv[]) { int a = 15,b = 20; swap(a,b); cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl; float m = 15,n = 22; swap(m,n); cout &amp;lt;&amp;lt; m &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; endl; return 0; } 报错信息 原因是因为标准库中已经定义过这个函数,只</description>
+    </item>
     
     <item>
       <title>vs2019代码智能提醒默认选中</title>

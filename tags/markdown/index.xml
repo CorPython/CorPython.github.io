@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on code show的博客</title>
+    <link>https://CorPython.github.io/tags/markdown/</link>
+    <description>Recent content in markdown on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Feb 2020 12:36:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>markdown语法补充</title>
+      <link>https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/</link>
+      <pubDate>Wed, 05 Feb 2020 12:36:57 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/</guid>
+      <description>我使用的markdown编辑器是typora或者vscode,基础的语法就不再提了,这篇文章会在我掌握的基础语法上补充新的语法(不定期更新) 实现文章标题跳转 1.使用html语法实现 (建议) &amp;lt;a href=&amp;#39;#标题名&amp;#39;&amp;gt;自定义&amp;lt;/a&amp;gt; 2.使用行内式链接</description>
+    </item>
+    
+  </channel>
+</rss>

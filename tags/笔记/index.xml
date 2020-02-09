@@ -17,7 +17,7 @@
       <pubDate>Tue, 14 Jan 2020 10:52:48 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/</guid>
-      <description>c++模板 c++提供了函数模板(function template)所谓函数模板，实际上是建立一个通用函数，其函数类型和形参类型不具体制定，用一个虚拟的类型来代表。这个通用函数就成为函数模板。凡是函数体相同的函数都可以用这个模板代替，不必定义多个函数，只需在模板中定义一次即可。在调</description>
+      <description>转换函数 [conversion function] #include &amp;lt;iostream&amp;gt; using namespace std; class Fraction { public: Fraction(int num, int den = 1) : m_numerator(num), m_denominator(den) {} operator double() const { //转换函数,将Fraction转换为double return (double)m_numerator / m_denominator; } private: int m_numerator;//分子 int m_denominator;//分母 }; int main() { Fraction f(3, 5); double d = 4 + f; cout &amp;lt;&amp;lt; d &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; f &amp;lt;&amp;lt; endl; //f的值为0.6 return 0; } 任何Fractio</description>
     </item>
     
   </channel>

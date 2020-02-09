@@ -6,10 +6,28 @@
     <description>Recent content in 教程篇 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2020 19:46:12 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 21:36:02 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>服务器安装neovim</title>
+      <link>https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/</link>
+      <pubDate>Sat, 08 Feb 2020 21:36:02 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/</guid>
+      <description>neovim的官方安装文档https://github.com/neovim/neovim/wiki/Installing-Neovim 安装nvim 1.使用命令在服务器上安装neovim,我用的服务器的linux系统是centos7 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm yum install -y neovim python3-neovim 2.使用nvim命令进入 3.创</description>
+    </item>
+    
+    <item>
+      <title>markdown语法补充</title>
+      <link>https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/</link>
+      <pubDate>Wed, 05 Feb 2020 12:36:57 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/</guid>
+      <description>我使用的markdown编辑器是typora或者vscode,基础的语法就不再提了,这篇文章会在我掌握的基础语法上补充新的语法(不定期更新) 实现文章标题跳转 1.使用html语法实现 (建议) &amp;lt;a href=&amp;#39;#标题名&amp;#39;&amp;gt;自定义&amp;lt;/a&amp;gt; 2.使用行内式链接</description>
+    </item>
     
     <item>
       <title>Pacman命令</title>
@@ -35,7 +53,7 @@
       <pubDate>Mon, 27 Jan 2020 10:38:12 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vs2019%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>快捷键 说明 ctrl + d 剪切粘贴一次完成 ctrl + alt + 上/下 多光标操作 ctrl + shift + / 多行注释 ctrl + / 单行注释 alt + 上/下 移动上/下行 ctrl + K,ctrl + d(或者ctrl + k + d) 格式化代码</description>
+      <description>快捷键 说明 ctrl + c 复制该行 ctrl + x 删除该行 ctrl + d 剪切粘贴一次完成 ctrl + alt + 上/下 多光标操作 ctrl + shift + / 或者 ctrl + K +C 多行注释 ctrl + / 单行注释 alt + 上/下 移动上/下行 ctrl + K,ctrl + d(或者ctrl + k + d) 格式化代码 ctrl + 上/下 移动代码区不改变光标位置 shift + F12 查看所有引用 ctrl + shift + v 查看剪切板 ctrl + 减号[注意要</description>
     </item>
     
     <item>
@@ -98,7 +116,7 @@
       <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</guid>
-      <description>vim 安装插件 vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc linux下安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 将以下信息写入.vimrc中 &amp;quot; Specify a directory for plugins &amp;quot; - For Neovim: stdpath(&#39;data&#39;) . &#39;/plugged&#39; &amp;quot; - Avoid using standard Vim directory names like &#39;plugin&#39; call plug#begin(&#39;~/.vim/plugged&#39;) &amp;quot; Make sure you use single quotes &amp;quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align Plug &#39;junegunn/vim-easy-align&#39; &amp;quot;</description>
+      <description>vim 安装插件 1.vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc 2.安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 3.使用命令更新配置文件 :source ~/.vimrc 4.加入自己想用的插件 call plug#begin(&amp;#39;~/.vim/plugged&amp;#39;) &amp;#34;将该插件加入到插件列表 Plug &amp;#39;mhinz/vim-startify&amp;#39; call plug#end() 5.开始安装插件 :PlugInstall</description>
     </item>
     
     <item>

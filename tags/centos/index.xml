@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on code show的博客</title>
+    <link>https://CorPython.github.io/tags/centos/</link>
+    <description>Recent content in centos on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Feb 2020 23:49:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Centos系统yum下载错误</title>
+      <link>https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Sat, 08 Feb 2020 23:49:16 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/</guid>
+      <description>错误描述 File contains no section headers. file: file:///etc/yum.repos.d/mcepl-vim8-epel-7.repo, line: 2 原因 原因是没有配置yum源 解决 删除之前的yum源文件,自己获取阿里的源,命令 //删除该目录下所有文件 rm -f /etc/yum.repos.d/* //获取阿里源 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo //清理缓存 yum clean all //下载测试安装 yum install vim</description>
+    </item>
+    
+  </channel>
+</rss>

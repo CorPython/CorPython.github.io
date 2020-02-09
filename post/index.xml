@@ -6,10 +6,100 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2020 19:46:12 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 19:33:41 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux下解压安装压缩包</title>
+      <link>https://CorPython.github.io/post/linux%E4%B8%8B%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8E%8B%E7%BC%A9%E5%8C%85/</link>
+      <pubDate>Sun, 09 Feb 2020 19:33:41 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/linux%E4%B8%8B%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8E%8B%E7%BC%A9%E5%8C%85/</guid>
+      <description>linux 下安装.tar.gz文件的安装方法 1.找到你下载的压缩包,解压 tar xvf xxxx.tar.gz 2.解压之后会在当前目录出现一个和压缩包名同名的文件夹,进入这个文件夹 ls //查看目录当前的文件 3.不同文件对应的编译方式 你观察一下这个目录中包含了以下哪一个文件：configure、Makefile还是Imak</description>
+    </item>
+    
+    <item>
+      <title>Centos系统yum下载错误</title>
+      <link>https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Sat, 08 Feb 2020 23:49:16 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/</guid>
+      <description>错误描述 File contains no section headers. file: file:///etc/yum.repos.d/mcepl-vim8-epel-7.repo, line: 2 原因 原因是没有配置yum源 解决 删除之前的yum源文件,自己获取阿里的源,命令 //删除该目录下所有文件 rm -f /etc/yum.repos.d/* //获取阿里源 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo //清理缓存 yum clean all //下载测试安装 yum install vim</description>
+    </item>
+    
+    <item>
+      <title>服务器安装neovim</title>
+      <link>https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/</link>
+      <pubDate>Sat, 08 Feb 2020 21:36:02 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/</guid>
+      <description>neovim的官方安装文档https://github.com/neovim/neovim/wiki/Installing-Neovim 安装nvim 1.使用命令在服务器上安装neovim,我用的服务器的linux系统是centos7 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm yum install -y neovim python3-neovim 2.使用nvim命令进入 3.创</description>
+    </item>
+    
+    <item>
+      <title>leetcode287题</title>
+      <link>https://CorPython.github.io/post/leetcode287%E9%A2%98/</link>
+      <pubDate>Wed, 05 Feb 2020 21:01:59 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode287%E9%A2%98/</guid>
+      <description>题目 给定一个包含 n+1 个整数的数组 nums,其数字都在 1 到 n 之间（包括 1 和n）,可知至少存在一个重复的整数.假设只有一个重复的整数,找出这个重复的数 示例 1: 输入: [1,3,4,2,2] 输出: 2 示例 2: 输入: [3,1,3,4,2] 输出: 3 说明： 不能更改原数组（假设数组是只读的） 只能使用额外的 O(1) 的空间 时间复杂度小于 O(n^2) 数组中只有一个</description>
+    </item>
+    
+    <item>
+      <title>markdown语法补充</title>
+      <link>https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/</link>
+      <pubDate>Wed, 05 Feb 2020 12:36:57 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/</guid>
+      <description>我使用的markdown编辑器是typora或者vscode,基础的语法就不再提了,这篇文章会在我掌握的基础语法上补充新的语法(不定期更新) 实现文章标题跳转 1.使用html语法实现 (建议) &amp;lt;a href=&amp;#39;#标题名&amp;#39;&amp;gt;自定义&amp;lt;/a&amp;gt; 2.使用行内式链接</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;11部分新特性</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;11%E9%83%A8%E5%88%86%E6%96%B0%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Mon, 03 Feb 2020 14:59:59 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;11%E9%83%A8%E5%88%86%E6%96%B0%E7%89%B9%E6%80%A7/</guid>
+      <description>Variadic Templates 数量不定的模板参数 template &amp;lt;typename T1, typename... TS&amp;gt; //可以接受至少一个模板类型 template &amp;lt;typename... TS&amp;gt; //至少0个 递归分解可变参数函数的参数包 #include&amp;lt;iostream&amp;gt;#include&amp;lt;bitset&amp;gt; using namespace std; //当参数到0时,必须定义一个边界,不写这个报错 void print() {} //...就是pack（包） template&amp;lt;typename T, typename... Types&amp;gt; //模板参数包 void print(const T&amp;amp;fristArg, const Types &amp;amp;...args) {//types函数参数类型包，args函数参数包</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;中的const</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E7%9A%84const/</link>
+      <pubDate>Sun, 02 Feb 2020 11:12:17 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E7%9A%84const/</guid>
+      <description>const 变量 const变量指的是,此变量是只读的,不能被改变 如果我们在程序中试图改变const变量的值,编译器将报错,因此每次定义一个const变量时必须进行初始化 const int num = 15;//正确 const int num;//错误,必须进行初始化 const 结构体 和const int相同,必须在定义的时候进行初始化,并且</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;编译错误2</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF2/</link>
+      <pubDate>Sat, 01 Feb 2020 16:22:33 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF2/</guid>
+      <description>&amp;lsquo;shared_ptr&amp;rsquo; was not declared in this scope 在我编译下面这段代码时,对于智能指针shared_ptr编译出错 #include &amp;lt;string&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;memory&amp;gt; //shared_ptr class Base1 { }; class Derived1: public Base1 { }; class Base2 { }; class Derived2: public Base2 { }; template &amp;lt;class T1, class T2&amp;gt; struct pair { typedef T1 first_type; typedef T2 second_type; T1 first; T2 second; pair() : first(T1()), second(T2()) {} pair(const T1&amp;amp; a, const T2&amp;amp; b) : first(a), second(b) {} template &amp;lt;class U1, class U2&amp;gt; pair(const pair&amp;lt;U1, U2&amp;gt;&amp;amp; p) : first(p.first), second(p.second) {} }; int main(int argc, char const *argv[]) { pair&amp;lt;Derived1, Derived2&amp;gt; p; pair&amp;lt;Base1, Base2&amp;gt; p2(pair&amp;lt;Derived1, Derived2&amp;gt;()); pair&amp;lt;Base1, Base2&amp;gt; p3(p); // pair&amp;lt;Derived1, Derived2&amp;gt; p4(p3); // error: no matching function for call to</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;编译错误之与标准库函数冲突</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/</link>
+      <pubDate>Sat, 01 Feb 2020 15:10:38 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/</guid>
+      <description>error: call of overloaded &amp;lsquo;swap(int&amp;amp;, int&amp;amp;)&amp;rsquo; is ambiguous swap(a,b); 最近使用模板template写了一个swap函数,编译之后竟然出错了 代码如下: #include &amp;lt;iostream&amp;gt; using namespace std; template&amp;lt;class T&amp;gt; void swap(T&amp;amp; a, T&amp;amp; b) { T temp = b; b = a; a = temp; } int main(int argc, char const *argv[]) { int a = 15,b = 20; swap(a,b); cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl; float m = 15,n = 22; swap(m,n); cout &amp;lt;&amp;lt; m &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; endl; return 0; } 报错信息 原因是因为标准库中已经定义过这个函数,只</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;面向对象程序设计(2)</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/</link>
+      <pubDate>Thu, 30 Jan 2020 18:50:05 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/</guid>
+      <description>Static static function没有this pointer,静态函数只能处理静态的数据. class template 类模板 声明方法： template &amp;lt;typename 标识符&amp;gt; 编译器从调用实参的类型，推导出函数模板的类型的参数。 template &amp;lt;typename T&amp;gt; class complex { public: complex(T r = 0, T i = 0 ) : re (r), im (i) { } complex&amp;amp; operator += ( const complex&amp;amp; ); T real () const {return re;} T imag () const {return im;} void real(T r) { re = r; } T func(const complex&amp;amp; param) { return param.re</description>
+    </item>
     
     <item>
       <title>Pacman命令</title>
@@ -44,7 +134,7 @@
       <pubDate>Mon, 27 Jan 2020 10:38:12 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vs2019%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>快捷键 说明 ctrl + d 剪切粘贴一次完成 ctrl + alt + 上/下 多光标操作 ctrl + shift + / 多行注释 ctrl + / 单行注释 alt + 上/下 移动上/下行 ctrl + K,ctrl + d(或者ctrl + k + d) 格式化代码</description>
+      <description>快捷键 说明 ctrl + c 复制该行 ctrl + x 删除该行 ctrl + d 剪切粘贴一次完成 ctrl + alt + 上/下 多光标操作 ctrl + shift + / 或者 ctrl + K +C 多行注释 ctrl + / 单行注释 alt + 上/下 移动上/下行 ctrl + K,ctrl + d(或者ctrl + k + d) 格式化代码 ctrl + 上/下 移动代码区不改变光标位置 shift + F12 查看所有引用 ctrl + shift + v 查看剪切板 ctrl + 减号[注意要</description>
     </item>
     
     <item>
@@ -269,7 +359,7 @@
       <pubDate>Tue, 14 Jan 2020 10:52:48 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c&#43;&#43;%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B02/</guid>
-      <description>c++模板 c++提供了函数模板(function template)所谓函数模板，实际上是建立一个通用函数，其函数类型和形参类型不具体制定，用一个虚拟的类型来代表。这个通用函数就成为函数模板。凡是函数体相同的函数都可以用这个模板代替，不必定义多个函数，只需在模板中定义一次即可。在调</description>
+      <description>转换函数 [conversion function] #include &amp;lt;iostream&amp;gt; using namespace std; class Fraction { public: Fraction(int num, int den = 1) : m_numerator(num), m_denominator(den) {} operator double() const { //转换函数,将Fraction转换为double return (double)m_numerator / m_denominator; } private: int m_numerator;//分子 int m_denominator;//分母 }; int main() { Fraction f(3, 5); double d = 4 + f; cout &amp;lt;&amp;lt; d &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; f &amp;lt;&amp;lt; endl; //f的值为0.6 return 0; } 任何Fractio</description>
     </item>
     
     <item>
@@ -309,12 +399,12 @@
     </item>
     
     <item>
-      <title>C&#43;&#43;面向对象程序设计</title>
+      <title>C&#43;&#43;面向对象程序设计(1)</title>
       <link>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Wed, 08 Jan 2020 11:53:35 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
-      <description>类和对象 #include &amp;lt;iostream&amp;gt; using namespace std; class Box { public: double length; // 长度 double breadth; // 宽度 double height; // 高度 }; int main( ) { Box Box1; // 声明 Box1，类型为 Box Box Box2; // 声明 Box2，类型为 Box double volume = 0.0; // 用于存储体积 // box 1 详述 Box1.height = 5.0; Box1.length = 6.0; Box1.breadth = 7.0; // box 2 详述 Box2.height = 10.0; Box2.length = 12.0; Box2.breadth = 13.0; // box 1 的体积 volume = Box1.height * Box1.length * Box1.breadth; cout &amp;lt;&amp;lt; &amp;#34;Box1 的体积: &amp;#34; &amp;lt;&amp;lt; volume &amp;lt;&amp;lt; endl; // box 2 的体积 volume = Box2.height * Box2.length * Box2.breadth; cout &amp;lt;&amp;lt;</description>
+      <description>Classes的两个经典分类 Class without pointer member(s) ![]( Class with pointer member(s) ) Header中的防卫式声明 complex.h #ifndef __COMPLEX__ #define __COMPLEX__ #endif inline function 函数若在class body内定义完成，便自动成为inline function的候选人. class body之外定义的函数，需要加上inline关键字，以此建议编译器将其编译为inline function constr</description>
     </item>
     
     <item>
@@ -327,7 +417,7 @@
     </item>
     
     <item>
-      <title>C&#43;&#43;编译错误</title>
+      <title>C&#43;&#43;编译错误1</title>
       <link>https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 07 Jan 2020 15:50:02 +0800</pubDate>
       
@@ -548,7 +638,7 @@
       <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</guid>
-      <description>vim 安装插件 vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc linux下安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 将以下信息写入.vimrc中 &amp;quot; Specify a directory for plugins &amp;quot; - For Neovim: stdpath(&#39;data&#39;) . &#39;/plugged&#39; &amp;quot; - Avoid using standard Vim directory names like &#39;plugin&#39; call plug#begin(&#39;~/.vim/plugged&#39;) &amp;quot; Make sure you use single quotes &amp;quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align Plug &#39;junegunn/vim-easy-align&#39; &amp;quot;</description>
+      <description>vim 安装插件 1.vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc 2.安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 3.使用命令更新配置文件 :source ~/.vimrc 4.加入自己想用的插件 call plug#begin(&amp;#39;~/.vim/plugged&amp;#39;) &amp;#34;将该插件加入到插件列表 Plug &amp;#39;mhinz/vim-startify&amp;#39; call plug#end() 5.开始安装插件 :PlugInstall</description>
     </item>
     
     <item>
