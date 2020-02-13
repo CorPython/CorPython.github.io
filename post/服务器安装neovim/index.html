@@ -98,6 +98,7 @@
     <li><a href="#安装nvim">安装nvim</a></li>
     <li><a href="#删除neovim">删除neovim</a></li>
     <li><a href="#安装cocnvim">安装coc.nvim</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
 </nav>
         </div>
@@ -193,6 +194,7 @@
     <li><a href="#安装nvim">安装nvim</a></li>
     <li><a href="#删除neovim">删除neovim</a></li>
     <li><a href="#安装cocnvim">安装coc.nvim</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
 </nav>
     </div>
@@ -239,14 +241,14 @@
                                 
                             </div>
                             
-                            <span class="post-word-count">|392 words</span>
+                            <span class="post-word-count">|994 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
                                         阅读</span></span>
                             </div>
                             <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约1分钟
+                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约2分钟
                             </div>
                             
                             
@@ -282,14 +284,147 @@ nvim init.vim
 </span><span style="color:#d14"></span>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 </code></pre></div><p>4.编辑<code>init.vim</code>文件,在该文件中加入<code>vim-plug</code>配置部分</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">call plug#begin<span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#39;~/.local/share/nvim/plugged&#39;</span><span style="color:#000;font-weight:bold">)</span>
-//你要安装的插件
-call plug#end<span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
-</code></pre></div><p>5.退出编辑<code>init.vim</code>,重新打开<code>nvim</code>,输入命令安装插件</p>
+<span style="color:#d14">&#34;</span><span style="color:#d14">添加coc.nvim
+</span><span style="color:#d14">Plug &#39;neoclide/coc.nvim&#39;, {&#39;branch&#39;: &#39;release&#39;}
+</span><span style="color:#d14">call plug#end()
+</span></code></pre></div><p>5.退出编辑<code>init.vim</code>,重新打开<code>nvim</code>,输入命令安装插件</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">:PlugInstall 
-</code></pre></div><p>6.安装<code>coc.nvim</code>插件</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Plug <span style="color:#d14">&#39;neoclide/coc.nvim&#39;</span>, <span style="color:#000;font-weight:bold">{</span><span style="color:#d14">&#39;branch&#39;</span>: <span style="color:#d14">&#39;release&#39;</span><span style="color:#000;font-weight:bold">}</span>
-或
-Plug <span style="color:#d14">&#39;neoclide/coc.nvim&#39;</span>, <span style="color:#000;font-weight:bold">{</span><span style="color:#d14">&#39;do&#39;</span>: <span style="color:#d14">&#39;yarn install --frozen-lockfile&#39;</span><span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>6.在<code>init.vim</code>中添加官方推荐的配置内容</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#d14">&#34;下面是coc.nvim的官方配置
+</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">if</span> hidden is not set, TextEdit might fail.
+<span style="color:#0086b3">set</span> hidden
+
+<span style="color:#d14">&#34; Some servers have issues with backup files, see #649
+</span><span style="color:#d14">set nobackup
+</span><span style="color:#d14">set nowritebackup
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34;</span> Better display <span style="color:#000;font-weight:bold">for</span> messages
+<span style="color:#0086b3">set</span> <span style="color:#008080">cmdheight</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">2</span>
+
+<span style="color:#d14">&#34; You will have bad experience for diagnostic messages when it&#39;s default 4000.
+</span><span style="color:#d14">set updatetime=300
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34;</span> don<span style="color:#d14">&#39;t give |ins-completion-menu| messages.
+</span><span style="color:#d14">set shortmess+=c
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; always show signcolumns
+</span><span style="color:#d14">set signcolumn=yes
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use tab for trigger completion with characters ahead and navigate.
+</span><span style="color:#d14">&#34; Use command &#39;</span>:verbose imap &lt;tab&gt;<span style="color:#d14">&#39; to make sure tab is not mapped by other plugin.
+</span><span style="color:#d14">inoremap &lt;silent&gt;&lt;expr&gt; &lt;TAB&gt;
+</span><span style="color:#d14">      \ pumvisible() ? &#34;\&lt;C-n&gt;&#34; :
+</span><span style="color:#d14">      \ &lt;SID&gt;check_back_space() ? &#34;\&lt;TAB&gt;&#34; :
+</span><span style="color:#d14">      \ coc#refresh()
+</span><span style="color:#d14">inoremap &lt;expr&gt;&lt;S-TAB&gt; pumvisible() ? &#34;\&lt;C-p&gt;&#34; : &#34;\&lt;C-h&gt;&#34;
+</span><span style="color:#d14">
+</span><span style="color:#d14">function! s:check_back_space() abort
+</span><span style="color:#d14">  let col = col(&#39;</span>.<span style="color:#d14">&#39;) - 1
+</span><span style="color:#d14">  return !col || getline(&#39;</span>.<span style="color:#d14">&#39;)[col - 1]  =~# &#39;</span><span style="color:#d14">\s</span><span style="color:#d14">&#39;
+</span><span style="color:#d14">endfunction
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use &lt;c-space&gt; to trigger completion.
+</span><span style="color:#d14">inoremap &lt;silent&gt;&lt;expr&gt; &lt;c-space&gt; coc#refresh()
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use &lt;cr&gt; to confirm completion, `&lt;C-g&gt;u` means break undo chain at current position.
+</span><span style="color:#d14">&#34; Coc only does snippet and additional edit on confirm.
+</span><span style="color:#d14">inoremap &lt;expr&gt; &lt;cr&gt; pumvisible() ? &#34;\&lt;C-y&gt;&#34; : &#34;\&lt;C-g&gt;u\&lt;CR&gt;&#34;
+</span><span style="color:#d14">&#34; Or use `complete_info` if your vim support it, like:
+</span><span style="color:#d14">&#34; inoremap &lt;expr&gt; &lt;cr&gt; complete_info()[&#34;selected&#34;] != &#34;-1&#34; ? &#34;\&lt;C-y&gt;&#34; : &#34;\&lt;C-g&gt;u\&lt;CR&gt;&#34;
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use `[g` and `]g` to navigate diagnostics
+</span><span style="color:#d14">nmap &lt;silent&gt; [g &lt;Plug&gt;(coc-diagnostic-prev)
+</span><span style="color:#d14">nmap &lt;silent&gt; ]g &lt;Plug&gt;(coc-diagnostic-next)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Remap keys for gotos
+</span><span style="color:#d14">nmap &lt;silent&gt; gd &lt;Plug&gt;(coc-definition)
+</span><span style="color:#d14">nmap &lt;silent&gt; gy &lt;Plug&gt;(coc-type-definition)
+</span><span style="color:#d14">nmap &lt;silent&gt; gi &lt;Plug&gt;(coc-implementation)
+</span><span style="color:#d14">nmap &lt;silent&gt; gr &lt;Plug&gt;(coc-references)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use K to show documentation in preview window
+</span><span style="color:#d14">nnoremap &lt;silent&gt; K :call &lt;SID&gt;show_documentation()&lt;CR&gt;
+</span><span style="color:#d14">
+</span><span style="color:#d14">function! s:show_documentation()
+</span><span style="color:#d14">  if (index([&#39;</span>vim<span style="color:#d14">&#39;,&#39;</span>help<span style="color:#d14">&#39;], &amp;filetype) &gt;= 0)
+</span><span style="color:#d14">    execute &#39;</span>h <span style="color:#d14">&#39;.expand(&#39;</span>&lt;cword&gt;<span style="color:#d14">&#39;)
+</span><span style="color:#d14">  else
+</span><span style="color:#d14">    call CocAction(&#39;</span>doHover<span style="color:#d14">&#39;)
+</span><span style="color:#d14">  endif
+</span><span style="color:#d14">endfunction
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Highlight symbol under cursor on CursorHold
+</span><span style="color:#d14">autocmd CursorHold * silent call CocActionAsync(&#39;</span>highlight<span style="color:#d14">&#39;)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Remap for rename current word
+</span><span style="color:#d14">nmap &lt;leader&gt;rn &lt;Plug&gt;(coc-rename)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Remap for format selected region
+</span><span style="color:#d14">xmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)
+</span><span style="color:#d14">nmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)
+</span><span style="color:#d14">
+</span><span style="color:#d14">augroup mygroup
+</span><span style="color:#d14">  autocmd!
+</span><span style="color:#d14">  &#34; Setup formatexpr specified filetype(s).
+</span><span style="color:#d14">  autocmd FileType typescript,json setl formatexpr=CocAction(&#39;</span>formatSelected<span style="color:#d14">&#39;)
+</span><span style="color:#d14">  &#34; Update signature help on jump placeholder
+</span><span style="color:#d14">  autocmd User CocJumpPlaceholder call CocActionAsync(&#39;</span>showSignatureHelp<span style="color:#d14">&#39;)
+</span><span style="color:#d14">augroup end
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Remap for do codeAction of selected region, ex: `&lt;leader&gt;aap` for current paragraph
+</span><span style="color:#d14">xmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)
+</span><span style="color:#d14">nmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Remap for do codeAction of current line
+</span><span style="color:#d14">nmap &lt;leader&gt;ac  &lt;Plug&gt;(coc-codeaction)
+</span><span style="color:#d14">&#34; Fix autofix problem of current line
+</span><span style="color:#d14">nmap &lt;leader&gt;qf  &lt;Plug&gt;(coc-fix-current)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Create mappings for function text object, requires document symbols feature of languageserver.
+</span><span style="color:#d14">xmap if &lt;Plug&gt;(coc-funcobj-i)
+</span><span style="color:#d14">xmap af &lt;Plug&gt;(coc-funcobj-a)
+</span><span style="color:#d14">omap if &lt;Plug&gt;(coc-funcobj-i)
+</span><span style="color:#d14">omap af &lt;Plug&gt;(coc-funcobj-a)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use &lt;TAB&gt; for select selections ranges, needs server support, like: coc-tsserver, coc-python
+</span><span style="color:#d14">nmap &lt;silent&gt; &lt;TAB&gt; &lt;Plug&gt;(coc-range-select)
+</span><span style="color:#d14">xmap &lt;silent&gt; &lt;TAB&gt; &lt;Plug&gt;(coc-range-select)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use `:Format` to format current buffer
+</span><span style="color:#d14">command! -nargs=0 Format :call CocAction(&#39;</span>format<span style="color:#d14">&#39;)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Use `:Fold` to fold current buffer
+</span><span style="color:#d14">command! -nargs=? Fold :call     CocAction(&#39;</span>fold<span style="color:#d14">&#39;, &lt;f-args&gt;)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; use `:OR` for organize import of current buffer
+</span><span style="color:#d14">command! -nargs=0 OR   :call     CocAction(&#39;</span>runCommand<span style="color:#d14">&#39;, &#39;</span>editor.action.organizeImport<span style="color:#d14">&#39;)
+</span><span style="color:#d14">
+</span><span style="color:#d14">&#34; Add status line support, for integration with other plugin, checkout `:h coc-status`
+</span><span style="color:#d14">set statusline^=%{coc#status()}%{get(b:,&#39;</span>coc_current_function<span style="color:#d14">&#39;,&#39;</span><span style="color:#a61717;background-color:#e3d2d2">&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#d14">&#34; Using CocList
+</span><span style="color:#d14">&#34;</span> Show all diagnostics
+nnoremap &lt;silent&gt; &lt;space&gt;a  :&lt;C-u&gt;CocList diagnostics&lt;cr&gt;
+<span style="color:#d14">&#34; Manage extensions
+</span><span style="color:#d14">nnoremap &lt;silent&gt; &lt;space&gt;e  :&lt;C-u&gt;CocList extensions&lt;cr&gt;
+</span><span style="color:#d14">&#34;</span> Show commands
+nnoremap &lt;silent&gt; &lt;space&gt;c  :&lt;C-u&gt;CocList commands&lt;cr&gt;
+<span style="color:#d14">&#34; Find symbol of current document
+</span><span style="color:#d14">nnoremap &lt;silent&gt; &lt;space&gt;o  :&lt;C-u&gt;CocList outline&lt;cr&gt;
+</span><span style="color:#d14">&#34;</span> Search workspace symbols
+nnoremap &lt;silent&gt; &lt;space&gt;s  :&lt;C-u&gt;CocList -I symbols&lt;cr&gt;
+<span style="color:#d14">&#34; Do default action for next item.
+</span><span style="color:#d14">nnoremap &lt;silent&gt; &lt;space&gt;j  :&lt;C-u&gt;CocNext&lt;CR&gt;
+</span><span style="color:#d14">&#34;</span> Do default action <span style="color:#000;font-weight:bold">for</span> previous item.
+nnoremap &lt;silent&gt; &lt;space&gt;k  :&lt;C-u&gt;CocPrev&lt;CR&gt;
+<span style="color:#d14">&#34; Resume latest coc list
+</span><span style="color:#d14">nnoremap &lt;silent&gt; &lt;space&gt;p  :&lt;C-u&gt;CocListResume&lt;CR&gt;
+</span><span style="color:#d14">&#34;</span> coc.nvim-----&gt;<span style="color:#000;font-weight:bold">(</span>end<span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="faq">FAQ</h2>
+<p><code>javascript</code>文件不存在,如图:</p>
+<img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200209234913.png"/>
+<p>解决方案:实用下列命令</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">:call coc#util#install<span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
 </code></pre></div>
                             </div>
                            
@@ -398,6 +533,11 @@ Plug <span style="color:#d14">&#39;neoclide/coc.nvim&#39;</span>, <span style="c
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/Html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" title="Html常用标签">Html常用标签</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/linux%E4%B8%8B%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8E%8B%E7%BC%A9%E5%8C%85/" title="Linux下解压安装压缩包">Linux下解压安装压缩包</a>
     </li>
     
@@ -441,11 +581,6 @@ Plug <span style="color:#d14">&#39;neoclide/coc.nvim&#39;</span>, <span style="c
         <a href="https://CorPython.github.io/post/c&#43;&#43;%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E4%B9%8B%E4%B8%8E%E6%A0%87%E5%87%86%E5%BA%93%E5%87%BD%E6%95%B0%E5%86%B2%E7%AA%81/" title="C&#43;&#43;编译错误之与标准库函数冲突">C&#43;&#43;编译错误之与标准库函数冲突</a>
     </li>
     
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/c&#43;&#43;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12/" title="C&#43;&#43;面向对象程序设计(2)">C&#43;&#43;面向对象程序设计(2)</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -464,6 +599,8 @@ Plug <span style="color:#d14">&#39;neoclide/coc.nvim&#39;</span>, <span style="c
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/java/">java (1)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (16)</a></li>
+    
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%89%8D%E7%AB%AF/">前端 (1)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/">教程篇 (17)</a></li>
     
@@ -569,6 +706,11 @@ Plug <span style="color:#d14">&#39;neoclide/coc.nvim&#39;</span>, <span style="c
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/html/">html</a>
     </li>
     
     <li>
@@ -734,6 +876,11 @@ Plug <span style="color:#d14">&#39;neoclide/coc.nvim&#39;</span>, <span style="c
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/%E6%8F%92%E4%BB%B6/">插件</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/%E6%A0%87%E7%AD%BE/">标签</a>
     </li>
     
     <li>

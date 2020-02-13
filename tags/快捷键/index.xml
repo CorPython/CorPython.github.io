@@ -26,7 +26,7 @@
       <pubDate>Wed, 04 Dec 2019 20:46:09 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + F 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,自动修正 ctrl + enter 9.</description>
+      <description>1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + L 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,自动修正 ctrl + enter 9.</description>
     </item>
     
   </channel>

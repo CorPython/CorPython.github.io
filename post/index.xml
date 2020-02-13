@@ -6,10 +6,19 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Feb 2020 19:33:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 18:30:00 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Html常用标签</title>
+      <link>https://CorPython.github.io/post/Html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Tue, 11 Feb 2020 18:30:00 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/Html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <description>页面结构 基本结构 下面是HTML文档的基本组成部分 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh-CN&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;keyword&amp;#34; content=&amp;#34;Mysql,Laravel,Javascript,HTML,CSS,ES6,TYPESCRIPT,后盾人,后盾人教程&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;description&amp;#34; content=&amp;#34;后盾人专注WEB开发，高密度更</description>
+    </item>
     
     <item>
       <title>Linux下解压安装压缩包</title>
@@ -557,7 +566,7 @@
       <pubDate>Wed, 04 Dec 2019 20:46:09 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + F 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,自动修正 ctrl + enter 9.</description>
+      <description>1.返回上一次查看代码的位置 ctrl + alt + 左键 2.代码格式化快捷键 ctrl + alt + L 3.查看最近打开的文件 ctrl + E 4.查看最近修改的文件 ctrl + shift + E 5.查看当前文件的结构 ctrl + F12 6.语句完成 ctrl + shift + enter 7.可以生成构造器/Getter/Setter/toString Alt + Insert 8.导入包,自动修正 ctrl + enter 9.</description>
     </item>
     
     <item>
