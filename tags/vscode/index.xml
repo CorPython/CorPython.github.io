@@ -6,10 +6,19 @@
     <description>Recent content in vscode on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Dec 2019 18:25:21 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2020 21:43:25 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vscode修改默认的快捷键</title>
+      <link>https://CorPython.github.io/post/vscode%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Sun, 16 Feb 2020 21:43:25 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>这篇文章的由来是因为我在vscode上写cpp代码时发现注释的快捷键和我在其他编辑器上不同😵.于是我通过百度查找,终于在这篇问答中找到了答案😃,vscode使用的快捷键是shift + alt + a😭,大微软的使用习惯谁能琢磨透呢🤣 通常我们在写代码的时候会使用到两种注释方式 1.行注释 默认快</description>
+    </item>
     
     <item>
       <title>vscode如何写latex</title>

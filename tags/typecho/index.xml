@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typecho on code show的博客</title>
+    <link>https://CorPython.github.io/tags/typecho/</link>
+    <description>Recent content in typecho on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Feb 2020 23:51:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Typecho主题设置备忘录</title>
+      <link>https://CorPython.github.io/post/typecho%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98%E5%BD%95/</link>
+      <pubDate>Sat, 15 Feb 2020 23:51:59 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/typecho%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
+      <description>这篇文章主要是记录我的typecho博客主题Aria在后台的相关配置,我的博客地址点这里 虽然作者有对应的官方wiki文档,但是我是一个乐于折腾的人😉,所以可能时不时会想去换个主题尝试一下😂,但是由于主题没有保存原来的配置的功能😥,所以我决定把主题的部分配置记录下来😁,🆗下面就是我</description>
+    </item>
+    
+  </channel>
+</rss>
