@@ -6,10 +6,19 @@
     <description>Recent content in 踩坑篇 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2020 21:43:25 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2020 18:54:19 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E8%B8%A9%E5%9D%91%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C&#43;&#43;中关于数组的动态初始化问题</title>
+      <link>https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 19 Feb 2020 18:54:19 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%97%AE%E9%A2%98/</guid>
+      <description>这是一段c++代码; #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int len = 5; int arr[len] { 0 }; for (size_t i = 0; i &amp;lt; len; i++) { cout &amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; endl; } return 0; } 我们先看在g++中的运行情况: 我们将arr数组初始化为0.并输出,得到了正确的结果 然后我们在vs2019中运行,vs2019使用的是msvc编译器 直接运行出了错,因为动态数组长度必须是常量</description>
+    </item>
     
     <item>
       <title>vscode修改默认的快捷键</title>
