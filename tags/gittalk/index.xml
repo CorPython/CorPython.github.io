@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gittalk on code show的博客</title>
-    <link>https://CorPython.github.io/tags/Gittalk/</link>
-    <description>Recent content in Gittalk on code show的博客</description>
+    <title>gittalk on code show的博客</title>
+    <link>https://CorPython.github.io/tags/gittalk/</link>
+    <description>Recent content in gittalk on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2019 18:14:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 18:51:43 +0800</lastBuildDate>
     
-	<atom:link href="https://CorPython.github.io/tags/Gittalk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://CorPython.github.io/tags/gittalk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Gittalk报错Error: Validation Failed</title>
-      <link>https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/</link>
-      <pubDate>Mon, 11 Nov 2019 18:14:21 +0800</pubDate>
+      <title>hugo-maupassant主题添加gittalk评论</title>
+      <link>https://CorPython.github.io/post/hugo-Maupassant%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0gittalk%E8%AF%84%E8%AE%BA/</link>
+      <pubDate>Thu, 20 Feb 2020 18:51:43 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/gittalk%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3/</guid>
-      <description>gittalk 是一个基于 Github Issue 和 Preact 开发的评论插件。它除了支持 Hexo 外，还支持 java，php 等语言开发的博客,当然我现在使用的hugo博客也是支持的.详情请点击gittalk官网 但是如果标题的字节过长(建议标题起短一些),会出现ERROR:Validation Failed这个错误 解决方案 1.找到配</description>
+      <guid>https://CorPython.github.io/post/hugo-Maupassant%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0gittalk%E8%AF%84%E8%AE%BA/</guid>
+      <description>更新主题之后发现评论功能丢了🤔,岂有此理,后面发现原来是主题不支持gittalk评论,之前是自己加上去的,所以为了自己的健忘症😂,还是写一篇博客记录一下😎! 注:Maupassant主题自带了utteranc评论功能,但是我觉得不是很好用,gittalk评论能够在github上创建</description>
+    </item>
+    
+    <item>
+      <title>hugo博客如何使用gittalk</title>
+      <link>https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 11 Nov 2019 18:59:30 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8gittalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
+      <description>1.进入github官方网站,登陆自己的github-&amp;gt;settings-&amp;gt;Devloper settings-&amp;gt;Github Apps会出现下图 Application name:给应用起个名字,根据自己的想法 Homepage:写你的博客地址 Application description:为你的应用写一段描述 Application callback URL:回调地址,可以写你的博客</description>
     </item>
     
   </channel>
