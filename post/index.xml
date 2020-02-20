@@ -6,10 +6,19 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Feb 2020 18:54:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 18:51:43 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo-maupassant主题添加gittalk评论</title>
+      <link>https://CorPython.github.io/post/hugo-Maupassant%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0gittalk%E8%AF%84%E8%AE%BA/</link>
+      <pubDate>Thu, 20 Feb 2020 18:51:43 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/hugo-Maupassant%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0gittalk%E8%AF%84%E8%AE%BA/</guid>
+      <description>更新主题之后发现评论功能丢了🤔,岂有此理,后面发现原来是主题不支持gittalk评论,之前是自己加上去的,所以为了自己的健忘症😂,还是写一篇博客记录一下😎! 注:Maupassant主题自带了utteranc评论功能,但是我觉得不是很好用,gittalk评论能够在github上创建</description>
+    </item>
     
     <item>
       <title>C&#43;&#43;中关于数组的动态初始化问题</title>
