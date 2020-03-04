@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>使用篇 on code show的博客</title>
+    <link>https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/</link>
+    <description>Recent content in 使用篇 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Mar 2020 11:57:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vscode隐藏文件</title>
+      <link>https://CorPython.github.io/post/vscode%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Mon, 02 Mar 2020 11:57:46 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/</guid>
+      <description>vscode隐藏文件和文件夹 &amp;#34;files.exclude&amp;#34;: { &amp;#34;**/.classpath&amp;#34;: true, &amp;#34;**/.project&amp;#34;: true, &amp;#34;**/.settings&amp;#34;: true, &amp;#34;**/.factorypath&amp;#34;: true, &amp;#34;**/*.exe&amp;#34;: true, &amp;#34;**/$null&amp;#34;: true, &amp;#34;**/folder&amp;#34;:true, }, vscode使用git-bash &amp;#34;terminal.integrated.shell.windows&amp;#34;:&amp;#34;D:\\Git\\bin\\bash.exe&amp;#34;,</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,37 @@
     <description>Recent content in Posts on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Feb 2020 18:51:43 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 17:50:58 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test</title>
+      <link>https://CorPython.github.io/post/test/</link>
+      <pubDate>Wed, 04 Mar 2020 17:50:58 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leecode面试金典1-4</title>
+      <link>https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B81-4/</link>
+      <pubDate>Wed, 04 Mar 2020 17:23:34 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B81-4/</guid>
+      <description>1.判定字符是否唯一 题目 实现一个算法，确定一个字符串 s 的所有字符是否全都不同。 示例 1： 输入: s = &amp;quot;leetcode&amp;quot; 输出: false 示例 2： 输入: s = &amp;quot;abc&amp;quot; 输出: true 限制： 0 &amp;lt;= len(s) &amp;lt;= 100 如果你不使用额外的数据结构，会很加分。 题解 1.对字符串排序,比较相邻字符是否相同 bool isUnique(string astr) { if (astr.size() == 0) return true; sort(astr.begin(), astr.end()); for (size_t i = 0; i &amp;lt; astr.size() - 1; i++) { if</description>
+    </item>
+    
+    <item>
+      <title>vscode隐藏文件</title>
+      <link>https://CorPython.github.io/post/vscode%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Mon, 02 Mar 2020 11:57:46 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/vscode%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/</guid>
+      <description>vscode隐藏文件和文件夹 &amp;#34;files.exclude&amp;#34;: { &amp;#34;**/.classpath&amp;#34;: true, &amp;#34;**/.project&amp;#34;: true, &amp;#34;**/.settings&amp;#34;: true, &amp;#34;**/.factorypath&amp;#34;: true, &amp;#34;**/*.exe&amp;#34;: true, &amp;#34;**/$null&amp;#34;: true, &amp;#34;**/folder&amp;#34;:true, }, vscode使用git-bash &amp;#34;terminal.integrated.shell.windows&amp;#34;:&amp;#34;D:\\Git\\bin\\bash.exe&amp;#34;,</description>
+    </item>
     
     <item>
       <title>hugo-maupassant主题添加gittalk评论</title>
@@ -440,7 +467,7 @@
       <pubDate>Thu, 09 Jan 2020 17:07:56 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E5%AE%8F%E5%AE%9A%E4%B9%89/</guid>
-      <description>c语言宏定义初识 带参数的宏的原则: 一切都要括号 整个值要括号 参数出现的每个地方都要括号 注意:结尾千万不要加上分号 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt; #define MAX( x, y ) ( ((x) &amp;gt; (y)) ? (x) : (y) )#define MIN( x, y ) ( ((x) &amp;lt; (y)) ? (x) : (y) )#define UPCASE( c ) ( ((c) &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; (c) &amp;lt;= &amp;#39;z&amp;#39;) ? ((c) - 0x20) : (c) )//大小写转换 #define Cube(x) ((x) * (x) * (x) )#define func(x) ((x) /3) #define PI 3.14//#undef PI 撤销宏定义 int main() { printf(&amp;#34;%.2f\n&amp;#34;,PI); printf(&amp;#34;%d\n&amp;#34;,MAX(15,20)); printf(&amp;#34;%.1f\n&amp;#34;,MAX(15.5,20.5)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;a&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;b&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;c&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;D&amp;#39;)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;E&amp;#39;)); printf(&amp;#34;%d\n&amp;#34;,Cube(5));</description>
+      <description>c语言宏定义初识 带参数的宏的原则: 一切都要括号 整个值要括号 参数出现的每个地方都要括号 注意:结尾千万不要加上分号 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt; #define MAX( x, y ) ( ((x) &amp;gt; (y)) ? (x) : (y) ) #define MIN( x, y ) ( ((x) &amp;lt; (y)) ? (x) : (y) ) #define UPCASE( c ) ( ((c) &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; (c) &amp;lt;= &amp;#39;z&amp;#39;) ? ((c) - 0x20) : (c) )//大小写转换 #define Cube(x) ((x) * (x) * (x) ) #define func(x) ((x) / 3) #define PI 3.14 //#undef PI 撤销宏定义 int main() { printf(&amp;#34;%.2f\n&amp;#34;,PI); printf(&amp;#34;%d\n&amp;#34;,MAX(15,20)); printf(&amp;#34;%.1f\n&amp;#34;,MAX(15.5,20.5)); printf(&amp;#34;%c\n&amp;#34;,UPCASE(&amp;#39;a&amp;#39;));</description>
     </item>
     
     <item>
@@ -530,7 +557,7 @@
       <pubDate>Wed, 25 Dec 2019 21:53:10 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/c%E8%AF%AD%E8%A8%80%E6%8E%92%E5%BA%8F/</guid>
-      <description>c++ 1.sort()函数 头文件#include&amp;lt;algorithm&amp;gt; #include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; int main() { int a[10]= {9,6,3,8,5,2,7,4,1,0}; for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; cout&amp;lt;&amp;lt;endl; //数组长度 cout &amp;lt;&amp;lt; sizeof(a)/sizeof(a[0]) &amp;lt;&amp;lt; endl; sort(a,a+10);//注意是加上数组长度 for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34;&amp;#34;; return 0; } sort()自定义函数 #include&amp;lt;iostream&amp;gt;#include&amp;lt;vector&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; bool Comp(const int &amp;amp;a,const int &amp;amp;b) { return a&amp;gt;b; } int main() { vector&amp;lt;int&amp;gt; v; for (int i = 0; i &amp;lt; 10; ++i) { v.push_back(i +</description>
+      <description>c++ 1.sort()函数 头文件#include&amp;lt;algorithm&amp;gt; #include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; int main() { int a[10]= {9,6,3,8,5,2,7,4,1,0}; for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34; &amp;#34;; cout&amp;lt;&amp;lt;endl; //数组长度 cout &amp;lt;&amp;lt; sizeof(a)/sizeof(a[0]) &amp;lt;&amp;lt; endl; sort(a,a+10);//注意是加上数组长度 for(int i=0; i&amp;lt;10; i++) cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;#34; &amp;#34;; return 0; } sort()自定义函数 #include&amp;lt;iostream&amp;gt;#include&amp;lt;vector&amp;gt;#include&amp;lt;algorithm&amp;gt; using namespace std; bool Comp(const int &amp;amp;a,const int &amp;amp;b) { return a&amp;gt;b; } int main() { vector&amp;lt;int&amp;gt; v; for (int i = 0; i &amp;lt; 10; ++i) {</description>
     </item>
     
     <item>
@@ -575,7 +602,7 @@
       <pubDate>Tue, 10 Dec 2019 20:35:22 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/</guid>
-      <description>SQL server触发器及存储过程 删除触发器 /*1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表</description>
+      <description>SQL server触发器及存储过程 删除触发器 /* 1.在表Student中建立删除触发器，实现表Student和表SC的级联删除，也就是只要删除表Student 中的元组学号为s1，则表SC中SNO为s1的元组也要删除；建立触发器后用企业管理器删除Student中学号为30的元组，看看表S</description>
     </item>
     
     <item>
@@ -584,7 +611,7 @@
       <pubDate>Sun, 08 Dec 2019 11:56:45 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/maven%E9%85%8D%E7%BD%AE/</guid>
-      <description>&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt; &amp;lt;!--Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the &amp;#34;License&amp;#34;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &amp;#34;AS IS&amp;#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --&amp;gt; &amp;lt;!--| This is the configuration file for Maven. It can be specified at two levels: | | 1. User Level. This settings.xml file</description>
+      <description>&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt; &amp;lt;!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the &amp;#34;License&amp;#34;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &amp;#34;AS IS&amp;#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --&amp;gt; &amp;lt;!-- | This is the configuration file for Maven. It can be specified at two levels: | | 1. User Level. This</description>
     </item>
     
     <item>
@@ -683,7 +710,7 @@
       <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</guid>
-      <description>vim 安装插件 1.vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc 2.安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 3.使用命令更新配置文件 :source ~/.vimrc 4.加入自己想用的插件 call plug#begin(&amp;#39;~/.vim/plugged&amp;#39;) &amp;#34;将该插件加入到插件列表 Plug &amp;#39;mhinz/vim-startify&amp;#39; call plug#end() 5.开始安装插件 :PlugInstall</description>
+      <description>vim 安装插件 1.vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc 2.安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 3.使用命令更新配置文件 :source ~/.vimrc 4.加入自己想用的插件 call plug#begin(&amp;#39;~/.vim/plugged&amp;#39;) &amp;#34; 将该插件加入到插件列表 Plug &amp;#39;mhinz/vim-startify&amp;#39; call plug#end() 5.开始安装插件 :PlugInstall vim-plug 操作 在</description>
     </item>
     
     <item>

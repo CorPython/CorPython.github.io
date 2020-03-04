@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -194,7 +194,7 @@
     <li><a href="#ctor放在private区">ctor放在private区</a></li>
     <li><a href="#const-member-function">const member function</a></li>
     <li><a href="#friend--友元">friend  友元</a></li>
-    <li><a href="#pass-by-value-传值----栈">Pass by value 传值 &ndash;> 栈</a></li>
+    <li><a href="#pass-by-value-传值----栈">Pass by value 传值 &ndash;&gt; 栈</a></li>
     <li><a href="#pass-by-reference-传递引用">Pass by reference 传递引用</a></li>
     <li><a href="#return-by-value--or---return-by-reference">Return by value  OR   Return by reference</a></li>
     <li><a href="#设计建议">设计建议</a></li>
@@ -319,7 +319,7 @@
     <li><a href="#ctor放在private区">ctor放在private区</a></li>
     <li><a href="#const-member-function">const member function</a></li>
     <li><a href="#friend--友元">friend  友元</a></li>
-    <li><a href="#pass-by-value-传值----栈">Pass by value 传值 &ndash;> 栈</a></li>
+    <li><a href="#pass-by-value-传值----栈">Pass by value 传值 &ndash;&gt; 栈</a></li>
     <li><a href="#pass-by-reference-传递引用">Pass by reference 传递引用</a></li>
     <li><a href="#return-by-value--or---return-by-reference">Return by value  OR   Return by reference</a></li>
     <li><a href="#设计建议">设计建议</a></li>
@@ -391,7 +391,7 @@
                                 
                             </div>
                             
-                            <span class="post-word-count">|2614 words</span>
+                            <span class="post-word-count">|2610 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
@@ -431,8 +431,8 @@
 <code>class body</code>之外定义的函数，需要加上<code>inline</code>关键字，以此建议编译器将其编译为<code>inline function</code></p>
 <h2 id="constructor---下面简称ctor">constructor&mdash;&raquo;下面简称ctor</h2>
 <p><img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200130135709.png" alt=""></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">ifndef _COMPELX_H_</span><span style="color:#999;font-weight:bold;font-style:italic">
-</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">define _COMPELX_H_</span><span style="color:#999;font-weight:bold;font-style:italic">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#ifndef _COMPELX_H_
+</span><span style="color:#999;font-weight:bold;font-style:italic">#define _COMPELX_H_
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">complex</span>
 {
@@ -443,7 +443,7 @@
 	<span style="color:#998;font-style:italic">//complex(),complex cm,会引起冲突
 </span><span style="color:#998;font-style:italic"></span>	<span style="color:#998;font-style:italic">/*complex(): re(0), im(0)
 </span><span style="color:#998;font-style:italic">	{}*/</span>
-	complex<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> ( <span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> );
+	complex<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+=</span> ( <span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> );
 	<span style="color:#458;font-weight:bold">double</span> <span style="color:#900;font-weight:bold">real</span> () <span style="color:#000;font-weight:bold">const</span> {<span style="color:#000;font-weight:bold">return</span> re;}
 	<span style="color:#458;font-weight:bold">double</span> <span style="color:#900;font-weight:bold">imag</span> () <span style="color:#000;font-weight:bold">const</span> {<span style="color:#000;font-weight:bold">return</span> im;}
 	<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">real</span>(<span style="color:#458;font-weight:bold">double</span> r) { re <span style="color:#000;font-weight:bold">=</span> r; }
@@ -452,7 +452,7 @@
 	<span style="color:#000;font-weight:bold">friend</span> complex<span style="color:#000;font-weight:bold">&amp;</span> _doapl(complex<span style="color:#000;font-weight:bold">*</span> , <span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span>);
 };
 
-<span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">endif</span><span style="color:#999;font-weight:bold;font-style:italic">
+<span style="color:#999;font-weight:bold;font-style:italic">#endif
 </span></code></pre></div><p>构造函数中用初值列初始化变量，而最好不在函数体中用&quot;=&quot;来赋值
 一个变量的构造有两个阶段:初始化,赋值;所以使用初值列的机制效率更好（省去了一个赋值阶段,<span style='color:red'><strong>推荐</strong></span>）
 <code>ctor</code>可以有多个重载</p>
@@ -469,7 +469,7 @@
   	...
 };
 
-A<span style="color:#000;font-weight:bold">&amp;</span> A<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>getInstance()
+A<span style="color:#000;font-weight:bold">&amp;</span> A<span style="color:#000;font-weight:bold">::</span>getInstance()
 {
  	<span style="color:#000;font-weight:bold">static</span> A a;
  	<span style="color:#000;font-weight:bold">return</span> a;
@@ -481,7 +481,7 @@ A<span style="color:#000;font-weight:bold">&amp;</span> A<span style="color:#000
 <p>这里的<code>const</code>关键字声明将一定不改变类内的成员变量re</p>
 <p>例如：若不写上述的<code>const</code>，以下代码块将会编译错误</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">const</span> complex <span style="color:#900;font-weight:bold">c1</span>(<span style="color:#099">1</span>, <span style="color:#099">2</span>)
-cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> c1.real() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> c1.imag();
+cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> c1.real() <span style="color:#000;font-weight:bold">&lt;&lt;</span> c1.imag();
 </code></pre></div><p>因为使用者创建了一个<code>const</code>的对象<code>c1</code>，即规定<code>c1</code>是一个常量，其中的成员变量也将是<code>const</code>的，没有可能被改变；而在调用成员函数<code>real()</code>时，并未声明其为一个常量成员函数，即类内的成员变量<code>re</code>将&quot;有可能&quot;被改变，这是矛盾的</p>
 <h2 id="friend--友元">friend  友元</h2>
 <p>类中的private成员<code>re</code>与<code>im</code>不能被外界直接取用（可通过类内函数取用）,但类内的友元函数可以直接取得其&quot;朋友&quot;的私有成员</p>
@@ -494,8 +494,8 @@ cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#00
 
 <span style="color:#000;font-weight:bold">inline</span> complex<span style="color:#000;font-weight:bold">&amp;</span> __doapl(complex<span style="color:#000;font-weight:bold">*</span> ths, <span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)
 {
- 	ths<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>re <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> r.re; <span style="color:#998;font-style:italic">//自由取得friend的private成员
-</span><span style="color:#998;font-style:italic"></span> 	ths<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>im <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> r.im;
+ 	ths<span style="color:#000;font-weight:bold">-&gt;</span>re <span style="color:#000;font-weight:bold">+=</span> r.re; <span style="color:#998;font-style:italic">//自由取得friend的private成员
+</span><span style="color:#998;font-style:italic"></span> 	ths<span style="color:#000;font-weight:bold">-&gt;</span>im <span style="color:#000;font-weight:bold">+=</span> r.im;
 }
 </code></pre></div><p>相同<code>class</code>的各个<code>objects</code>互为<code>friends</code>(友元)</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">{
@@ -513,18 +513,18 @@ cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#00
 complex <span style="color:#900;font-weight:bold">r</span>(<span style="color:#099">4</span>,<span style="color:#099">3</span>);
 </code></pre></div><h2 id="pass-by-reference-传递引用">Pass by reference 传递引用</h2>
 <p>按引用传递相当于传递参数的地址（底层是指针)</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">complex<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> (<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span>);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">complex<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+=</span> (<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span>);
 </code></pre></div><p>目的是按reference传入一个complex对象的引用,并声明传入的对象本身禁止被函数修改,这就是<code>pass by reference(to const)</code>
 参数的传递尽量<code>by reference</code></p>
 <h2 id="return-by-value--or---return-by-reference">Return by value  OR   Return by reference</h2>
 <p><code>return by reference</code>的例子</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">inline</span> complex<span style="color:#000;font-weight:bold">&amp;</span> __doapl(complex<span style="color:#000;font-weight:bold">*</span> ths, <span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)
 {
-  ths<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>re <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> r.re;
-  ths<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>im <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> r.im;
+  ths<span style="color:#000;font-weight:bold">-&gt;</span>re <span style="color:#000;font-weight:bold">+=</span> r.re;
+  ths<span style="color:#000;font-weight:bold">-&gt;</span>im <span style="color:#000;font-weight:bold">+=</span> r.im;
   <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">*</span>ths;
 }
-<span style="color:#000;font-weight:bold">inline</span> complex<span style="color:#000;font-weight:bold">&amp;</span> complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> (<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)
+<span style="color:#000;font-weight:bold">inline</span> complex<span style="color:#000;font-weight:bold">&amp;</span> complex<span style="color:#000;font-weight:bold">::</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+=</span> (<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)
 {
   <span style="color:#000;font-weight:bold">return</span> <span style="color:#900;font-weight:bold">__doapl</span>(<span style="color:#000;font-weight:bold">this</span>, r);
 }
@@ -544,13 +544,13 @@ complex <span style="color:#900;font-weight:bold">r</span>(<span style="color:#0
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">inline</span> complex<span style="color:#000;font-weight:bold">&amp;</span> 
 _doapl(complex<span style="color:#000;font-weight:bold">*</span> ths, <span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)
 {
-	ths<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>re <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> r.re;
-	ths<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>im <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span> r.im;
+	ths<span style="color:#000;font-weight:bold">-&gt;</span>re <span style="color:#000;font-weight:bold">+=</span> r.re;
+	ths<span style="color:#000;font-weight:bold">-&gt;</span>im <span style="color:#000;font-weight:bold">+=</span> r.im;
 	<span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">*</span>ths;
 }
 
 <span style="color:#000;font-weight:bold">inline</span> complex<span style="color:#000;font-weight:bold">&amp;</span> 
-complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span>(<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)
+complex<span style="color:#000;font-weight:bold">::</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+=</span>(<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)
 {
 	<span style="color:#000;font-weight:bold">return</span> <span style="color:#900;font-weight:bold">_doapl</span> (<span style="color:#000;font-weight:bold">this</span>, r);
 }
@@ -560,8 +560,8 @@ complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000
 <span style="color:#998;font-style:italic">//下面是调用
 </span><span style="color:#998;font-style:italic"></span>complex <span style="color:#900;font-weight:bold">cm</span>(<span style="color:#099">1</span>,<span style="color:#099">3</span>);
 complex <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">1</span>,<span style="color:#099">2</span>);
-cm <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span>c ;
-cm <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">5</span>;
+cm <span style="color:#000;font-weight:bold">+=</span>c ;
+cm <span style="color:#000;font-weight:bold">+=</span><span style="color:#099">5</span>;
 </code></pre></div><h2 id="操作符重载---非成员函数">操作符重载&mdash;&raquo;非成员函数</h2>
 <p>注意这时候是<code>return by value</code>,因为这时候存在的是临时的<code>local object</code>.函数结束之后会销毁</p>
 <p>另外这时候使用的<code>typename()</code>方法来创建的对象,所以返回的是<code>complex</code>对象,相当于<code>java</code>中的<code>匿名对象</code>.</p>
@@ -578,7 +578,7 @@ cm <span style="color:#000;font-weight:bold">+</span><span style="color:#000;fon
 }
 
 <span style="color:#000;font-weight:bold">inline</span> complex<span style="color:#000;font-weight:bold">&amp;</span>
-complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">=</span>(<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)<span style="color:#998;font-style:italic">//成员函数
+complex<span style="color:#000;font-weight:bold">::</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">+=</span>(<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span> r)<span style="color:#998;font-style:italic">//成员函数
 </span><span style="color:#998;font-style:italic"></span>{
 	<span style="color:#000;font-weight:bold">return</span> <span style="color:#900;font-weight:bold">_doapl</span> (<span style="color:#000;font-weight:bold">this</span>, r);
 }
@@ -603,14 +603,14 @@ complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000
 </code></pre></div><h2 id="特殊操作符重载">特殊操作符重载</h2>
 <p>有些特殊操作符不能设为<code>成员函数</code>,比如<code>&gt;&gt;</code>和<code>&lt;&lt;</code></p>
 <p>如下,我们重新设置<code>complex类的实部和虚部</code>的数值输出</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">ostream<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> (ostream <span style="color:#000;font-weight:bold">&amp;</span> os,<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span>x)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">ostream<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">&lt;&lt;</span> (ostream <span style="color:#000;font-weight:bold">&amp;</span> os,<span style="color:#000;font-weight:bold">const</span> complex<span style="color:#000;font-weight:bold">&amp;</span>x)
 {
     <span style="color:#998;font-style:italic">// return os &lt;&lt; &#34;(&#34; &lt;&lt; real(x) &lt;&lt; &#34;,&#34; &lt;&lt; imag(x) &lt;&lt; &#34;)&#34;;
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">return</span> os <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> real(x) <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">+</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> imag(x) <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">i</span><span style="color:#d14">&#34;</span>;  
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">return</span> os <span style="color:#000;font-weight:bold">&lt;&lt;</span> real(x) <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#d14">&#34;+&#34;</span> <span style="color:#000;font-weight:bold">&lt;&lt;</span> imag(x) <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#d14">&#34;i&#34;</span>;  
 }
 </code></pre></div><p>注意这时候的<code>os</code>的一直在改变,所以它不是<code>const</code>的引用.</p>
 <p>但是为什么这里的返回类型是<code>operator</code>类型呢?因为考虑到有连续输出的需求,比如</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> c1 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> c2;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> c1 <span style="color:#000;font-weight:bold">&lt;&lt;</span> c2;
 </code></pre></div><hr>
 <blockquote>
 <p>从这里开始是c++的第二种分类**</p>
@@ -623,7 +623,7 @@ complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000
 <h3 id="拷贝构造">拷贝构造</h3>
 <p>拷贝构造的参数的类型必须是相同的,注意拷贝构造要分配足够的内存</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">inline</span>
-String<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>String(<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">char</span><span style="color:#000;font-weight:bold">*</span> cstr)
+String<span style="color:#000;font-weight:bold">::</span>String(<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">char</span><span style="color:#000;font-weight:bold">*</span> cstr)
 {
    <span style="color:#000;font-weight:bold">if</span> (cstr) {
       m_data <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">char</span>[strlen(cstr) <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>];
@@ -631,16 +631,16 @@ String<span style="color:#000;font-weight:bold">:</span><span style="color:#000;
    }
    <span style="color:#000;font-weight:bold">else</span> {
       m_data <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">char</span>[<span style="color:#099">1</span>];
-      <span style="color:#000;font-weight:bold">*</span>m_data <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">\0</span><span style="color:#d14">&#39;</span>;
+      <span style="color:#000;font-weight:bold">*</span>m_data <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;\0&#39;</span>;
    }
 }
 </code></pre></div><h3 id="拷贝赋值">拷贝赋值</h3>
 <p>先将左边字符串中的内容清空,再分配一个和右边字符串一样大的空间,最后将右边字符串的内容放到左边的空间中</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">inline</span>
-String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">=</span> (<span style="color:#000;font-weight:bold">const</span> String<span style="color:#000;font-weight:bold">&amp;</span> str)
+String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="color:#000;font-weight:bold">::</span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">=</span> (<span style="color:#000;font-weight:bold">const</span> String<span style="color:#000;font-weight:bold">&amp;</span> str)
 {
     <span style="color:#998;font-style:italic">//判断是不是自己赋值给自己,不写结果可能会出错
-</span><span style="color:#998;font-style:italic"></span>   <span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span> <span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">&amp;</span>str)
+</span><span style="color:#998;font-style:italic"></span>   <span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">&amp;</span>str)
       <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">this</span>;
 
    <span style="color:#000;font-weight:bold">delete</span>[] m_data;
@@ -648,21 +648,21 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
    strcpy(m_data, str.m_data);
    <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">this</span>;
 }
-</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span> <span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">&amp;</span>str)
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">&amp;</span>str)
       <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">this</span>;
 </code></pre></div><p>关于上面这两行的重要性</p>
 <p>1.对于自我赋值的效率很高</p>
 <p>2.如果没有写这两句,对于浅拷贝的话,如果指向同一块空间,而你又先<code>delete</code>了空间,那么这两个指针相当于无处可指了!会出错!</p>
 <h2 id="析构函数">析构函数</h2>
 <p>释放掉对象内存</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">String<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">~</span>String()
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">String<span style="color:#000;font-weight:bold">::~</span>String()
 {
    <span style="color:#000;font-weight:bold">delete</span>[] m_data;
 }
 </code></pre></div><h2 id="output函数">Output函数</h2>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">ostream<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span>(ostream<span style="color:#000;font-weight:bold">&amp;</span> os, <span style="color:#000;font-weight:bold">const</span> String<span style="color:#000;font-weight:bold">&amp;</span> str)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">ostream<span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#000;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">&lt;&lt;</span>(ostream<span style="color:#000;font-weight:bold">&amp;</span> os, <span style="color:#000;font-weight:bold">const</span> String<span style="color:#000;font-weight:bold">&amp;</span> str)
 {
-   os <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> str.get_c_str();
+   os <span style="color:#000;font-weight:bold">&lt;&lt;</span> str.get_c_str();
    <span style="color:#000;font-weight:bold">return</span> os;
 }
 </code></pre></div><p><code>os</code>获得的是一个<code>char * </code>的指针,这样就能得到整个字符串,再输出</p>
@@ -680,14 +680,14 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">Complex<span style="color:#000;font-weight:bold">*</span> pc <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> Complex(<span style="color:#099">1</span>,<span style="color:#099">2</span>);
 </code></pre></div><p>分解为一下三步</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#458;font-weight:bold">void</span><span style="color:#000;font-weight:bold">*</span> mem <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">operator</span> <span style="color:#000;font-weight:bold">new</span>( <span style="color:#000;font-weight:bold">sizeof</span>(Complex) ); <span style="color:#998;font-style:italic">//分配内存,相当于malloc(n)
-</span><span style="color:#998;font-style:italic"></span>pc <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">static_cast</span><span style="color:#000;font-weight:bold">&lt;</span>Complex<span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">&gt;</span>(mem); <span style="color:#998;font-style:italic">//类型转换
-</span><span style="color:#998;font-style:italic"></span>pc<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>Complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>Complex(<span style="color:#099">1</span>,<span style="color:#099">2</span>); <span style="color:#998;font-style:italic">//调用构造函数
+</span><span style="color:#998;font-style:italic"></span>pc <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">static_cast</span><span style="color:#000;font-weight:bold">&lt;</span>Complex<span style="color:#000;font-weight:bold">*&gt;</span>(mem); <span style="color:#998;font-style:italic">//类型转换
+</span><span style="color:#998;font-style:italic"></span>pc<span style="color:#000;font-weight:bold">-&gt;</span>Complex<span style="color:#000;font-weight:bold">::</span>Complex(<span style="color:#099">1</span>,<span style="color:#099">2</span>); <span style="color:#998;font-style:italic">//调用构造函数
 </span></code></pre></div><h3 id="delete">delete</h3>
 <p><strong>先调用<code>dtor</code>,再释放<code>memory</code></strong></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">Complex<span style="color:#000;font-weight:bold">*</span> pc <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> Complex(<span style="color:#099">1</span>,<span style="color:#099">2</span>);
 <span style="color:#000;font-weight:bold">delete</span> pc;
 </code></pre></div><p>分解为两步</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">Complex<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">~</span>Complex(pc); <span style="color:#998;font-style:italic">// 调用析构函数,相当于free(pc)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">Complex<span style="color:#000;font-weight:bold">::~</span>Complex(pc); <span style="color:#998;font-style:italic">// 调用析构函数,相当于free(pc)
 </span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">operator</span> <span style="color:#900;font-weight:bold">delete</span>(pc); <span style="color:#998;font-style:italic">// 释放内存
 </span></code></pre></div><h3 id="array-new一定要搭配array-delete">array new一定要搭配array delete</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">string <span style="color:#000;font-weight:bold">*</span>p <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> string[<span style="color:#099">3</span>];
@@ -825,6 +825,21 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/test/" title="Test">Test</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B81-4/" title="Leecode面试金典1-4">Leecode面试金典1-4</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/vscode%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" title="vscode隐藏文件">vscode隐藏文件</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/hugo-Maupassant%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0gittalk%E8%AF%84%E8%AE%BA/" title="hugo-maupassant主题添加gittalk评论">hugo-maupassant主题添加gittalk评论</a>
     </li>
     
@@ -858,21 +873,6 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
         <a href="https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/" title="Centos系统yum下载错误">Centos系统yum下载错误</a>
     </li>
     
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/" title="服务器安装neovim">服务器安装neovim</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode287%E9%A2%98/" title="leetcode287题">leetcode287题</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/" title="markdown语法补充">markdown语法补充</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -882,6 +882,8 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/1/">1 (1)</a></li>
+    
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (11)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (3)</a></li>
@@ -890,7 +892,9 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/java/">java (1)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (16)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (17)</a></li>
+    
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/">使用篇 (1)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%89%8D%E7%AB%AF/">前端 (1)</a></li>
     
@@ -917,12 +921,17 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/2/">2</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/2020/">2020</a>
     </li>
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">Gittalk</a>
+    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
     </li>
     
     <li>
@@ -937,7 +946,7 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/Pacman/">Pacman</a>
+    <a href="https://CorPython.github.io/tags/pacman/">pacman</a>
     </li>
     
     <li>
@@ -997,7 +1006,7 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
+    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
     </li>
     
     <li>
@@ -1062,7 +1071,7 @@ String<span style="color:#000;font-weight:bold">&amp;</span> String<span style="
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">pacman</a>
+    <a href="https://CorPython.github.io/tags/pacman/">pacman</a>
     </li>
     
     <li>

@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -403,14 +403,14 @@
 <h3 id="添加标签标题生成网格线美化图形">添加标签，标题，生成网格线，美化图形</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x = [<span style="color:#099">0</span>:<span style="color:#099">0.01</span>:<span style="color:#099">10</span>];
 y = <span style="color:#0086b3">sin</span>(x);
-plot(x, y), xlabel(<span style="color:#d14">&#39;</span><span style="color:#d14">x&#39;</span>), ylabel(<span style="color:#d14">&#39;</span><span style="color:#d14">Sin(x)&#39;</span>), title(<span style="color:#d14">&#39;</span><span style="color:#d14">Sin(x) Graph&#39;</span>),
+plot(x, y), xlabel(<span style="color:#d14">&#39;x&#39;</span>), ylabel(<span style="color:#d14">&#39;Sin(x)&#39;</span>), title(<span style="color:#d14">&#39;Sin(x) Graph&#39;</span>),
 grid on,axis equal#添加网格线和美化图形
 </code></pre></div><p><img src="https://i.loli.net/2019/11/13/G3CvmVySnpuaeqO.png" alt=""></p>
 <h3 id="绘制多个函数">绘制多个函数</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x = [<span style="color:#099">0</span> : <span style="color:#099">0.01</span>: <span style="color:#099">10</span>];
 y = <span style="color:#0086b3">sin</span>(x);
 g = <span style="color:#0086b3">cos</span>(x);
-plot(x, y, x, g, <span style="color:#d14">&#39;</span><span style="color:#d14">.-&#39;</span>), legend(<span style="color:#d14">&#39;</span><span style="color:#d14">Sin(x)&#39;</span>, <span style="color:#d14">&#39;</span><span style="color:#d14">Cos(x)&#39;</span>)
+plot(x, y, x, g, <span style="color:#d14">&#39;.-&#39;</span>), legend(<span style="color:#d14">&#39;Sin(x)&#39;</span>, <span style="color:#d14">&#39;Cos(x)&#39;</span>)
 </code></pre></div><p><img src="https://i.loli.net/2019/11/13/QERpcVzeA5Mh9Ct.png" alt=""></p>
 <h3 id="绘制多个图象">绘制多个图象</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">plot(x,y,x,g)
@@ -422,7 +422,7 @@ plot(x,g)
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">axis([xmin xmax ymin ymax])
 axis([xmin xmax ymin ymax zmin zmax cmin cmax]);
 <span style="color:#998;font-style:italic">% 设置x，y，z轴的范围及当前颜色刻度范围</span>
-axis <span style="color:#d14">&#39;</span><span style="color:#d14">auto x&#39;</span><span style="color:#998;font-style:italic">% 自动设置x轴的范围</span>
+axis <span style="color:#d14">&#39;auto x&#39;</span><span style="color:#998;font-style:italic">% 自动设置x轴的范围</span>
 axis(axis) <span style="color:#998;font-style:italic">% 固定当前坐标轴的范围</span>
 </code></pre></div><h3 id="用subplot画多个子图">用subplot画多个子图</h3>
 <p>subplot(m,n,p)</p>
@@ -430,38 +430,38 @@ axis(axis) <span style="color:#998;font-style:italic">% 固定当前坐标轴的
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x = <span style="color:#099">0</span>:<span style="color:#099">0.01</span>:<span style="color:#099">5</span>;
 y = <span style="color:#0086b3">exp</span>(<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1.5</span><span style="color:#000;font-weight:bold">*</span>x)<span style="color:#000;font-weight:bold">.*</span><span style="color:#0086b3">sin</span>(<span style="color:#099">10</span><span style="color:#000;font-weight:bold">*</span>x);
 subplot(<span style="color:#099">1</span>,<span style="color:#099">3</span>,<span style="color:#099">1</span>)
-plot(x,y), xlabel(<span style="color:#d14">&#39;</span><span style="color:#d14">x&#39;</span>),ylabel(<span style="color:#d14">&#39;</span><span style="color:#d14">exp(–1.5x)*sin(10x)&#39;</span>),axis([<span style="color:#099">0</span> <span style="color:#099">5</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span> <span style="color:#099">1</span>])
+plot(x,y), xlabel(<span style="color:#d14">&#39;x&#39;</span>),ylabel(<span style="color:#d14">&#39;exp(–1.5x)*sin(10x)&#39;</span>),axis([<span style="color:#099">0</span> <span style="color:#099">5</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span> <span style="color:#099">1</span>])
 y = <span style="color:#0086b3">exp</span>(<span style="color:#000;font-weight:bold">-</span><span style="color:#099">2</span><span style="color:#000;font-weight:bold">*</span>x)<span style="color:#000;font-weight:bold">.*</span><span style="color:#0086b3">sin</span>(<span style="color:#099">10</span><span style="color:#000;font-weight:bold">*</span>x);
 subplot(<span style="color:#099">1</span>,<span style="color:#099">3</span>,<span style="color:#099">2</span>)
-plot(x,y),xlabel(<span style="color:#d14">&#39;</span><span style="color:#d14">x&#39;</span>),ylabel(<span style="color:#d14">&#39;</span><span style="color:#d14">exp(–2x)*sin(10x)&#39;</span>),axis([<span style="color:#099">0</span> <span style="color:#099">5</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span> <span style="color:#099">1</span>])
+plot(x,y),xlabel(<span style="color:#d14">&#39;x&#39;</span>),ylabel(<span style="color:#d14">&#39;exp(–2x)*sin(10x)&#39;</span>),axis([<span style="color:#099">0</span> <span style="color:#099">5</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span> <span style="color:#099">1</span>])
 y = <span style="color:#0086b3">exp</span>(<span style="color:#000;font-weight:bold">-</span><span style="color:#099">2.5</span><span style="color:#000;font-weight:bold">*</span>x)<span style="color:#000;font-weight:bold">.*</span><span style="color:#0086b3">sin</span>(<span style="color:#099">10</span><span style="color:#000;font-weight:bold">*</span>x);
 subplot(<span style="color:#099">1</span>,<span style="color:#099">3</span>,<span style="color:#099">3</span>)
-plot(x,y),xlabel(<span style="color:#d14">&#39;</span><span style="color:#d14">x&#39;</span>),ylabel(<span style="color:#d14">&#39;</span><span style="color:#d14">exp(–2x)*sin(10x)&#39;</span>),axis([<span style="color:#099">0</span> <span style="color:#099">5</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span> <span style="color:#099">1</span>])
+plot(x,y),xlabel(<span style="color:#d14">&#39;x&#39;</span>),ylabel(<span style="color:#d14">&#39;exp(–2x)*sin(10x)&#39;</span>),axis([<span style="color:#099">0</span> <span style="color:#099">5</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span> <span style="color:#099">1</span>])
 </code></pre></div><p><img src="https://i.loli.net/2019/11/13/KQwtCvPaOmoslcT.png" alt=""></p>
 <h3 id="绘图基本格式">绘图基本格式</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#998;font-style:italic">%% 绘图</span>
-set(gca,<span style="color:#d14">&#39;</span><span style="color:#d14">linewidth&#39;</span>,<span style="color:#099">2</span>) 
+set(gca,<span style="color:#d14">&#39;linewidth&#39;</span>,<span style="color:#099">2</span>) 
 <span style="color:#998;font-style:italic">% 与最短路程关系图</span>
 subplot(<span style="color:#099">3</span>,<span style="color:#099">1</span>,<span style="color:#099">1</span>);<span style="color:#998;font-style:italic">% 子图</span>
-plot(R,Y1, <span style="color:#d14">&#39;</span><span style="color:#d14">-r*&#39;</span>, <span style="color:#d14">&#39;</span><span style="color:#d14">LineWidth&#39;</span>, <span style="color:#099">2</span>);
-set(gca,<span style="color:#d14">&#39;</span><span style="color:#d14">linewidth&#39;</span>,<span style="color:#099">2</span>); <span style="color:#998;font-style:italic">% 设置坐标轴线宽</span>
-xlabel(<span style="color:#d14">&#39;</span><span style="color:#d14">蚂蚁数与城市数之比&#39;</span>);<span style="color:#998;font-style:italic">% x轴标签</span>
-ylabel(<span style="color:#d14">&#39;</span><span style="color:#d14">最短路程&#39;</span>);<span style="color:#998;font-style:italic">% y轴标签</span>
-title(<span style="color:#d14">&#39;</span><span style="color:#d14">蚂蚁数与最短路程关系图&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">fontsize&#39;</span>,<span style="color:#099">12</span>);<span style="color:#998;font-style:italic">% 标题及字体大小</span>
-legend(<span style="color:#d14">&#39;</span><span style="color:#d14">最短路程&#39;</span>); <span style="color:#998;font-style:italic">% 设置图例</span>
+plot(R,Y1, <span style="color:#d14">&#39;-r*&#39;</span>, <span style="color:#d14">&#39;LineWidth&#39;</span>, <span style="color:#099">2</span>);
+set(gca,<span style="color:#d14">&#39;linewidth&#39;</span>,<span style="color:#099">2</span>); <span style="color:#998;font-style:italic">% 设置坐标轴线宽</span>
+xlabel(<span style="color:#d14">&#39;蚂蚁数与城市数之比&#39;</span>);<span style="color:#998;font-style:italic">% x轴标签</span>
+ylabel(<span style="color:#d14">&#39;最短路程&#39;</span>);<span style="color:#998;font-style:italic">% y轴标签</span>
+title(<span style="color:#d14">&#39;蚂蚁数与最短路程关系图&#39;</span>,<span style="color:#d14">&#39;fontsize&#39;</span>,<span style="color:#099">12</span>);<span style="color:#998;font-style:italic">% 标题及字体大小</span>
+legend(<span style="color:#d14">&#39;最短路程&#39;</span>); <span style="color:#998;font-style:italic">% 设置图例</span>
 </code></pre></div><h3 id="绘图知识补充">绘图知识补充</h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">set(gca,<span style="color:#d14">&#39;</span><span style="color:#d14">XTickLabel&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">&#39;</span>)<span style="color:#998;font-style:italic">%去掉x轴上的标签</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">set(gca,<span style="color:#d14">&#39;XTickLabel&#39;</span>,<span style="color:#d14">&#39;&#39;</span>)<span style="color:#998;font-style:italic">%去掉x轴上的标签</span>
 hold on <span style="color:#998;font-style:italic">%保持当前图形</span>
 hold off <span style="color:#998;font-style:italic">% 解除hold on命令</span>
 grid on<span style="color:#998;font-style:italic">% 添加网格线</span>
-legend(<span style="color:#d14">&#39;</span><span style="color:#d14">first&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">second&#39;</span>,<span style="color:#099">1</span>)<span style="color:#998;font-style:italic">%前两个参数分别是两个图例的名称，第三个参数是图例的位置</span>
+legend(<span style="color:#d14">&#39;first&#39;</span>,<span style="color:#d14">&#39;second&#39;</span>,<span style="color:#099">1</span>)<span style="color:#998;font-style:italic">%前两个参数分别是两个图例的名称，第三个参数是图例的位置</span>
 
 </code></pre></div><h2 id="图形">图形</h2>
 <h3 id="绘制条形图">绘制条形图</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x = <span style="color:#099">1</span>:<span style="color:#099">10</span>;
 y = [<span style="color:#099">75</span>, <span style="color:#099">58</span>, <span style="color:#099">90</span>, <span style="color:#099">87</span>, <span style="color:#099">50</span>, <span style="color:#099">85</span>, <span style="color:#099">92</span>, <span style="color:#099">75</span>, <span style="color:#099">60</span>, <span style="color:#099">95</span>];
-bar(x,y), xlabel(<span style="color:#d14">&#39;</span><span style="color:#d14">Student&#39;</span>),ylabel(<span style="color:#d14">&#39;</span><span style="color:#d14">Score&#39;</span>),
-title(<span style="color:#d14">&#39;</span><span style="color:#d14">First Sem&#39;</span>)
+bar(x,y), xlabel(<span style="color:#d14">&#39;Student&#39;</span>),ylabel(<span style="color:#d14">&#39;Score&#39;</span>),
+title(<span style="color:#d14">&#39;First Sem&#39;</span>)
 print <span style="color:#000;font-weight:bold">-</span>deps graph.<span style="color:#0086b3">eps</span>#纯美化工作,可写可不写
 </code></pre></div><p><img src="https://i.loli.net/2019/11/13/rHfpsR6yu3d7ing.png" alt=""></p>
 <h3 id="绘制等高线图">绘制等高线图</h3>
@@ -470,7 +470,7 @@ print <span style="color:#000;font-weight:bold">-</span>deps graph.<span style="
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">[x,y] = <span style="color:#0086b3">meshgrid</span>(<span style="color:#000;font-weight:bold">-</span><span style="color:#099">5</span>:<span style="color:#099">0.1</span>:<span style="color:#099">5</span>,<span style="color:#000;font-weight:bold">-</span><span style="color:#099">3</span>:<span style="color:#099">0.1</span>:<span style="color:#099">3</span>); <span style="color:#998;font-style:italic">% 设置变量定义域</span>
 g = x<span style="color:#000;font-weight:bold">.^</span><span style="color:#099">2</span> <span style="color:#000;font-weight:bold">+</span> y<span style="color:#000;font-weight:bold">.^</span><span style="color:#099">2</span>;                     <span style="color:#998;font-style:italic">% 设置函数</span>
 [C, h] = contour(x,y,g);             <span style="color:#998;font-style:italic">% 调用contour()函数</span>
-set(h,<span style="color:#d14">&#39;</span><span style="color:#d14">ShowText&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">on&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">TextStep&#39;</span>,get(h,<span style="color:#d14">&#39;</span><span style="color:#d14">LevelStep&#39;</span>)<span style="color:#000;font-weight:bold">*</span><span style="color:#099">2</span>)
+set(h,<span style="color:#d14">&#39;ShowText&#39;</span>,<span style="color:#d14">&#39;on&#39;</span>,<span style="color:#d14">&#39;TextStep&#39;</span>,get(h,<span style="color:#d14">&#39;LevelStep&#39;</span>)<span style="color:#000;font-weight:bold">*</span><span style="color:#099">2</span>)
 print <span style="color:#000;font-weight:bold">-</span>deps graph.<span style="color:#0086b3">eps</span>
 
 </code></pre></div><p><img src="https://i.loli.net/2019/11/13/VN9LCIAdQ2u7go5.png" alt=""></p>
@@ -1023,41 +1023,41 @@ final_velocity = initial_velocity <span style="color:#998;font-style:italic">...
 <h2 id="if语句">if语句</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">a = <span style="color:#099">10</span>;
 <span style="color:#000;font-weight:bold">if</span>(a<span style="color:#000;font-weight:bold">&lt;</span>=<span style="color:#099">10</span>)
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">value is %d\n&#39;</span>,a);
+    fprintf(<span style="color:#d14">&#39;value is %d\n&#39;</span>,a);
 <span style="color:#000;font-weight:bold">end</span>
 
 </code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">a = <span style="color:#099">100</span>;
 <span style="color:#000;font-weight:bold">if</span>  a <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">20</span>
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">a is less than 20\n&#39;</span> );
+    fprintf(<span style="color:#d14">&#39;a is less than 20\n&#39;</span> );
 <span style="color:#000;font-weight:bold">else</span>
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">a is not less than 20\n&#39;</span> );
+    fprintf(<span style="color:#d14">&#39;a is not less than 20\n&#39;</span> );
 <span style="color:#000;font-weight:bold">end</span>
 
 </code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">a = <span style="color:#099">100</span>;
 <span style="color:#000;font-weight:bold">if</span>  a <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">20</span>
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">a is less than 20\n&#39;</span> );
+    fprintf(<span style="color:#d14">&#39;a is less than 20\n&#39;</span> );
 <span style="color:#000;font-weight:bold">else</span>
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">a is not less than 20\n&#39;</span> );
+    fprintf(<span style="color:#d14">&#39;a is not less than 20\n&#39;</span> );
 <span style="color:#000;font-weight:bold">end</span>
 
 </code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">a = <span style="color:#099">45</span>;
 <span style="color:#000;font-weight:bold">if</span>  a <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">20</span>
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">a is less than 20\n&#39;</span> );
+    fprintf(<span style="color:#d14">&#39;a is less than 20\n&#39;</span> );
 <span style="color:#000;font-weight:bold">elseif</span> a<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#099">50</span>
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">a is not less than 50\n&#39;</span> );
+    fprintf(<span style="color:#d14">&#39;a is not less than 50\n&#39;</span> );
 <span style="color:#000;font-weight:bold">elseif</span> a<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#099">80</span>
-    fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">a is not less than 80\n&#39;</span> );
+    fprintf(<span style="color:#d14">&#39;a is not less than 80\n&#39;</span> );
 <span style="color:#000;font-weight:bold">end</span>
 
 </code></pre></div><h2 id="循环语句">循环语句</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">a = <span style="color:#099">10</span>;
 <span style="color:#000;font-weight:bold">while</span> a <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">20</span> 
-  fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">value of a: %d\n&#39;</span>, a);
+  fprintf(<span style="color:#d14">&#39;value of a: %d\n&#39;</span>, a);
   a = a <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;
 <span style="color:#000;font-weight:bold">end</span>
 
 </code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#000;font-weight:bold">for</span> a = <span style="color:#099">10</span>:<span style="color:#099">20</span> 
-  fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">value of a: %d\n&#39;</span>, a);
+  fprintf(<span style="color:#d14">&#39;value of a: %d\n&#39;</span>, a);
 <span style="color:#000;font-weight:bold">end</span>
 <span style="color:#998;font-style:italic">%</span>
 <span style="color:#000;font-weight:bold">for</span> a = [<span style="color:#099">12</span>,<span style="color:#099">12</span>,<span style="color:#099">15</span>,<span style="color:#099">15</span>,<span style="color:#099">15</span>]
@@ -1065,20 +1065,20 @@ final_velocity = initial_velocity <span style="color:#998;font-style:italic">...
 <span style="color:#000;font-weight:bold">end</span>
 
 </code></pre></div><h2 id="breakcontinueswitch语句">break，continue，switch语句</h2>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MATLAB" data-lang="MATLAB">grade = <span style="color:#d14">&#39;</span><span style="color:#d14">D&#39;</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MATLAB" data-lang="MATLAB">grade = <span style="color:#d14">&#39;D&#39;</span>;
 <span style="color:#000;font-weight:bold">switch</span>(grade)
-    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;</span><span style="color:#d14">A&#39;</span>
-        fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">Excellent!\n&#39;</span> );
-    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;</span><span style="color:#d14">B&#39;</span>
-        fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">Well done\n&#39;</span> );
-    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;</span><span style="color:#d14">C&#39;</span>
-        fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">Well done\n&#39;</span> );
-    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;</span><span style="color:#d14">D&#39;</span>
-        fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">You passed\n&#39;</span> );
-    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;</span><span style="color:#d14">F&#39;</span>
-        fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">Better try again\n&#39;</span> );
+    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;A&#39;</span>
+        fprintf(<span style="color:#d14">&#39;Excellent!\n&#39;</span> );
+    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;B&#39;</span>
+        fprintf(<span style="color:#d14">&#39;Well done\n&#39;</span> );
+    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;C&#39;</span>
+        fprintf(<span style="color:#d14">&#39;Well done\n&#39;</span> );
+    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;D&#39;</span>
+        fprintf(<span style="color:#d14">&#39;You passed\n&#39;</span> );
+    <span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#39;F&#39;</span>
+        fprintf(<span style="color:#d14">&#39;Better try again\n&#39;</span> );
     <span style="color:#000;font-weight:bold">otherwise</span>
-        fprintf(<span style="color:#d14">&#39;</span><span style="color:#d14">Invalid grade\n&#39;</span> );
+        fprintf(<span style="color:#d14">&#39;Invalid grade\n&#39;</span> );
 <span style="color:#000;font-weight:bold">end</span>
 
 </code></pre></div><h2 id="行列向量">行，列向量</h2>
@@ -1249,12 +1249,12 @@ b = inv(a)
 <p>2.该数组的访问</p>
 <p><strong>通过()访问cell数组时访问到的是cell单元</strong></p>
 <p><strong>通过{}访问cell数组时访问到的是cell单元储存的内容，</strong></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">c = {<span style="color:#d14">&#39;</span><span style="color:#d14">Red&#39;</span>, <span style="color:#d14">&#39;</span><span style="color:#d14">Blue&#39;</span>, <span style="color:#d14">&#39;</span><span style="color:#d14">Green&#39;</span>, <span style="color:#d14">&#39;</span><span style="color:#d14">Yellow&#39;</span>, <span style="color:#d14">&#39;</span><span style="color:#d14">White&#39;</span>; <span style="color:#099">1</span> <span style="color:#099">2</span> <span style="color:#099">3</span> <span style="color:#099">4</span> <span style="color:#099">5</span>};
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">c = {<span style="color:#d14">&#39;Red&#39;</span>, <span style="color:#d14">&#39;Blue&#39;</span>, <span style="color:#d14">&#39;Green&#39;</span>, <span style="color:#d14">&#39;Yellow&#39;</span>, <span style="color:#d14">&#39;White&#39;</span>; <span style="color:#099">1</span> <span style="color:#099">2</span> <span style="color:#099">3</span> <span style="color:#099">4</span> <span style="color:#099">5</span>};
 c(<span style="color:#099">1</span>:<span style="color:#099">2</span>,<span style="color:#099">1</span>:<span style="color:#099">2</span>)
 
 </code></pre></div><p>结果：</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#0086b3">ans</span> = 
-    <span style="color:#d14">&#39;</span><span style="color:#d14">Red&#39;</span>    <span style="color:#d14">&#39;</span><span style="color:#d14">Blue&#39;</span>
+    <span style="color:#d14">&#39;Red&#39;</span>    <span style="color:#d14">&#39;Blue&#39;</span>
     [  <span style="color:#099">1</span>]    [   <span style="color:#099">2</span>]
 
 </code></pre></div><h2 id="多维数组">多维数组</h2>
@@ -1560,8 +1560,8 @@ x = x <span style="color:#000;font-weight:bold">+</span> <span style="color:#099
 
 </code></pre></div><h2 id="matlab读写excel文件">MATLAB读写excel文件</h2>
 <p>读取</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">    [num,text,raw] = xlsread(<span style="color:#d14">&#39;</span><span style="color:#d14">filename&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">sheet&#39;</span>);                    
-    [num,text,raw] = xlsread(<span style="color:#d14">&#39;</span><span style="color:#d14">filename&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">sheet&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">xlRange&#39;</span>);            
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">    [num,text,raw] = xlsread(<span style="color:#d14">&#39;filename&#39;</span>,<span style="color:#d14">&#39;sheet&#39;</span>);                    
+    [num,text,raw] = xlsread(<span style="color:#d14">&#39;filename&#39;</span>,<span style="color:#d14">&#39;sheet&#39;</span>,<span style="color:#d14">&#39;xlRange&#39;</span>);            
 
     num   <span style="color:#998;font-style:italic">%返回为数值矩阵</span>
     
@@ -1576,7 +1576,7 @@ x = x <span style="color:#000;font-weight:bold">+</span> <span style="color:#099
     xlRange   <span style="color:#998;font-style:italic">%读取指定工作表的范围，使用Excel范围的语法</span>
 
 </code></pre></div><p>写入</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">		status = xlswrite(<span style="color:#d14">&#39;</span><span style="color:#d14">filename&#39;</span>,A,<span style="color:#d14">&#39;</span><span style="color:#d14">sheet&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">xlRange&#39;</span>)   <span style="color:#998;font-style:italic">%这里的file是已存在的</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">		status = xlswrite(<span style="color:#d14">&#39;filename&#39;</span>,A,<span style="color:#d14">&#39;sheet&#39;</span>,<span style="color:#d14">&#39;xlRange&#39;</span>)   <span style="color:#998;font-style:italic">%这里的file是已存在的</span>
 
             status        <span style="color:#998;font-style:italic">%用0和1返回操作的状态</span>
 
@@ -1605,7 +1605,7 @@ plot(date,Papashi),datetick('x','dd-mm-yyyy');
 
 </code></pre><p><img src="https://i.loli.net/2019/11/13/nbXdQjwcfRpLt16.png" alt=""></p>
 <h3 id="使用strcat来连接字符串">使用strcat来连接字符串</h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#0086b3">disp</span>(strcat(num2str(<span style="color:#099">15</span>),<span style="color:#d14">&#39;</span><span style="color:#d14">num&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">is&#39;</span>,num2str(<span style="color:#099">18</span>)));
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#0086b3">disp</span>(strcat(num2str(<span style="color:#099">15</span>),<span style="color:#d14">&#39;num&#39;</span>,<span style="color:#d14">&#39;is&#39;</span>,num2str(<span style="color:#099">18</span>)));
 <span style="color:#998;font-style:italic">% 15numis18</span>
 
 </code></pre></div><h2 id="matlab读取文本">MATLAB读取文本</h2>
@@ -1639,7 +1639,7 @@ M = dlmread(filename, delimiter)12
 703 471 330.2 14894 9 2016-05-18
 675 441 33.1 15109 10 2016-05-18
 
-</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">[A,B,C,D,E,F] = textread(<span style="color:#d14">&#39;</span><span style="color:#d14">ok.txt&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">%d%d%f%d%d%s&#39;</span>,<span style="color:#d14">&#39;</span><span style="color:#d14">headerlines&#39;</span>,<span style="color:#099">1</span>)
+</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">[A,B,C,D,E,F] = textread(<span style="color:#d14">&#39;ok.txt&#39;</span>,<span style="color:#d14">&#39;%d%d%f%d%d%s&#39;</span>,<span style="color:#d14">&#39;headerlines&#39;</span>,<span style="color:#099">1</span>)
 
 </code></pre></div><p><code>headerlines,1</code>为跳过第一行，<code>%d %f %s</code>为读取格式</p>
 <h2 id="matlab代码节">MATLAB代码节</h2>
@@ -1790,11 +1790,11 @@ c = x <span style="color:#000;font-weight:bold">+</span> y;
 
 </code></pre></div><h2 id="结构体">结构体</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#998;font-style:italic">% 创建一个结构体</span>
-stu.name = <span style="color:#d14">&#39;</span><span style="color:#d14">zh&#39;</span>;
+stu.name = <span style="color:#d14">&#39;zh&#39;</span>;
 stu.age = <span style="color:#099">15</span>;
-stu.sex =<span style="color:#d14">&#39;</span><span style="color:#d14">F&#39;</span>;
+stu.sex =<span style="color:#d14">&#39;F&#39;</span>;
 stu.num = <span style="color:#099">175224</span>;
-stu.addr = <span style="color:#d14">&#39;</span><span style="color:#d14">nchu&#39;</span>;
+stu.addr = <span style="color:#d14">&#39;nchu&#39;</span>;
 <span style="color:#998;font-style:italic">% 结构体数组转为cell</span>
 a = struct2cell(stu);
 <span style="color:#998;font-style:italic">% 预分配一个5行1列的矩阵</span>
@@ -1819,7 +1819,7 @@ syms y(t)
 Dy = diff(y,t);
 D2y = diff(y,t,<span style="color:#099">2</span>);
 cond = [D2y(<span style="color:#099">0</span>)<span style="color:#000;font-weight:bold">==</span><span style="color:#099">1</span>,Dy(<span style="color:#099">0</span>)<span style="color:#000;font-weight:bold">==</span><span style="color:#099">1</span>,y(<span style="color:#099">0</span>)<span style="color:#000;font-weight:bold">==</span><span style="color:#099">2</span>];
-eqn = diff(y,t,<span style="color:#099">3</span>) <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">3</span> <span style="color:#000;font-weight:bold">*</span> diff(y,t,<span style="color:#099">2</span>) <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">3</span><span style="color:#000;font-weight:bold">*</span>diff(y,t,<span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">-</span>y<span style="color:#000;font-weight:bold">==</span><span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>;
+eqn = diff(y,t,<span style="color:#099">3</span>) <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">3</span> <span style="color:#000;font-weight:bold">*</span> diff(y,t,<span style="color:#099">2</span>) <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">3</span><span style="color:#000;font-weight:bold">*</span>diff(y,t,<span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">-</span>y<span style="color:#000;font-weight:bold">==-</span><span style="color:#099">1</span>;
 ysol = dsolve(eqn)
 ysol2 = dsolve(eqn,cond)
 
@@ -1830,7 +1830,7 @@ clc;
 syms y(t)
 D3y = diff(y,t,<span style="color:#099">3</span>);
 cond = [D2y(<span style="color:#099">0</span>)<span style="color:#000;font-weight:bold">==</span><span style="color:#099">1</span>,Dy(<span style="color:#099">0</span>)<span style="color:#000;font-weight:bold">==</span><span style="color:#099">1</span>,y(<span style="color:#099">0</span>)<span style="color:#000;font-weight:bold">==</span><span style="color:#099">2</span>];
-eqn = D3y<span style="color:#000;font-weight:bold">-</span> <span style="color:#099">3</span> <span style="color:#000;font-weight:bold">*</span> D2y <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">3</span><span style="color:#000;font-weight:bold">*</span>Dy <span style="color:#000;font-weight:bold">-</span>y<span style="color:#000;font-weight:bold">==</span><span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>;
+eqn = D3y<span style="color:#000;font-weight:bold">-</span> <span style="color:#099">3</span> <span style="color:#000;font-weight:bold">*</span> D2y <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">3</span><span style="color:#000;font-weight:bold">*</span>Dy <span style="color:#000;font-weight:bold">-</span>y<span style="color:#000;font-weight:bold">==-</span><span style="color:#099">1</span>;
 ysol = dsolve(eqn)
 ysol2 = dsolve(eqn,cond)
 
@@ -1863,8 +1863,8 @@ cond = [cond1,cond2];
 <p><code>See also</code>:提供了与该函数相关的其他函数的链接</p>
 <h2 id="save和load">Save和load</h2>
 <p>Save将当前工作区的变量保存在一个.mat文件中，load则可以将该文件中的变量重新加载出来</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">save(<span style="color:#d14">&#39;</span><span style="color:#d14">matlab.mat&#39;</span>)
-load(<span style="color:#d14">&#39;</span><span style="color:#d14">matlab.mat&#39;</span>)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">save(<span style="color:#d14">&#39;matlab.mat&#39;</span>)
+load(<span style="color:#d14">&#39;matlab.mat&#39;</span>)
 
 </code></pre></div><h2 id="matlab数据拟合">MATLAB数据拟合</h2>
 <p>使用命令<code>cftool</code>打开数据拟合工具箱</p>
@@ -2007,6 +2007,21 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/test/" title="Test">Test</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B81-4/" title="Leecode面试金典1-4">Leecode面试金典1-4</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/vscode%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" title="vscode隐藏文件">vscode隐藏文件</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/hugo-Maupassant%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0gittalk%E8%AF%84%E8%AE%BA/" title="hugo-maupassant主题添加gittalk评论">hugo-maupassant主题添加gittalk评论</a>
     </li>
     
@@ -2040,21 +2055,6 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
         <a href="https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/" title="Centos系统yum下载错误">Centos系统yum下载错误</a>
     </li>
     
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/" title="服务器安装neovim">服务器安装neovim</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode287%E9%A2%98/" title="leetcode287题">leetcode287题</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/" title="markdown语法补充">markdown语法补充</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -2064,6 +2064,8 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/1/">1 (1)</a></li>
+    
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (11)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (3)</a></li>
@@ -2072,7 +2074,9 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/java/">java (1)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (16)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (17)</a></li>
+    
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/">使用篇 (1)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%89%8D%E7%AB%AF/">前端 (1)</a></li>
     
@@ -2099,12 +2103,17 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/2/">2</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/2020/">2020</a>
     </li>
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">Gittalk</a>
+    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
     </li>
     
     <li>
@@ -2119,7 +2128,7 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/Pacman/">Pacman</a>
+    <a href="https://CorPython.github.io/tags/pacman/">pacman</a>
     </li>
     
     <li>
@@ -2179,7 +2188,7 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
+    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
     </li>
     
     <li>
@@ -2244,7 +2253,7 @@ Weibull：只有一种，a*b*x^(b-1)*exp(-a*x^b)
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">pacman</a>
+    <a href="https://CorPython.github.io/tags/pacman/">pacman</a>
     </li>
     
     <li>

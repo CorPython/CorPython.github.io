@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pacman on code show的博客</title>
-    <link>https://CorPython.github.io/tags/Pacman/</link>
-    <description>Recent content in Pacman on code show的博客</description>
+    <title>pacman on code show的博客</title>
+    <link>https://CorPython.github.io/tags/pacman/</link>
+    <description>Recent content in pacman on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Jan 2020 19:46:12 +0800</lastBuildDate>
     
-	<atom:link href="https://CorPython.github.io/tags/Pacman/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://CorPython.github.io/tags/pacman/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,6 +17,15 @@
       <pubDate>Tue, 28 Jan 2020 19:46:12 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/Pacman%E5%91%BD%E4%BB%A4/</guid>
+      <description>Pacman指令 1.安装软件 sudo pacman -S 软件名 2.更新软件源并更新你的软件 sudo pacman -Syu 3.查询软件 sudo pacman -Ss 软件名 4.请理已安装的软件的缓存(安装包) sudo pacman -Sc 5.删除某个软件 只删除安装包 sudo pacman -R 软件名 删除安装包及其依赖 sudo pacman -Rs 软件名 在上面的基础上删除该软件的全局配置(推荐) sudo pacman -Rns 软件名 6.查询本地已经</description>
+    </item>
+    
+    <item>
+      <title>Pacman包管理命令</title>
+      <link>https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 13 Nov 2019 16:51:48 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/pacman%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</guid>
       <description>Pacman指令 1.安装软件 sudo pacman -S 软件名 2.更新软件源并更新你的软件 sudo pacman -Syu 3.查询软件 sudo pacman -Ss 软件名 4.请理已安装的软件的缓存(安装包) sudo pacman -Sc 5.删除某个软件 只删除安装包 sudo pacman -R 软件名 删除安装包及其依赖 sudo pacman -Rs 软件名 在上面的基础上删除该软件的全局配置(推荐) sudo pacman -Rns 软件名 6.查询本地已经</description>
     </item>
     

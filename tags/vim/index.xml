@@ -44,7 +44,7 @@
       <pubDate>Wed, 13 Nov 2019 16:54:24 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vim%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/</guid>
-      <description>vim 安装插件 1.vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc 2.安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 3.使用命令更新配置文件 :source ~/.vimrc 4.加入自己想用的插件 call plug#begin(&amp;#39;~/.vim/plugged&amp;#39;) &amp;#34;将该插件加入到插件列表 Plug &amp;#39;mhinz/vim-startify&amp;#39; call plug#end() 5.开始安装插件 :PlugInstall</description>
+      <description>vim 安装插件 1.vim在linux下的配置文件的地址有以下两z种方法 vim /home/用户名/.vimrc(比如vim /home/zhangfp/.vimrc) 或者 vim ~/.vimrc 2.安装插件管理器vim_plug curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 3.使用命令更新配置文件 :source ~/.vimrc 4.加入自己想用的插件 call plug#begin(&amp;#39;~/.vim/plugged&amp;#39;) &amp;#34; 将该插件加入到插件列表 Plug &amp;#39;mhinz/vim-startify&amp;#39; call plug#end() 5.开始安装插件 :PlugInstall vim-plug 操作 在</description>
     </item>
     
     <item>

@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -191,7 +191,7 @@
     <li><a href="#const-结构体">const 结构体</a></li>
     <li><a href="#const-类对象">const 类对象</a></li>
     <li><a href="#const-指针">const 指针</a></li>
-    <li><a href="#如何区分-const-int-p-和-int-const-p">如何区分 const int* p 和 int* const p</a></li>
+    <li><a href="#如何区分-const-int-p-和-int-const-p">如何区分 <code>const int* p</code> 和 <code>int* const p</code></a></li>
     <li><a href="#指向const变量的const指针">指向const变量的const指针</a></li>
     <li><a href="#const-变量作为函数参数">const 变量作为函数参数</a></li>
     <li><a href="#const-返回值">const 返回值</a></li>
@@ -294,7 +294,7 @@
     <li><a href="#const-结构体">const 结构体</a></li>
     <li><a href="#const-类对象">const 类对象</a></li>
     <li><a href="#const-指针">const 指针</a></li>
-    <li><a href="#如何区分-const-int-p-和-int-const-p">如何区分 const int* p 和 int* const p</a></li>
+    <li><a href="#如何区分-const-int-p-和-int-const-p">如何区分 <code>const int* p</code> 和 <code>int* const p</code></a></li>
     <li><a href="#指向const变量的const指针">指向const变量的const指针</a></li>
     <li><a href="#const-变量作为函数参数">const 变量作为函数参数</a></li>
     <li><a href="#const-返回值">const 返回值</a></li>
@@ -373,7 +373,7 @@
 </span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> num;<span style="color:#998;font-style:italic">//错误,必须进行初始化
 </span></code></pre></div><h2 id="const-结构体">const 结构体</h2>
 <p>和<code>const int</code>相同,必须在定义的时候进行初始化,并且需要一个已经初始化的结构体来指向</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
@@ -400,7 +400,7 @@
 <li>类对象的 <strong>改变</strong> 定义: <strong>改变任何成员变量的值，调用任何非<code>const</code>成员函数</strong></li>
 </ul>
 <p><strong>不允许改变<code>const</code>对象的成员变量,也不允许调用不带<code>const</code>的成员函数</strong></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
@@ -425,7 +425,7 @@
     t <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">&amp;</span>t2;<span style="color:#998;font-style:italic">//允许
 </span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">// cout &lt;&lt; t1.get_im() &lt;&lt; endl;//出错,不允许改变const对象的成员变量,也不允许调用不带const的成员函数
 </span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">// t1.set_re(15); //不允许改变const对象的成员变量值
-</span><span style="color:#998;font-style:italic"></span>    cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> t1.get_re() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+</span><span style="color:#998;font-style:italic"></span>    cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> t1.get_re() <span style="color:#000;font-weight:bold">&lt;&lt;</span> endl;
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
 </code></pre></div><p><strong>指向const变量的指针</strong></p>
@@ -451,20 +451,20 @@ p <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;fon
 </span></code></pre></div><p>指针的类型如果为指向<code>const</code>变量的指针,即使其指向的内容是非<code>const</code>变量，也无法通过这个指针改变数据内容。</p>
 <p>反之，如果指针的类型是指向非<code>const</code>变量的指针，即使指向的是<code>const</code>变量，也可以通过这个指针改变<code>const</code>变量的内容.所以，<em><strong>编译器是通过 <span style=color:red>指针的类型</span>来判断是否只读的。</strong></em></p>
 <p>打印结果:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">debugLevel = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, debugLevel);
-printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">*q = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>q);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#d14">&#34;debugLevel = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, debugLevel);
+printf(<span style="color:#d14">&#34;*q = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>q);
 
-printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">debugLevel address = %p</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>debugLevel);
-printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">q = %p</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, q);
+printf(<span style="color:#d14">&#34;debugLevel address = %p</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>debugLevel);
+printf(<span style="color:#d14">&#34;q = %p</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, q);
 </code></pre></div><p><strong>输出结果:</strong>(输出结果在<code>g++</code>编译器和<code>vc++</code>编译器中编译结果相同)</p>
 <pre><code>debugLevel = 10  // 直接打印可以发现，const 变量的值未改变 ！
 *q = 5  //通过指针访问，发现 const 变量的值改变了
 debugLevel address = 000000000061fe14 
 q = 000000000061fe14 //但是指针指向的内存区域是相同的
 </code></pre><p>这就奇怪了,同一块地址空间的内容竟然不同! ! !原因是因为编译器对于<code>const</code>的访问做了,对应的优化.编译器将<code>const</code>变量直接替换成对应的值,也就是在编译的过程中,</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">debugLevel = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, debugLevel);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#d14">&#34;debugLevel = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, debugLevel);
 </code></pre></div><p>这个语句，被直接替换成了：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">debugLevel = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#099">10</span>);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#d14">&#34;debugLevel = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#099">10</span>);
 </code></pre></div><h2 id="const-指针">const 指针</h2>
 <p><code>const</code>指针的特点:</p>
 <ul>
@@ -474,7 +474,7 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#458;font-weight:bold">int</span> value <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">15</span>;
 <span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">const</span> p <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">&amp;</span>value;
 <span style="color:#000;font-weight:bold">*</span>p <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">150</span>; <span style="color:#998;font-style:italic">//改变内容没问题
-</span><span style="color:#998;font-style:italic"></span>printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">%d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>p); <span style="color:#998;font-style:italic">//输出150
+</span><span style="color:#998;font-style:italic"></span>printf(<span style="color:#d14">&#34;%d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>p); <span style="color:#998;font-style:italic">//输出150
 </span><span style="color:#998;font-style:italic"></span>
 <span style="color:#458;font-weight:bold">int</span> num <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">10</span>;
 <span style="color:#998;font-style:italic">//p = &amp;num;//出错,指针的指向不能改变
@@ -495,20 +495,20 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 <span style="color:#000;font-weight:bold">*</span>p <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">15</span>;<span style="color:#998;font-style:italic">//出错,指向的内容不能改变
 </span><span style="color:#998;font-style:italic"></span>p <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">&amp;</span>num;<span style="color:#998;font-style:italic">//出错,指向不能改变
 </span></code></pre></div><h2 id="const-变量作为函数参数">const 变量作为函数参数</h2>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;cstdio&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;cstdio&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#998;font-style:italic">// 接收一个int变量，在函数内部，认为它是普通的
 </span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">OutputInt_not_const</span>( <span style="color:#458;font-weight:bold">int</span> a )
 {
     a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>;  <span style="color:#998;font-style:italic">// 正常
-</span><span style="color:#998;font-style:italic"></span>    printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, a);
+</span><span style="color:#998;font-style:italic"></span>    printf(<span style="color:#d14">&#34;a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, a);
 }
 
 <span style="color:#998;font-style:italic">// 接收一个int变量，并在函数内部，认为它是只读的
 </span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">OutputInt_const</span>( <span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> a )
 {
     <span style="color:#998;font-style:italic">// a = 5;  // 编译错误：不允许修改只读变量
-</span><span style="color:#998;font-style:italic"></span>    printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, a);
+</span><span style="color:#998;font-style:italic"></span>    printf(<span style="color:#d14">&#34;a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, a);
 }
 
 
@@ -516,14 +516,14 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 </span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">OutputInt_p_const</span>( <span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">*</span> a )
 {
     <span style="color:#998;font-style:italic">// *a = 5;  // 编译错误：
-</span><span style="color:#998;font-style:italic"></span>    printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">*a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>a);
+</span><span style="color:#998;font-style:italic"></span>    printf(<span style="color:#d14">&#34;*a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>a);
 }
 
 <span style="color:#998;font-style:italic">// 接收一个普通指针
 </span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">OutputInt_p_not_const</span>( <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>a )
 {
     <span style="color:#000;font-weight:bold">*</span>a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>;
-    printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">*a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>a);
+    printf(<span style="color:#d14">&#34;*a = %d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">*</span>a);
 }
 
 <span style="color:#998;font-style:italic">// 主函数
@@ -554,21 +554,21 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 <ul>
 <li>函数返回<code>const</code>返回值，主要用于<strong>函数返回<code>const</code>引用。</strong></li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
 <span style="color:#998;font-style:italic">// 返回 const 引用的函数
 </span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> string<span style="color:#000;font-weight:bold">&amp;</span> SetVersion_const(string <span style="color:#000;font-weight:bold">&amp;</span> versionInfo)
 {
-    versionInfo <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">V0.0.3</span><span style="color:#d14">&#34;</span>;
+    versionInfo <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;V0.0.3&#34;</span>;
     <span style="color:#000;font-weight:bold">return</span> versionInfo;
 }
 
 <span style="color:#998;font-style:italic">// 返回普通引用的函数
 </span><span style="color:#998;font-style:italic"></span>string<span style="color:#000;font-weight:bold">&amp;</span> SetVersion_not_const(string <span style="color:#000;font-weight:bold">&amp;</span> versionInfo)
 {
-    versionInfo <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">V0.0.3</span><span style="color:#d14">&#34;</span>;
+    versionInfo <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;V0.0.3&#34;</span>;
     <span style="color:#000;font-weight:bold">return</span> versionInfo;
 }
 
@@ -577,9 +577,9 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 {
     string versionInfo;
 
-    SetVersion_const(versionInfo) <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">V0.0.5</span><span style="color:#d14">&#34;</span>;      <span style="color:#998;font-style:italic">// 编译错误，返回的引用为 const 引用，不允许修改。
+    SetVersion_const(versionInfo) <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;V0.0.5&#34;</span>;      <span style="color:#998;font-style:italic">// 编译错误，返回的引用为 const 引用，不允许修改。
 </span><span style="color:#998;font-style:italic"></span> 
-    SetVersion_not_const(versionInfo) <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">V0.0.5</span><span style="color:#d14">&#34;</span>;  <span style="color:#998;font-style:italic">// 正常，返回的引用为普通引用，可以修改内容。
+    SetVersion_not_const(versionInfo) <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;V0.0.5&#34;</span>;  <span style="color:#998;font-style:italic">// 正常，返回的引用为普通引用，可以修改内容。
 </span><span style="color:#998;font-style:italic"></span>    
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
@@ -596,7 +596,7 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 <p>静态 <code>const</code> 成员变量<strong>需要在类外部单独定义并初始化（可定义在头文件）</strong></p>
 </li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
@@ -606,25 +606,25 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 	<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">get_first</span>() <span style="color:#000;font-weight:bold">const</span> { <span style="color:#000;font-weight:bold">return</span> a; };
 	<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">get_second</span>() <span style="color:#000;font-weight:bold">const</span> { <span style="color:#000;font-weight:bold">return</span> b; };
 	<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">get_third</span>() <span style="color:#000;font-weight:bold">const</span> { <span style="color:#000;font-weight:bold">return</span> c; };
-	<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">set_first</span>(<span style="color:#458;font-weight:bold">int</span> a) { <span style="color:#000;font-weight:bold">this</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>a <span style="color:#000;font-weight:bold">=</span> a; };
+	<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">set_first</span>(<span style="color:#458;font-weight:bold">int</span> a) { <span style="color:#000;font-weight:bold">this</span><span style="color:#000;font-weight:bold">-&gt;</span>a <span style="color:#000;font-weight:bold">=</span> a; };
 <span style="color:#000;font-weight:bold">public</span><span style="color:#000;font-weight:bold">:</span>
 	<span style="color:#458;font-weight:bold">int</span> a;<span style="color:#998;font-style:italic">//只能在构造函数初始化列表中初始化
 </span><span style="color:#998;font-style:italic"></span>	<span style="color:#000;font-weight:bold">static</span> <span style="color:#458;font-weight:bold">int</span> b;<span style="color:#998;font-style:italic">//在类的实现文件中定义并初始化
 </span><span style="color:#998;font-style:italic"></span>	<span style="color:#000;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">static</span> <span style="color:#458;font-weight:bold">int</span> c;<span style="color:#998;font-style:italic">//与 static const int c;相同。
 </span><span style="color:#998;font-style:italic"></span>};
 
-<span style="color:#458;font-weight:bold">int</span> Test<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>b <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; <span style="color:#998;font-style:italic">//static成员变量不能在构造函数初始化列表中初始化，因为它不属于某个对象。
-</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> Test<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>c <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;<span style="color:#998;font-style:italic">//注意：给静态成员变量赋值时，不需要加static修饰符，但要加const。
+<span style="color:#458;font-weight:bold">int</span> Test<span style="color:#000;font-weight:bold">::</span>b <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; <span style="color:#998;font-style:italic">//static成员变量不能在构造函数初始化列表中初始化，因为它不属于某个对象。
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> Test<span style="color:#000;font-weight:bold">::</span>c <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;<span style="color:#998;font-style:italic">//注意：给静态成员变量赋值时，不需要加static修饰符，但要加const。
 </span><span style="color:#998;font-style:italic"></span>
 <span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>()
 {
 	Test t(<span style="color:#099">15</span>);
-	cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> t.get_first() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
-	cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> t.get_second() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
-	cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> t.get_third() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+	cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> t.get_first() <span style="color:#000;font-weight:bold">&lt;&lt;</span> endl;
+	cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> t.get_second() <span style="color:#000;font-weight:bold">&lt;&lt;</span> endl;
+	cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> t.get_third() <span style="color:#000;font-weight:bold">&lt;&lt;</span> endl;
 
 	t.set_first(<span style="color:#099">10</span>);
-	cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> t.get_first() <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
+	cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> t.get_first() <span style="color:#000;font-weight:bold">&lt;&lt;</span> endl;
 
 	t.b <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">10</span>; <span style="color:#998;font-style:italic">//可以修改
 </span><span style="color:#998;font-style:italic"></span>	<span style="color:#998;font-style:italic">//t.c = 15; //const 类型不可以修改
@@ -637,7 +637,7 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 <li>传给<code>const</code>成员函数的this指针,是<strong>指向<code>const</code>对象 的 <code>const</code>指针</strong>。</li>
 <li><code>const</code>成员函数,不能够修改任何成员变量,<strong>除非成员变量被 mutable 修饰符修饰</strong>。</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span>
 <span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
@@ -652,13 +652,13 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
 </span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">SetDebugLevel_const</span>(<span style="color:#458;font-weight:bold">int</span> debugLevel) <span style="color:#000;font-weight:bold">const</span>; <span style="color:#998;font-style:italic">// const 成员函数
 </span><span style="color:#998;font-style:italic"></span>};
 
-<span style="color:#458;font-weight:bold">void</span> CDebugModule<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>SetDebugLevel_not_const(<span style="color:#458;font-weight:bold">int</span> debugLevel)
+<span style="color:#458;font-weight:bold">void</span> CDebugModule<span style="color:#000;font-weight:bold">::</span>SetDebugLevel_not_const(<span style="color:#458;font-weight:bold">int</span> debugLevel)
 {
     m_debugLevel_not_mutable <span style="color:#000;font-weight:bold">=</span> debugLevel;
     m_debugLevel_mutable <span style="color:#000;font-weight:bold">=</span> debugLevel;
 }
 
-<span style="color:#458;font-weight:bold">void</span> CDebugModule<span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">:</span>SetDebugLevel_const(<span style="color:#458;font-weight:bold">int</span> debugLevel) <span style="color:#000;font-weight:bold">const</span>
+<span style="color:#458;font-weight:bold">void</span> CDebugModule<span style="color:#000;font-weight:bold">::</span>SetDebugLevel_const(<span style="color:#458;font-weight:bold">int</span> debugLevel) <span style="color:#000;font-weight:bold">const</span>
 {
     <span style="color:#998;font-style:italic">//m_debugLevel_not_mutable = debugLevel; // 编译错误，const 成员函数不能修改一般的成员变量
 </span><span style="color:#998;font-style:italic"></span>    m_debugLevel_mutable <span style="color:#000;font-weight:bold">=</span> debugLevel;     <span style="color:#998;font-style:italic">// 正常，当成员变量被 mutable 修饰时，const成员函数就能修改了
@@ -866,6 +866,21 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/test/" title="Test">Test</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B81-4/" title="Leecode面试金典1-4">Leecode面试金典1-4</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/vscode%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" title="vscode隐藏文件">vscode隐藏文件</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/hugo-Maupassant%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0gittalk%E8%AF%84%E8%AE%BA/" title="hugo-maupassant主题添加gittalk评论">hugo-maupassant主题添加gittalk评论</a>
     </li>
     
@@ -899,21 +914,6 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
         <a href="https://CorPython.github.io/post/centos%E7%B3%BB%E7%BB%9Fyum%E4%B8%8B%E8%BD%BD%E9%94%99%E8%AF%AF/" title="Centos系统yum下载错误">Centos系统yum下载错误</a>
     </li>
     
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85neovim/" title="服务器安装neovim">服务器安装neovim</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/leetcode287%E9%A2%98/" title="leetcode287题">leetcode287题</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/markdown%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/" title="markdown语法补充">markdown语法补充</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -923,6 +923,8 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/1/">1 (1)</a></li>
+    
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c&#43;&#43;/">c&#43;&#43; (11)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/c%E8%AF%AD%E8%A8%80/">c语言 (3)</a></li>
@@ -931,7 +933,9 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/java/">java (1)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (16)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (17)</a></li>
+    
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/">使用篇 (1)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%89%8D%E7%AB%AF/">前端 (1)</a></li>
     
@@ -958,12 +962,17 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/2/">2</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/2020/">2020</a>
     </li>
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">Gittalk</a>
+    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
     </li>
     
     <li>
@@ -978,7 +987,7 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/Pacman/">Pacman</a>
+    <a href="https://CorPython.github.io/tags/pacman/">pacman</a>
     </li>
     
     <li>
@@ -1038,7 +1047,7 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="https://CorPython.github.io/tags/gittalk/">gittalk</a>
+    <a href="https://CorPython.github.io/tags/Gittalk/">Gittalk</a>
     </li>
     
     <li>
@@ -1103,7 +1112,7 @@ q = 000000000061fe14 //但是指针指向的内存区域是相同的
     
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
-    <a href="">pacman</a>
+    <a href="https://CorPython.github.io/tags/pacman/">pacman</a>
     </li>
     
     <li>
