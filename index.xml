@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>Test</title>
-      <link>https://CorPython.github.io/post/test/</link>
-      <pubDate>Wed, 04 Mar 2020 17:50:58 +0800</pubDate>
+      <title>git Bash简单美化</title>
+      <link>https://CorPython.github.io/post/git-bash%E7%AE%80%E5%8D%95%E7%BE%8E%E5%8C%96/</link>
+      <pubDate>Thu, 05 Mar 2020 12:22:14 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/test/</guid>
-      <description></description>
+      <guid>https://CorPython.github.io/post/git-bash%E7%AE%80%E5%8D%95%E7%BE%8E%E5%8C%96/</guid>
+      <description>先上最终效果图: 美化过程 1.自定义配置文件 打开git-bash,使用命令打开配置文件(我这里使用的是vim编辑器) vim ~/.minttyrc 配置文件覆盖为: Font=Source Code Pro FontHeight=16 ForegroundColour=131,148,150 BackgroundColour=0,43,54 CursorColour=220,50,47 Black=7,54,66 BoldBlack=0,43,54 Red=220,50,47 BoldRed=203,75,22 Green=133,153,0 BoldGreen=88,110,117 Yellow=181,137,0 BoldYellow=101,123,131 Blue=38,139,210 BoldBlue=131,148,150 Magenta=211,54,130 BoldMagenta=108,113,196 Cyan=42,161,152 BoldCyan=147,161,161 White=238,232,213 BoldWhite=253,246,227 BoldAsFont=-1 FontSmoothing=full FontWeight=400 FontIsBold=no Locale=C Charset=UTF-8 ThemeFile=windows10 Transparency=low 注意:我使用的字体是Source code pro,如果你没有在系统上安装这个字体,windo</description>
     </item>
     
     <item>
-      <title>Leecode面试金典1-4</title>
-      <link>https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B81-4/</link>
+      <title>Leecode面试金典</title>
+      <link>https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8/</link>
       <pubDate>Wed, 04 Mar 2020 17:23:34 +0800</pubDate>
       
-      <guid>https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B81-4/</guid>
+      <guid>https://CorPython.github.io/post/leecode%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8/</guid>
       <description>1.判定字符是否唯一 题目 实现一个算法，确定一个字符串 s 的所有字符是否全都不同。 示例 1： 输入: s = &amp;quot;leetcode&amp;quot; 输出: false 示例 2： 输入: s = &amp;quot;abc&amp;quot; 输出: true 限制： 0 &amp;lt;= len(s) &amp;lt;= 100 如果你不使用额外的数据结构，会很加分。 题解 1.对字符串排序,比较相邻字符是否相同 bool isUnique(string astr) { if (astr.size() == 0) return true; sort(astr.begin(), astr.end()); for (size_t i = 0; i &amp;lt; astr.size() - 1; i++) { if</description>
     </item>
     
