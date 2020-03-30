@@ -6,10 +6,19 @@
     <description>Recent content in 使用篇 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2020 11:57:46 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 11:34:53 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sublime Text3使用</title>
+      <link>https://CorPython.github.io/post/sublime-Text3%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 15 Mar 2020 11:34:53 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/sublime-Text3%E4%BD%BF%E7%94%A8/</guid>
+      <description>1.代码块左移TAB ctrl + { 2.代码块右移一个TAB ctrl + } 3.选中代码 按住shift + 上下左右 4.复制粘贴一行 ctrl + shift + D 5.放大缩小字体 ctrl `+` 和 `-` 6.移动左右一个单词的距离 ctrl + 左方向键(右方向键) 7.选中一行 ctrl + L</description>
+    </item>
     
     <item>
       <title>vscode隐藏文件</title>

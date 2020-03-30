@@ -6,10 +6,19 @@
     <description>Recent content in leetcode on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2020 12:29:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 11:04:25 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode108题</title>
+      <link>https://CorPython.github.io/post/leetcode108/</link>
+      <pubDate>Mon, 30 Mar 2020 11:04:25 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode108/</guid>
+      <description>题目 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。 本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。 示例: 给定有序数组: [-10,-3,0,5,9], 一个可能的答案是：[0,-3,9,-10,null,5]，它可以表示下面这个高度平衡二叉搜索树： 0 / \ -3 9</description>
+    </item>
     
     <item>
       <title>leetcode169题</title>
@@ -35,7 +44,7 @@
       <pubDate>Fri, 06 Mar 2020 09:47:09 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</guid>
-      <description>和为s的连续正数序列(3-6) 题目链接 方法一:滑动窗口求解 参考题解 滑动串口为左闭右开区间,sum为[i,j)之间的数字之和, 当左边界小于等于target / 2时,有以下三种情况 sum&amp;lt;target时,右边界向右移动,sum+=j,j++ sum&amp;gt;target时,左边界向右</description>
+      <description>和为s的连续正数序列 题目 题目链接 题解 方法一:滑动窗口求解 参考题解 滑动串口为左闭右开区间,sum为[i,j)之间的数字之和, 当左边界小于等于target / 2时,有以下三种情况 sum&amp;lt;target时,右边界向右移动,sum+=j,j++ sum&amp;gt;target时,左边界向右移</description>
     </item>
     
     <item>

@@ -206,21 +206,23 @@
                                 
                             </div>
                             
-                            <span class="post-word-count">|1318 words</span>
+                            <span class="post-word-count">|2460 words</span>
                             
                             <div class="post-meta">
                                 <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
                                         阅读</span></span>
                             </div>
                             <div class="post-meta animated slower fadeInUp">
-                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约3分钟
+                                <i class="fa fa-clock-o"></i>&nbsp;| 阅读时间大约5分钟
                             </div>
                             
                             
                             <div class="post-content">
                                     
-                                    <h2 id="和为s的连续正数序列3-6">和为s的连续正数序列(3-6)</h2>
+                                    <h2 id="和为s的连续正数序列">和为s的连续正数序列</h2>
+<h3 id="题目">题目</h3>
 <p><a href="https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/">题目链接</a></p>
+<h3 id="题解">题解</h3>
 <p><strong>方法一:滑动窗口求解</strong></p>
 <p><a href="https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/solution/shi-yao-shi-hua-dong-chuang-kou-yi-ji-ru-he-yong-h/">参考题解</a></p>
 <p><a data-fancybox="gallery" href="http://cdn.knowempty.xyz/20200306095040.png"><img src="http://cdn.knowempty.xyz/20200306095040.png"/></a></p>
@@ -316,10 +318,10 @@
 </span><span style="color:#998;font-style:italic"></span>    reverse(ans.begin(), ans.end());
     <span style="color:#000;font-weight:bold">return</span> ans;
 }
-</code></pre></div><h2 id="买卖股票的最佳时机3-9">买卖股票的最佳时机(3-9)</h2>
-<h3 id="题目">题目</h3>
+</code></pre></div><h2 id="买卖股票的最佳时机">买卖股票的最佳时机</h2>
+<h3 id="题目-1">题目</h3>
 <p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/">题目链接</a></p>
-<h3 id="题解">题解</h3>
+<h3 id="题解-1">题解</h3>
 <p><strong>1.方法一,遍历整个数组,每次更新最小价格和最大利润</strong></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">maxProfit</span>(vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">&amp;</span>prices)
 {
@@ -337,9 +339,9 @@
 </code></pre></div><p><strong>2.方法二,动态规划</strong>(待更)</p>
 <pre><code>
 </code></pre><h2 id="字符串的最大公因子">字符串的最大公因子</h2>
-<h3 id="题目-1">题目</h3>
+<h3 id="题目-2">题目</h3>
 <p><a href="https://leetcode-cn.com/problems/greatest-common-divisor-of-strings/">题目链接</a></p>
-<h3 id="题解-1">题解</h3>
+<h3 id="题解-2">题解</h3>
 <p>利用<code>gcd()</code>巧解本题</p>
 <p>首先假设<code>str1</code>和<code>str2</code>有最大公因数<code>x</code>,则它们分别有<code>m</code>和<code>n</code>个<code>x</code>,所以<code>str1+str2</code>应该和<code>str2+str1</code>相等,否则没有最大公约数.</p>
 <p>使用<code>gcd(m,n)</code>求出两个字符串长度的最大公因数,取出<code>[0,gcd(str1.length(),str2.length()))</code>子字符串即为结果</p>
@@ -352,6 +354,134 @@
     string <span style="color:#900;font-weight:bold">gcdOfStrings</span>(string str1, string str2) {
         <span style="color:#000;font-weight:bold">if</span> (str1 <span style="color:#000;font-weight:bold">+</span> str2 <span style="color:#000;font-weight:bold">!=</span> str2 <span style="color:#000;font-weight:bold">+</span> str1) <span style="color:#000;font-weight:bold">return</span> <span style="color:#d14">&#34;&#34;</span>;
         <span style="color:#000;font-weight:bold">return</span> str1.substr(<span style="color:#099">0</span>, gcd(str1.size(), str2.size()));
+    }
+};
+</code></pre></div><h2 id="矩阵重叠">矩阵重叠</h2>
+<h3 id="题目-3">题目</h3>
+<p>矩形以列表 <code>[x1, y1, x2, y2]</code> 的形式表示，其中 <code>(x1, y1)</code> 为左下角的坐标，<code>(x2, y2)</code> 是右上角的坐标。</p>
+<p>如果相交的面积为正，则称两矩形重叠。需要明确的是，只在角或边接触的两个矩形不构成重叠。</p>
+<p>给出两个矩形，判断它们是否重叠并返回结果。</p>
+<p>示例 1：</p>
+<pre><code>输入：rec1 = [0,0,2,2], rec2 = [1,1,3,3]
+输出：true
+</code></pre><p>示例 2：</p>
+<pre><code>输入：rec1 = [0,0,1,1], rec2 = [1,0,2,1]
+输出：false
+</code></pre><h3 id="题解-3">题解</h3>
+<p>图解:</p>
+<img src="http://cdn.knowempty.xyz/20200318114759.png"/>
+<p>四种情况:</p>
+<p>上：<code>rec1[1]&gt;=rec2[3]</code>
+下：<code>rec1[3]&lt;=rec2[1]</code>
+左：<code>rec1[2]&lt;=rec2[0]</code>
+右：<code>rec1[0]&gt;=rec2[2]</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#458;font-weight:bold">bool</span> <span style="color:#900;font-weight:bold">isRectangleOverlap</span>(vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;&amp;</span> rec1, vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;&amp;</span> rec2) {
+	<span style="color:#000;font-weight:bold">if</span> (rec2[<span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">&gt;=</span> rec1[<span style="color:#099">3</span>] <span style="color:#000;font-weight:bold">||</span> rec1[<span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">&gt;=</span> rec2[<span style="color:#099">3</span>]) {
+		<span style="color:#000;font-weight:bold">return</span> <span style="color:#0086b3">false</span>;
+	}
+	<span style="color:#000;font-weight:bold">if</span> (rec1[<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">&gt;=</span> rec2[<span style="color:#099">2</span>] <span style="color:#000;font-weight:bold">||</span> rec1[<span style="color:#099">2</span>] <span style="color:#000;font-weight:bold">&lt;=</span> rec2[<span style="color:#099">0</span>]) {
+		<span style="color:#000;font-weight:bold">return</span> <span style="color:#0086b3">false</span>;
+	}
+	<span style="color:#000;font-weight:bold">return</span> <span style="color:#0086b3">true</span>;
+}
+</code></pre></div><h2 id="水壶问题httpsleetcode-cncomproblemswater-and-jug-problem"><a href="https://leetcode-cn.com/problems/water-and-jug-problem/">水壶问题</a></h2>
+<h3 id="题目-4">题目</h3>
+<p><a href="https://leetcode-cn.com/problems/water-and-jug-problem/">题目链接</a></p>
+<h3 id="题解-4">题解</h3>
+<blockquote>
+<p>以下定理引自百度百科</p>
+</blockquote>
+<p>裴蜀定理（或<a href="https://baike.baidu.com/item/%E8%B4%9D%E7%A5%96%E5%AE%9A%E7%90%86">贝祖定理</a>）得名于法国数学家艾蒂安·裴蜀，说明了对任何<a href="https://baike.baidu.com/item/%E6%95%B4%E6%95%B0">整数</a><code>a</code>、<code>b</code>和它们的最大公约数<code>d</code>，关于<a href="https://baike.baidu.com/item/%E6%9C%AA%E7%9F%A5%E6%95%B0">未知数</a><code>x</code>和<code>y</code>的线性不定方程（称为裴蜀等式）：若<code>a</code>,<code>b</code>是整数,且<code>gcd(a,b)=d</code>，那么对于任意的整数<code>x</code>,<code>y</code>,<code>ax+by</code>都一定是<code>d</code>的倍数，特别地，一定存在整数x,y，使<code>ax+by=d</code>成立</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">gcd</span>(<span style="color:#458;font-weight:bold">int</span> a, <span style="color:#458;font-weight:bold">int</span> b)
+{
+	<span style="color:#000;font-weight:bold">return</span> b <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">?</span> <span style="color:#900;font-weight:bold">a</span> : gcd(b, a <span style="color:#000;font-weight:bold">%</span> b);
+}
+<span style="color:#458;font-weight:bold">bool</span> <span style="color:#900;font-weight:bold">canMeasureWater</span>(<span style="color:#458;font-weight:bold">int</span> x, <span style="color:#458;font-weight:bold">int</span> y, <span style="color:#458;font-weight:bold">int</span> z)
+{
+	<span style="color:#000;font-weight:bold">if</span> (x <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">||</span> y <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span> )
+	{
+		<span style="color:#000;font-weight:bold">if</span> (x <span style="color:#000;font-weight:bold">==</span> z <span style="color:#000;font-weight:bold">||</span> y <span style="color:#000;font-weight:bold">==</span> z)
+			<span style="color:#000;font-weight:bold">return</span> <span style="color:#0086b3">true</span>;
+		<span style="color:#000;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">return</span> <span style="color:#0086b3">false</span>;
+	}
+	<span style="color:#000;font-weight:bold">if</span> (x <span style="color:#000;font-weight:bold">+</span> y <span style="color:#000;font-weight:bold">&lt;</span> z)
+		<span style="color:#000;font-weight:bold">return</span> <span style="color:#0086b3">false</span>;
+	<span style="color:#000;font-weight:bold">return</span> z <span style="color:#000;font-weight:bold">%</span> gcd(x, y) <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span>;
+}
+</code></pre></div><h2 id="-链表的中间结点httpsleetcode-cncomproblemsmiddle-of-the-linked-list"><a href="https://leetcode-cn.com/problems/middle-of-the-linked-list/"> 链表的中间结点</a></h2>
+<h3 id="题目-5">题目</h3>
+<p>给定一个带有头结点 <code>head</code> 的非空单链表，返回链表的中间结点。</p>
+<p>如果有两个中间结点，则返回第二个中间结点。</p>
+<h3 id="题解-5">题解</h3>
+<p>![](<a href="http://cdn.knowempty.xyz//404d110d9578be8c86697c991fa35a86412224911eb5d49a0ad001af59d5339e.gif">http://cdn.knowempty.xyz//404d110d9578be8c86697c991fa35a86412224911eb5d49a0ad001af59d5339e.gif</a> (1200×500).gif)</p>
+<p><strong>快慢指针法</strong></p>
+<p>快指针,慢指针开始状态都指向<code>head</code>,快指针的移动每次移动两个节点,慢指针每次移动一个节点,当快指针指向最后一个节点,或者<code>NULL</code>的时候,<code>slow</code>指向的位置就是所求的中间节点</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">ListNode<span style="color:#000;font-weight:bold">*</span> <span style="color:#900;font-weight:bold">middleNode</span>(ListNode<span style="color:#000;font-weight:bold">*</span> head) {
+	ListNode<span style="color:#000;font-weight:bold">*</span> slow <span style="color:#000;font-weight:bold">=</span> head;
+	ListNode<span style="color:#000;font-weight:bold">*</span> fast <span style="color:#000;font-weight:bold">=</span> head;
+	<span style="color:#000;font-weight:bold">while</span> (fast <span style="color:#000;font-weight:bold">!=</span> <span style="color:#0086b3">NULL</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> fast<span style="color:#000;font-weight:bold">-&gt;</span>next <span style="color:#000;font-weight:bold">!=</span> <span style="color:#0086b3">NULL</span>)
+	{
+		fast <span style="color:#000;font-weight:bold">=</span> fast<span style="color:#000;font-weight:bold">-&gt;</span>next<span style="color:#000;font-weight:bold">-&gt;</span>next;
+		slow <span style="color:#000;font-weight:bold">=</span> slow<span style="color:#000;font-weight:bold">-&gt;</span>next;
+	}
+	<span style="color:#000;font-weight:bold">return</span> slow;
+}
+</code></pre></div><h2 id="单词的压缩编码httpsleetcode-cncomproblemsshort-encoding-of-words"><a href="https://leetcode-cn.com/problems/short-encoding-of-words/">单词的压缩编码</a></h2>
+<h3 id="题目-6">题目</h3>
+<p><a href="https://leetcode-cn.com/problems/short-encoding-of-words/">题目链接</a></p>
+<h3 id="题解-6">题解</h3>
+<p><strong>1.反转排序法</strong></p>
+<p><strong>方法:把每个字符串都倒序，然后排序，只需要比较相邻的字符串即可</strong></p>
+<p>这个起始就是找相同后缀的问题,将具有相同后缀的最大字符串加入到结果中.我们可以将字符串按长度进行排序,并且我们可以将找相同后缀转化为找相同前缀,只需要将字符串进行反转,依次比较相邻的字符串.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Solution</span> {
+<span style="color:#000;font-weight:bold">public</span><span style="color:#000;font-weight:bold">:</span>
+	<span style="color:#458;font-weight:bold">int</span> minimumLengthEncoding(vector<span style="color:#000;font-weight:bold">&lt;</span>string<span style="color:#000;font-weight:bold">&gt;&amp;</span> words) {
+		<span style="color:#458;font-weight:bold">int</span> res <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
+		<span style="color:#998;font-style:italic">//逆序所有字符串
+</span><span style="color:#998;font-style:italic"></span>		<span style="color:#000;font-weight:bold">for</span> (<span style="color:#000;font-weight:bold">auto</span> <span style="color:#000;font-weight:bold">&amp;</span> <span style="color:#900;font-weight:bold">s</span> : words)
+		{
+			reverse(s.begin(), s.end());
+		}
+		<span style="color:#998;font-style:italic">//按字符串长度排序
+</span><span style="color:#998;font-style:italic"></span>		sort(words.begin(), words.end());
+		<span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> words.size() <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>; i<span style="color:#000;font-weight:bold">++</span>) {
+			<span style="color:#458;font-weight:bold">int</span> size <span style="color:#000;font-weight:bold">=</span> words[i].size();
+			<span style="color:#000;font-weight:bold">if</span> (words[i] <span style="color:#000;font-weight:bold">==</span> words[i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>].substr(<span style="color:#099">0</span>, size)) <span style="color:#000;font-weight:bold">continue</span>;
+			res <span style="color:#000;font-weight:bold">+=</span> size <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;
+		}
+		<span style="color:#000;font-weight:bold">return</span> res <span style="color:#000;font-weight:bold">+</span> words.back().size() <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;
+	}
+};
+</code></pre></div><h3 id="2字典树法">2.字典树法</h3>
+<p>待更</p>
+<h2 id="-圆圈中最后剩下的数字httpsleetcode-cncomproblemsyuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof"><a href="https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/"> 圆圈中最后剩下的数字</a></h2>
+<h3 id="题目-7">题目</h3>
+<p><a href="https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/">题目链接</a></p>
+<p>题解</p>
+<p>这是一个约瑟夫环的问题,有n个人围成一个圈,依次报m个数,杀掉报m的这个人,之后从下一人重新开始报数,知道剩下最后一个人.</p>
+<p>很明显是一个递推关系,具体的推到可以看<a href="https://blog.csdn.net/u011500062/article/details/72855826">这里</a></p>
+<p>推导的公式:<em>f</em>(<em>N</em>,<em>M</em>)=(<em>f</em>(<em>N</em>−1,<em>M</em>)+<em>M</em>))%<em>N</em></p>
+<p><strong>迭代版</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Solution</span> {
+<span style="color:#000;font-weight:bold">public</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#458;font-weight:bold">int</span> lastRemaining(<span style="color:#458;font-weight:bold">int</span> n, <span style="color:#458;font-weight:bold">int</span> m)
+    {
+        <span style="color:#458;font-weight:bold">int</span> p <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
+        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">2</span>; i <span style="color:#000;font-weight:bold">&lt;=</span> n; i<span style="color:#000;font-weight:bold">++</span>)
+        {
+            p <span style="color:#000;font-weight:bold">=</span> (p <span style="color:#000;font-weight:bold">+</span> m) <span style="color:#000;font-weight:bold">%</span> i;
+        }
+        <span style="color:#000;font-weight:bold">return</span> p;
+    }
+};
+</code></pre></div><p><strong>递归版</strong></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Solution</span> {
+<span style="color:#000;font-weight:bold">public</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#458;font-weight:bold">int</span> lastRemaining(<span style="color:#458;font-weight:bold">int</span> n, <span style="color:#458;font-weight:bold">int</span> m)
+    {
+        <span style="color:#000;font-weight:bold">if</span>( n <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+        <span style="color:#000;font-weight:bold">else</span>
+        <span style="color:#900;font-weight:bold">return</span> (lastRemaining(n <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span> ,m) <span style="color:#000;font-weight:bold">+</span> m) <span style="color:#000;font-weight:bold">%</span> n;
     }
 };
 </code></pre></div>
@@ -485,6 +615,16 @@
     
     <li>
         <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/leetcode108/" title="leetcode108题">leetcode108题</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
+        <a href="https://CorPython.github.io/post/sublime-Text3%E4%BD%BF%E7%94%A8/" title="Sublime Text3使用">Sublime Text3使用</a>
+    </li>
+    
+    <li>
+        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
         <a href="https://CorPython.github.io/post/leetcode169%E9%A2%98/" title="leetcode169题">leetcode169题</a>
     </li>
     
@@ -523,16 +663,6 @@
         <a href="https://CorPython.github.io/post/c&#43;&#43;%E4%B8%AD%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%97%AE%E9%A2%98/" title="C&#43;&#43;中关于数组的动态初始化问题">C&#43;&#43;中关于数组的动态初始化问题</a>
     </li>
     
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/vscode%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="vscode修改默认的快捷键">vscode修改默认的快捷键</a>
-    </li>
-    
-    <li>
-        <svg t="1575031288889" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5815" width="20" height="20"><path d="M768 946.176H256c-98.304 0-178.176-79.872-178.176-178.176V256c0-98.304 79.872-178.176 178.176-178.176h512c98.304 0 178.176 79.872 178.176 178.176v512c0 98.304-79.872 178.176-178.176 178.176zM256 135.168c-66.56 0-120.832 54.272-120.832 120.832v512c0 66.56 54.272 120.832 120.832 120.832h512c66.56 0 120.832-54.272 120.832-120.832V256c0-66.56-54.272-120.832-120.832-120.832H256z" fill="#03A9F4" p-id="5816"></path><path d="M302.6944 386.4576h313.9584c14.5408 0 26.2144-13.9264 26.2144-31.1296 0-17.2032-11.6736-31.1296-26.2144-31.1296H302.6944c-14.5408 0-26.2144 13.9264-26.2144 31.1296 0 17.2032 11.6736 31.1296 26.2144 31.1296zM721.3056 481.0752H302.6944c-14.5408 0-26.2144 14.1312-26.2144 31.5392s11.6736 31.5392 26.2144 31.5392h418.6112c14.5408 0 26.2144-14.1312 26.2144-31.5392s-11.6736-31.5392-26.2144-31.5392zM721.3056 638.1568H302.6944c-14.5408 0-26.2144 13.7216-26.2144 30.9248 0 16.9984 11.6736 30.9248 26.2144 30.9248h418.6112c14.5408 0 26.2144-13.7216 26.2144-30.9248 0-16.9984-11.6736-30.9248-26.2144-30.9248z" fill="#03A9F4" p-id="5817"></path></svg>
-        <a href="https://CorPython.github.io/post/typecho%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98%E5%BD%95/" title="Typecho主题设置备忘录">Typecho主题设置备忘录</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -550,9 +680,9 @@
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/java/">java (1)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (20)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/leetcode/">leetcode (21)</a></li>
     
-    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/">使用篇 (1)</a></li>
+    <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E4%BD%BF%E7%94%A8%E7%AF%87/">使用篇 (2)</a></li>
     
     <li><svg t="1575030821102" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3187" width="22" height="22"><path d="M136 232v560h752V360H525.255a104 104 0 0 1-73.54-30.46L354.178 232H136z m-40-72h274.745a32 32 0 0 1 22.628 9.373l109.254 109.254A32 32 0 0 0 525.255 288H928c17.673 0 32 14.327 32 32v512c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z m296 464h240a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H392a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8z" fill="#5090F1" p-id="3188"></path></svg><a href="https://CorPython.github.io/categories/%E5%89%8D%E7%AB%AF/">前端 (1)</a></li>
     
@@ -730,6 +860,11 @@
     <li>
     <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
     <a href="https://CorPython.github.io/tags/sql/">sql</a>
+    </li>
+    
+    <li>
+    <svg t="1575031194075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2886" width="20" height="20"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="2887"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="2888"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="2889"></path></svg>
+    <a href="https://CorPython.github.io/tags/sublime/">sublime</a>
     </li>
     
     <li>
