@@ -53,7 +53,7 @@
       <pubDate>Thu, 07 Nov 2019 20:32:46 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/</guid>
-      <description>vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可 注意:在所有的mingw64的位置</description>
+      <description>vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可 配置 注意:在所有的mingw64的</description>
     </item>
     
     <item>

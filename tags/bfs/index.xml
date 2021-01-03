@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bfs on code show的博客</title>
-    <link>https://CorPython.github.io/tags/bfs/</link>
-    <description>Recent content in bfs on code show的博客</description>
+    <title>BFS on code show的博客</title>
+    <link>https://CorPython.github.io/tags/BFS/</link>
+    <description>Recent content in BFS on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Dec 2019 21:43:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2020 13:21:07 +0800</lastBuildDate>
     
-	<atom:link href="https://CorPython.github.io/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://CorPython.github.io/tags/BFS/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>二叉树的右视图</title>
+      <link>https://CorPython.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/</link>
+      <pubDate>Wed, 22 Apr 2020 13:21:07 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/</guid>
+      <description>题目 题目链接 题解 1.广度优先搜索 我们可以对二叉树进行层次遍历，那么对于每层来说，最右边的结点一定是最后被遍历到的。二叉树的层次遍历可以用广度优先搜索实现。执行广度优先搜索，左结点排在右结点之前，这样，我们对每一层都从左到右访问。因此，只保留每个深度最后访问的结点，我们就可以在遍历</description>
+    </item>
     
     <item>
       <title>初探BFS,DFS</title>

@@ -12,6 +12,51 @@
     
     
     <item>
+      <title>数组中数字出现的次数</title>
+      <link>https://CorPython.github.io/post/leetcode_04_28/</link>
+      <pubDate>Tue, 28 Apr 2020 12:27:10 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode_04_28/</guid>
+      <description>题目 一个整型数组 nums 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。要求时间复杂度是$O(n)$，空间复杂度是$O(1)$. 测试样例: 示例1: 题解 这道题考的是位运算的应用,其中关键的在于异或的一些性质 异或 两个相同的数异或的结果为0 任何数和0异或的结果为其</description>
+    </item>
+    
+    <item>
+      <title>二叉树的右视图</title>
+      <link>https://CorPython.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/</link>
+      <pubDate>Wed, 22 Apr 2020 13:21:07 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/</guid>
+      <description>题目 题目链接 题解 1.广度优先搜索 我们可以对二叉树进行层次遍历，那么对于每层来说，最右边的结点一定是最后被遍历到的。二叉树的层次遍历可以用广度优先搜索实现。执行广度优先搜索，左结点排在右结点之前，这样，我们对每一层都从左到右访问。因此，只保留每个深度最后访问的结点，我们就可以在遍历</description>
+    </item>
+    
+    <item>
+      <title>硬币找零问题</title>
+      <link>https://CorPython.github.io/post/%E7%A1%AC%E5%B8%81%E6%89%BE%E9%9B%B6%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 10 Apr 2020 13:11:56 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E7%A1%AC%E5%B8%81%E6%89%BE%E9%9B%B6%E9%97%AE%E9%A2%98/</guid>
+      <description>问题描述 给出一系列不同面值的货币金额v和一个待找零的金额money,硬币的数量不限,返回找零的最少的货币数 问题解决 1.贪心法 **前提:**假如货币面额按升序排列后前n-1项的和都不超过第n项的值,这时我们就可以利用贪心算法来求解 例如货币面额有1,2,5,10,20,50,100，</description>
+    </item>
+    
+    <item>
+      <title>Leetcode之生命游戏</title>
+      <link>https://CorPython.github.io/post/leetcode%E4%B9%8B%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Wed, 08 Apr 2020 13:59:12 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode%E4%B9%8B%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/</guid>
+      <description>题目 给定一个包含 m × n 个格子的面板，每一个格子都可以看成是一个细胞。每个细胞都具有一个初始状态：1即为活细胞(live)，或 0 即为死细胞(dead).每个细胞与其八个相邻位置（水平，垂直，对角线）的细胞都遵循以下四条生存定律： 如果活细胞周围八个位置的活细胞数少于两个，则该位置活细</description>
+    </item>
+    
+    <item>
+      <title>背包问题</title>
+      <link>https://CorPython.github.io/post/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 08 Apr 2020 13:02:32 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</guid>
+      <description>0/1背包问题 题目描述: 有N件物品和一个容量为W的背包。第i件物品的费用（即体积，下同）是weight[i]，价值是value[i]。求解将哪些物品装入背包可使这些物品的费用总和不超过背包容量，且价值总和最大。 问题解决: 利用动态规划的思路，阶段就是物品的件数，状态就是**背包剩下</description>
+    </item>
+    
+    <item>
       <title>leetcode108题</title>
       <link>https://CorPython.github.io/post/leetcode108/</link>
       <pubDate>Mon, 30 Mar 2020 11:04:25 +0800</pubDate>
@@ -845,7 +890,7 @@
       <pubDate>Thu, 07 Nov 2019 20:32:46 +0800</pubDate>
       
       <guid>https://CorPython.github.io/post/vscode%E9%85%8D%E7%BD%AE/</guid>
-      <description>vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可 注意:在所有的mingw64的位置</description>
+      <description>vscode作为一个优秀的编辑器,以轻度,高效,美观著名.但是配置c语言确实对新手很不友好.所以我这里保存了最新版的vscode的c/c++配置文件 使用者只要直接在.vscode 文件夹下建立launch.json和tasks.json配置文件即可 配置 注意:在所有的mingw64的</description>
     </item>
     
     <item>

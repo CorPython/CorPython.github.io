@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>每日一题 on code show的博客</title>
+    <link>https://CorPython.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</link>
+    <description>Recent content in 每日一题 on code show的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Apr 2020 13:59:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://CorPython.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Leetcode之生命游戏</title>
+      <link>https://CorPython.github.io/post/leetcode%E4%B9%8B%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Wed, 08 Apr 2020 13:59:12 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/leetcode%E4%B9%8B%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/</guid>
+      <description>题目 给定一个包含 m × n 个格子的面板，每一个格子都可以看成是一个细胞。每个细胞都具有一个初始状态：1即为活细胞(live)，或 0 即为死细胞(dead).每个细胞与其八个相邻位置（水平，垂直，对角线）的细胞都遵循以下四条生存定律： 如果活细胞周围八个位置的活细胞数少于两个，则该位置活细</description>
+    </item>
+    
+  </channel>
+</rss>

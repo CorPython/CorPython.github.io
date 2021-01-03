@@ -6,10 +6,28 @@
     <description>Recent content in 算法与数据结构 on code show的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jan 2020 09:52:35 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 13:11:56 +0800</lastBuildDate>
     
 	<atom:link href="https://CorPython.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>硬币找零问题</title>
+      <link>https://CorPython.github.io/post/%E7%A1%AC%E5%B8%81%E6%89%BE%E9%9B%B6%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 10 Apr 2020 13:11:56 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E7%A1%AC%E5%B8%81%E6%89%BE%E9%9B%B6%E9%97%AE%E9%A2%98/</guid>
+      <description>问题描述 给出一系列不同面值的货币金额v和一个待找零的金额money,硬币的数量不限,返回找零的最少的货币数 问题解决 1.贪心法 **前提:**假如货币面额按升序排列后前n-1项的和都不超过第n项的值,这时我们就可以利用贪心算法来求解 例如货币面额有1,2,5,10,20,50,100，</description>
+    </item>
+    
+    <item>
+      <title>背包问题</title>
+      <link>https://CorPython.github.io/post/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 08 Apr 2020 13:02:32 +0800</pubDate>
+      
+      <guid>https://CorPython.github.io/post/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</guid>
+      <description>0/1背包问题 题目描述: 有N件物品和一个容量为W的背包。第i件物品的费用（即体积，下同）是weight[i]，价值是value[i]。求解将哪些物品装入背包可使这些物品的费用总和不超过背包容量，且价值总和最大。 问题解决: 利用动态规划的思路，阶段就是物品的件数，状态就是**背包剩下</description>
+    </item>
     
     <item>
       <title>算法基础之位运算</title>
